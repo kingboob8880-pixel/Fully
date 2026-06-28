@@ -6661,11 +6661,17 @@ body.exporting[data-print-template="soft"] .chip-status {
 
 /* --- standalone controls --- */
 
-.rp-toolbar{position:sticky;top:0;z-index:100;display:flex;gap:8px;align-items:center;padding:10px 16px;background:var(--surface);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+.rp-toolbar{position:sticky;top:0;z-index:100;display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 14px;background:var(--surface);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
 .rp-toolbar button{padding:8px 14px;border:1px solid var(--border);background:var(--surface-2);color:var(--text);border-radius:10px;cursor:pointer;font:inherit}
 .rp-toolbar button:hover{background:var(--primary-soft);border-color:var(--primary)}
+.rp-toolbar button.pdf-btn{background:var(--accent,#c9a53b);color:#fff;border-color:var(--accent,#c9a53b);font-weight:700}
 .rp-toolbar .sp{flex:1}
-.rp-toolbar .ttl{font-weight:700;color:var(--text-strong)}
+.rp-toolbar .ttl{font-weight:700;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw}
+@media(max-width:640px){.rp-toolbar{gap:6px;padding:8px 10px}.rp-toolbar .ttl{display:none}.rp-toolbar .sp{display:none}.rp-toolbar button{padding:8px 12px;font-size:.92rem}}
+.tg-banner{display:none;background:#fff3cd;color:#664d03;padding:10px 14px;font-size:.92rem;line-height:1.4;border-bottom:1px solid #ffe69c;text-align:center}
+.tg-banner button{margin:8px 4px 0;padding:8px 14px;border:0;border-radius:9px;color:#fff;cursor:pointer;font:inherit;font-weight:600}
+.tg-banner .b-open{background:#0a84ff}.tg-banner .b-copy{background:#6c757d}
+@media print{.tg-banner{display:none !important}}
 .healer-head{display:flex;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--surface)}
 .healer-head img{max-height:52px;border-radius:8px}
 .healer-foot{padding:14px 16px;border-top:1px solid var(--border);margin-top:24px;color:var(--text-soft);font-size:.85rem;display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap}
@@ -6697,8 +6703,29 @@ html{font-size:var(--rp-fs, 16px)}
   <span class="sp"></span>
   <button type="button" onclick="document.documentElement.style.setProperty('--rp-fs',(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--rp-fs'))||16)-1+'px')" title="Уменьшить">A−</button>
   <button type="button" onclick="document.documentElement.style.setProperty('--rp-fs',(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--rp-fs'))||16)+1+'px')" title="Увеличить">A+</button>
-  <button type="button" onclick="window.print()" title="Откроется окно печати — выберите «Сохранить как PDF» или принтер (Ctrl+P)">⬇️ Скачать PDF / 🖨 Печать</button>
+  <button type="button" class="pdf-btn" onclick="window.print()" title="Откроется окно печати — выберите «Сохранить как PDF» или принтер (Ctrl+P)">⬇️ Скачать PDF / 🖨 Печать</button>
 </div>
+<div class="tg-banner no-print" id="tgBanner">
+  ⚠️ Похоже, вы открыли через Telegram. Печать и скачивание PDF работают только в браузере.
+  <br><button type="button" class="b-open" id="tgOpen">🌐 Открыть в браузере</button><button type="button" class="b-copy" id="tgCopy">📋 Скопировать ссылку</button>
+</div>
+<script>(function(){
+  var ua=navigator.userAgent||'';
+  var inTg=/Telegram/i.test(ua)||(typeof window.TelegramWebviewProxy!=='undefined')||!!(window.external&&window.external.notify&&/Telegram/i.test(ua));
+  if(!inTg)return;
+  var ban=document.getElementById('tgBanner');if(ban)ban.style.display='block';
+  var url=location.href;
+  var o=document.getElementById('tgOpen'),c=document.getElementById('tgCopy');
+  if(o)o.onclick=function(){
+    if(/Android/i.test(ua)){try{location.href='intent://'+(url.split('://')[1]||url)+'#Intent;scheme=https;end';}catch(e){}setTimeout(function(){window.open(url,'_blank');},700);}
+    else{window.open(url,'_blank');}
+  };
+  if(c)c.onclick=function(){
+    function done(){c.textContent='✓ Скопировано';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done).catch(function(){fallback();});}else{fallback();}
+    function fallback(){var t=document.createElement('input');t.value=url;document.body.appendChild(t);t.select();try{document.execCommand('copy');}catch(e){}t.remove();done();}
+  };
+})();</script>
 
 <div class="container" style="padding:20px 16px"><div class="plan-root print-wrap" data-mode="patient" data-for-print="1">
         
@@ -7732,7 +7759,7 @@ html{font-size:var(--rp-fs, 16px)}
         </ul>
         <p class="muted" style="font-size:.82rem;margin:10px 0 0;line-height:1.45">В спорных вопросах — к людям знания и лекарю рукьи. Аллах знает лучше.</p>
       </div>
-        <div class="footer">RUKYA PRO · Абу Мухаммад · 29.06.2026<br/><span style="font-size:.78rem;opacity:.85">Сформировано: 29.06.2026, 01:49:27</span></div>
+        <div class="footer">RUKYA PRO · Абу Мухаммад · 29.06.2026<br/><span style="font-size:.78rem;opacity:.85">Сформировано: 29.06.2026, 02:06:25</span></div>
       </div></div>
 
 
