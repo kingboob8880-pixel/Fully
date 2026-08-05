@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Хитаб аль-Исаба: Мастерское руководство по разрушению джиннов и аннулированию колдовства</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #fcfaf2;
+  --paper-alt: #f2f6f0;
+  --ink: #192c23;
+  --ink-soft: #486056;
+  --rule: #ddd6c4;
+  --accent: #1f6144;
+  --accent-soft: #e9f1eb;
+  --gold: #b38a2c;
+  --serif: "PT Serif", "Merriweather", Georgia, serif;
+  --sans: Inter, system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(25,44,35,.06);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  font-size: var(--base);
+}
+
+/* Отступ для якорей — чтобы заголовок не перекрывался при прокрутке */
+[id] {
+  scroll-margin-top: 100px;
+  scroll-snap-align: start;
+}
+
+/* Специально для заголовков */
+h2[id], h3[id], h4[id], h5[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Для секций с id */
+section[id], .chapter[id], .section[id] {
+  scroll-margin-top: 100px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  /* Мобильная читаемость */
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля: база ---- */
+.bismillah-slot {
+  display: flex;
+  width: 100%;
+  direction: ltr;
+}
+.bismillah {
+  display: block;
+  max-width: 100%;
+  font-family: var(--arabic);
+  direction: rtl;
+  font-size: 1.75em;
+  color: var(--gold);
+  line-height: 2.1;
+  margin: 0;
+  letter-spacing: 0.02em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Позиции */
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page {
+  margin-bottom: 3rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+.bism-pos-center-page::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: .8rem auto 0;
+  opacity: .45;
+}
+.title-page-bism-center {
+  padding-top: 3rem;
+}
+.title-page-bism-center .bismillah-slot {
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+.title-page-bism-center .title-page-body {
+  text-align: center;
+}
+
+/* Выравнивание */
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+
+/* Басмаля без арабского направления (например, русская транслитерация) */
+.bismillah:not([dir="rtl"]) {
+  font-family: var(--serif);
+  font-style: italic;
+  direction: ltr;
+  letter-spacing: .04em;
+}
+
+.institution {
+  font-family: var(--sans);
+  font-size: .76em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+}
+
+.book-title {
+  font-family: var(--title-font);
+  font-size: 2.5em;
+  line-height: 1.22;
+  font-weight: 700;
+  margin: 0 0 .7rem;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+.book-subtitle {
+  font-size: 1.15em;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 1.8rem;
+  font-weight: 400;
+}
+
+.rule-orn {
+  width: 160px;
+  height: 14px;
+  margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.8em;
+  height: 1em;
+  line-height: .85;
+  background: var(--paper);
+  color: var(--gold);
+  font-size: .85rem;
+}
+
+.book-author {
+  font-size: 1.08em;
+  font-weight: 700;
+  margin: 0 0 .4rem;
+  letter-spacing: .02em;
+}
+.book-meta {
+  font-family: var(--sans);
+  font-size: .84em;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.epigraph {
+  max-width: 38ch;
+  margin: 2.8rem auto 0;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .96em;
+  line-height: 1.5;
+}
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem;
+  padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans);
+  font-size: .78em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 1.3rem;
+  font-weight: 600;
+  border: 0;
+  padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  gap: .6rem;
+  align-items: baseline;
+  padding: .15rem 0;
+  border-radius: 2px;
+  transition: color .15s, background .15s;
+}
+.toc a:hover {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-radius: 3px;
+  padding-left: .3rem;
+  margin-left: -.3rem;
+}
+.toc .num {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  min-width: 2.8em;
+  font-size: .9em;
+  font-weight: 500;
+}
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 {
+  font-family: var(--title-font);
+  line-height: 1.32;
+  text-wrap: balance;
+}
+
+.chapter > h2 {
+  font-size: 1.65em;
+  font-weight: 700;
+  margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.chapter > h2 .num,
+.section > h3 .num,
+.subsection > h4 .num {
+  color: var(--accent);
+  font-weight: 400;
+  margin-right: .55em;
+  font-variant-numeric: tabular-nums;
+}
+
+.section > h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 2.6rem 0 1rem;
+  color: var(--ink);
+}
+.subsection > h4 {
+  font-size: 1.08em;
+  font-weight: 700;
+  margin: 1.9rem 0 .8rem;
+  color: var(--ink-soft);
+}
+.chapter:first-of-type > h2 { margin-top: 0; }
+
+section[data-kind="front"] > h2,
+section[data-kind="back"] > h2 {
+  text-align: center;
+  border-bottom: 0;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+section[data-kind="front"] > h2::after,
+section[data-kind="back"] > h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1.5px;
+  background: var(--gold);
+  margin: .9rem auto 0;
+  border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem;
+  text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p,
+blockquote + p, .toc + p, figure + p,
+ul + p, ol + p, table + p,
+.callout + p, .ayah + p, .hadith + p, .dua + p {
+  text-indent: 0;
+}
+
+
+
+.lead {
+  font-size: 1.07em;
+  color: var(--ink-soft);
+  text-indent: 0;
+  line-height: 1.65;
+}
+
+strong { font-weight: 700; }
+em { font-style: italic; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+
+a {
+  color: var(--accent);
+  text-underline-offset: .22em;
+  text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+a:hover { color: var(--gold); }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, "Cascadia Code", monospace;
+  font-size: .86em;
+  background: var(--paper-alt);
+  padding: .12em .4em;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+}
+
+hr, .divider {
+  border: 0;
+  text-align: center;
+  margin: 2.6rem 0;
+  color: var(--gold);
+}
+.divider::before {
+  content: "❦   ❦   ❦";
+  letter-spacing: .8em;
+  font-size: .65em;
+  opacity: .75;
+}
+
+/* ========== СПИСКИ ========== */
+ul, ol {
+  margin: 1rem 0 1.2rem;
+  padding-left: 1.7rem;
+}
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0;
+  padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source,
+blockquote.quote footer {
+  display: block;
+  margin-top: .7rem;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: .78em;
+  color: var(--ink-soft);
+  letter-spacing: .03em;
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0;
+  padding: 1.8rem 2rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+.ayah::before,
+.ayah::after {
+  content: "";
+  position: absolute;
+  left: 1.6rem;
+  right: 1.6rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: .45;
+}
+.ayah::before { top: .65rem; }
+.ayah::after { bottom: .65rem; }
+
+.ar-block {
+  font-family: var(--arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 2.3;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+
+.ayah-tr {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: .97em;
+  text-indent: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.ayah .source {
+  margin-top: .7rem;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: .8em;
+}
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС ========== */
+.hadith {
+  margin: 1.9rem 0;
+  padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--accent);
+  border-radius: 5px;
+  background: var(--paper-alt);
+  position: relative;
+}
+.hadith .label,
+.dua .label,
+.callout .label {
+  display: block;
+  font-family: var(--sans);
+  font-size: .66em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .65rem;
+  font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+
+/* ========== ДУА ========== */
+.dua {
+  margin: 1.9rem 0;
+  padding: 1.5rem 1.8rem;
+  background: var(--paper-alt);
+  border: 1.5px dashed var(--gold);
+  border-radius: 8px;
+  text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+
+/* ========== ПРИМЕЧАНИЕ ========== */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.4rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  font-size: .94em;
+}
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline {
+  font-family: var(--arabic);
+  font-size: 1.2em;
+  line-height: 1.9;
+  unicode-bidi: isolate;
+  direction: rtl;
+}
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] {
+  font-family: var(--arabic);
+  font-size: 1.35em;
+  line-height: 2.2;
+  text-indent: 0;
+}
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table {
+  margin: 2.2rem 0;
+  overflow-x: auto;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+figcaption {
+  font-family: var(--sans);
+  font-size: .78em;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: .7rem;
+  font-style: italic;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: .92em;
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+th, td {
+  border: 1px solid var(--rule);
+  padding: .6rem .8rem;
+  text-align: left;
+  vertical-align: top;
+}
+thead th {
+  background: var(--paper-alt);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: .82em;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--paper-alt) 60%, transparent);
+}
+
+/* ========== СНОСКИ ========== */
+sup.fn-ref a {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: .82em;
+  padding: 0 .1em;
+  font-weight: 600;
+}
+.footnotes {
+  margin-top: 4rem;
+  padding-top: 1.4rem;
+  border-top: 1.5px solid var(--rule);
+  font-size: .85em;
+  color: var(--ink-soft);
+}
+.footnotes h2,
+.bibliography h2 {
+  font-family: var(--sans);
+  font-size: .76em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num {
+  color: var(--accent);
+  margin-right: .55em;
+  font-weight: 700;
+}
+
+/* ========== БИБЛИОГРАФИЯ ========== */
+.bibliography ol {
+  list-style: none;
+  counter-reset: bib;
+  padding-left: 0;
+}
+.bibliography li {
+  counter-increment: bib;
+  padding-left: 2.8rem;
+  position: relative;
+  margin: .7rem 0;
+  font-size: .94em;
+  line-height: 1.55;
+}
+.bibliography li::before {
+  content: counter(bib) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem;
+  padding-top: 1.4rem;
+  border-top: 1.5px solid var(--rule);
+  font-family: var(--sans);
+  font-size: .72em;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page {
+    padding: 2.2rem 1.4rem 3rem;
+  }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .35rem 0; }
+  .ayah { padding: 1.2rem 1rem; }
+  .hadith { padding: 1.1rem 1.1rem; }
+  .dua { padding: 1.2rem 1.1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  table { min-width: 36rem; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .section > h3 { font-size: 1.12em; }
+  .subsection > h4 { font-size: 1.02em; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+  .bismillah-slot { margin-bottom: 1.8rem; }
+}
+
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+  .toc, .ayah, .hadith, .dua { padding: .9rem .7rem; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page {
+  size: A4;
+  margin: 22mm 20mm 22mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--sans);
+    font-size: 9pt;
+    color: var(--ink-soft);
+  }
+}
+@media print {
+  body {
+    background: #fff;
+    font-size: 11.5pt;
+    line-height: 1.55;
+  }
+  .page {
+    box-shadow: none;
+    padding: 0;
+    max-width: none;
+    min-height: 0;
+  }
+  .wrap { max-width: none; }
+  .title-page {
+    page-break-after: always;
+    border-bottom: 0;
+  }
+  .title-page::after { display: none; }
+  .toc {
+    page-break-after: always;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  section[data-kind="front"],
+  section[data-kind="back"] { page-break-before: always; }
+
+  h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { page-break-inside: avoid; }
+
+  a { color: inherit; text-decoration: none; }
+  .toc a::after { content: ""; }
+  .doc-footer { display: none; }
+
+  .ayah { background: none; border-color: var(--rule); }
+  .hadith { background: none; }
+  .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" data-align="center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Хитаб аль-Исаба: Мастерское руководство по разрушению джиннов и аннулированию колдовства</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2026</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#glava-1-fundament-volevoy-akt-kak-osnova-vsego"><span class="num"></span><span class="lbl">Глава 1. Фундамент: Волевой акт как основа всего</span></a><ol><li class="toc-l2">
+      <a href="#zaklinanie-eto-deystvie-a-ne-chtenie"><span class="num"></span><span class="lbl">1.1. Заклинание — это действие, а не чтение</span></a></li>
+<li class="toc-l2">
+      <a href="#pyat-elementov-istinnogo-namereniya"><span class="num"></span><span class="lbl">1.2. Пять элементов истинного намерения</span></a></li>
+<li class="toc-l2">
+      <a href="#shest-razrushiteley-namereniya"><span class="num"></span><span class="lbl">1.3. Шесть разрушителей намерения</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-2-mehanika-zaryada-i-vystrela"><span class="num"></span><span class="lbl">Глава 2. Механика заряда и выстрела</span></a><ol><li class="toc-l2">
+      <a href="#serdechnyy-rezervuar-nakoplenie-sily"><span class="num"></span><span class="lbl">2.1. Сердечный резервуар: накопление силы</span></a></li>
+<li class="toc-l2">
+      <a href="#pryamoy-vybros-arkiyka"><span class="num"></span><span class="lbl">2.2. Прямой выброс: Аркийка</span></a></li>
+<li class="toc-l2">
+      <a href="#vnutrennyaya-bronya-arkiniy"><span class="num"></span><span class="lbl">2.3. Внутренняя броня: Аркиний</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-3-diagnostika-i-podgotovka"><span class="num"></span><span class="lbl">Глава 3. Диагностика и подготовка</span></a><ol><li class="toc-l2">
+      <a href="#opredelenie-tipa-porazheniya-i-ego-lokalizacii"><span class="num"></span><span class="lbl">3.1. Определение типа поражения и его локализации</span></a></li>
+<li class="toc-l2">
+      <a href="#podgotovka-raki-pered-seansom"><span class="num"></span><span class="lbl">3.2. Подготовка раки перед сеансом</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-4-universalnyy-cikl-zaklinaniya-9-stupeney"><span class="num"></span><span class="lbl">Глава 4. Универсальный цикл заклинания: 9 ступеней</span></a><ol><li class="toc-l2">
+      <a href="#polnaya-struktura-cikla-dlya-kazhdogo-organa"><span class="num"></span><span class="lbl">4.1. Полная структура цикла для каждого органа</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-1-ayaty-dlya-organa-ayatul-udv"><span class="num">4.2.</span><span class="lbl">СТУПЕНЬ 1. Аяты для органа (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ العُضْو</span>— аятуль-'удв)</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-2-svyazka-perehod-volevoy-akt-zaklinaniya"><span class="num">4.3.</span><span class="lbl">СТУПЕНЬ 2. Связка-переход: волевой акт заклинания</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-4-ayaty-razvyazyvaniya-uzlov-ayatu-fakkil-ukad"><span class="num">4.4.</span><span class="lbl">СТУПЕНЬ 4. Аяты развязывания узлов (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ فَكِّ العُقَد</span>— аяту факкиль-'укад)</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-6-snyatie-okov-cepey-i-zamkov"><span class="num">4.5.</span><span class="lbl">СТУПЕНЬ 6. Снятие оков, цепей и замков</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-7-zaklinanie-na-izgnanie-at-tahridzh"><span class="num">4.6.</span><span class="lbl">СТУПЕНЬ 7. Заклинание на изгнание (<span class="ar-inline" lang="ar" dir="rtl">التَّحْرِيج</span>— ат-тахридж)</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-8-rot-otkryt-ayaty-vytyagivaniya-ayatu-as-sahb"><span class="num">4.7.</span><span class="lbl">СТУПЕНЬ 8. Рот открыт — Аяты вытягивания (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ السَّحْب</span>— аяту ас-сахб)</span></a></li>
+<li class="toc-l2">
+      <a href="#stupen-9-zavershayuschaya-formula-pechat-20-30-raz"><span class="num">4.8.</span><span class="lbl">СТУПЕНЬ 9. Завершающая формула-печать (20–30 раз)</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-5-polnoe-primenenie-po-kazhdomu-organu"><span class="num"></span><span class="lbl">Глава 5. Полное применение по каждому органу</span></a><ol><li class="toc-l2">
+      <a href="#nogi-al-ardzhul"><span class="num"></span><span class="lbl">5.1. Ноги (<span class="ar-inline" lang="ar" dir="rtl">الأَرْجُل</span>— аль-арджуль)</span></a></li>
+<li class="toc-l2">
+      <a href="#matka-intimnye-mesta-ar-rahim"><span class="num"></span><span class="lbl">5.2. Матка / Интимные места (<span class="ar-inline" lang="ar" dir="rtl">الرَّحِم</span>— ар-рахим)</span></a></li>
+<li class="toc-l2">
+      <a href="#zhivot-al-batn"><span class="num"></span><span class="lbl">5.3. Живот (<span class="ar-inline" lang="ar" dir="rtl">البَطْن</span>— аль-батн)</span></a></li>
+<li class="toc-l2">
+      <a href="#grud-as-sadr"><span class="num"></span><span class="lbl">5.4. Грудь (<span class="ar-inline" lang="ar" dir="rtl">الصَّدْر</span>— ас-садр)</span></a></li>
+<li class="toc-l2">
+      <a href="#plechi-i-ruki-al-aktaf-val-yadayn"><span class="num"></span><span class="lbl">5.5. Плечи и руки (<span class="ar-inline" lang="ar" dir="rtl">الأَكْتَاف وَالْيَدَيْن</span>— аль-актаф валь-ядайн)</span></a></li>
+<li class="toc-l2">
+      <a href="#spina-az-zahr"><span class="num"></span><span class="lbl">5.6. Спина (<span class="ar-inline" lang="ar" dir="rtl">الظَّهْر</span>— аз-захр)</span></a></li>
+<li class="toc-l2">
+      <a href="#golova-ar-ra-s"><span class="num"></span><span class="lbl">5.7. Голова (<span class="ar-inline" lang="ar" dir="rtl">الرَّأْس</span>— ар-ра'с)</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-6-specialnye-operacii"><span class="num"></span><span class="lbl">Глава 6. Специальные операции</span></a><ol><li class="toc-l2">
+      <a href="#izgnanie-ifrita-i-moschnyh-dzhinnov"><span class="num"></span><span class="lbl">6.1. Изгнание ифрита и мощных джиннов</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-slozhnyh-vidov-koldovstva"><span class="num"></span><span class="lbl">6.2. Аннулирование сложных видов колдовства</span></a></li>
+<li class="toc-l2">
+      <a href="#rabota-s-dzhinnom-lyubovnikom-al-ashik"><span class="num"></span><span class="lbl">6.3. Работа с джинном-любовником (<span class="ar-inline" lang="ar" dir="rtl">العَاشِق</span>— аль-'ашик)</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-7-nachityvanie-vody-i-masla"><span class="num"></span><span class="lbl">Глава 7. Начитывание воды и масла</span></a><ol><li class="toc-l2">
+      <a href="#zaklinanie-vody-i-masla-metodom-volevogo-akta"><span class="num"></span><span class="lbl">7.1. Заклинание воды и масла методом волевого акта</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-8-vizualiziruyuschaya-rukya"><span class="num"></span><span class="lbl">Глава 8. Визуализирующая рукья</span></a><ol><li class="toc-l2">
+      <a href="#metod-vizualizacii-kak-dopolnenie"><span class="num"></span><span class="lbl">8.1. Метод визуализации как дополнение</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-9-vnutrennie-klyuchi-mastera"><span class="num"></span><span class="lbl">Глава 9. Внутренние ключи мастера</span></a><ol><li class="toc-l2">
+      <a href="#serdechnoe-chtenie-kak-fundament"><span class="num"></span><span class="lbl">9.1. Сердечное чтение как фундамент</span></a></li>
+<li class="toc-l2">
+      <a href="#fokus-vnimaniya-i-perifericheskoe-zrenie"><span class="num"></span><span class="lbl">9.2. Фокус внимания и периферическое зрение</span></a></li>
+<li class="toc-l2">
+      <a href="#telo-kak-poddannyy-prikaz-a-ne-prosba"><span class="num"></span><span class="lbl">9.3. Тело как подданный: приказ, а не просьба</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-10-polnyy-protokol-seansa"><span class="num"></span><span class="lbl">Глава 10. Полный протокол сеанса</span></a><ol><li class="toc-l2">
+      <a href="#poshagovoe-provedenie-seansa-ot-nachala-do-konca"><span class="num"></span><span class="lbl">10.1. Пошаговое проведение сеанса от начала до конца</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#vudu-ritualnaya-chistota"><span class="num"></span><span class="lbl">1. Вуду. Ритуальная чистота.</span></a></li>
+<li class="toc-l1">
+      <a href="#uedinenie-telefon-vyklyuchen"><span class="num"></span><span class="lbl">2. Уединение. Телефон выключен.</span></a></li>
+<li class="toc-l1">
+      <a href="#pribezhische-ot-shaytana-3-raza"><span class="num"></span><span class="lbl">3. Прибежище от шайтана (3 раза).</span></a></li>
+<li class="toc-l1">
+      <a href="#formulirovka-namereniya-5-elementov"><span class="num"></span><span class="lbl">4. Формулировка намерения (5 элементов).</span></a></li>
+<li class="toc-l1">
+      <a href="#zaryazhenie-namereniya-40-100-povtoreniy-v-serdce"><span class="num"></span><span class="lbl">5. Заряжение намерения (40–100 повторений в сердце).</span></a></li>
+<li class="toc-l1">
+      <a href="#zaschita-sebya-ayat-al-kursi-3-sury-arkiniy"><span class="num"></span><span class="lbl">6. Защита себя (Аят аль-Курси + 3 суры + «Аркиний»).</span></a></li>
+<li class="toc-l1">
+      <a href="#zaschita-mesta"><span class="num"></span><span class="lbl">7. Защита места.</span></a></li>
+<li class="toc-l1">
+      <a href="#diagnostika-i-fizicheskaya-proverka"><span class="num"></span><span class="lbl">8. Диагностика и физическая проверка.</span></a></li>
+<li class="toc-l1">
+      <a href="#esli-est-mass-ayaty-izgnaniya-pervymi"><span class="num"></span><span class="lbl">9. Если есть масс — аяты изгнания первыми.</span></a></li>
+<li class="toc-l1">
+      <a href="#osnovnoy-cikl-snizu-vverh-nogi-matka-zhivot-grud-plechi-spin"><span class="num"></span><span class="lbl">10. Основной цикл снизу вверх (Ноги -&gt; Матка -&gt; Живот -&gt; Грудь -&gt; Плечи -&gt; Спина -&gt; Голова).</span></a></li>
+<li class="toc-l1">
+      <a href="#povtornaya-proverka-tochek"><span class="num"></span><span class="lbl">11. Повторная проверка точек.</span></a></li>
+<li class="toc-l1">
+      <a href="#rekomendacii-pacientu"><span class="num"></span><span class="lbl">12. Рекомендации пациенту.</span></a></li>
+<li class="toc-l1">
+      <a href="#pechat-dlya-sebya-20-30-raz"><span class="num"></span><span class="lbl">13. Печать для себя (20-30 раз).</span></a></li>
+<li class="toc-l1">
+      <a href="#sohranenie-namereniya-posle-seansa"><span class="num"></span><span class="lbl">14. Сохранение намерения после сеанса.</span></a></li>
+<li class="toc-l1">
+      <a href="#glava-11-svodnye-tablicy"><span class="num"></span><span class="lbl">Глава 11. Сводные таблицы</span></a><ol><li class="toc-l2">
+      <a href="#bystraya-spravka-po-organam"><span class="num"></span><span class="lbl">11.1. Быстрая справка по органам</span></a></li>
+<li class="toc-l2">
+      <a href="#bystraya-spravka-po-tipam-koldovstva"><span class="num"></span><span class="lbl">11.2. Быстрая справка по типам колдовства</span></a></li>
+<li class="toc-l2">
+      <a href="#universalnye-formuly-zaklinaniya"><span class="num"></span><span class="lbl">11.3. Универсальные формулы заклинания</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-12-predosterezheniya-i-etika"><span class="num"></span><span class="lbl">Глава 12. Предостережения и этика</span></a><ol><li class="toc-l2">
+      <a href="#chego-nelzya-delat"><span class="num"></span><span class="lbl">12.1. Чего нельзя делать</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#ne-razgovarivay-s-dzhinnami-razrushay-magiyu"><span class="num"></span><span class="lbl">1. Не разговаривай с джиннами. Разрушай магию.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-davay-fetvu-ob-etom-metode-esli-ne-izuchil-ego"><span class="num"></span><span class="lbl">2. Не давай фетву об этом методе, если не изучил его.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-obuchay-novichkov-vizualiziruyuschey-ruke-bez-podgotovki"><span class="num"></span><span class="lbl">3. Не обучай новичков визуализирующей рукье без подготовки.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-vpaday-v-zapretnoe-net-mesta-shirku-i-talismanam"><span class="num"></span><span class="lbl">4. Не впадай в запретное. Нет места ширку и талисманам.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-zabyvay-o-medicine-napravlyay-k-vracham-pri-neobhodimosti"><span class="num"></span><span class="lbl">5. Не забывай о медицине. Направляй к врачам при необходимости.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-hvalis-posle-seansa-skazhi-allah-iscelil"><span class="num"></span><span class="lbl">6. Не хвались после сеанса. Скажи: «Аллах исцелил».</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-otchaivaysya-esli-seans-ne-udalsya-prover-namerenie"><span class="num"></span><span class="lbl">7. Не отчаивайся, если сеанс не удался. Проверь намерение.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-sravnivay-sebya-s-drugimi-raki"><span class="num"></span><span class="lbl">8. Не сравнивай себя с другими раки.</span></a></li>
+<li class="toc-l1">
+      <a href="#pey-vodu-otdyhay-posle-seansa"><span class="num"></span><span class="lbl">9. Пей воду, отдыхай после сеанса.</span></a></li>
+<li class="toc-l1">
+      <a href="#otvetstvennost-za-pravilnoe-primenenie-na-uchenike"><span class="num"></span><span class="lbl">10. Ответственность за правильное применение — на ученике.</span></a></li></ol></nav>
+  <main>
+<p>Введение</p>
+<p>Три столпа мастера</p>
+<p>Данное руководство объединяет три метода в единую систему уровня мастера:</p>
+<p>Первый столп — Волевой акт (<span class="ar-inline" lang="ar" dir="rtl">النِّيَّةُ القَلْبِيَّةُ الْمُسْتَمِرَّة</span>— ан-ниййатуль-кальбиййатуль-мустамира). Заклинание — это не чтение. Это непрерывное, удерживаемое в сердце намерение, которое не прерывается ни на секунду. Без него слова Корана остаются звуком. С ним — они становятся молотом.</p>
+<p>Второй столп — Влияние волей (<span class="ar-inline" lang="ar" dir="rtl">التَّأْثِيرُ بِالْإِرَادَة</span>— ат-та'сир биль-ирада). Глагол<span class="ar-inline" lang="ar" dir="rtl">أَرْقِي</span>(аркы) — «Я совершаю рукью» — стоит в первом лице. Раки не наблюдатель, не посредник. Он — исполнитель воли Аллаха. Чтение — функция языка. Рукья — акт воли, облечённый в слова.</p>
+<p>Третий столп — Хитаб аль-Исаба (<span class="ar-inline" lang="ar" dir="rtl">خِطَابُ الْإِصَابَة</span>— хитабуль-исаба). Обращение к поражённому месту. Не абстрактное «убери всё плохое», а точный удар: конкретный орган, конкретный вид колдовства, конкретное требование. Как стрела, пущенная точно в цель.</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ</div>
+  <p>С именем Аллаха совершаю над тобой рукью — от всего, что причиняет тебе вред</p>
+  <footer class="source">Источник: Муслим, № 2186</footer>
+</blockquote>
+<p>Обратите внимание:<span class="ar-inline" lang="ar" dir="rtl">أَرْقِيكَ</span>— «Я совершаю рукью над тобой». Не «текст исцеляет». Не «пусть совершится». А «Я — совершаю». Осознанно. С именем Аллаха. Направляя силу. Это и есть метод мастера.</p>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-1-fundament-volevoy-akt-kak-osnova-vsego">Глава 1. Фундамент: Волевой акт как основа всего</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaklinanie-eto-deystvie-a-ne-chtenie">1.1. Заклинание — это действие, а не чтение</h3>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى</div>
+  <p>Поистине, дела — только по намерениям, и поистине, каждому человеку — только то, что он намеревался</p>
+  <footer class="source">Источник: аль-Бухари, № 1; Муслим, № 1907</footer>
+</blockquote>
+<p>Слово<span class="ar-inline" lang="ar" dir="rtl">إِنَّمَا</span>(иннама) в арабском — это ограничение. Оно означает: только это, и ничего больше. Если применить к рукье: заклинание — ТОЛЬКО по намерению. Без намерения — это не заклинание. Это звук.</p>
+<blockquote class="quote"><p>Намерение — это дух дела, его сердцевина, его основа. Если оно правильное — дело правильное. Если оно испорчено — испорчено и дело.</p></blockquote>
+<ul><li>Ибн аль-Каййим, «Мадаридж ас-Саликин»</li></ul>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى أَجْسَادِكُمْ وَلَا إِلَى صُوَرِكُمْ، وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ</div>
+  <p>Поистине, Аллах смотрит не на ваши тела и не на ваши облики, но смотрит на ваши сердца и ваши деяния</p>
+  <footer class="source">Источник: Муслим, № 2564</footer>
+</blockquote>
+<p>Аллах смотрит на сердце. Пустое сердце — пустое воздействие. Полное сердце — полное воздействие.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pyat-elementov-istinnogo-namereniya">1.2. Пять элементов истинного намерения</h3>
+<p>Прежде чем заклинать, мастер проверяет наличие пяти элементов. Если один отсутствует — намерение дырявое, и сила уходит через дыру.</p>
+<ul><li>Элемент 1 — Субъект (<span class="ar-inline" lang="ar" dir="rtl">مَنْ يَفْعَل</span>— ман йаф'аль): Кто делает? Ты. Раки. Но не источник силы — причина, через которую Аллах направляет Свою силу.</li><li>Элемент 2 — Объект (<span class="ar-inline" lang="ar" dir="rtl">عَلَى مَنْ</span>— 'аля ман): На кого? Конкретный пациент. Максимальная точность.</li><li>Элемент 3 — Действие (<span class="ar-inline" lang="ar" dir="rtl">مَاذَا أَفْعَل</span>— маза аф'аль): Что делаешь? Разрушить колдовство? Изгнать джинна? Каждое действие — своё намерение.</li><li>Элемент 4 — Инструмент (<span class="ar-inline" lang="ar" dir="rtl">بِمَاذَا</span>— бимаза): Чем? Аятами Корана. Мольбой. Силой Аллаха, проходящей через Его слова.</li><li>Элемент 5 — Цель (<span class="ar-inline" lang="ar" dir="rtl">لِمَاذَا</span>— лимаза): Ради чего? Ради довольства Аллаха. Не для похвалы. Не для денег.</li></ul>
+<p>Формула проверки перед каждым сеансом: «Намереваюсь именем Аллаха и через силу Его Книги [конкретное действие] для [имя пациента] от [конкретный вид зла], ища довольства Аллаха и Его награды».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shest-razrushiteley-namereniya">1.3. Шесть разрушителей намерения</h3>
+<figure class="table"><table><thead><tr><th>№</th><th>Разрушитель</th><th>Арабский</th><th>Лечение</th></tr></thead><tbody><tr><td>1</td><td>Показуха</td><td><span class="ar-inline" lang="ar" dir="rtl">الرِّيَاء</span>(ар-рийа')</td><td>«Никто не видит, кроме Аллаха»</td></tr><tr><td>2</td><td>Гордыня</td><td><span class="ar-inline" lang="ar" dir="rtl">الكِبْر</span>(аль-кибр)</td><td>«Я — ничто. Аллах — всё»</td></tr><tr><td>3</td><td>Страх</td><td><span class="ar-inline" lang="ar" dir="rtl">الخَوْف</span>(аль-хауф)</td><td>«Аллах со мной. Джинн — раб Аллаха»</td></tr><tr><td>4</td><td>Рассеянность</td><td><span class="ar-inline" lang="ar" dir="rtl">الغَفْلَة</span>(аль-гафля)</td><td>Возвращение к намерению каждые несколько секунд</td></tr><tr><td>5</td><td>Сомнение</td><td><span class="ar-inline" lang="ar" dir="rtl">الشَّك</span>(аш-шакк)</td><td>«Аяты Аллаха не могут не подействовать»</td></tr><tr><td>6</td><td>Спешка</td><td><span class="ar-inline" lang="ar" dir="rtl">العَجَلَة</span>(аль-'аджаля)</td><td>Замедлиться. Читать аят за аятом</td></tr></tbody></table></figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ إِنِّي أَسْأَلُكَ الإِخْلَاصَ فِي القَوْلِ وَالعَمَلِ وَالنِّيَّةِ</div>
+  <p>О Аллах, прошу у Тебя искренности в словах, делах и намерениях</p>
+  <div class="source">Источник: Мольба праведников</div>
+</aside>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَا مُقَلِّبَ القُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ</div>
+  <p>О Переворачивающий сердца, укрепи моё сердце на Твоей религии</p>
+  <div class="source">Источник: ат-Тирмизи, № 2140</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-2-mehanika-zaryada-i-vystrela">Глава 2. Механика заряда и выстрела</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="serdechnyy-rezervuar-nakoplenie-sily">2.1. Сердечный резервуар: накопление силы</h3>
+<p>Это базовое упражнение мастера для превращения сердца в конденсатор божественной силы. Без заряда — нет выстрела.</p>
+<p>Техника:</p>
+<ol><li>Выбери мощный аят. Для разрушения джиннов и колдовства лучше всего Аят аль-Курси.</li><li>Закрой глаза. Начни читать аят «в сердце» — полностью заблокировав движение языка и губ.</li><li>Визуализация: Каждое слово аята — сгусток света, который оседает внутри груди. С каждым прочтением плотность света растёт.</li><li>Читай так 15–20 минут, пока не почувствуешь, что ты наполнен и заряд ищет выхода.</li></ol>
+<p>Три ступени заряжения:</p>
+<ul><li>Ступень 1: Формулировка (<span class="ar-inline" lang="ar" dir="rtl">التَّكْوِين</span>). Формулируешь намерение чётко, в конкретных словах внутри сердца.</li><li>Ступень 2: Повторение (<span class="ar-inline" lang="ar" dir="rtl">التَّكْرَار</span>). Повторяешь 40–100 раз, пока намерение не станет плотным.</li><li>Ступень 3: Удержание (<span class="ar-inline" lang="ar" dir="rtl">الإِمْسَاك</span>). Держишь заряженное намерение, не давая ему угаснуть.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pryamoy-vybros-arkiyka">2.2. Прямой выброс: Аркийка</h3>
+<p>Когда ты заряжен, нужно научиться мгновенно направлять заряд в цель.</p>
+<p>Техника:</p>
+<ol><li>Короткая дозарядка сердечным чтением: 3–5 раз аят в сердце.</li><li>Резкий, волевой мысленный удар — слово:<span class="ar-inline" lang="ar" dir="rtl">أَرْقِيكَ</span>! (АРКИЙКА!) — «Я заклинаю тебя!»</li><li>Сразу после «Аркийка» мысленно произноси недуг:<span class="ar-inline" lang="ar" dir="rtl">مِنْ كُلِّ عَيْنٍ وَحَسَدٍ وَسِحْرٍ</span>(мин кулли 'айнин ва хасадин ва сихрин) — «от всякого сглаза, зависти и колдовства».</li></ol>
+<p>Критическое правило: В момент произнесения «Аркийка» в голове не должно быть ни одной лишней мысли. Только приказ.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vnutrennyaya-bronya-arkiniy">2.3. Внутренняя броня: Аркиний</h3>
+<p>Это упражнение для самоисцеления и укрепления собственной защиты.</p>
+<p>Техника: Направь внимание внутрь своего тела. В местах, где чувствуешь холод или зажим, произноси в сердце:<span class="ar-inline" lang="ar" dir="rtl">أَرْقِينِي</span>(АРКИНИЙ) — «Я заклинаю себя».</p>
+<p>График ежедневной тренировки мастера:</p>
+<ul><li>05:30 (после Фаджра): Наполнение резервуара. 20 мин сердечного чтения.</li><li>11:00 (пик активности): Тренировка выброса. 10 мин работы с объектом.</li><li>16:00 (работа с вниманием): Сканирование. 10 мин. Внимание на органы.</li><li>22:00 (перед сном): Консолидация силы. Чтение Корана сердцем до засыпания.</li></ul>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-3-diagnostika-i-podgotovka">Глава 3. Диагностика и подготовка</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="opredelenie-tipa-porazheniya-i-ego-lokalizacii">3.1. Определение типа поражения и его локализации</h3>
+<p>Прежде чем заклинать, мастер определяет, что и где лечить.</p>
+<ul><li>НОГИ (<span class="ar-inline" lang="ar" dir="rtl">الأَرْجُل</span>— аль-арджуль): Рассыпанное колдовство (<span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ الْمَرْشُوش</span>), сглаз на пропитание. Признаки: боль в коленях при руку', судороги, онемение.</li><li>МАТКА / ИНТИМНЫЕ МЕСТА (<span class="ar-inline" lang="ar" dir="rtl">الرَّحِم</span>— ар-рахим): Джинн-любовник (<span class="ar-inline" lang="ar" dir="rtl">العَاشِق</span>), колдовство на разлуку (<span class="ar-inline" lang="ar" dir="rtl">سِحْرُ التَّفْرِيق</span>). Признаки: нарушение цикла, боль при близости.</li><li>ЖИВОТ (<span class="ar-inline" lang="ar" dir="rtl">البَطْن</span>— аль-батн): Выпитое колдовство (<span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ الْمَشْرُوب</span>), съеденное колдовство (<span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ الْمَأْكُول</span>). Признаки: жжение, вздутие, кормление во сне.</li><li>ГРУДЬ (<span class="ar-inline" lang="ar" dir="rtl">الصَّدْر</span>— ас-садр): Сглаз и зависть (<span class="ar-inline" lang="ar" dir="rtl">العَيْن وَالحَسَد</span>). Признаки: стеснение, затруднённое дыхание.</li><li>ПЛЕЧИ И РУКИ (<span class="ar-inline" lang="ar" dir="rtl">الأَكْتَاف وَالْيَدَيْن</span>— аль-актаф валь-ядайн): Накопленный сглаз, джинны-скитальцы. Признаки: тяжесть, непроизвольное подёргивание.</li><li>СПИНА (<span class="ar-inline" lang="ar" dir="rtl">الظَّهْر</span>— аз-захр): Концентрация всех видов поражений. Признаки: ощущение кинжала в пояснице.</li><li>ГОЛОВА (<span class="ar-inline" lang="ar" dir="rtl">الرَّأْس</span>— ар-ра'с): Все виды: магия, сглаз, зависть, узлы. Признаки: головная боль, забывчивость.</li></ul>
+<aside class="callout"><span class="label">Примечание</span><p>Не все симптомы имеют духовную причину. Обязательно учитывай медицинские причины. Направляй к врачам при необходимости.</p></aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="podgotovka-raki-pered-seansom">3.2. Подготовка раки перед сеансом</h3>
+<p>Девять ступеней подготовки:</p>
+<ol><li>Уединение (<span class="ar-inline" lang="ar" dir="rtl">الخَلْوَة</span>— аль-хальва). Найди тихое место.</li><li>Ритуальная чистота (<span class="ar-inline" lang="ar" dir="rtl">الطَّهَارَة</span>— ат-тахара). Соверши вуду.</li><li>Прибежище (<span class="ar-inline" lang="ar" dir="rtl">الاسْتِعَاذَة</span>— аль-исти'аза).</li><li>Формулировка намерения по пяти элементам.</li><li>Заряжение через повторение (40–100 раз в сердце).</li><li>Направление взгляда широким лучом.</li><li>Защита себя (Аят аль-Курси, 3 суры, «Аркиний»).</li><li>Защита места.</li><li>Физическая проверка пациента.</li></ol>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-4-universalnyy-cikl-zaklinaniya-9-stupeney">Глава 4. Универсальный цикл заклинания: 9 ступеней</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnaya-struktura-cikla-dlya-kazhdogo-organa">4.1. Полная структура цикла для каждого органа</h3>
+<p>Принцип: лечение снизу вверх. Если есть постоянное присутствие джинна (<span class="ar-inline" lang="ar" dir="rtl">مَسّ</span>— масс) — сначала читаются аяты изгнания.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-1-ayaty-dlya-organa-ayatul-udv"><span class="num">4.2.</span>СТУПЕНЬ 1. Аяты для органа (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ العُضْو</span>— аятуль-'удв)</h3>
+<p>Читается один или несколько аятов Корана, в которых упоминается данный орган.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-2-svyazka-perehod-volevoy-akt-zaklinaniya"><span class="num">4.3.</span>СТУПЕНЬ 2. Связка-переход: волевой акт заклинания</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي [اسم المريض / نَفْسِي] مِنْ كُلِّ عَيْنٍ وَحَسَدٍ وَسِحْرٍ فِي [العُضْو]</div>
+  <p>С именем Аллаха заклинаю [больного / себя] от каждого сглаза, зависти и колдовства в [орган]</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>СТУПЕНЬ 3. Аяты разрушения сглаза (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ انْفِجَارِ العَيْن</span>— аяту инфиджариль-'айн)</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَفَجَّرْنَا فِيهَا مِنَ الْعُيُونِ</div>
+  <figcaption class="ayah-tr">И Мы извергли в ней источники</figcaption>
+  <div class="source">Источник: Сура «Йа Син», аят 34</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، تُفَجَّرُ كُلُّ عَيْنٍ فِي [العُضْو]: عَيْنُ إِعْجَابٍ، عَيْنُ حَسَدٍ، كُلُّ عَيْنٍ نَظَرَتْ وَلَمْ تُبَارِكْ</div>
+  <p>С именем Аллаха Великого, Величайшего, разрушается каждый сглаз в [орган]: сглаз восхищения, сглаз зависти, каждый сглаз того, кто посмотрел и не благословил</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-4-ayaty-razvyazyvaniya-uzlov-ayatu-fakkil-ukad"><span class="num">4.4.</span>СТУПЕНЬ 4. Аяты развязывания узлов (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ فَكِّ العُقَد</span>— аяту факкиль-'укад)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي</div>
+  <figcaption class="ayah-tr">Господь мой, раскрой мне грудь, облегчи моё дело и развяжи узел с моего языка</figcaption>
+  <div class="source">Источник: Сура «Та Ха», аяты 25-27</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، تَنْحَلُّ كُلُّ عُقْدَةِ عَيْنٍ وَحَسَدٍ فِي [العُضْو]، تَنْحَلُّ كُلُّ عُقْدَةِ سِحْرٍ فِي [العُضْو]</div>
+  <p>С именем Аллаха Великого, Величайшего, развязывается каждый узел сглаза и зависти в [орган], развязывается каждый узел колдовства в [орган]</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>СТУПЕНЬ 5. Аяты аннулирования колдовства (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ إِبْطَالِ السِّحْر</span>— аяту ибталис-сихр)</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنْ أَلْقِ عَصَاكَ ۖ فَإِذَا هِيَ تَلْقَفُ مَا يَأْفِكُونَ ۞ فَوَقَعَ الْحَقُّ وَبَطَلَ مَا كَانُوا يَعْمَلُونَ</div>
+  <figcaption class="ayah-tr">И внушили Мы Мусе: «Брось свой посох!» И вот — он поглощает то, что они измышляют. Истина свершилась, и тщетным оказалось то, что они делали</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аяты 117-118</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، يُبْطَلُ كُلُّ سِحْرٍ فِي [العُضْو]، يُبْطَلُ كُلُّ سِحْرٍ مَأْكُولٍ وَمَشْرُوبٍ وَمَرْشُوشٍ فِي [العُضْو]</div>
+  <p>С именем Аллаха Великого, Величайшего, аннулируется всякое колдовство в [орган], аннулируется всякое колдовство съеденное, выпитое и рассыпанное в [орган]</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-6-snyatie-okov-cepey-i-zamkov"><span class="num">4.5.</span>СТУПЕНЬ 6. Снятие оков, цепей и замков</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَيَضَعُ عَنْهُمْ إِصْرَهُمْ وَالْأَغْلَالَ الَّتِي كَانَتْ عَلَيْهِمْ</div>
+  <figcaption class="ayah-tr">И снимает с них их бремя и оковы, которые были на них</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аят 157</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ الفَتَّاحِ، تُفْتَحُ كُلُّ أَغْلَالٍ وَسَلَاسِلَ وَأَقْفَالٍ فِي [العُضْو]. اللَّهُمَّ فُكَّ كُلَّ جِنِّيٍّ مُقَيَّدٍ فِي [العُضْو]</div>
+  <p>С именем Аллаха Открывающего, открываются все оковы, цепи и замки в [орган]. О Аллах, освободи каждого связанного джинна в [орган]</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-7-zaklinanie-na-izgnanie-at-tahridzh"><span class="num">4.6.</span>СТУПЕНЬ 7. Заклинание на изгнание (<span class="ar-inline" lang="ar" dir="rtl">التَّحْرِيج</span>— ат-тахридж)</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ، أُقْسِمُ عَلَى كُلِّ مَنْ سَكَنَ فِي [العُضْو] مِنْ خُدَّامِ العَيْنِ وَالحَسَدِ وَالسِّحْرِ وَجُنُودِهِمْ وَأَعْوَانِهِمْ: اخْرُجُوا مِنَ [العُضْو] بِسُلْطَانِ اللهِ وَرَسُولِهِ</div>
+  <p>С именем Аллаха, заклинаю каждого, кто поселился в [орган] из числа слуг сглаза, зависти и колдовства, их солдат и помощников: выходите из [орган] властью Аллаха и Его Посланника</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">اخْرُجْ مِنْهَا فَإِنَّكَ رَجِيمٌ</div>
+  <figcaption class="ayah-tr">Выйди из неё, ибо ты изгнанный</figcaption>
+  <div class="source">Источник: Сура «аль-Хиджр», аят 34</div>
+</figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-8-rot-otkryt-ayaty-vytyagivaniya-ayatu-as-sahb"><span class="num">4.7.</span>СТУПЕНЬ 8. Рот открыт — Аяты вытягивания (<span class="ar-inline" lang="ar" dir="rtl">آيَاتُ السَّحْب</span>— аяту ас-сахб)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِذِ الْأَغْلَالُ فِي أَعْنَاقِهِمْ وَالسَّلَاسِلُ يُسْحَبُونَ</div>
+  <figcaption class="ayah-tr">Когда оковы на их шеях и цепи — их тянут</figcaption>
+  <div class="source">Источник: Сура «Гафир», аят 71</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، يُسْحَبُ كُلُّ جِنٍّ، يُسْحَبُ كُلُّ عُقْدَةٍ، يُسْحَبُ كُلُّ عَيْنٍ، يُسْحَبُ كُلُّ أَذًى مِنَ [العُضْو] بِإِذْنِ اللهِ</div>
+  <p>С именем Аллаха Великого, Величайшего, вытягивается каждый джинн, каждый узел, каждый сглаз, каждый вред из [орган] с дозволения Аллаха</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="stupen-9-zavershayuschaya-formula-pechat-20-30-raz"><span class="num">4.8.</span>СТУПЕНЬ 9. Завершающая формула-печать (20–30 раз)</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي [العُضْو] اللهُ يَشْفِي</div>
+  <p>С именем Аллаха заклинаю [орган], Аллах исцеляет</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-5-polnoe-primenenie-po-kazhdomu-organu">Глава 5. Полное применение по каждому органу</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="nogi-al-ardzhul">5.1. Ноги (<span class="ar-inline" lang="ar" dir="rtl">الأَرْجُل</span>— аль-арджуль)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">يَوْمَ تَشْهَدُ عَلَيْهِمْ أَلْسِنَتُهُمْ وَأَيْدِيهِمْ وَأَرْجُلُهُمْ بِمَا كَانُوا يَعْمَلُونَ</div>
+  <figcaption class="ayah-tr">В тот день их языки, руки и ноги будут свидетельствовать против них о том, что они делали</figcaption>
+  <div class="source">Источник: Сура «ан-Нур», аят 24</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي الأَرْجُلَ مِنْ كُلِّ عَيْنٍ وَحَسَدٍ وَسِحْرٍ مَرْشُوشٍ</div>
+  <p>С именем Аллаха заклинаю ноги от каждого сглаза, зависти и рассыпанного колдовства</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="matka-intimnye-mesta-ar-rahim">5.2. Матка / Интимные места (<span class="ar-inline" lang="ar" dir="rtl">الرَّحِم</span>— ар-рахим)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">يَعْلَمُ مَا تَغِيضُ الْأَرْحَامُ وَمَا تَزْدَادُ وَكُلُّ شَيْءٍ عِنْدَهُ بِمِقْدَارٍ</div>
+  <figcaption class="ayah-tr">Он знает, что убывает в утробах и что прибавляется, и у Него всё по мере</figcaption>
+  <div class="source">Источник: Сура «ар-Ра'д», аят 8</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي الرَّحِمَ مِنْ كُلِّ عَيْنٍ وَحَسَدٍ وَسِحْرٍ وَعَاشِقٍ</div>
+  <p>С именем Аллаха заклинаю матку от каждого сглаза, зависти, колдовства и влюблённого джинна</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Против влюблённого джинна:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَحْرِقِ العَاشِقَ وَدَمِّرْ دُرُوعَهُ وَتَحْصِينَاتِهِ</div>
+  <p>О Аллах, сожги влюблённого джинна, уничтожь его доспехи и укрепления</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zhivot-al-batn">5.3. Живот (<span class="ar-inline" lang="ar" dir="rtl">البَطْن</span>— аль-батн)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّمَا يَأْكُلُونَ فِي بُطُونِهِمْ نَارًا</div>
+  <figcaption class="ayah-tr">Они поглощают в своих животах только огонь</figcaption>
+  <div class="source">Источник: Сура «аль-Бакара», аят 174</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي البَطْنَ مِنْ كُلِّ سِحْرٍ مَأْكُولٍ وَمَشْرُوبٍ وَكُلِّ عَيْنٍ</div>
+  <p>С именем Аллаха заклинаю живот от каждого колдовства съеденного и выпитого и каждого сглаза</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="grud-as-sadr">5.4. Грудь (<span class="ar-inline" lang="ar" dir="rtl">الصَّدْر</span>— ас-садр)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ</div>
+  <figcaption class="ayah-tr">Разве Мы не раскрыли тебе грудь твою?</figcaption>
+  <div class="source">Источник: Сура «аш-Шарх», аят 1</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي الصَّدْرَ مِنْ كُلِّ عَيْنٍ وَحَسَدٍ وَسِحْرٍ</div>
+  <p>С именем Аллаха заклинаю грудь от каждого сглаза, зависти и колдовства</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="plechi-i-ruki-al-aktaf-val-yadayn">5.5. Плечи и руки (<span class="ar-inline" lang="ar" dir="rtl">الأَكْتَاف وَالْيَدَيْن</span>— аль-актаф валь-ядайн)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَكُلَّ إِنسَانٍ أَلْزَمْنَاهُ طَائِرَهُ فِي عُنُقِهِ</div>
+  <figcaption class="ayah-tr">Каждому человеку Мы прикрепили его судьбу к его шее</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 13</div>
+</figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="spina-az-zahr">5.6. Спина (<span class="ar-inline" lang="ar" dir="rtl">الظَّهْر</span>— аз-захр)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">يَوْمَ تُكْوَىٰ بِهَا جِبَاهُهُمْ وَجُنُوبُهُمْ وَظُهُورُهُمْ</div>
+  <figcaption class="ayah-tr">В тот день, когда их лбы, бока и спины будут клеймиться ими</figcaption>
+  <div class="source">Источник: Сура «ат-Тауба», аят 35</div>
+</figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="golova-ar-ra-s">5.7. Голова (<span class="ar-inline" lang="ar" dir="rtl">الرَّأْس</span>— ар-ра'с)</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَاشْتَعَلَ الرَّأْسُ شَيْبًا</div>
+  <figcaption class="ayah-tr">И воспылала голова сединой</figcaption>
+  <div class="source">Источник: Сура «Марьям», аят 4</div>
+</figure>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، تُفَجَّرُ كُلُّ عَيْنٍ فِي الرَّأْسِ: عَيْنُ الحِفْظِ، عَيْنُ الذَّاكِرَةِ، عَيْنُ الحِكْمَةِ، عَيْنُ السَّكِينَةِ</div>
+  <p>С именем Аллаха Великого, Величайшего, разрушается каждый сглаз в голове: сглаз на запоминание, на память, на мудрость, на спокойствие</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-6-specialnye-operacii">Глава 6. Специальные операции</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="izgnanie-ifrita-i-moschnyh-dzhinnov">6.1. Изгнание ифрита и мощных джиннов</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">نَوَيْتُ بِاسْمِ اللهِ أَنْ أُخْرِجَ كُلَّ جِنِّيٍّ عَاتٍ وَمَارِدٍ وَإِفْرِيتٍ مِنْ جَسَدِ [اسم المريض] بِسُلْطَانِ اللهِ وَقُوَّةِ كَلَامِهِ</div>
+  <p>Намереваюсь именем Аллаха изгнать каждого дерзкого, мятежного джинна и ифрита из тела [имя] властью Аллаха и силой Его слов</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">قَالَ اخْرُجْ مِنْهَا مَذْءُومًا مَدْحُورًا ۖ لَمَنْ تَبِعَكَ مِنْهُمْ لَأَمْلَأَنَّ جَهَنَّمَ مِنْكُمْ أَجْمَعِينَ</div>
+  <figcaption class="ayah-tr">Сказал: «Выйди из неё униженным, отверженным. Тех из них, кто последует за тобой, Я непременно заполню Геенну вами всеми»</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аят 18</div>
+</figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-slozhnyh-vidov-koldovstva">6.2. Аннулирование сложных видов колдовства</h3>
+<p>Закопанное колдовство:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، يُبْطَلُ كُلُّ سِحْرٍ مَدْفُونٍ، يُبْطَلُ كُلُّ سِحْرٍ مَعْقُودٍ، يُبْطَلُ كُلُّ سِحْرٍ مُعَلَّقٍ</div>
+  <p>С именем Аллаха Великого, Величайшего, аннулируется всякое закопанное колдовство, всякое завязанное колдовство, всякое подвешенное колдовство</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Кладбищенское колдовство:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، يُبْطَلُ كُلُّ سِحْرٍ مِنْ سِحْرِ المَقَابِرِ، يُبْطَلُ كُلُّ عَمَلٍ عُمِلَ فِي المَقَابِرِ، يُبْطَلُ كُلُّ نَفْثٍ مِنْ نَفَثَاتِ السَّحَرَةِ</div>
+  <p>С именем Аллаха Великого, Величайшего, аннулируется всякое колдовство из колдовства кладбищ, аннулируется всякое дело, сделанное на кладбищах, аннулируется всякое дуновение из дуновений колдунов</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="rabota-s-dzhinnom-lyubovnikom-al-ashik">6.3. Работа с джинном-любовником (<span class="ar-inline" lang="ar" dir="rtl">العَاشِق</span>— аль-'ашик)</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ العَظِيمِ الأَعْظَمِ، أَحْرِقْ كُلَّ عَاشِقٍ مِنَ الجِنِّ فِي جَسَدِ [اسم المريض]. اللَّهُمَّ أَحْرِقْهُ بِنَارِ آيَاتِكَ، وَدَمِّرْ دُرُوعَهُ، وَاقْطَعْ كُلَّ حَبْلٍ بَيْنَهُ وَبَيْنَ هَذَا الجَسَدِ</div>
+  <p>С именем Аллаха Великого, Величайшего, сожги каждого влюблённого джинна в теле [имя]. О Аллах, сожги его огнём Твоих аятов, уничтожь его доспехи, разорви всякую связь между ним и этим телом</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-7-nachityvanie-vody-i-masla">Глава 7. Начитывание воды и масла</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaklinanie-vody-i-masla-metodom-volevogo-akta">7.1. Заклинание воды и масла методом волевого акта</h3>
+<p>Вода от сглаза:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي المَاءَ مِنَ العَيْنِ. اللَّهُمَّ اجْعَلْ هَذَا المَاءَ شِفَاءً مِنَ العَيْنِ</div>
+  <p>С именем Аллаха заклинаю воду от сглаза. О Аллах, сделай эту воду исцелением от сглаза</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Вода от колдовства:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي المَاءَ مِنَ السِّحْرِ. اللَّهُمَّ اجْعَلْ هَذَا المَاءَ شِفَاءً مِنَ السِّحْرِ</div>
+  <p>С именем Аллаха заклинаю воду от колдовства. О Аллах, сделай эту воду исцелением от колдовства</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Вода от джинна:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِي المَاءَ مِنَ المَسِّ وَالجِنِّ. اللَّهُمَّ اجْعَلْ هَذَا المَاءَ حِفْظًا مِنَ المَسِّ وَالجِنِّ</div>
+  <p>С именем Аллаха заклинаю воду от прикосновения и джинна. О Аллах, сделай эту воду защитой от прикосновения и джинна</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Для масла заменяй<span class="ar-inline" lang="ar" dir="rtl">المَاء</span>(аль-ма') на<span class="ar-inline" lang="ar" dir="rtl">الزَّيْت</span>(аз-зайт).</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-8-vizualiziruyuschaya-rukya">Глава 8. Визуализирующая рукья</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="metod-vizualizacii-kak-dopolnenie">8.1. Метод визуализации как дополнение</h3>
+<p>Этот метод дополняет основной цикл. Он не заменяет пророческую рукью. Видит только пациент, а не раки. Если раки видит — он сам поражён.</p>
+<p>Если не знаешь конкретных аятов для увиденного образа:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ، يُبْطَلُ هَذَا</div>
+  <p>С именем Аллаха, пусть это будет аннулировано</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-9-vnutrennie-klyuchi-mastera">Глава 9. Внутренние ключи мастера</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="serdechnoe-chtenie-kak-fundament">9.1. Сердечное чтение как фундамент</h3>
+<p>Весь текст заклинания можно сначала читать внутри сердца — без движения языка и губ. Нечисть реагирует на звук. Внутреннее чтение лишает её возможности зацепиться за вибрацию.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="fokus-vnimaniya-i-perifericheskoe-zrenie">9.2. Фокус внимания и периферическое зрение</h3>
+<p>Где внимание — там и результат. Если ты говоришь «Аркийка» и думаешь о печени, но внимание уплыло на плечо — сила уйдёт в плечо. Используй периферическое зрение: смотри не на точку, а сквозь неё, охватывая всю область.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="telo-kak-poddannyy-prikaz-a-ne-prosba">9.3. Тело как подданный: приказ, а не просьба</h3>
+<p>Когда направляешь «Аркийка» на орган, делай это с внутренним чувством правителя, который отдаёт приказ подчинённому. Тело — подданный Аллаха. Оно обязано подчиниться Его словам.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-10-polnyy-protokol-seansa">Глава 10. Полный протокол сеанса</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poshagovoe-provedenie-seansa-ot-nachala-do-konca">10.1. Пошаговое проведение сеанса от начала до конца</h3>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vudu-ritualnaya-chistota">1. Вуду. Ритуальная чистота.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="uedinenie-telefon-vyklyuchen">2. Уединение. Телефон выключен.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="pribezhische-ot-shaytana-3-raza">3. Прибежище от шайтана (3 раза).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="formulirovka-namereniya-5-elementov">4. Формулировка намерения (5 элементов).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="zaryazhenie-namereniya-40-100-povtoreniy-v-serdce">5. Заряжение намерения (40–100 повторений в сердце).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="zaschita-sebya-ayat-al-kursi-3-sury-arkiniy">6. Защита себя (Аят аль-Курси + 3 суры + «Аркиний»).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="zaschita-mesta">7. Защита места.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="diagnostika-i-fizicheskaya-proverka">8. Диагностика и физическая проверка.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="esli-est-mass-ayaty-izgnaniya-pervymi">9. Если есть масс — аяты изгнания первыми.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="osnovnoy-cikl-snizu-vverh-nogi-matka-zhivot-grud-plechi-spin">10. Основной цикл снизу вверх (Ноги -&gt; Матка -&gt; Живот -&gt; Грудь -&gt; Плечи -&gt; Спина -&gt; Голова).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="povtornaya-proverka-tochek">11. Повторная проверка точек.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="rekomendacii-pacientu">12. Рекомендации пациенту.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="pechat-dlya-sebya-20-30-raz">13. Печать для себя (20-30 раз).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sohranenie-namereniya-posle-seansa">14. Сохранение намерения после сеанса.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-11-svodnye-tablicy">Глава 11. Сводные таблицы</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="bystraya-spravka-po-organam">11.1. Быстрая справка по органам</h3>
+<figure class="table"><table><thead><tr><th>Орган</th><th>Арабский</th><th>Транскрипция</th><th>Основной тип поражения</th></tr></thead><tbody><tr><td>Ноги</td><td><span class="ar-inline" lang="ar" dir="rtl">الأَرْجُل</span></td><td>аль-арджуль</td><td>Рассыпанное колдовство, сглаз на пропитание</td></tr><tr><td>Матка</td><td><span class="ar-inline" lang="ar" dir="rtl">الرَّحِم</span></td><td>ар-рахим</td><td>Джинн-любовник, колдовство на разлуку</td></tr><tr><td>Живот</td><td><span class="ar-inline" lang="ar" dir="rtl">البَطْن</span></td><td>аль-батн</td><td>Съеденное/выпитое колдовство</td></tr><tr><td>Грудь</td><td><span class="ar-inline" lang="ar" dir="rtl">الصَّدْر</span></td><td>ас-садр</td><td>Сглаз и зависть</td></tr><tr><td>Плечи</td><td><span class="ar-inline" lang="ar" dir="rtl">الأَكْتَاف</span></td><td>аль-актаф</td><td>Накопленный сглаз, джинны-скитальцы</td></tr><tr><td>Спина</td><td><span class="ar-inline" lang="ar" dir="rtl">الظَّهْر</span></td><td>аз-захр</td><td>Концентрация всех видов поражений</td></tr><tr><td>Голова</td><td><span class="ar-inline" lang="ar" dir="rtl">الرَّأْس</span></td><td>ар-ра'с</td><td>Все виды: магия, сглаз, зависть, узлы</td></tr></tbody></table></figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="bystraya-spravka-po-tipam-koldovstva">11.2. Быстрая справка по типам колдовства</h3>
+<figure class="table"><table><thead><tr><th>Тип</th><th>Арабский</th><th>Транскрипция</th></tr></thead><tbody><tr><td>Сглаз</td><td><span class="ar-inline" lang="ar" dir="rtl">العَيْن</span></td><td>аль-'айн</td></tr><tr><td>Зависть</td><td><span class="ar-inline" lang="ar" dir="rtl">الحَسَد</span></td><td>аль-хасад</td></tr><tr><td>Съеденное колдовство</td><td><span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ المَأْكُول</span></td><td>ас-сихр аль-ма'куль</td></tr><tr><td>Выпитое колдовство</td><td><span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ المَشْرُوب</span></td><td>ас-сихр аль-машруб</td></tr><tr><td>Рассыпанное колдовство</td><td><span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ المَرْشُوش</span></td><td>ас-сихр аль-маршуш</td></tr><tr><td>Закопанное колдовство</td><td><span class="ar-inline" lang="ar" dir="rtl">السِّحْرُ المَدْفُون</span></td><td>ас-сихр аль-мадфун</td></tr><tr><td>Кладбищенское колдовство</td><td><span class="ar-inline" lang="ar" dir="rtl">سِحْرُ المَقَابِر</span></td><td>сихр аль-макабир</td></tr><tr><td>Колдовство на разлуку</td><td><span class="ar-inline" lang="ar" dir="rtl">سِحْرُ التَّفْرِيق</span></td><td>сихр ат-тафрик</td></tr><tr><td>Прикосновение джинна</td><td><span class="ar-inline" lang="ar" dir="rtl">المَسّ</span></td><td>аль-масс</td></tr><tr><td>Джинн-любовник</td><td><span class="ar-inline" lang="ar" dir="rtl">العَاشِق</span></td><td>аль-'ашик</td></tr></tbody></table></figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="universalnye-formuly-zaklinaniya">11.3. Универсальные формулы заклинания</h3>
+<p>Самозаклинание:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِينِي مِنَ [النَّدُع] فِي [العُضْو]</div>
+  <p>С именем Аллаха заклинаю себя от [недуг] в [орган]</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Завершающая печать:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِينِي اللهُ يَشْفِينِي</div>
+  <p>С именем Аллаха заклинаю себя, Аллах исцеляет меня</p>
+  <div class="source">Источник: Метод Хитаб аль-Исаба</div>
+</aside>
+<p>Полная мольба Пророка:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ البَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+  <p>О Аллах, Господь людей! Удали страдание, исцели — Ты Исцеляющий. Нет исцеления, кроме Твоего исцеления. Исцеление, которое не оставит болезни</p>
+  <div class="source">Источник: аль-Бухари, № 5675; Муслим, № 2191</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-12-predosterezheniya-i-etika">Глава 12. Предостережения и этика</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chego-nelzya-delat">12.1. Чего нельзя делать</h3>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-razgovarivay-s-dzhinnami-razrushay-magiyu">1. Не разговаривай с джиннами. Разрушай магию.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-davay-fetvu-ob-etom-metode-esli-ne-izuchil-ego">2. Не давай фетву об этом методе, если не изучил его.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-obuchay-novichkov-vizualiziruyuschey-ruke-bez-podgotovki">3. Не обучай новичков визуализирующей рукье без подготовки.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-vpaday-v-zapretnoe-net-mesta-shirku-i-talismanam">4. Не впадай в запретное. Нет места ширку и талисманам.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-zabyvay-o-medicine-napravlyay-k-vracham-pri-neobhodimosti">5. Не забывай о медицине. Направляй к врачам при необходимости.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-hvalis-posle-seansa-skazhi-allah-iscelil">6. Не хвались после сеанса. Скажи: «Аллах исцелил».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-otchaivaysya-esli-seans-ne-udalsya-prover-namerenie">7. Не отчаивайся, если сеанс не удался. Проверь намерение.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-sravnivay-sebya-s-drugimi-raki">8. Не сравнивай себя с другими раки.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="pey-vodu-otdyhay-posle-seansa">9. Пей воду, отдыхай после сеанса.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="otvetstvennost-za-pravilnoe-primenenie-na-uchenike">10. Ответственность за правильное применение — на ученике.</h2>
+<p>Заключение</p>
+<p>Суть метода «Хитаб аль-Исаба — Влияние волей» строится на трёх столпах: волевое действие, точное обращение к органу и упование на Аллаха.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِنِينَ</div>
+  <figcaption class="ayah-tr">И Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 82</div>
+</figure>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنْفُسِهِمْ</div>
+  <figcaption class="ayah-tr">Поистине, Аллах не меняет положения людей, пока они не изменят самих себя</figcaption>
+  <div class="source">Источник: Сура «ар-Ра'д», аят 11</div>
+</figure>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ۚ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ</div>
+  <figcaption class="ayah-tr">Успех мой — только от Аллаха. На Него я уповаю и к Нему обращаюсь</figcaption>
+  <div class="source">Источник: Сура «Худ», аят 88</div>
+</figure>
+<p>Да исцелит Аллах каждого, кто использует этот метод с искренним намерением и упованием на Него.</p>
+<p>Валлаху а'лям (А Аллах знает лучше).</p>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Хитаб аль-Исаба: Мастерское руководство по разрушению джиннов и аннулированию колдовства · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<style>
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+[id] { scroll-margin-top: 100px; }
+a[href^="#"] { cursor: pointer; }
+</style>
+<script>
+(function(){
+  var offset = 100;
+  function scrollToId(id) {
+    var el = document.getElementById(id);
+    if (!el) return false;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return true;
+  }
+  // Обработчик на весь документ
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (link) {
+      var href = link.getAttribute('href');
+      if (href && href.length > 1) {
+        e.preventDefault();
+        var id = href.substring(1);
+        if (scrollToId(id)) {
+          try { history.pushState(null, '', href); } catch(err) {}
+        }
+      }
+    }
+  }, true);
+  // При загрузке
+  setTimeout(function() {
+    if (location.hash && location.hash.length > 1) {
+      scrollToId(location.hash.substring(1));
+    }
+  }, 100);
+})();
+</script>
+</body>
+</html>
