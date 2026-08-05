@@ -1,0 +1,2152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Полный курс чистки и защиты дома от духовных недугов. Метод «Влияние волей» и формула «У'изу аль-байт билляхи»</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #fcfaf2;
+  --paper-alt: #f2f6f0;
+  --ink: #192c23;
+  --ink-soft: #486056;
+  --rule: #ddd6c4;
+  --accent: #1f6144;
+  --accent-soft: #e9f1eb;
+  --gold: #b38a2c;
+  --serif: "PT Serif", "Merriweather", Georgia, serif;
+  --sans: Inter, system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(25,44,35,.06);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  font-size: var(--base);
+}
+
+/* Отступ для якорей — чтобы заголовок не перекрывался при прокрутке */
+[id] {
+  scroll-margin-top: 100px;
+  scroll-snap-align: start;
+}
+
+/* Специально для заголовков */
+h2[id], h3[id], h4[id], h5[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Для секций с id */
+section[id], .chapter[id], .section[id] {
+  scroll-margin-top: 100px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  /* Мобильная читаемость */
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля: база ---- */
+.bismillah-slot {
+  display: flex;
+  width: 100%;
+  direction: ltr;
+}
+.bismillah {
+  display: block;
+  max-width: 100%;
+  font-family: var(--arabic);
+  direction: rtl;
+  font-size: 1.75em;
+  color: var(--gold);
+  line-height: 2.1;
+  margin: 0;
+  letter-spacing: 0.02em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Позиции */
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page {
+  margin-bottom: 3rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+.bism-pos-center-page::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: .8rem auto 0;
+  opacity: .45;
+}
+.title-page-bism-center {
+  padding-top: 3rem;
+}
+.title-page-bism-center .bismillah-slot {
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+.title-page-bism-center .title-page-body {
+  text-align: center;
+}
+
+/* Выравнивание */
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+
+/* Басмаля без арабского направления (например, русская транслитерация) */
+.bismillah:not([dir="rtl"]) {
+  font-family: var(--serif);
+  font-style: italic;
+  direction: ltr;
+  letter-spacing: .04em;
+}
+
+.institution {
+  font-family: var(--sans);
+  font-size: .76em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+}
+
+.book-title {
+  font-family: var(--title-font);
+  font-size: 2.5em;
+  line-height: 1.22;
+  font-weight: 700;
+  margin: 0 0 .7rem;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+.book-subtitle {
+  font-size: 1.15em;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 1.8rem;
+  font-weight: 400;
+}
+
+.rule-orn {
+  width: 160px;
+  height: 14px;
+  margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.8em;
+  height: 1em;
+  line-height: .85;
+  background: var(--paper);
+  color: var(--gold);
+  font-size: .85rem;
+}
+
+.book-author {
+  font-size: 1.08em;
+  font-weight: 700;
+  margin: 0 0 .4rem;
+  letter-spacing: .02em;
+}
+.book-meta {
+  font-family: var(--sans);
+  font-size: .84em;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.epigraph {
+  max-width: 38ch;
+  margin: 2.8rem auto 0;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .96em;
+  line-height: 1.5;
+}
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem;
+  padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans);
+  font-size: .78em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 1.3rem;
+  font-weight: 600;
+  border: 0;
+  padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  gap: .6rem;
+  align-items: baseline;
+  padding: .15rem 0;
+  border-radius: 2px;
+  transition: color .15s, background .15s;
+}
+.toc a:hover {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-radius: 3px;
+  padding-left: .3rem;
+  margin-left: -.3rem;
+}
+.toc .num {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  min-width: 2.8em;
+  font-size: .9em;
+  font-weight: 500;
+}
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 {
+  font-family: var(--title-font);
+  line-height: 1.32;
+  text-wrap: balance;
+}
+
+.chapter > h2 {
+  font-size: 1.65em;
+  font-weight: 700;
+  margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.chapter > h2 .num,
+.section > h3 .num,
+.subsection > h4 .num {
+  color: var(--accent);
+  font-weight: 400;
+  margin-right: .55em;
+  font-variant-numeric: tabular-nums;
+}
+
+.section > h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 2.6rem 0 1rem;
+  color: var(--ink);
+}
+.subsection > h4 {
+  font-size: 1.08em;
+  font-weight: 700;
+  margin: 1.9rem 0 .8rem;
+  color: var(--ink-soft);
+}
+.chapter:first-of-type > h2 { margin-top: 0; }
+
+section[data-kind="front"] > h2,
+section[data-kind="back"] > h2 {
+  text-align: center;
+  border-bottom: 0;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+section[data-kind="front"] > h2::after,
+section[data-kind="back"] > h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1.5px;
+  background: var(--gold);
+  margin: .9rem auto 0;
+  border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem;
+  text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p,
+blockquote + p, .toc + p, figure + p,
+ul + p, ol + p, table + p,
+.callout + p, .ayah + p, .hadith + p, .dua + p {
+  text-indent: 0;
+}
+
+
+
+.lead {
+  font-size: 1.07em;
+  color: var(--ink-soft);
+  text-indent: 0;
+  line-height: 1.65;
+}
+
+strong { font-weight: 700; }
+em { font-style: italic; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+
+a {
+  color: var(--accent);
+  text-underline-offset: .22em;
+  text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+a:hover { color: var(--gold); }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, "Cascadia Code", monospace;
+  font-size: .86em;
+  background: var(--paper-alt);
+  padding: .12em .4em;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+}
+
+hr, .divider {
+  border: 0;
+  text-align: center;
+  margin: 2.6rem 0;
+  color: var(--gold);
+}
+.divider::before {
+  content: "❦   ❦   ❦";
+  letter-spacing: .8em;
+  font-size: .65em;
+  opacity: .75;
+}
+
+/* ========== СПИСКИ ========== */
+ul, ol {
+  margin: 1rem 0 1.2rem;
+  padding-left: 1.7rem;
+}
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0;
+  padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source,
+blockquote.quote footer {
+  display: block;
+  margin-top: .7rem;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: .78em;
+  color: var(--ink-soft);
+  letter-spacing: .03em;
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0;
+  padding: 1.8rem 2rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+.ayah::before,
+.ayah::after {
+  content: "";
+  position: absolute;
+  left: 1.6rem;
+  right: 1.6rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: .45;
+}
+.ayah::before { top: .65rem; }
+.ayah::after { bottom: .65rem; }
+
+.ar-block {
+  font-family: var(--arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 2.3;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+
+.ayah-tr {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: .97em;
+  text-indent: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.ayah .source {
+  margin-top: .7rem;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: .8em;
+}
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС ========== */
+.hadith {
+  margin: 1.9rem 0;
+  padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--accent);
+  border-radius: 5px;
+  background: var(--paper-alt);
+  position: relative;
+}
+.hadith .label,
+.dua .label,
+.callout .label {
+  display: block;
+  font-family: var(--sans);
+  font-size: .66em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .65rem;
+  font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+
+/* ========== ДУА ========== */
+.dua {
+  margin: 1.9rem 0;
+  padding: 1.5rem 1.8rem;
+  background: var(--paper-alt);
+  border: 1.5px dashed var(--gold);
+  border-radius: 8px;
+  text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+
+/* ========== ПРИМЕЧАНИЕ ========== */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.4rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  font-size: .94em;
+}
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline {
+  font-family: var(--arabic);
+  font-size: 1.2em;
+  line-height: 1.9;
+  unicode-bidi: isolate;
+  direction: rtl;
+}
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] {
+  font-family: var(--arabic);
+  font-size: 1.35em;
+  line-height: 2.2;
+  text-indent: 0;
+}
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table {
+  margin: 2.2rem 0;
+  overflow-x: auto;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+figcaption {
+  font-family: var(--sans);
+  font-size: .78em;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: .7rem;
+  font-style: italic;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: .92em;
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+th, td {
+  border: 1px solid var(--rule);
+  padding: .6rem .8rem;
+  text-align: left;
+  vertical-align: top;
+}
+thead th {
+  background: var(--paper-alt);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: .82em;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--paper-alt) 60%, transparent);
+}
+
+/* ========== СНОСКИ ========== */
+sup.fn-ref a {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: .82em;
+  padding: 0 .1em;
+  font-weight: 600;
+}
+.footnotes {
+  margin-top: 4rem;
+  padding-top: 1.4rem;
+  border-top: 1.5px solid var(--rule);
+  font-size: .85em;
+  color: var(--ink-soft);
+}
+.footnotes h2,
+.bibliography h2 {
+  font-family: var(--sans);
+  font-size: .76em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num {
+  color: var(--accent);
+  margin-right: .55em;
+  font-weight: 700;
+}
+
+/* ========== БИБЛИОГРАФИЯ ========== */
+.bibliography ol {
+  list-style: none;
+  counter-reset: bib;
+  padding-left: 0;
+}
+.bibliography li {
+  counter-increment: bib;
+  padding-left: 2.8rem;
+  position: relative;
+  margin: .7rem 0;
+  font-size: .94em;
+  line-height: 1.55;
+}
+.bibliography li::before {
+  content: counter(bib) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem;
+  padding-top: 1.4rem;
+  border-top: 1.5px solid var(--rule);
+  font-family: var(--sans);
+  font-size: .72em;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page {
+    padding: 2.2rem 1.4rem 3rem;
+  }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .35rem 0; }
+  .ayah { padding: 1.2rem 1rem; }
+  .hadith { padding: 1.1rem 1.1rem; }
+  .dua { padding: 1.2rem 1.1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  table { min-width: 36rem; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .section > h3 { font-size: 1.12em; }
+  .subsection > h4 { font-size: 1.02em; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+  .bismillah-slot { margin-bottom: 1.8rem; }
+}
+
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+  .toc, .ayah, .hadith, .dua { padding: .9rem .7rem; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page {
+  size: A4;
+  margin: 22mm 20mm 22mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--sans);
+    font-size: 9pt;
+    color: var(--ink-soft);
+  }
+}
+@media print {
+  body {
+    background: #fff;
+    font-size: 11.5pt;
+    line-height: 1.55;
+  }
+  .page {
+    box-shadow: none;
+    padding: 0;
+    max-width: none;
+    min-height: 0;
+  }
+  .wrap { max-width: none; }
+  .title-page {
+    page-break-after: always;
+    border-bottom: 0;
+  }
+  .title-page::after { display: none; }
+  .toc {
+    page-break-after: always;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  section[data-kind="front"],
+  section[data-kind="back"] { page-break-before: always; }
+
+  h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { page-break-inside: avoid; }
+
+  a { color: inherit; text-decoration: none; }
+  .toc a::after { content: ""; }
+  .doc-footer { display: none; }
+
+  .ayah { background: none; border-color: var(--rule); }
+  .hadith { background: none; }
+  .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" data-align="center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Полный курс чистки и защиты дома от духовных недугов. Метод «Влияние волей» и формула «У'изу аль-байт билляхи»</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2025</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#glava-1-vvedenie"><span class="num"></span><span class="lbl">Глава 1. Введение</span></a><ol><li class="toc-l2">
+      <a href="#o-dome-v-islame"><span class="num"></span><span class="lbl">1.1. О доме в Исламе</span></a></li>
+<li class="toc-l2">
+      <a href="#zachem-napisan-etot-kurs"><span class="num"></span><span class="lbl">1.2. Зачем написан этот курс</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-nelzya-medlit"><span class="num"></span><span class="lbl">1.3. Почему нельзя медлить</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-2-diagnostika-golos-vashego-doma"><span class="num"></span><span class="lbl">Глава 2. Диагностика: голос вашего дома</span></a><ol><li class="toc-l2">
+      <a href="#dvenadcat-simptomov-porazheniya-doma"><span class="num"></span><span class="lbl">2.1. Двенадцать симптомов поражения дома</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#v-dome-tyazhelo-nahoditsya-tyanet-poskoree-uyti"><span class="num"></span><span class="lbl">1. В доме тяжело находиться, тянет поскорее уйти.</span></a></li>
+<li class="toc-l1">
+      <a href="#sily-vosstanavlivayutsya-tolko-vne-doma"><span class="num"></span><span class="lbl">2. Силы восстанавливаются только вне дома.</span></a></li>
+<li class="toc-l1">
+      <a href="#postoyannye-ssory-i-razlad-sredi-domochadcev-hotya-vne-doma-"><span class="num"></span><span class="lbl">3. Постоянные ссоры и разлад среди домочадцев, хотя вне дома такого нет.</span></a></li>
+<li class="toc-l1">
+      <a href="#chuvstvo-nezrimogo-prisutstviya-pugayuschie-oschuscheniya-il"><span class="num"></span><span class="lbl">4. Чувство незримого присутствия, пугающие ощущения или даже «видения».</span></a></li>
+<li class="toc-l1">
+      <a href="#veschi-i-mebel-lomayutsya-sami-po-sebe-bez-vidimyh-prichin"><span class="num"></span><span class="lbl">5. Вещи и мебель ломаются сами по себе, без видимых причин.</span></a></li>
+<li class="toc-l1">
+      <a href="#postoyannyy-besporyadok-i-gryaz-kotoruyu-ne-udaetsya-pobedit"><span class="num"></span><span class="lbl">6. Постоянный беспорядок и грязь, которую не удаётся победить.</span></a></li>
+<li class="toc-l1">
+      <a href="#oschuschenie-chto-dom-bukvalno-vytyagivaet-iz-vas-zhiznennye"><span class="num"></span><span class="lbl">7. Ощущение, что дом буквально вытягивает из вас жизненные силы.</span></a></li>
+<li class="toc-l1">
+      <a href="#nichego-ne-poluchaetsya-nachinat-ili-dovodit-do-konca-v-sten"><span class="num"></span><span class="lbl">8. Ничего не получается начинать или доводить до конца в стенах дома.</span></a></li>
+<li class="toc-l1">
+      <a href="#oschuschenie-chto-v-dome-hozyaynichaet-kto-to-nezrimyy"><span class="num"></span><span class="lbl">9. Ощущение, что в доме хозяйничает кто-то незримый.</span></a></li>
+<li class="toc-l1">
+      <a href="#nashestvie-nasekomyh-s-kotorym-ne-spravlyayutsya-obychnye-sr"><span class="num"></span><span class="lbl">10. Нашествие насекомых, с которым не справляются обычные средства.</span></a></li>
+<li class="toc-l1">
+      <a href="#chuvstvo-chto-prostranstvo-napolneno-mrakom-i-temnotoy-dazhe"><span class="num"></span><span class="lbl">11. Чувство, что пространство наполнено мраком и темнотой, даже когда светло.</span></a></li>
+<li class="toc-l1">
+      <a href="#vsepogloschayuschaya-len-i-apatiya-kotorye-nakatyvayut-imenn"><span class="num"></span><span class="lbl">12. Всепоглощающая лень и апатия, которые накатывают именно дома.</span></a><ol><li class="toc-l2">
+      <a href="#detalnyy-razbor-simptomov"><span class="num"></span><span class="lbl">2.2. Детальный разбор симптомов</span></a><ol><li class="toc-l3">
+      <a href="#v-dome-tyazhelo-nahoditsya-tyanet-poskoree-uyti-2"><span class="num"></span><span class="lbl">2.2.1. В доме тяжело находиться, тянет поскорее уйти</span></a></li>
+<li class="toc-l3">
+      <a href="#sily-vosstanavlivayutsya-tolko-vne-doma-2"><span class="num"></span><span class="lbl">2.2.2. Силы восстанавливаются только вне дома</span></a></li>
+<li class="toc-l3">
+      <a href="#postoyannye-ssory-i-razlad-tolko-vnutri-doma"><span class="num"></span><span class="lbl">2.2.3. Постоянные ссоры и разлад (только внутри дома)</span></a></li>
+<li class="toc-l3">
+      <a href="#chuvstvo-nezrimogo-prisutstviya-ili-videniya"><span class="num"></span><span class="lbl">2.2.4. Чувство незримого присутствия или «видения»</span></a></li>
+<li class="toc-l3">
+      <a href="#veschi-i-mebel-lomayutsya-bez-prichin"><span class="num"></span><span class="lbl">2.2.5. Вещи и мебель ломаются без причин</span></a></li>
+<li class="toc-l3">
+      <a href="#postoyannyy-besporyadok-i-gryaz"><span class="num"></span><span class="lbl">2.2.6. Постоянный беспорядок и грязь</span></a></li>
+<li class="toc-l3">
+      <a href="#oschuschenie-chto-dom-vytyagivaet-zhiznennye-sily"><span class="num"></span><span class="lbl">2.2.7. Ощущение, что дом вытягивает жизненные силы</span></a></li>
+<li class="toc-l3">
+      <a href="#nevozmozhnost-nachinat-ili-dovodit-dela-do-konca"><span class="num"></span><span class="lbl">2.2.8. Невозможность начинать или доводить дела до конца</span></a></li>
+<li class="toc-l3">
+      <a href="#oschuschenie-chto-v-dome-hozyaynichaet-kto-to-nezrimyy-2"><span class="num"></span><span class="lbl">2.2.9. Ощущение, что в доме хозяйничает кто-то незримый</span></a></li>
+<li class="toc-l3">
+      <a href="#nashestvie-nasekomyh-neobyasnimoe"><span class="num"></span><span class="lbl">2.2.10. Нашествие насекомых (необъяснимое)</span></a></li>
+<li class="toc-l3">
+      <a href="#prostranstvo-napolneno-mrakom-dazhe-pri-svete"><span class="num"></span><span class="lbl">2.2.11. Пространство наполнено мраком даже при свете</span></a></li>
+<li class="toc-l3">
+      <a href="#vsepogloschayuschaya-len-i-apatiya-imenno-doma"><span class="num"></span><span class="lbl">2.2.12. Всепоглощающая лень и апатия (именно дома)</span></a></li></ol></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-3-volevoy-akt-osnova-iscelyayuschego-zaklinaniya"><span class="num"></span><span class="lbl">Глава 3. Волевой акт: основа исцеляющего заклинания</span></a><ol><li class="toc-l2">
+      <a href="#fundament-iz-knigi-i-sunny"><span class="num"></span><span class="lbl">3.1. Фундамент из Книги и Сунны</span></a></li>
+<li class="toc-l2">
+      <a href="#opredelenie-volevogo-akta"><span class="num"></span><span class="lbl">3.2. Определение волевого акта</span></a></li>
+<li class="toc-l2">
+      <a href="#anatomiya-namereniya-pyat-elementov"><span class="num"></span><span class="lbl">3.3. Анатомия намерения: пять элементов</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#kto-ya-ya-raki-prichina-a-ne-istochnik-sily"><span class="num"></span><span class="lbl">1. Кто я? — «Я раки, причина, а не источник силы».</span></a></li>
+<li class="toc-l1">
+      <a href="#na-chto-ya-napravlyayu-na-etot-dom-na-konkretnuyu-problemu"><span class="num"></span><span class="lbl">2. На что я направляю? — «На этот дом, на [конкретную проблему]».</span></a></li>
+<li class="toc-l1">
+      <a href="#chto-ya-delayu-razrushayu-konkretnyy-vid-zla-v-konkretnom-me"><span class="num"></span><span class="lbl">3. Что я делаю? — «Разрушаю [конкретный вид зла] в [конкретном месте]».</span></a></li>
+<li class="toc-l1">
+      <a href="#chem-ya-deystvuyu-ayatami-korana-zikrom-i-molboy-k-allahu"><span class="num"></span><span class="lbl">4. Чем я действую? — «Аятами Корана, зикром и мольбой к Аллаху».</span></a></li>
+<li class="toc-l1">
+      <a href="#radi-chego-radi-dovolstva-allaha-i-pomoschi-ego-rabam"><span class="num"></span><span class="lbl">5. Ради чего? — «Ради довольства Аллаха и помощи Его рабам».</span></a><ol><li class="toc-l2">
+      <a href="#metod-zaryazheniya-namereniya-tri-stupeni"><span class="num"></span><span class="lbl">3.4. Метод заряжения намерения: три ступени</span></a></li>
+<li class="toc-l2">
+      <a href="#shest-razrushiteley-namereniya"><span class="num"></span><span class="lbl">3.5. Шесть разрушителей намерения</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-4-avtorskiy-metod-vliyanie-voley-glubinnoe-razyasnenie"><span class="num"></span><span class="lbl">Глава 4. Авторский метод «Влияние волей»: глубинное разъяснение</span></a><ol><li class="toc-l2">
+      <a href="#mehanika-serdechnogo-chteniya-bezmolvnaya-mosch"><span class="num"></span><span class="lbl">4.1. Механика «Сердечного чтения» (безмолвная мощь)</span></a></li>
+<li class="toc-l2">
+      <a href="#tehnika-kolca-zahvata-vnimanie-i-zrenie"><span class="num"></span><span class="lbl">4.2. Техника «Кольца захвата» (внимание и зрение)</span></a></li>
+<li class="toc-l2">
+      <a href="#prikaz-a-ne-prosba"><span class="num"></span><span class="lbl">4.3. Приказ, а не просьба</span></a></li>
+<li class="toc-l2">
+      <a href="#poshagovyy-cikl-metoda"><span class="num"></span><span class="lbl">4.4. Пошаговый цикл метода</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#nakoplenie-chtenie-sur-vy-sozdaete-fundament-eto-kak-nabor-d"><span class="num"></span><span class="lbl">1. Накопление (чтение сур): вы создаёте фундамент. Это как набор давления в системе.</span></a></li>
+<li class="toc-l1">
+      <a href="#glava-5-polnaya-posledovatelnost-seansa-chistki-doma"><span class="num"></span><span class="lbl">Глава 5. Полная последовательность сеанса чистки дома</span></a><ol><li class="toc-l2">
+      <a href="#devyat-stupeney-volevogo-akta-pri-chistke-doma"><span class="num"></span><span class="lbl">5.1. Девять ступеней волевого акта при чистке дома</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-6-metod-u-izu-al-bayt-billyahi-aktivnaya-zaschita-doma"><span class="num"></span><span class="lbl">Глава 6. Метод «У'изу аль-байт билляхи»: активная защита дома</span></a><ol><li class="toc-l2">
+      <a href="#opisanie-metoda"><span class="num"></span><span class="lbl">6.1. Описание метода</span></a></li>
+<li class="toc-l2">
+      <a href="#istochniki-metoda"><span class="num"></span><span class="lbl">6.2. Источники метода</span></a></li>
+<li class="toc-l2">
+      <a href="#princip-postroeniya-formul"><span class="num"></span><span class="lbl">6.3. Принцип построения формул</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#fiksirovannoe-nachalo-ya-zaschischayu-dom-s-pomoschyu-allaha"><span class="num"></span><span class="lbl">1. Фиксированное начало:<span class="ar-inline" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ</span>— «Я защищаю дом с помощью Аллаха».</span></a></li>
+<li class="toc-l1">
+      <a href="#predlog-min-ot-ukazyvaet-na-to-ot-chego-zaschischaem"><span class="num"></span><span class="lbl">2. Предлог «мин» (<span class="ar-inline" lang="ar" dir="rtl">مِنْ</span>) — «от», указывает на то, от чего защищаем.</span></a></li>
+<li class="toc-l1">
+      <a href="#konkretnyy-vid-vreda-podstavlyaetsya-v-roditelnom-padezhe"><span class="num"></span><span class="lbl">3. Конкретный вид вреда — подставляется в родительном падеже.</span></a><ol><li class="toc-l2">
+      <a href="#pochemu-vazhno-progovarivat-imenno-tak"><span class="num"></span><span class="lbl">6.4. Почему важно проговаривать именно так</span></a></li>
+<li class="toc-l2">
+      <a href="#formuly-metoda-u-izu-al-bayt-billyahi"><span class="num"></span><span class="lbl">6.5. Формулы метода «У'изу аль-байт билляхи»</span></a><ol><li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakogo-dzhinna"><span class="num"></span><span class="lbl">6.5.1. Защита дома от всякого джинна</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakogo-bezumiya-ot-dzhinnov"><span class="num"></span><span class="lbl">6.5.2. Защита дома от всякого безумия от джиннов</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakoy-oderzhimosti-dzhinnami"><span class="num"></span><span class="lbl">6.5.3. Защита дома от всякой одержимости джиннами</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakogo-bezumiya-ot-koldovstva"><span class="num"></span><span class="lbl">6.5.4. Защита дома от всякого безумия от колдовства</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakoy-oderzhimosti-koldovstvom"><span class="num"></span><span class="lbl">6.5.5. Защита дома от всякой одержимости колдовством</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakogo-bezumiya-ot-sglaza-i-zavisti"><span class="num"></span><span class="lbl">6.5.6. Защита дома от всякого безумия от сглаза и зависти</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-doma-ot-vsyakogo-sglaza-i-zavisti"><span class="num"></span><span class="lbl">6.5.7. Защита дома от всякого сглаза и зависти</span></a></li>
+<li class="toc-l3">
+      <a href="#obedinennoe-pribeganie-polnaya-zaschita"><span class="num"></span><span class="lbl">6.5.8. Объединённое прибегание (полная защита)</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#rekomendaciya-po-ispolzovaniyu-metoda"><span class="num"></span><span class="lbl">6.6. Рекомендация по использованию метода</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-7-polnoe-zaklinanie-dlya-chistki-doma"><span class="num"></span><span class="lbl">Глава 7. Полное заклинание для чистки дома</span></a><ol><li class="toc-l2">
+      <a href="#izgnanie-dzhinnov"><span class="num"></span><span class="lbl">7.1. Изгнание джиннов</span></a><ol><li class="toc-l3">
+      <a href="#izgnanie-vseh-dzhinnov-iz-doma"><span class="num"></span><span class="lbl">7.1.1. Изгнание всех джиннов из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#izgnanie-maridov-iz-doma"><span class="num"></span><span class="lbl">7.1.2. Изгнание маридов из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#izgnanie-ifritov-iz-doma"><span class="num"></span><span class="lbl">7.1.3. Изгнание ифритов из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#izgnanie-sluzhiteley-koldovstva-iz-doma"><span class="num"></span><span class="lbl">7.1.4. Изгнание служителей колдовства из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#izgnanie-shaytanov-prelyubodeyaniya-iz-doma"><span class="num"></span><span class="lbl">7.1.5. Изгнание шайтанов прелюбодеяния из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#izgnanie-shaytanov-vasvasy-iz-doma"><span class="num"></span><span class="lbl">7.1.6. Изгнание шайтанов васвасы из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#izgnanie-shaytanov-razdora-iz-doma"><span class="num"></span><span class="lbl">7.1.7. Изгнание шайтанов раздора из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#sozhzhenie-vseh-dzhinnov-v-dome"><span class="num"></span><span class="lbl">7.1.8. Сожжение всех джиннов в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#rasseivanie-dzhinnov-iz-doma"><span class="num"></span><span class="lbl">7.1.9. Рассеивание джиннов из дома</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#unichtozhenie-koldovstva"><span class="num"></span><span class="lbl">7.2. Уничтожение колдовства</span></a><ol><li class="toc-l3">
+      <a href="#unichtozhenie-vsego-koldovstva-v-dome"><span class="num"></span><span class="lbl">7.2.1. Уничтожение всего колдовства в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#sozhzhenie-koldovstva-v-dome"><span class="num"></span><span class="lbl">7.2.2. Сожжение колдовства в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#razvyazyvanie-uzlov-koldovstva-v-dome"><span class="num"></span><span class="lbl">7.2.3. Развязывание узлов колдовства в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#unichtozhenie-zakopannogo-koldovstva-pod-domom"><span class="num"></span><span class="lbl">7.2.4. Уничтожение закопанного колдовства под домом</span></a></li>
+<li class="toc-l3">
+      <a href="#unichtozhenie-podveshennogo-koldovstva-v-dome"><span class="num"></span><span class="lbl">7.2.5. Уничтожение подвешенного колдовства в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#unichtozhenie-koldovstva-v-stenah-doma"><span class="num"></span><span class="lbl">7.2.6. Уничтожение колдовства в стенах дома</span></a></li>
+<li class="toc-l3">
+      <a href="#unichtozhenie-koldovstva-v-uglah-doma"><span class="num"></span><span class="lbl">7.2.7. Уничтожение колдовства в углах дома</span></a></li>
+<li class="toc-l3">
+      <a href="#unichtozhenie-koldovstva-na-porogah-doma"><span class="num"></span><span class="lbl">7.2.8. Уничтожение колдовства на порогах дома</span></a></li>
+<li class="toc-l3">
+      <a href="#vozvraschenie-koldovstva-k-otpravitelyu"><span class="num"></span><span class="lbl">7.2.9. Возвращение колдовства к отправителю</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#ochischenie-ot-sglaza-i-zavisti"><span class="num"></span><span class="lbl">7.3. Очищение от сглаза и зависти</span></a><ol><li class="toc-l3">
+      <a href="#vyvedenie-sglaza-iz-doma"><span class="num"></span><span class="lbl">7.3.1. Выведение сглаза из дома</span></a></li>
+<li class="toc-l3">
+      <a href="#sozhzhenie-sledov-sglaza-v-dome"><span class="num"></span><span class="lbl">7.3.2. Сожжение следов сглаза в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#ochischenie-doma-ot-zavisti"><span class="num"></span><span class="lbl">7.3.3. Очищение дома от зависти</span></a></li>
+<li class="toc-l3">
+      <a href="#vozvraschenie-sglaza-i-zavisti-k-istochniku"><span class="num"></span><span class="lbl">7.3.4. Возвращение сглаза и зависти к источнику</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#ochischenie-ot-duhovnogo-musora"><span class="num"></span><span class="lbl">7.4. Очищение от духовного мусора</span></a><ol><li class="toc-l3">
+      <a href="#ochischenie-doma-ot-tmy"><span class="num"></span><span class="lbl">7.4.1. Очищение дома от тьмы</span></a></li>
+<li class="toc-l3">
+      <a href="#ochischenie-doma-ot-negativnoy-energii"><span class="num"></span><span class="lbl">7.4.2. Очищение дома от негативной энергии</span></a></li>
+<li class="toc-l3">
+      <a href="#ochischenie-doma-ot-skverny"><span class="num"></span><span class="lbl">7.4.3. Очищение дома от скверны</span></a></li>
+<li class="toc-l3">
+      <a href="#napolnenie-doma-svetom"><span class="num"></span><span class="lbl">7.4.4. Наполнение дома светом</span></a></li>
+<li class="toc-l3">
+      <a href="#napolnenie-doma-baraka-tom"><span class="num"></span><span class="lbl">7.4.5. Наполнение дома барака́том</span></a></li>
+<li class="toc-l3">
+      <a href="#napolnenie-doma-spokoystviem"><span class="num"></span><span class="lbl">7.4.6. Наполнение дома спокойствием</span></a></li>
+<li class="toc-l3">
+      <a href="#napolnenie-doma-lyubovyu-i-soglasiem"><span class="num"></span><span class="lbl">7.4.7. Наполнение дома любовью и согласием</span></a></li></ol></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-8-zaschita-doma"><span class="num"></span><span class="lbl">Глава 8. Защита дома</span></a><ol><li class="toc-l2">
+      <a href="#mnogosloynaya-zaschita"><span class="num"></span><span class="lbl">8.1. Многослойная защита</span></a><ol><li class="toc-l3">
+      <a href="#krepost-vokrug-doma-hisn"><span class="num"></span><span class="lbl">8.1.1. Крепость вокруг дома (хисн)</span></a></li>
+<li class="toc-l3">
+      <a href="#pregrada-vokrug-doma-sadd"><span class="num"></span><span class="lbl">8.1.2. Преграда вокруг дома (садд)</span></a></li>
+<li class="toc-l3">
+      <a href="#zavesa-nad-domom-hidzhab"><span class="num"></span><span class="lbl">8.1.3. Завеса над домом (хиджаб)</span></a></li>
+<li class="toc-l3">
+      <a href="#ohrana-doma-hifz"><span class="num"></span><span class="lbl">8.1.4. Охрана дома (хифз)</span></a></li>
+<li class="toc-l3">
+      <a href="#chetyrehsloynaya-zaschita-doma"><span class="num"></span><span class="lbl">8.1.5. Четырёхслойная защита дома</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#zaschita-ot-dzhinnov"><span class="num"></span><span class="lbl">8.2. Защита от джиннов</span></a><ol><li class="toc-l3">
+      <a href="#zapret-vhoda-dzhinnov-v-dom"><span class="num"></span><span class="lbl">8.2.1. Запрет входа джиннов в дом</span></a></li>
+<li class="toc-l3">
+      <a href="#sozhzhenie-vhodyaschih-dzhinnov"><span class="num"></span><span class="lbl">8.2.2. Сожжение входящих джиннов</span></a></li>
+<li class="toc-l3">
+      <a href="#uzhas-v-serdca-dzhinnov-ot-doma"><span class="num"></span><span class="lbl">8.2.3. Ужас в сердца джиннов от дома</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-ot-maridov"><span class="num"></span><span class="lbl">8.2.4. Защита от маридов</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-ot-ifritov"><span class="num"></span><span class="lbl">8.2.5. Защита от ифритов</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-ot-sluzhiteley-koldovstva"><span class="num"></span><span class="lbl">8.2.6. Защита от служителей колдовства</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#zaschita-ot-koldovstva"><span class="num"></span><span class="lbl">8.3. Защита от колдовства</span></a><ol><li class="toc-l3">
+      <a href="#zaschita-ot-proniknoveniya-koldovstva"><span class="num"></span><span class="lbl">8.3.1. Защита от проникновения колдовства</span></a></li>
+<li class="toc-l3">
+      <a href="#pregrada-ot-koldovstva"><span class="num"></span><span class="lbl">8.3.2. Преграда от колдовства</span></a></li>
+<li class="toc-l3">
+      <a href="#vozvraschenie-napravlennogo-koldovstva"><span class="num"></span><span class="lbl">8.3.3. Возвращение направленного колдовства</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#zaschita-ot-sglaza-i-zavisti"><span class="num"></span><span class="lbl">8.4. Защита от сглаза и зависти</span></a><ol><li class="toc-l3">
+      <a href="#zaschita-doma-ot-sglaza"><span class="num"></span><span class="lbl">8.4.1. Защита дома от сглаза</span></a></li>
+<li class="toc-l3">
+      <a href="#zavesa-ot-zavistnikov"><span class="num"></span><span class="lbl">8.4.2. Завеса от завистников</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-blag-doma-ot-zavisti"><span class="num"></span><span class="lbl">8.4.3. Защита благ дома от зависти</span></a></li>
+<li class="toc-l3">
+      <a href="#vozvraschenie-sglaza-i-zavisti"><span class="num"></span><span class="lbl">8.4.4. Возвращение сглаза и зависти</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#zaschita-konkretnyh-chastey-doma"><span class="num"></span><span class="lbl">8.5. Защита конкретных частей дома</span></a><ol><li class="toc-l3">
+      <a href="#zaschita-dverey-doma"><span class="num"></span><span class="lbl">8.5.1. Защита дверей дома</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-okon-doma"><span class="num"></span><span class="lbl">8.5.2. Защита окон дома</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-sten-doma"><span class="num"></span><span class="lbl">8.5.3. Защита стен дома</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-kryshi-doma"><span class="num"></span><span class="lbl">8.5.4. Защита крыши дома</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-fundamenta-doma"><span class="num"></span><span class="lbl">8.5.5. Защита фундамента дома</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-uglov-doma"><span class="num"></span><span class="lbl">8.5.6. Защита углов дома</span></a></li></ol></li>
+<li class="toc-l2">
+      <a href="#zaschita-obitateley-doma"><span class="num"></span><span class="lbl">8.6. Защита обитателей дома</span></a><ol><li class="toc-l3">
+      <a href="#zaschita-semi-v-dome"><span class="num"></span><span class="lbl">8.6.1. Защита семьи в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-detey-v-dome"><span class="num"></span><span class="lbl">8.6.2. Защита детей в доме</span></a></li>
+<li class="toc-l3">
+      <a href="#zaschita-imuschestva-v-dome"><span class="num"></span><span class="lbl">8.6.3. Защита имущества в доме</span></a></li></ol></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-9-kombinirovannye-polnye-formuly"><span class="num"></span><span class="lbl">Глава 9. Комбинированные полные формулы</span></a><ol><li class="toc-l2">
+      <a href="#polnaya-chistka-doma-odin-tekst"><span class="num"></span><span class="lbl">9.1. Полная чистка дома — один текст</span></a></li>
+<li class="toc-l2">
+      <a href="#polnaya-zaschita-doma-odin-tekst"><span class="num"></span><span class="lbl">9.2. Полная защита дома — один текст</span></a></li>
+<li class="toc-l2">
+      <a href="#polnaya-chistka-i-zaschita-doma-maksimalnaya-formula"><span class="num"></span><span class="lbl">9.3. Полная чистка и защита дома — максимальная формула</span></a></li>
+<li class="toc-l2">
+      <a href="#ezhednevnaya-zaschita-doma-utro"><span class="num"></span><span class="lbl">9.4. Ежедневная защита дома — утро</span></a></li>
+<li class="toc-l2">
+      <a href="#ezhednevnaya-zaschita-doma-vecher"><span class="num"></span><span class="lbl">9.5. Ежедневная защита дома — вечер</span></a></li></ol></li></ol></nav>
+  <main>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-1-vvedenie">Глава 1. Введение</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="o-dome-v-islame">1.1. О доме в Исламе</h3>
+<p>Дом в Исламе — это не просто физическое строение из камня, бетона или дерева. Это байт — место спокойствия (сакин), прибежище души и крепость веры. Однако в нашем мире, полном зависти, скрытого колдовства и враждебных сущностей из мира джиннов, эта крепость может быть взломана. Когда духовная чистота дома нарушается, он перестаёт быть местом отдыха и превращается в источник боли, апатии и страха.</p>
+<p>Пространство дома обладает своего рода «живым сознанием». Оно впитывает в себя энергию слов, поступков и намерений тех, кто в нём живёт. Если в доме годами не поминается Аллах, если в него проникает сихр (колдовство) или на него падает тяжёлый взгляд хасада (зависти), стены дома начинают «болеть».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zachem-napisan-etot-kurs">1.2. Зачем написан этот курс</h3>
+<p>Большинство людей ограничиваются лишь фоновым включением записей Корана. Это благое дело, но зачастую его недостаточно, когда недуг пустил глубокие корни. Данный курс переводит вас из состояния пассивного слушателя в состояние активного лекаря (раки).</p>
+<p>Метод «Влияние волей» — это духовная хирургия. Мы используем слова Всевышнего как инструмент точечного воздействия. Мы направляем мощь Корана не в пустоту, а точно в цель, будь то узел колдовства, притаившийся джинн или яд завистливого глаза.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-nelzya-medlit">1.3. Почему нельзя медлить</h3>
+<p>Когда дом поражён, это проявляется в симптомах, которые невозможно игнорировать:</p>
+<ul><li>В доме буквально хозяйничает кто-то незримый, а пространство наполнено мраком и темнотой, даже при ярком свете.</li><li>Охватывает всепоглощающая лень и апатия, силы восстанавливаются только за порогом, а внутри — энергия просто утекает.</li><li>Начинается нашествие насекомых, ломается мебель, а домочадцы вязнут в бесконечных ссорах.</li></ul>
+<p>Это не случайности. Это сигналы того, что жизненное пространство захвачено чужеродной, враждебной волей.</p>
+<aside class="callout"><span class="label">Примечание</span><p>Данный курс объединяет три ключевых компонента: (1) метод «Волевой акт» — искусство удержания намерения в сердце как основа исцеляющего заклинания; (2) практические формулы чистки и защиты дома методом «Влияние волей»; (3) формулу «У'изу аль-байт билляхи» — систему активного прибегания к защите Аллаха за жилище.</p></aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-2-diagnostika-golos-vashego-doma">Глава 2. Диагностика: голос вашего дома</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="dvenadcat-simptomov-porazheniya-doma">2.1. Двенадцать симптомов поражения дома</h3>
+<p>Прежде чем лечить, нужно понять, чем болен ваш дом. Не игнорируйте эти признаки — они крик о помощи вашего пространства:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="v-dome-tyazhelo-nahoditsya-tyanet-poskoree-uyti">1. В доме тяжело находиться, тянет поскорее уйти.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sily-vosstanavlivayutsya-tolko-vne-doma">2. Силы восстанавливаются только вне дома.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="postoyannye-ssory-i-razlad-sredi-domochadcev-hotya-vne-doma-">3. Постоянные ссоры и разлад среди домочадцев, хотя вне дома такого нет.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="chuvstvo-nezrimogo-prisutstviya-pugayuschie-oschuscheniya-il">4. Чувство незримого присутствия, пугающие ощущения или даже «видения».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="veschi-i-mebel-lomayutsya-sami-po-sebe-bez-vidimyh-prichin">5. Вещи и мебель ломаются сами по себе, без видимых причин.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="postoyannyy-besporyadok-i-gryaz-kotoruyu-ne-udaetsya-pobedit">6. Постоянный беспорядок и грязь, которую не удаётся победить.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="oschuschenie-chto-dom-bukvalno-vytyagivaet-iz-vas-zhiznennye">7. Ощущение, что дом буквально вытягивает из вас жизненные силы.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="nichego-ne-poluchaetsya-nachinat-ili-dovodit-do-konca-v-sten">8. Ничего не получается начинать или доводить до конца в стенах дома.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="oschuschenie-chto-v-dome-hozyaynichaet-kto-to-nezrimyy">9. Ощущение, что в доме хозяйничает кто-то незримый.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="nashestvie-nasekomyh-s-kotorym-ne-spravlyayutsya-obychnye-sr">10. Нашествие насекомых, с которым не справляются обычные средства.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="chuvstvo-chto-prostranstvo-napolneno-mrakom-i-temnotoy-dazhe">11. Чувство, что пространство наполнено мраком и темнотой, даже когда светло.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vsepogloschayuschaya-len-i-apatiya-kotorye-nakatyvayut-imenn">12. Всепоглощающая лень и апатия, которые накатывают именно дома.</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="detalnyy-razbor-simptomov">2.2. Детальный разбор симптомов</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="v-dome-tyazhelo-nahoditsya-tyanet-poskoree-uyti-2">2.2.1. В доме тяжело находиться, тянет поскорее уйти</h4>
+<p>С чем связано: сихр (колдовство) на изгнание или джинн.</p>
+<p>Разъяснение: это часто результат колдовства, направленного на то, чтобы разрушить семью или бизнес. Шайтаны создают вокруг человека «поле давления». С точки зрения метода «Влияние волей», это попытка чужой воли вытеснить вашу волю из вашего же пространства. Дом буквально «выталкивает» вас.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="sily-vosstanavlivayutsya-tolko-vne-doma-2">2.2.2. Силы восстанавливаются только вне дома</h4>
+<p>С чем связано: сихр (порча) или наличие «энергетического паразита» (джинна).</p>
+<p>Разъяснение: в стенах дома работает «воронка». Как только вы переступаете порог, начинается утечка вашей жизненной силы. Это часто связано с «привязкой» сихра к самому строению или фундаменту.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="postoyannye-ssory-i-razlad-tolko-vnutri-doma">2.2.3. Постоянные ссоры и разлад (только внутри дома)</h4>
+<p>С чем связано: сихр ат-тафрик (колдовство на разлучение) или зависть (хасад).</p>
+<p>Разъяснение: зависть соседей или родственников оседает в доме «тяжёлым осадком». Она искривляет восприятие: слова близких начинают казаться оскорблениями. Вне дома это воздействие ослабевает, но в «заряженном» злом пространстве вспыхивает с новой силой.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="chuvstvo-nezrimogo-prisutstviya-ili-videniya">2.2.4. Чувство незримого присутствия или «видения»</h4>
+<p>С чем связано: джинн (аммар аль-байт — обитатели дома из числа джиннов).</p>
+<p>Разъяснение: это прямой признак того, что в доме поселились посторонние сущности. Они могут быть как «залётными» из-за грехов в доме, так и присланными через сихр. Периферическим зрением вы улавливаете их движение, так как ваша душа чувствует чужое присутствие.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="veschi-i-mebel-lomayutsya-bez-prichin">2.2.5. Вещи и мебель ломаются без причин</h4>
+<p>С чем связано: сильное колдовство или мощный сглаз ('айн).</p>
+<p>Разъяснение: когда концентрация негативной энергии (субстанции зла) превышает критический предел, она начинает влиять на физический мир. Металл, дерево и электроника не выдерживают плотности этого «мрака» и выходят из строя.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="postoyannyy-besporyadok-i-gryaz">2.2.6. Постоянный беспорядок и грязь</h4>
+<p>С чем связано: джинны (хубус — скверные сущности) и сихр.</p>
+<p>Разъяснение: скверные джинны обожают нечистоты. Они внушают домочадцам лень и апатию, чтобы те перестали убираться. Грязь — это их естественная среда обитания. Если вы не можете победить беспорядок, значит, за ним стоит воля джинна, которую нужно сломить рукьей.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="oschuschenie-chto-dom-vytyagivaet-zhiznennye-sily">2.2.7. Ощущение, что дом вытягивает жизненные силы</h4>
+<p>С чем связано: джинн-вампиризм или сихр на истощение.</p>
+<p>Разъяснение: тело пациента слышит приказ Творца, но если в доме есть «печать» колдовства, оно постоянно борется с ней, тратя все ресурсы. Вы просыпаетесь уже уставшим, потому что ночью ваша душа вела битву.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="nevozmozhnost-nachinat-ili-dovodit-dela-do-konca">2.2.8. Невозможность начинать или доводить дела до конца</h4>
+<p>С чем связано: сихр ат-та'тиль (колдовство на застой/блокировку).</p>
+<p>Разъяснение: это «связывание» воли. Ваши намерения словно вязнут в болоте. В стенах дома блокируется любая созидательная энергия.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="oschuschenie-chto-v-dome-hozyaynichaet-kto-to-nezrimyy-2">2.2.9. Ощущение, что в доме хозяйничает кто-то незримый</h4>
+<p>С чем связано: сильный джинн-захватчик.</p>
+<p>Разъяснение: это стадия, когда джинн считает дом своим. Он может передвигать вещи или издавать звуки. Это прямой вызов вашей власти как хозяина и наместника Аллаха в этом доме.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="nashestvie-nasekomyh-neobyasnimoe">2.2.10. Нашествие насекомых (необъяснимое)</h4>
+<p>С чем связано: сихр (часто через подклад) или джинны.</p>
+<p>Разъяснение: муравьи, тараканы или мухи, появляющиеся «из ниоткуда» и не реагирующие на химию, часто являются физическим проявлением духовного недуга. Они — «солдаты» этого поражения.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="prostranstvo-napolneno-mrakom-dazhe-pri-svete">2.2.11. Пространство наполнено мраком даже при свете</h4>
+<p>С чем связано: накопленный хасад (зависть) или тёмное колдовство.</p>
+<p>Разъяснение: вы видите мир через призму своей души. Когда дом поражён, «нур» (свет) Аллаха перекрывается слоями «зульма» (тьмы). Это духовная копоть, которая делает пространство серым и неуютным.</p>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="vsepogloschayuschaya-len-i-apatiya-imenno-doma">2.2.12. Всепоглощающая лень и апатия (именно дома)</h4>
+<p>С чем связано: сглаз ('айн) или сихр на волю.</p>
+<p>Разъяснение: это удар по вашей решимости. Шайтан парализует ваши действия, чтобы вы не могли совершать поклонение (ибадат) и чистку дома. Это защитная реакция болезни — сделать вас слишком слабым, чтобы вы не смогли её изгнать.</p>
+<aside class="callout"><span class="label">Примечание</span><p>Когда вы приступаете к чистке, вы должны «выделять вниманием» именно тот симптом, который преобладает. Если это ссоры — концентрируйтесь на разрушении сихра ат-тафрик. Если это насекомые и мрак — направляйте волю на очищение пространства от «хубус» (скверны).</p></aside>
+</section>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-3-volevoy-akt-osnova-iscelyayuschego-zaklinaniya">Глава 3. Волевой акт: основа исцеляющего заклинания</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="fundament-iz-knigi-i-sunny">3.1. Фундамент из Книги и Сунны</h3>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى</div>
+  <p>Транскрипция: Иннамаль-а'малю бин-ниййат, ва иннама ли-кулли-мри'ин ма нава.</p>
+<p>Перевод: «Поистине, дела — только по намерениям, и поистине, каждому человеку — только то, что он намеревался».</p>
+  <footer class="source">Источник: аль-Бухари, № 1; Муслим, № 1907</footer>
+</blockquote>
+<p>Учёные единодушны, что этот хадис — треть всей религии. Слово «иннама» (<span class="ar-inline" lang="ar" dir="rtl">إِنَّمَا</span>) в арабском — это ограничение. Оно означает: только это, и ничего больше. Если применить это к рукье: заклинание — только по намерению. Без намерения — это не заклинание. Это лишь звук. Красивый звук, священный звук — но без силы воздействия.</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى أَجْسَادِكُمْ وَلَا إِلَى صُوَرِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ</div>
+  <p>Транскрипция: Инналлаха ля йанзуру иля аджсадикум ва ля иля суварикум, ва лякин йанзуру иля кулюбикум ва а'маликум.</p>
+<p>Перевод: «Поистине, Аллах смотрит не на ваши тела и не на ваши облики, но смотрит на ваши сердца и ваши деяния».</p>
+  <footer class="source">Источник: Муслим, № 2564</footer>
+</blockquote>
+<p>Аллах смотрит на сердце. Значит — сила приходит к тому, чьё сердце присутствует. Пустое сердце — пустое воздействие. Полное сердце — полное воздействие.</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ</div>
+  <p>Транскрипция: Йа мукаллибаль-кулюби саббит кальби 'аля диник.</p>
+<p>Перевод: «О Переворачивающий сердца, укрепи моё сердце на Твоей религии».</p>
+  <footer class="source">Источник: ат-Тирмизи, № 2140 (достоверный)</footer>
+</blockquote>
+<p>Сердце переворачивается. Оно нестабильно по своей природе. Именно поэтому его нужно удерживать — а не просто «настроить и забыть». Волевой акт — это не событие, а непрерывное усилие.</p>
+<blockquote class="quote"><p>Намерение — это дух дела, его сердцевина, его основа. Если оно правильное — дело правильное. Если оно испорчено — испорчено и дело.</p><footer class="source">Ибн аль-Каййим, да помилует его Аллах</footer></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="opredelenie-volevogo-akta">3.2. Определение волевого акта</h3>
+<p>Волевой акт (аль-кибля ан-ниййа аль-мустамирра) — это сознательное, направленное, удерживаемое в сердце намерение, которое не прерывается во время действия и накапливает силу через повторение.</p>
+<p>Разложение определения:</p>
+<ul><li>«Сознательное» — вы знаете, что намереваетесь. Вы не «плывёте по течению». Вы выбираете намерение и осознаёте его.</li><li>«Направленное» — намерение имеет цель. Не абстрактное «хочу помочь», а конкретное «намереваюсь исцелить эту головную боль у этой женщины через силу этих аятов».</li><li>«Удерживаемое в сердце» — намерение живёт в сердце, как пламя в лампе. Оно не должно погаснуть, пока идёт чтение.</li><li>«Не прерывается» — это ключевое. Большинство лекарей делают намерение один раз в начале и потом забывают о нём. Волевой акт — это постоянное намерение, живущее с первого до последнего слова.</li><li>«Накапливает силу через повторение» — намерение, повторяемое многократно, становится плотным, тяжёлым, мощным.</li></ul>
+<p>Разница между обычной ниятой и волевым актом: обычное намерение — это как щёлкнуть выключателем. Свет включился и горит сам. Волевой акт — это как держать зажжённый факел. Вы должны непрерывно нести его, иначе он погаснет.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="anatomiya-namereniya-pyat-elementov">3.3. Анатомия намерения: пять элементов</h3>
+<p>Элемент первый — Субъект (кто делает). Вы. Раки. Осознание: «Я — тот, через кого Аллах направляет Свою силу». Не «я исцеляю», а «я — причина, через которую Аллах исцеляет».</p>
+<p>Элемент второй — Объект (на кого). Пациент или дом. Конкретный объект. Не «на всё», а на конкретный дом, конкретную комнату, конкретную проблему.</p>
+<p>Элемент третий — Действие (что делаете). Разрушить колдовство? Изгнать джинна? Поставить защиту? Каждое из этих действий требует своего намерения.</p>
+<p>Элемент четвёртый — Инструмент (чем). Аяты Корана. Мольба. Заклинание. Сила Аллаха, проходящая через Его слова.</p>
+<p>Элемент пятый — Цель (для чего). Исцеление ради Аллаха. Не для похвалы. Не для денег. Для довольства Аллаха и помощи Его рабам.</p>
+<p>Формула проверки намерения перед каждым сеансом:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="kto-ya-ya-raki-prichina-a-ne-istochnik-sily">1. Кто я? — «Я раки, причина, а не источник силы».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="na-chto-ya-napravlyayu-na-etot-dom-na-konkretnuyu-problemu">2. На что я направляю? — «На этот дом, на [конкретную проблему]».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="chto-ya-delayu-razrushayu-konkretnyy-vid-zla-v-konkretnom-me">3. Что я делаю? — «Разрушаю [конкретный вид зла] в [конкретном месте]».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="chem-ya-deystvuyu-ayatami-korana-zikrom-i-molboy-k-allahu">4. Чем я действую? — «Аятами Корана, зикром и мольбой к Аллаху».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="radi-chego-radi-dovolstva-allaha-i-pomoschi-ego-rabam">5. Ради чего? — «Ради довольства Аллаха и помощи Его рабам».</h2>
+<p>Пока не ответите на все пять вопросов в сердце — не начинайте рукью.</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="metod-zaryazheniya-namereniya-tri-stupeni">3.4. Метод заряжения намерения: три ступени</h3>
+<p>Ступень первая — Формулировка (ат-такаввун). Вы формулируете намерение в чётких словах внутри сердца. Не расплывчато, не общо — а конкретно.</p>
+<p>Плохой пример: «Хочу почистить дом». Хороший пример: «Намереваюсь именем Аллаха разрушить колдовство на разлуку, заложенное в фундаменте этого дома, через силу суры аль-Бакара».</p>
+<p>Ступень вторая — Повторение (ат-такрар). Вы повторяете сформулированную фразу много раз. Не пять и не десять — а сорок, семьдесят, сто раз. Пока не почувствуете, как намерение становится плотным.</p>
+<p>Признаки того, что намерение зарядилось:</p>
+<ul><li>Вы чувствуете тяжесть в груди — приятную, наполняющую.</li><li>Вы уже не боитесь неудачи — есть уверенность.</li><li>Вы чувствуете связь с домом, с его пространством.</li><li>Слова заклинания уже сами просятся наружу.</li></ul>
+<p>Ступень третья — Удержание (аль-имсак). Заряженное намерение нужно удержать и не потерять. Метод удержания: вы возвращаетесь к намерению каждые несколько секунд. Прочитали аят — вспомнили намерение. Прочитали ещё — снова вспомнили. И так до конца.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shest-razrushiteley-namereniya">3.5. Шесть разрушителей намерения</h3>
+<figure class="table"><table><thead><tr><th>Разрушитель</th><th>Арабское название</th><th>Лечение</th></tr></thead><tbody><tr><td>Показуха</td><td>ар-рия</td><td>Напоминание: «Никто не видит, кроме Аллаха»</td></tr><tr><td>Гордыня</td><td>аль-кибр</td><td>Помнить: «Я — ничто. Аллах — всё»</td></tr><tr><td>Страх</td><td>аль-хауф</td><td>Повторять: «Аллах со мной. Аллах — Могущественнейший»</td></tr><tr><td>Рассеянность</td><td>аль-гафля</td><td>Тренировки удержания, возвращение к намерению</td></tr><tr><td>Сомнение</td><td>аш-шакк</td><td>Уверенность: «Аяты Аллаха не могут не подействовать»</td></tr><tr><td>Спешка</td><td>аль-'аджаля</td><td>Замедлиться. Читать аят за аятом, с паузами</td></tr></tbody></table></figure>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-4-avtorskiy-metod-vliyanie-voley-glubinnoe-razyasnenie">Глава 4. Авторский метод «Влияние волей»: глубинное разъяснение</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="mehanika-serdechnogo-chteniya-bezmolvnaya-mosch">4.1. Механика «Сердечного чтения» (безмолвная мощь)</h3>
+<p>Большинство людей привыкли, что рукья — это громкое чтение. Однако метод «Влияние волей» обучает вас методу внутреннего безмолвия.</p>
+<p>Суть: вы читаете аяты Корана внутри себя, не шевеля языком и губами.</p>
+<p>Почему это эффективно: звуковая волна — это физическое явление. Джинны и сущности могут пытаться «зацепиться» за звук, насмехаться над интонацией или оказывать сопротивление через слуховые каналы. Когда же чтение происходит в сердце, оно превращается в чистую энергию. Это прямой удар «духа по духу». Враг не слышит звука, но чувствует сокрушительное давление истины.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="tehnika-kolca-zahvata-vnimanie-i-zrenie">4.2. Техника «Кольца захвата» (внимание и зрение)</h3>
+<p>Ваше внимание — это проводник вашей духовной силы. Где внимание, туда расходуется сила.</p>
+<p>Концентрация на образе: когда вы работаете с домом, вы должны «держать» его образ в сознании. Если вы стоите в комнате, вы не просто смотрите на стены. Вы охватываете своим вниманием всё пространство сразу, от пола до потолка.</p>
+<p>Периферическое зрение: это секрет удержания «поля». Читая рукью, расслабьте взгляд. Вы должны видеть углы комнаты, не поворачивая головы. Это создаёт «плотное кольцо воздействия». Недугу просто некуда утечь — он оказывается заперт в поле вашего чтения и выжигается силой аятов.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="prikaz-a-ne-prosba">4.3. Приказ, а не просьба</h3>
+<p>Клетки материалов, из которых построен дом, воздух внутри него, каждый кирпич — всё это творения Аллаха. Мы не обращаемся к вещам напрямую («о стена, очистись»). Мы используем слова Аллаха как закон. Когда произносится «заклинаю дом», отдаётся приказ пространству исторгнуть чужеродное.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poshagovyy-cikl-metoda">4.4. Пошаговый цикл метода</h3>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="nakoplenie-chtenie-sur-vy-sozdaete-fundament-eto-kak-nabor-d">1. Накопление (чтение сур): вы создаёте фундамент. Это как набор давления в системе.</h2>
+<p>2. Направление (аркыйка / аркый хазаль-байт): вы открываете клапан и направляете всё накопленное давление на конкретную цель. 3. Точечный удар (спецификация): вы чётко называете врага. Если это сглаз — говорите «от сглаза». Если сихр — «от сихра». 4. Фиксация (Аллаху яшфийк / яшфихи): вы запечатываете процесс просьбой к Единственному Исцеляющему. 5. Послойная чистка (детализация): после «печати» продолжаете детализировать виды зла, очищая слой за слоем, пока в пространстве не воцарится покой.</p>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-5-polnaya-posledovatelnost-seansa-chistki-doma">Глава 5. Полная последовательность сеанса чистки дома</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="devyat-stupeney-volevogo-akta-pri-chistke-doma">5.1. Девять ступеней волевого акта при чистке дома</h3>
+<p>Ступень первая — Уединение (аль-хальва). Найдите тихое место в доме. Отключите телефон. Убедитесь, что вас не прервут. Попросите домочадцев на время покинуть комнату или не мешать.</p>
+<p>Ступень вторая — Ритуальная чистота (ат-тахара). Совершите омовение (вуду). Чистое тело — чистое сердце — чистое намерение.</p>
+<p>Ступень третья — Прибежище (аль-исти'аза).</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+  <p>Транскрипция: А'узу биЛляхи мин аш-шайтани р-раджим.</p>
+<p>Перевод: «Прибегаю к Аллаху от изгнанного шайтана».</p>
+  <div class="source">Источник: Сунна Пророка<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span></div>
+</aside>
+<p>Три раза. Медленно. Осознавая, что шайтан будет пытаться испортить ваше намерение. Это первая линия обороны.</p>
+<p>Ступень четвёртая — Формулировка намерения. Закройте глаза. Опустите голову. Сфокусируйтесь на груди — там, где сердце. Сформулируйте намерение в чётких словах внутри себя:</p>
+<p>«Намереваюсь именем Аллаха и через силу Его Книги [сделать конкретное действие: изгнать джиннов / разрушить колдовство / очистить от сглаза] в этом доме [адрес или описание], ища довольства Аллаха и Его награды».</p>
+<p>Ступень пятая — Заряжение через повторение. Начинайте повторять сформулированное намерение внутри сердца. Не двигая губами. Минимум — 40 повторений. Оптимум — 70. Максимум — 100 или больше, пока не почувствуете плотность.</p>
+<p>Ступень шестая — Направление взгляда. Откройте глаза. Не смотрите в одну точку. Смотрите широким лучом, охватывая всё пространство комнаты от пола до потолка. Взгляд — это канал. Через него намерение из сердца выходит наружу и достигает цели.</p>
+<p>Ступень седьмая — Открытие уст, начало чтения. Только теперь откройте уста. Прочтите бисмиллях. Затем — заклинание или аят. Каждое слово, которое вы произносите сейчас, несёт всю силу тех сорока-семидесяти-ста повторений намерения.</p>
+<p>Ступень восьмая — Постоянное возвращение к намерению. Читая, не забывайте о намерении. Каждые несколько аятов — мысленно возвращайтесь к нему. Напоминайте себе: «Что я делаю? Для чего? Ради Кого?»</p>
+<p>Ступень девятая — Завершение и печать. После окончания чтения не выходите резко из состояния. Останьтесь в намерении ещё несколько мгновений. Прочтите мольбу. Прочтите печать (20–30 раз):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِينِي اللَّهُ يَشْفِينِي</div>
+  <p>Транскрипция: Бисмилляхи аркыний, Аллаху яшфиний.</p>
+<p>Перевод: «С именем Аллаха заклинаю себя, Аллах исцеляет меня».</p>
+  <div class="source">Источник: Сунна Пророка<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span></div>
+</aside>
+<p>Затем — сохраните намерение в сердце ещё несколько минут после сеанса. Пейте воду, отдыхайте — но намерение всё ещё живёт внутри.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-6-metod-u-izu-al-bayt-billyahi-aktivnaya-zaschita-doma">Глава 6. Метод «У'изу аль-байт билляхи»: активная защита дома</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="opisanie-metoda">6.1. Описание метода</h3>
+<p>Данный метод представляет собой систему духовной защиты жилища, построенную на использовании коранических и пророческих формул прибегания к Аллаху. Его основу составляет арабская фраза:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи.</p>
+<p>Перевод: «Я защищаю дом с помощью Аллаха» / «Вверяю дом защите Аллаха».</p>
+  <div class="source">Источник: построено на основе пророческой практики</div>
+</aside>
+<p>Это не простое прибегание к Аллаху за себя («а'узу билляхи»), а активное действие по передаче другого объекта (жилища) под покровительство Всевышнего.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="istochniki-metoda">6.2. Источники метода</h3>
+<ol class="bib-list"><li>Коран и Сунна: в Коране многократно упоминается повеление прибегать к защите Аллаха от зла (сура «Аль-Фаляк», «Ан-Нас»), а также приводятся истории пророков, которые защищали себя и свои семьи через обращение к Аллаху.</li></ol>
+<ol class="bib-list"><li>Арабский язык и грамматика: формула «<span class="ar-inline" lang="ar" dir="rtl">أُعِيذُ</span>» (у'изу) является производной от глагола «<span class="ar-inline" lang="ar" dir="rtl">أَعَاذَ</span>», что означает «давать убежище, защищать, брать под покровительство». В отличие от «<span class="ar-inline" lang="ar" dir="rtl">أَعُوذُ</span>» (а'узу) — «я прибегаю к защите», форма «у'изу» предполагает, что защита даётся другому объекту. Это грамматическое различие делает формулу активной мольбой за дом, а не пассивным прибеганием.</li></ol>
+<ol class="bib-list"><li>Пророческая практика:</li></ol>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُكُمَا بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ</div>
+  <p>Транскрипция: У'изукума би-калиматилляхи-т-таммати мин кулли шайтанин ва хамматин ва мин кулли 'айнин лямма.</p>
+<p>Перевод: «Вверяю вас защите совершенных слов Аллаха от всякого шайтана, ядовитого существа и от всякого сглаза».</p>
+  <footer class="source">Источник: аль-Бухари, № 3371</footer>
+</blockquote>
+<ol class="bib-list"><li>Пророк Мухаммад<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>читал это дуа за своих внуков Хасана и Хусейна. Это прямое указание на то, что мусульманину дозволено и желательно читать защитные дуа не только за себя, но и за других, а также за своё жилище.</li></ol>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="princip-postroeniya-formul">6.3. Принцип построения формул</h3>
+<p>Формула «У'изу аль-байт билляхи» используется как универсальный каркас, в который подставляются различные объекты защиты:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="fiksirovannoe-nachalo-ya-zaschischayu-dom-s-pomoschyu-allaha">1. Фиксированное начало:<span class="ar-inline" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ</span>— «Я защищаю дом с помощью Аллаха».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="predlog-min-ot-ukazyvaet-na-to-ot-chego-zaschischaem">2. Предлог «мин» (<span class="ar-inline" lang="ar" dir="rtl">مِنْ</span>) — «от», указывает на то, от чего защищаем.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="konkretnyy-vid-vreda-podstavlyaetsya-v-roditelnom-padezhe">3. Конкретный вид вреда — подставляется в родительном падеже.</h2>
+<p>4. Уточнение источника (по желанию) — через предлог «би» (например, би-ль-джинни — «от джиннов», би-с-сихри — «от колдовства»).</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-vazhno-progovarivat-imenno-tak">6.4. Почему важно проговаривать именно так</h3>
+<p>Каждое слово в формуле несёт смысловую нагрузку:</p>
+<ul><li><span class="ar-inline" lang="ar" dir="rtl">أُعِيذُ</span>— указывает на действие защиты, которое совершает сам читающий по отношению к дому.</li><li><span class="ar-inline" lang="ar" dir="rtl">الْبَيْتَ</span>— конкретный объект защиты (дом), показывает, что защита адресована не только себе, но и жилищу.</li><li><span class="ar-inline" lang="ar" dir="rtl">بِاللَّهِ</span>— подчёркивает, что истинная защита только от Аллаха, а слова — это лишь средство обращения.</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنْ كُلِّ</span>— «от всякого» делает формулу всеохватной, не оставляя лазеек для зла.</li><li>Конкретный вид вреда — точное называние того, от чего защищаемся, помогает сосредоточить намерение и усилить эффективность мольбы.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="formuly-metoda-u-izu-al-bayt-billyahi">6.5. Формулы метода «У'изу аль-байт билляхи»</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakogo-dzhinna">6.5.1. Защита дома от всякого джинна</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ جِنِّيٍّ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли джиннийин.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякого джинна.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakogo-bezumiya-ot-dzhinnov">6.5.2. Защита дома от всякого безумия от джиннов</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ جُنُونٍ بِالْجِنِّ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли джунунин би-ль-джинни.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякого безумия от джиннов.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakoy-oderzhimosti-dzhinnami">6.5.3. Защита дома от всякой одержимости джиннами</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْيْتَ بِاللَّهِ مِنْ كُلِّ تَمَلُّكٍ بِالْجِنِّ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли тамаллюкин би-ль-джинни.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякой одержимости джиннами.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakogo-bezumiya-ot-koldovstva">6.5.4. Защита дома от всякого безумия от колдовства</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ جُنُونٍ بِالسِّحْرِ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли джунунин би-с-сихри.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякого безумия от колдовства.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakoy-oderzhimosti-koldovstvom">6.5.5. Защита дома от всякой одержимости колдовством</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ تَمَلُّكٍ بِالسِّحْرِ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли тамаллюкин би-с-сихри.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякой одержимости колдовством.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakogo-bezumiya-ot-sglaza-i-zavisti">6.5.6. Защита дома от всякого безумия от сглаза и зависти</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ جُنُونٍ بِالْعُيُونِ وَالْحَسَدِ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли джунунин би-ль-'уюни ва-ль-хасади.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякого безумия от сглаза и зависти.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-vsyakogo-sglaza-i-zavisti">6.5.7. Защита дома от всякого сглаза и зависти</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ عُيُونٍ وَحَسَدٍ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли 'уюнин ва хасадин.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякого сглаза и зависти.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="obedinennoe-pribeganie-polnaya-zaschita">6.5.8. Объединённое прибегание (полная защита)</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أُعِيذُ الْبَيْتَ بِاللَّهِ مِنْ كُلِّ جِنِّيٍّ وَجُنُونٍ وَتَمَلُّكٍ بِالْجِنِّ وَبِالسِّحْرِ وَمِنْ كُلِّ عُيُونٍ وَحَسَدٍ</div>
+  <p>Транскрипция: У'изу-ль-байта билляхи мин кулли джиннийин ва джунунин ва тамаллюкин би-ль-джинни ва би-с-сихри ва мин кулли 'уюнин ва хасадин.</p>
+<p>Перевод: Защищаю дом с помощью Аллаха от всякого джинна, безумия, одержимости джиннами и колдовством, а также от всякого сглаза и зависти.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="rekomendaciya-po-ispolzovaniyu-metoda">6.6. Рекомендация по использованию метода</h3>
+<p>Данный метод рекомендуется применять регулярно — утром и вечером, а также при входе в дом и выходе из него. Можно читать как все формулы подряд, так и выбирать те, которые соответствуют текущей ситуации. Важно произносить их с убеждённостью, что защита приходит только от Аллаха, а сами слова — это выполнение причины (сабаб) для получения этой защиты.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-7-polnoe-zaklinanie-dlya-chistki-doma">Глава 7. Полное заклинание для чистки дома</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="izgnanie-dzhinnov">7.1. Изгнание джиннов</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-vseh-dzhinnov-iz-doma">7.1.1. Изгнание всех джиннов из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِخُرُوجِ كُلِّ جِنٍّ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху мульку-с-самавати валь-ард, аркы ли-худжуджи кулли джиннин мин байти.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежит власть над небесами и землёй, заклинаю для выхода всех джиннов из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-maridov-iz-doma">7.1.2. Изгнание маридов из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي جَعَلَ حِفْظًا مِنْ كُلِّ شَيْطَانٍ مَارِدٍ أَرْقِي لِخُرُوجِ الْمَرَدَةِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи джа'аля хифзан мин кулли шайтанин марид, аркы ли-худжуджиль-марадати мин байти.</p>
+<p>Перевод: С именем Аллаха, Который установил защиту от всякого шайтана марида, заклинаю для выхода маридов из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-ifritov-iz-doma">7.1.3. Изгнание ифритов из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي سَخَّرَ لِسُلَيْمَانَ الْجِنَّ أَرْقِي لِخُرُوجِ الْعَفَارِيتِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи саххара ли-Сулейман аль-джинн, аркы ли-худжуджиль-'афарити мин байти.</p>
+<p>Перевод: С именем Аллаха, Который подчинил Сулейману джиннов, заклинаю для выхода ифритов из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-sluzhiteley-koldovstva-iz-doma">7.1.4. Изгнание служителей колдовства из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ جُنُودُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِخُرُوجِ خُدَّامِ السِّحْرِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху джунудус-самавати валь-ард, аркы ли-худжуджи худдамис-сихри мин байти.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежат воинства небес и земли, заклинаю для выхода служителей колдовства из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-shaytanov-prelyubodeyaniya-iz-doma">7.1.5. Изгнание шайтанов прелюбодеяния из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الطَّيِّبِ الطَّاهِرِ أَرْقِي لِخُرُوجِ شَيَاطِينِ الزِّنَا وَالْفَاحِشَةِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхит-Таййибит-Тахир, аркы ли-худжуджи шайатиниз-зина валь-фахишати мин байти.</p>
+<p>Перевод: С именем Аллаха Благого, Чистого, заклинаю для выхода шайтанов прелюбодеяния и мерзости из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-shaytanov-vasvasy-iz-doma">7.1.6. Изгнание шайтанов васвасы из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِخُرُوجِ شَيَاطِينِ الْوَسْوَسَةِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи нурус-самавати валь-ард, аркы ли-худжуджи шайатиниль-васвасати мин байти.</p>
+<p>Перевод: С именем Аллаха, Который является Светом небес и земли, заклинаю для выхода шайтанов наущения из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="izgnanie-shaytanov-razdora-iz-doma">7.1.7. Изгнание шайтанов раздора из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ السَّلَامِ أَرْقِي لِخُرُوجِ شَيَاطِينِ الشِّقَاقِ وَالْخِلَافِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхис-Салям, аркы ли-худжуджи шайатиниш-шикаки валь-хиляфи мин байти.</p>
+<p>Перевод: С именем Аллаха Мира, заклинаю для выхода шайтанов раздора и разногласий из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="sozhzhenie-vseh-dzhinnov-v-dome">7.1.8. Сожжение всех джиннов в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي أَرْسَلَ الشُّهُبَ لِرَجْمِ الشَّيَاطِينِ أَرْقِي لإِحْرَاقِ كُلِّ جِنٍّ فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи арсаляш-шухуба ли-раджмиш-шайатин, аркы ли-ихраки кулли джиннин фи байти.</p>
+<p>Перевод: С именем Аллаха, Который послал звёзды для побивания шайтанов, заклинаю для сожжения каждого джинна в моём доме.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="rasseivanie-dzhinnov-iz-doma">7.1.9. Рассеивание джиннов из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ الْخَلْقُ وَالأَمْرُ أَرْقِي لِتَفَرُّقِ الْجِنِّ مِنْ بَيْتِي وَعَدَمِ عَوْدَتِهِمْ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляхуль-хальку валь-амр, аркы ли-тафаррукиль-джинни мин байти ва 'адами 'аудатихим.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежат творение и повеление, заклинаю для рассеивания джиннов из моего дома и чтобы они не возвращались.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="unichtozhenie-koldovstva">7.2. Уничтожение колдовства</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="unichtozhenie-vsego-koldovstva-v-dome">7.2.1. Уничтожение всего колдовства в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ أَرْقِي لإِبْطَالِ كُلِّ سِحْرٍ فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи хува 'аля кулли шай'ин кадир, аркы ли-ибтали кулли сихрин фи байти.</p>
+<p>Перевод: С именем Аллаха, Который мощен над всякой вещью, заклинаю для уничтожения всякого колдовства в моём доме.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="sozhzhenie-koldovstva-v-dome">7.2.2. Сожжение колдовства в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لإِحْرَاقِ كُلِّ سِحْرٍ فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи нурус-самавати валь-ард, аркы ли-ихраки кулли сихрин фи байти.</p>
+<p>Перевод: С именем Аллаха, Который является Светом небес и земли, заклинаю для сожжения всякого колдовства в моём доме.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="razvyazyvanie-uzlov-koldovstva-v-dome">7.2.3. Развязывание узлов колдовства в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي فَالِقُ الإِصْبَاحِ أَرْقِي لانْحِلَالِ عُقَدِ السِّحْرِ فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи фаликуль-исбах, аркы ли-инхиляли 'укадис-сихри фи байти.</p>
+<p>Перевод: С именем Аллаха, Который расщепляет рассвет, заклинаю для развязывания узлов колдовства в моём доме.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="unichtozhenie-zakopannogo-koldovstva-pod-domom">7.2.4. Уничтожение закопанного колдовства под домом</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي يَعْلَمُ الْغَيْبَ وَالشَّهَادَةَ أَرْقِي لإِبْطَالِ السِّحْرِ الْمَدْفُونِ تَحْتَ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи йа'лямуль-гайба вашш-шахада, аркы ли-ибталис-сихриль-мадфуни тахта байти.</p>
+<p>Перевод: С именем Аллаха, Который знает сокровенное и явное, заклинаю для уничтожения закопанного колдовства под моим домом.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="unichtozhenie-podveshennogo-koldovstva-v-dome">7.2.5. Уничтожение подвешенного колдовства в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي يَعْلَمُ مَا فِي السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لإِبْطَالِ السِّحْرِ الْمُعَلَّقِ فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи йа'ляму ма фис-самавати валь-ард, аркы ли-ибталис-сихриль-му'алляки фи байти.</p>
+<p>Перевод: С именем Аллаха, Который знает то, что на небесах и на земле, заклинаю для уничтожения подвешенного колдовства в моём доме.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="unichtozhenie-koldovstva-v-stenah-doma">7.2.6. Уничтожение колдовства в стенах дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْخَبِيرِ اللَّطِيفِ أَرْقِي لإِبْطَالِ السِّحْرِ فِي جُدْرَانِ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхиль-Хабириль-Латиф, аркы ли-ибталис-сихри фи джудрани байти.</p>
+<p>Перевод: С именем Аллаха Сведущего, Проникающего, заклинаю для уничтожения колдовства в стенах моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="unichtozhenie-koldovstva-v-uglah-doma">7.2.7. Уничтожение колдовства в углах дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْمُحِيطِ بِكُلِّ شَيْءٍ أَرْقِي لإِبْطَالِ السِّحْرِ فِي زَوَايَا بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхиль-Мухити би-кулли шай', аркы ли-ибталис-сихри фи завайа байти.</p>
+<p>Перевод: С именем Аллаха, Объемлющего всякую вещь, заклинаю для уничтожения колдовства в углах моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="unichtozhenie-koldovstva-na-porogah-doma">7.2.8. Уничтожение колдовства на порогах дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْحَفِيظِ أَرْقِي لإِبْطَالِ السِّحْرِ عَلَى عَتَبَاتِ بَيْتِي وَأَبْوَابِهِ</div>
+  <p>Транскрипция: Бисмилляхиль-Хафиз, аркы ли-ибталис-сихри 'аля 'атабати байти ва абвабих.</p>
+<p>Перевод: С именем Аллаха Хранящего, заклинаю для уничтожения колдовства на порогах моего дома и его дверях.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="vozvraschenie-koldovstva-k-otpravitelyu">7.2.9. Возвращение колдовства к отправителю</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي رَدَّ الْكَافِرِينَ بِغَيْظِهِمْ أَرْقِي لِرَدِّ كُلِّ سِحْرٍ فِي بَيْتِي إِلَى صَاحِبِهِ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи раддаль-кафирина би-гайзихим, аркы ли-радди кулли сихрин фи байти иля сахибих.</p>
+<p>Перевод: С именем Аллаха, Который вернул неверующих с их яростью, заклинаю для возвращения всякого колдовства в моём доме к его отправителю.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ochischenie-ot-sglaza-i-zavisti">7.3. Очищение от сглаза и зависти</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="vyvedenie-sglaza-iz-doma">7.3.1. Выведение сглаза из дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِخُرُوجِ الْعَيْنِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи нурус-самавати валь-ард, аркы ли-худжуджиль-'айни мин байти.</p>
+<p>Перевод: С именем Аллаха, Который является Светом небес и земли, заклинаю для выхода сглаза из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="sozhzhenie-sledov-sglaza-v-dome">7.3.2. Сожжение следов сглаза в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الشَّافِي أَرْقِي لإِحْرَاقِ آثَارِ الْعَيْنِ فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхиш-Шафи, аркы ли-ихраки асариль-'айни фи байти.</p>
+<p>Перевод: С именем Аллаха Исцеляющего, заклинаю для сожжения следов сглаза в моём доме.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="ochischenie-doma-ot-zavisti">7.3.3. Очищение дома от зависти</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الطَّيِّبِ أَرْقِي لِتَطْهِيرِ بَيْتِي مِنْ آثَارِ الْحَسَدِ</div>
+  <p>Транскрипция: Бисмилляхит-Таййиб, аркы ли-татхири байти мин асариль-хасад.</p>
+<p>Перевод: С именем Аллаха Благого, заклинаю для очищения моего дома от следов зависти.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="vozvraschenie-sglaza-i-zavisti-k-istochniku">7.3.4. Возвращение сглаза и зависти к источнику</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْعَزِيزِ ذِي الانْتِقَامِ أَرْقِي لِرَدِّ كُلِّ عَيْنٍ وَحَسَدٍ فِي بَيْتِي إِلَى أَصْحَابِهَا</div>
+  <p>Транскрипция: Бисмилляхиль-'Азизи зиль-интикам, аркы ли-радди кулли 'айнин ва хасадин фи байти иля асхабиха.</p>
+<p>Перевод: С именем Аллаха Могущественного, Обладателя возмездия, заклинаю для возвращения всякого сглаза и зависти в моём доме к их источникам.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ochischenie-ot-duhovnogo-musora">7.4. Очищение от духовного мусора</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="ochischenie-doma-ot-tmy">7.4.1. Очищение дома от тьмы</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لإِزَالَةِ الظُّلُمَاتِ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи нурус-самавати валь-ард, аркы ли-изалятиз-зулумати мин байти.</p>
+<p>Перевод: С именем Аллаха, Который является Светом небес и земли, заклинаю для удаления тьмы из моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="ochischenie-doma-ot-negativnoy-energii">7.4.2. Очищение дома от негативной энергии</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الطَّيِّبِ الطَّاهِرِ أَرْقِي لِتَطْهِيرِ بَيْتِي مِنَ الطَّاقَةِ السَّلْبِيَّةِ</div>
+  <p>Транскрипция: Бисмилляхит-Таййибит-Тахир, аркы ли-татхири байти минат-такатис-сальбиййа.</p>
+<p>Перевод: С именем Аллаха Благого, Чистого, заклинаю для очищения моего дома от негативной энергии.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="ochischenie-doma-ot-skverny">7.4.3. Очищение дома от скверны</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْقُدُّوسِ أَرْقِي لِتَطْهِيرِ بَيْتِي مِنَ الرِّجْسِ وَالنَّجَاسَةِ الرُّوحِيَّةِ</div>
+  <p>Транскрипция: Бисмилляхиль-Куддус, аркы ли-татхири байти минар-риджси ван-наджасатир-рухиййа.</p>
+<p>Перевод: С именем Аллаха Святого, заклинаю для очищения моего дома от скверны и духовной нечистоты.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="napolnenie-doma-svetom">7.4.4. Наполнение дома светом</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِمَلْءِ بَيْتِي بِنُورِ اللَّهِ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи нурус-самавати валь-ард, аркы ли-маль'и байти бин-нуриллах.</p>
+<p>Перевод: С именем Аллаха, Который является Светом небес и земли, заклинаю для наполнения моего дома светом Аллаха.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="napolnenie-doma-baraka-tom">7.4.5. Наполнение дома барака́том</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْمُبَارَكِ أَرْقِي لِمَلْءِ بَيْتِي بِالْبَرَكَةِ</div>
+  <p>Транскрипция: Бисмилляхиль-Мубарак, аркы ли-маль'и байти биль-барака.</p>
+<p>Перевод: С именем Аллаха Благословенного, заклинаю для наполнения моего дома благословением.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="napolnenie-doma-spokoystviem">7.4.6. Наполнение дома спокойствием</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ السَّلَامِ أَرْقِي لِمَلْءِ بَيْتِي بِالسَّكِينَةِ وَالطُّمَأْنِينَةِ</div>
+  <p>Транскрипция: Бисмилляхис-Салям, аркы ли-маль'и байти бис-сакинати ват-тумаънина.</p>
+<p>Перевод: С именем Аллаха Мира, заклинаю для наполнения моего дома спокойствием и умиротворением.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="napolnenie-doma-lyubovyu-i-soglasiem">7.4.7. Наполнение дома любовью и согласием</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْوَدُودِ أَرْقِي لِمَلْءِ بَيْتِي بِالْمَوَدَّةِ وَالأُلْفَةِ</div>
+  <p>Транскрипция: Бисмилляхиль-Вадуд, аркы ли-маль'и байти биль-маваддати валь-ульфа.</p>
+<p>Перевод: С именем Аллаха Любящего, заклинаю для наполнения моего дома любовью и согласием.</p>
+  
+</aside>
+</section>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-8-zaschita-doma">Глава 8. Защита дома</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="mnogosloynaya-zaschita">8.1. Многослойная защита</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="krepost-vokrug-doma-hisn">8.1.1. Крепость вокруг дома (хисн)</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْقَوِيِّ الْمَتِينِ أَرْقِي لِجَعْلِ بَيْتِي حِصْنًا حَصِينًا مِنْ كُلِّ جِهَةٍ</div>
+  <p>Транскрипция: Бисмилляхиль-Кавийиль-Матин, аркы ли-джа'ли байти хиснан хасынан мин кулли джиха.</p>
+<p>Перевод: С именем Аллаха Сильного, Крепкого, заклинаю для превращения моего дома в неприступную крепость со всех сторон.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="pregrada-vokrug-doma-sadd">8.1.2. Преграда вокруг дома (садд)</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي جَعَلَ مِنْ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا أَرْقِي لِسَدٍّ حَوْلَ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи джа'аля мин байни айдихим саддан ва мин хальфихим саддан, аркы ли-саддин хауля байти.</p>
+<p>Перевод: С именем Аллаха, Который воздвиг перед ними преграду и позади них преграду, заклинаю для преграды вокруг моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zavesa-nad-domom-hidzhab">8.1.3. Завеса над домом (хиджаб)</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ السِّتِّيرِ أَرْقِي لِحِجَابٍ مَسْتُورٍ عَلَى بَيْتِي يَسْتُرُهُ مِنَ الأَعْدَاءِ</div>
+  <p>Транскрипция: Бисмилляхис-Ситтир, аркы ли-хиджабин мастурин 'аля байти йастуруху миналь-а'да.</p>
+<p>Перевод: С именем Аллаха Скрывающего, заклинаю для сокрытой завесы над моим домом, которая скрывает его от врагов.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="ohrana-doma-hifz">8.1.4. Охрана дома (хифз)</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي هُوَ خَيْرٌ حَافِظًا أَرْقِي لِحِفْظِ بَيْتِي مِنْ كُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи хува хайрун хафизан, аркы ли-хифзи байти мин кулли шарр.</p>
+<p>Перевод: С именем Аллаха, Который является лучшим Хранителем, заклинаю для охраны моего дома от всякого зла.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="chetyrehsloynaya-zaschita-doma">8.1.5. Четырёхслойная защита дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْحَفِيظِ الْقَوِيِّ الْمَتِينِ أَرْقِي لِحِفْظِ بَيْتِي وَسَدٍّ حَوْلَهُ وَحِجَابٍ عَلَيْهِ وَحِصْنٍ يُحِيطُ بِهِ</div>
+  <p>Транскрипция: Бисмилляхиль-Хафизиль-Кавийиль-Матин, аркы ли-хифзи байти ва саддин хауляху ва хиджабин 'аляйхи ва хиснин йухиту бих.</p>
+<p>Перевод: С именем Аллаха Хранящего, Сильного, Крепкого, заклинаю для охраны моего дома, и преграды вокруг него, и завесы над ним, и крепости, окружающей его.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-ot-dzhinnov">8.2. Защита от джиннов</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zapret-vhoda-dzhinnov-v-dom">8.2.1. Запрет входа джиннов в дом</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِمَنْعِ كُلِّ جِنٍّ مِنْ دُخُولِ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху мульку-с-самавати валь-ард, аркы ли-ман'и кулли джиннин мин духули байти.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежит власть над небесами и землёй, заклинаю для запрета всем джиннам входить в мой дом.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="sozhzhenie-vhodyaschih-dzhinnov">8.2.2. Сожжение входящих джиннов</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لإِحْرَاقِ كُلِّ جِنٍّ يَدْخُلُ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи нурус-самавати валь-ард, аркы ли-ихраки кулли джиннин йадхулу байти.</p>
+<p>Перевод: С именем Аллаха, Который является Светом небес и земли, заклинаю для сожжения каждого джинна, который входит в мой дом.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="uzhas-v-serdca-dzhinnov-ot-doma">8.2.3. Ужас в сердца джиннов от дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْعَزِيزِ الْجَبَّارِ أَرْقِي لِكَذْفِ الرُّعْبِ فِي قُلُوبِ الْجِنِّ مِنْ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхиль-'Азизиль-Джаббар, аркы ли-казфир-ру'би фи кулюбиль-джинни мин байти.</p>
+<p>Перевод: С именем Аллаха Могущественного, Могучего, заклинаю для вселения ужаса в сердца джиннов от моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-ot-maridov">8.2.4. Защита от маридов</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي جَعَلَ حِفْظًا مِنْ كُلِّ شَيْطَانٍ مَارِدٍ أَرْقِي لِحِفْظِ بَيْتِي مِنَ الْمَرَدَةِ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи джа'аля хифзан мин кулли шайтанин марид, аркы ли-хифзи байти миналь-марада.</p>
+<p>Перевод: С именем Аллаха, Который установил защиту от всякого шайтана марида, заклинаю для защиты моего дома от маридов.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-ot-ifritov">8.2.5. Защита от ифритов</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي سَخَّرَ لِسُلَيْمَانَ الْجِنَّ أَرْقِي لِحِفْظِ بَيْتِي مِنَ الْعَفَارِيتِ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи саххара ли-Сулейман аль-джинн, аркы ли-хифзи байти миналь-'афарит.</p>
+<p>Перевод: С именем Аллаха, Который подчинил Сулейману джиннов, заклинаю для защиты моего дома от ифритов.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-ot-sluzhiteley-koldovstva">8.2.6. Защита от служителей колдовства</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ جُنُودُ السَّمَاوَاتِ وَالأَرْضِ أَرْقِي لِحِفْظِ بَيْتِي مِنْ خُدَّامِ السَّحَرَةِ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху джунудус-самавати валь-ард, аркы ли-хифзи байти мин худдамис-сахара.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежат воинства небес и земли, заклинаю для защиты моего дома от служителей колдунов.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-ot-koldovstva">8.3. Защита от колдовства</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-ot-proniknoveniya-koldovstva">8.3.1. Защита от проникновения колдовства</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَا يُفْلِحُ السَّاحِرُ حَيْثُ أَتَى أَرْقِي لِمَنْعِ السِّحْرِ مِنْ دُخُولِ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ля йуфлихус-сахиру хайсу ата, аркы ли-ман'ис-сихри мин духули байти.</p>
+<p>Перевод: С именем Аллаха, [при Котором] не преуспеет колдун, откуда бы он ни пришёл, заклинаю для запрета колдовству входить в мой дом.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="pregrada-ot-koldovstva">8.3.2. Преграда от колдовства</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي جَعَلَ سَدًّا أَرْقِي لِسَدٍّ يَمْنَعُ السِّحْرَ مِنَ الْوُصُولِ إِلَى بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи джа'аля саддан, аркы ли-саддин йамна'ус-сихра миналь-вусули иля байти.</p>
+<p>Перевод: С именем Аллаха, Который воздвиг преграду, заклинаю для преграды, которая не даёт колдовству достичь моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="vozvraschenie-napravlennogo-koldovstva">8.3.3. Возвращение направленного колдовства</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْعَزِيزِ ذِي الانْتِقَامِ أَرْقِي لِرَدِّ كُلِّ سِحْرٍ مُوَجَّهٍ إِلَى بَيْتِي إِلَى صَاحِبِهِ</div>
+  <p>Транскрипция: Бисмилляхиль-'Азизи зиль-интикам, аркы ли-радди кулли сихрин муваджджахин иля байти иля сахибих.</p>
+<p>Перевод: С именем Аллаха Могущественного, Обладателя возмездия, заклинаю для возвращения всякого колдовства, направленного на мой дом, к его отправителю.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-ot-sglaza-i-zavisti">8.4. Защита от сглаза и зависти</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-doma-ot-sglaza">8.4.1. Защита дома от сглаза</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْحَفِيظِ أَرْقِي لِحِفْظِ بَيْتِي مِنَ الْعَيْنِ وَأَثَرِهَا</div>
+  <p>Транскрипция: Бисмилляхиль-Хафиз, аркы ли-хифзи байти миналь-'айни ва асариха.</p>
+<p>Перевод: С именем Аллаха Хранящего, заклинаю для защиты моего дома от сглаза и его следа.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zavesa-ot-zavistnikov">8.4.2. Завеса от завистников</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ السِّتِّيرِ أَرْقِي لِحِجَابٍ يَسْتُرُ بَيْتِي مِنْ أَعْيُنِ الْحَاسِدِينَ</div>
+  <p>Транскрипция: Бисмилляхис-Ситтир, аркы ли-хиджабин йастуру байти мин а'йуниль-хасидин.</p>
+<p>Перевод: С именем Аллаха Скрывающего, заклинаю для завесы, которая скрывает мой дом от глаз завистников.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-blag-doma-ot-zavisti">8.4.3. Защита благ дома от зависти</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّزَّاقِ الْحَفِيظِ أَرْقِي لِحِفْظِ نِعَمِ بَيْتِي مِنَ الْحَسَدِ</div>
+  <p>Транскрипция: Бисмилляхир-Раззакиль-Хафиз, аркы ли-хифзи ни'ами байти миналь-хасад.</p>
+<p>Перевод: С именем Аллаха Дающего удел, Хранящего, заклинаю для защиты благ моего дома от зависти.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="vozvraschenie-sglaza-i-zavisti">8.4.4. Возвращение сглаза и зависти</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْعَزِيزِ أَرْقِي لِرَدِّ كُلِّ عَيْنٍ وَحَسَدٍ مُوَجَّهٍ إِلَى بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхиль-'Азиз, аркы ли-радди кулли 'айнин ва хасадин муваджджахин иля байти.</p>
+<p>Перевод: С именем Аллаха Могущественного, заклинаю для возвращения всякого сглаза и зависти, направленных на мой дом.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-konkretnyh-chastey-doma">8.5. Защита конкретных частей дома</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-dverey-doma">8.5.1. Защита дверей дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْحَفِيظِ أَرْقِي لِحِفْظِ أَبْوَابِ بَيْتِي مِنْ دُخُولِ كُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхиль-Хафиз, аркы ли-хифзи абваби байти мин духули кулли шарр.</p>
+<p>Перевод: С именем Аллаха Хранящего, заклинаю для защиты дверей моего дома от входа всякого зла.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-okon-doma">8.5.2. Защита окон дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي جَعَلَ سَدًّا أَرْقِي لِسَدٍّ عَلَى نَوَافِذِ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи джа'аля саддан, аркы ли-саддин 'аля навафизи байти.</p>
+<p>Перевод: С именем Аллаха, Который воздвиг преграду, заклинаю для преграды на окнах моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-sten-doma">8.5.3. Защита стен дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْقَوِيِّ الْمَتِينِ أَرْقِي لِتَقْوِيَةِ جُدْرَانِ بَيْتِي ضِدَّ كُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхиль-Кавийиль-Матин, аркы ли-таквийати джудрани байти дидда кулли шарр.</p>
+<p>Перевод: С именем Аллаха Сильного, Крепкого, заклинаю для укрепления стен моего дома против всякого зла.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-kryshi-doma">8.5.4. Защита крыши дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ أَرْقِي لِحِفْظِ سَقْفِ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху ма фис-самавати ва ма филь-ард, аркы ли-хифзи сакфи байти.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежит то, что на небесах и то, что на земле, заклинаю для защиты крыши моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-fundamenta-doma">8.5.5. Защита фундамента дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي يُمْسِكُ السَّمَاوَاتِ وَالأَرْضَ أَنْ تَزُولَا أَرْقِي لِحِفْظِ أَسَاسِ بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхи-ллязи йумсикус-самавати валь-арда ан тазуля, аркы ли-хифзи асаси байти.</p>
+<p>Перевод: С именем Аллаха, Который удерживает небеса и землю от исчезновения, заклинаю для защиты фундамента моего дома.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-uglov-doma">8.5.6. Защита углов дома</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْمُحِيطِ بِكُلِّ شَيْءٍ أَرْقِي لِحِفْظِ زَوَايَا بَيْتِي مِنْ كُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхиль-Мухити би-кулли шай', аркы ли-хифзи завайа байти мин кулли шарр.</p>
+<p>Перевод: С именем Аллаха, Объемлющего всякую вещь, заклинаю для защиты углов моего дома от всякого зла.</p>
+  
+</aside>
+</section>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-obitateley-doma">8.6. Защита обитателей дома</h3>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-semi-v-dome">8.6.1. Защита семьи в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي هُوَ خَيْرٌ حَافِظًا أَرْقِي لِحِفْظِ أَهْلِي فِي بَيْتِي مِنْ كُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи хува хайрун хафизан, аркы ли-хифзи ахли фи байти мин кулли шарр.</p>
+<p>Перевод: С именем Аллаха, Который является лучшим Хранителем, заклинаю для защиты моей семьи в моём доме от всякого зла.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-detey-v-dome">8.6.2. Защита детей в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ أَرْقِي لِحِفْظِ أَطْفَالِي فِي بَيْتِي مِنَ الْجِنِّ وَالْعَيْنِ</div>
+  <p>Транскрипция: Бисмилляхир-Рахманир-Рахим, аркы ли-хифзи атфали фи байти миналь-джинни валь-'айн.</p>
+<p>Перевод: С именем Аллаха Милостивого, Милосердного, заклинаю для защиты моих детей в моём доме от джиннов и сглаза.</p>
+  
+</aside>
+</section>
+<section class="subsection" data-kind="subsection" data-level="3">
+<h4 id="zaschita-imuschestva-v-dome">8.6.3. Защита имущества в доме</h4>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّزَّاقِ الْحَفِيظِ أَرْقِي لِحِفْظِ مَالِي وَمَتَاعِي فِي بَيْتِي</div>
+  <p>Транскрипция: Бисмилляхир-Раззакиль-Хафиз, аркы ли-хифзи мали ва мата'и фи байти.</p>
+<p>Перевод: С именем Аллаха Дающего удел, Хранящего, заклинаю для защиты моего имущества в моём доме.</p>
+  
+</aside>
+</section>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-9-kombinirovannye-polnye-formuly">Глава 9. Комбинированные полные формулы</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnaya-chistka-doma-odin-tekst">9.1. Полная чистка дома — один текст</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالأَرْضِ الَّذِي نُورُ السَّمَاوَاتِ وَالأَرْضِ الشَّافِي الَّذِي لَا شِفَاءَ إِلَّا شِفَاؤُهُ أَرْقِي لِخُرُوجِ كُلِّ جِنٍّ مِنْ بَيْتِي وَإِبْطَالِ كُلِّ سِحْرٍ وَإِزَالَةِ كُلِّ عَيْنٍ وَحَسَدٍ وَتَطْهِيرِهِ مِنْ كُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху мульку-с-самавати валь-ард, аллязи нурус-самавати валь-ард, аш-Шафи-ллязи ля шифаа илля шифаух, аркы ли-худжуджи кулли джиннин мин байти ва ибтали кулли сихрин ва изаляти кулли 'айнин ва хасадин ва татхирихи мин кулли шарр.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежит власть над небесами и землёй, Который является Светом небес и земли, Исцеляющего, Чьё исцеление — единственное исцеление, заклинаю для выхода всех джиннов из моего дома, и уничтожения всякого колдовства, и удаления всякого сглаза и зависти, и очищения его от всякого зла.</p>
+  
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnaya-zaschita-doma-odin-tekst">9.2. Полная защита дома — один текст</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الْحَفِيظِ الْقَوِيِّ الْمَتِينِ الَّذِي جَعَلَ مِنْ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَاهُمْ فَهُمْ لَا يُبْصِرُونَ أَرْقِي لِحِفْظِ بَيْتِي وَسَدٍّ حَوْلَهُ وَحِجَابٍ عَلَيْهِ وَحِصْنٍ يُحِيطُ بِهِ مِنْ كُلِّ جِنٍّ وَسِحْرٍ وَعَيْنٍ وَحَسَدٍ وَكُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхиль-Хафизиль-Кавийиль-Матин, аллязи джа'аля мин байни айдихим саддан ва мин хальфихим саддан фа-агшахум фахум ля йубсырун, аркы ли-хифзи байти ва саддин хауляху ва хиджабин 'аляйхи ва хиснин йухиту бихи мин кулли джиннин ва сихрин ва 'айнин ва хасадин ва кулли шарр.</p>
+<p>Перевод: С именем Аллаха Хранящего, Сильного, Крепкого, Который воздвиг перед ними преграду и позади них преграду и накрыл их покрывалом и они не видят, заклинаю для охраны моего дома, и преграды вокруг него, и завесы над ним, и крепости, окружающей его, от всех джиннов, колдовства, сглаза, зависти и всякого зла.</p>
+  
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnaya-chistka-i-zaschita-doma-maksimalnaya-formula">9.3. Полная чистка и защита дома — максимальная формула</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالأَرْضِ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ أَرْقِي لِتَطْهِيرِ بَيْتِي مِنْ كُلِّ جِنٍّ وَمَارِدٍ وَعِفْرِيتٍ وَخَادِمِ سِحْرٍ وَلإِبْطَالِ كُلِّ سِحْرٍ مَدْفُونٍ وَمُعَلَّقٍ وَمَأْكُولٍ وَمَشْرُوبٍ وَمَنْفُوخٍ وَلإِزَالَةِ كُلِّ عَيْنٍ وَحَسَدٍ وَلِحِفْظِهِ وَسَدٍّ حَوْلَهُ وَحِجَابٍ عَلَيْهِ وَحِصْنٍ يُحِيطُ بِهِ وَلِمَلْئِهِ بِالنُّورِ وَالْبَرَكَةِ وَالسَّكِينَةِ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху мульку-с-самавати валь-арди ва хува 'аля кулли шай'ин кадир, аркы ли-татхири байти мин кулли джиннин ва маридин ва 'ифритин ва хадими сихр, ва ли-ибтали кулли сихрин мадфунин ва му'аллякин ва ма'кулин ва машрубин ва манфух, ва ли-изаляти кулли 'айнин ва хасад, ва ли-хифзихи ва саддин хауляху ва хиджабин 'аляйхи ва хиснин йухиту бих, ва ли-маль'ихи бин-нури валь-баракати вас-сакина.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежит власть над небесами и землёй и Который мощен над всякой вещью, заклинаю для очищения моего дома от всех джиннов, маридов, ифритов и служителей колдовства, и для уничтожения всякого колдовства — закопанного, подвешенного, съеденного, выпитого и вдутого, и для удаления всякого сглаза и зависти, и для его охраны, и преграды вокруг него, и завесы над ним, и крепости, окружающей его, и для наполнения его светом, благословением и спокойствием.</p>
+  
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ezhednevnaya-zaschita-doma-utro">9.4. Ежедневная защита дома — утро</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ أَرْقِي لِحِفْظِ بَيْتِي وَأَهْلِي فِي يَوْمِنَا هَذَا مِنَ الْجِنِّ وَالسِّحْرِ وَالْعَيْنِ وَالْحَسَدِ وَكُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи би-йадихиль-мульку ва хува 'аля кулли шай'ин кадир, аркы ли-хифзи байти ва ахли фи яумина хаза миналь-джинни вас-сихри валь-'айни валь-хасади ва кулли шарр.</p>
+<p>Перевод: С именем Аллаха, в Чьей руке власть и Который мощен над всякой вещью, заклинаю для защиты моего дома и моей семьи в этот наш день от джиннов, колдовства, сглаза, зависти и всякого зла.</p>
+  
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ezhednevnaya-zaschita-doma-vecher">9.5. Ежедневная защита дома — вечер</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَهُ مَا سَكَنَ فِي اللَّيْلِ وَالنَّهَارِ وَهُوَ السَّمِيعُ الْعَلِيمُ أَرْقِي لِحِفْظِ بَيْتِي وَأَهْلِي فِي لَيْلَتِنَا هَذِهِ مِنَ الْجِنِّ وَالسِّحْرِ وَالْعَيْنِ وَالْحَسَدِ وَكُلِّ شَرٍّ</div>
+  <p>Транскрипция: Бисмилляхи-ллязи ляху ма сакана филь-ляйли ван-нахари ва хувас-Сами'уль-'Алим, аркы ли-хифзи байти ва ахли фи ляйлятина хазихи миналь-джинни вас-сихри валь-'айни валь-хасади ва кулли шарр.</p>
+<p>Перевод: С именем Аллаха, Которому принадлежит всё, что обитает ночью и днём, и Который является Слышащим, Знающим, заклинаю для защиты моего дома и моей семьи в эту нашу ночь от джиннов, колдовства, сглаза, зависти и всякого зла.</p>
+  
+</aside>
+<p>Печать после каждого сеанса:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ</div>
+  <p>Транскрипция: Ва ма тауфики илля билляхи 'аляйхи таваккальту ва иляйхи ун</p>
+  
+</aside>
+</section>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Полный курс чистки и защиты дома от духовных недугов. Метод «Влияние волей» и формула «У'изу аль-байт билляхи» · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<style>
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+[id] { scroll-margin-top: 100px; }
+a[href^="#"] { cursor: pointer; }
+</style>
+<script>
+(function(){
+  var offset = 100;
+  function scrollToId(id) {
+    var el = document.getElementById(id);
+    if (!el) return false;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return true;
+  }
+  // Обработчик на весь документ
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (link) {
+      var href = link.getAttribute('href');
+      if (href && href.length > 1) {
+        e.preventDefault();
+        var id = href.substring(1);
+        if (scrollToId(id)) {
+          try { history.pushState(null, '', href); } catch(err) {}
+        }
+      }
+    }
+  }, true);
+  // При загрузке
+  setTimeout(function() {
+    if (location.hash && location.hash.length > 1) {
+      scrollToId(location.hash.substring(1));
+    }
+  }, 100);
+})();
+</script>
+</body>
+</html>
