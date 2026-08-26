@@ -1,0 +1,1617 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Руководство по дуа для открытия закрытых путей</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --paper-alt: #f5f7f5;
+  --ink: #1b221f;
+  --ink-soft: #4a5751;
+  --rule: #dce1dd;
+  --accent: #2f6b4f;
+  --accent-soft: #eaf2ed;
+  --gold: #9a7b32;
+  --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(20,30,25,.05);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: var(--base);
+  /* Плавная прокрутка только для якорей, без влияния на колесо мыши */
+  scroll-behavior: auto;
+  scroll-padding-top: 88px;
+}
+
+/* Отступ для якорей */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-break: normal;
+  /* Важно: не блокировать вертикальную прокрутку */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; width: 100%; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля ---- */
+.bismillah-slot { display: flex; width: 100%; direction: ltr; }
+.bismillah {
+  display: block; max-width: 100%;
+  font-family: var(--arabic); direction: rtl;
+  font-size: 1.75em; color: var(--gold);
+  line-height: 2.1; margin: 0;
+  letter-spacing: 0.02em; white-space: pre-wrap;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page { margin-bottom: 3rem; padding: 1.5rem 0; position: relative; }
+.bism-pos-center-page::after {
+  content: ""; display: block; width: 60px; height: 1px;
+  background: var(--gold); margin: .8rem auto 0; opacity: .45;
+}
+.title-page-bism-center { padding-top: 3rem; }
+.title-page-bism-center .bismillah-slot { margin-top: 1.5rem; margin-bottom: 3.5rem; }
+.title-page-bism-center .title-page-body { text-align: center; }
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+.bismillah:not([dir="rtl"]) { font-family: var(--serif); font-style: italic; direction: ltr; letter-spacing: .04em; }
+
+.institution {
+  font-family: var(--sans); font-size: .76em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3rem;
+}
+.book-title {
+  font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+}
+.book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.rule-orn {
+  width: 160px; height: 14px; margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦"; position: absolute; inset: 0; margin: auto;
+  width: 1.8em; height: 1em; line-height: .85;
+  background: var(--paper); color: var(--gold); font-size: .85rem;
+}
+.book-author { font-size: 1.08em; font-weight: 700; margin: 0 0 .4rem; }
+.book-meta { font-family: var(--sans); font-size: .84em; color: var(--ink-soft); line-height: 1.6; }
+.epigraph { max-width: 38ch; margin: 2.8rem auto 0; font-style: italic; color: var(--ink-soft); font-size: .96em; }
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 1.3rem; font-weight: 600; border: 0; padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink); text-decoration: none;
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .1rem; border-radius: 4px;
+}
+.toc a:hover { color: var(--accent); background: rgba(47,107,79,.06); }
+.toc a:active { background: rgba(47,107,79,.1); }
+.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.8em; font-size: .9em; font-weight: 500; }
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+.chapter > h2 {
+  font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
+  color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
+}
+.section > h3 { font-size: 1.25em; font-weight: 700; margin: 2.6rem 0 1rem; }
+.subsection > h4 { font-size: 1.08em; font-weight: 700; margin: 1.9rem 0 .8rem; color: var(--ink-soft); }
+.chapter:first-of-type > h2 { margin-top: 0; }
+section[data-kind="front"] > h2, section[data-kind="back"] > h2 {
+  text-align: center; border-bottom: 0; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 1.3em; font-weight: 700;
+}
+section[data-kind="front"] > h2::after, section[data-kind="back"] > h2::after {
+  content: ""; display: block; width: 72px; height: 1.5px;
+  background: var(--gold); margin: .9rem auto 0; border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem; text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
+
+.lead { font-size: 1.07em; color: var(--ink-soft); text-indent: 0; line-height: 1.65; }
+strong { font-weight: 700; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+a {
+  color: var(--accent); text-underline-offset: .22em; text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover { color: var(--gold); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
+  background: var(--paper-alt); padding: .12em .4em; border-radius: 3px; border: 1px solid var(--rule);
+  word-break: break-all;
+}
+hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
+.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+
+/* ========== СПИСКИ ========== */
+ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold); font-style: italic; color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source, blockquote.quote footer {
+  display: block; margin-top: .7rem; font-family: var(--sans);
+  font-style: normal; font-size: .78em; color: var(--ink-soft);
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0; padding: 1.8rem 2rem;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+  border-radius: 8px; position: relative; text-align: center;
+}
+.ayah::before, .ayah::after {
+  content: ""; position: absolute; left: 1.6rem; right: 1.6rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .45;
+}
+.ayah::before { top: .65rem; } .ayah::after { bottom: .65rem; }
+.ar-block {
+  font-family: var(--arabic); direction: rtl; unicode-bidi: isolate;
+  text-align: center; font-size: 1.6em; line-height: 2.3;
+  color: var(--ink); overflow-wrap: anywhere; word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+.ayah-tr { margin-top: 1rem; font-style: italic; font-size: .97em; text-indent: 0; color: var(--ink-soft); }
+.ayah .source { margin-top: .7rem; text-align: center; color: var(--accent); font-weight: 500; font-size: .8em; }
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС / ДУА ========== */
+.hadith {
+  margin: 1.9rem 0; padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 5px; background: var(--paper-alt);
+}
+.hadith .label, .dua .label, .callout .label {
+  display: block; font-family: var(--sans); font-size: .66em;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .65rem; font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+.dua {
+  margin: 1.9rem 0; padding: 1.5rem 1.8rem;
+  background: var(--paper-alt); border: 1.5px dashed var(--gold);
+  border-radius: 8px; text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+.callout { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 5px; font-size: .94em; }
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; unicode-bidi: isolate; direction: rtl; }
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] { font-family: var(--arabic); font-size: 1.35em; line-height: 2.2; text-indent: 0; }
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table { margin: 2.2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft); text-align: center; margin-top: .7rem; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
+th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
+tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+/* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
+sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
+.footnotes { margin-top: 4rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule); font-size: .85em; color: var(--ink-soft); }
+.footnotes h2, .bibliography h2 { font-family: var(--sans); font-size: .76em; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 600; }
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num { color: var(--accent); margin-right: .55em; font-weight: 700; }
+.bibliography ol { list-style: none; counter-reset: bib; padding-left: 0; }
+.bibliography li { counter-increment: bib; padding-left: 2.8rem; position: relative; margin: .7rem 0; font-size: .94em; line-height: 1.55; }
+.bibliography li::before { content: counter(bib) "."; position: absolute; left: 0; top: 0; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule);
+  font-family: var(--sans); font-size: .72em; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page { padding: 2.2rem 1.4rem 3rem; }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .45rem .1rem; min-height: 44px; }
+  .ayah { padding: 1.2rem 1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table { display: block; width: 100%; overflow-x: auto; }
+  table { min-width: 36rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page { size: A4; margin: 22mm 20mm 22mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.55; overflow: visible; }
+  .page { box-shadow: none; padding: 0; max-width: none; min-height: 0; }
+  .wrap { max-width: none; }
+  .title-page { page-break-after: always; border-bottom: 0; }
+  .title-page::after { display: none; }
+  .toc { page-break-after: always; background: none; border: 0; padding: 0; }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .doc-footer { display: none; }
+  .ayah, .hadith, .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Руководство по дуа для открытия закрытых путей</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2025</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#vvedenie"><span class="num">1.</span><span class="lbl">Введение</span></a><ol><li class="toc-l2">
+      <a href="#podgotovka-k-chteniyu-dua"><span class="num">1.1.</span><span class="lbl">Подготовка к чтению дуа</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#sovershite-omovenie-vudu-esli-est-vozmozhnost"><span class="num"></span><span class="lbl">1. Совершите омовение (вуду), если есть возможность.</span></a></li>
+<li class="toc-l1">
+      <a href="#povernites-v-storonu-kibly"><span class="num"></span><span class="lbl">2. Повернитесь в сторону киблы.</span></a></li>
+<li class="toc-l1">
+      <a href="#podnimite-ruki"><span class="num"></span><span class="lbl">3. Поднимите руки.</span></a></li>
+<li class="toc-l1">
+      <a href="#nachnite-s-bismillyahi-r-rahmani-r-rahim"><span class="num"></span><span class="lbl">4. Начните с «Бисмилляхи-р-Рахмани-р-Рахим».</span></a></li>
+<li class="toc-l1">
+      <a href="#prochitayte-salavat-proroku"><span class="num"></span><span class="lbl">5. Прочитайте салават Пророку<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>.</span></a></li>
+<li class="toc-l1">
+      <a href="#chitayte-kazhdoe-dua-po-3-7-ili-11-raz-kak-pochuvstvuet-serd"><span class="num"></span><span class="lbl">6. Читайте каждое дуа по 3, 7 или 11 раз — как почувствует сердце.</span></a></li>
+<li class="toc-l1">
+      <a href="#glava-1-put-udela-rizk"><span class="num"></span><span class="lbl">Глава 1. Путь удела (ризк)</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dverey-udela"><span class="num"></span><span class="lbl">1.1. Открытие дверей удела</span></a></li>
+<li class="toc-l2">
+      <a href="#razvyazyvanie-uzlov-na-puti-rizka"><span class="num"></span><span class="lbl">1.2. Развязывание узлов на пути ризка</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-koldovstva-i-sglaza-na-udel"><span class="num"></span><span class="lbl">1.3. Аннулирование колдовства и сглаза на удел</span></a></li>
+<li class="toc-l2">
+      <a href="#rasshirenie-udela"><span class="num"></span><span class="lbl">1.4. Расширение удела</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-dozvolennom-udele"><span class="num"></span><span class="lbl">1.5. Мольба о дозволенном уделе</span></a></li>
+<li class="toc-l2">
+      <a href="#ustranenie-prepyatstviy"><span class="num"></span><span class="lbl">1.6. Устранение препятствий</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-dostatke"><span class="num"></span><span class="lbl">1.7. Мольба о достатке</span></a></li>
+<li class="toc-l2">
+      <a href="#otkrytie-dverey-dozvolennogo-zarabotka"><span class="num"></span><span class="lbl">1.8. Открытие дверей дозволенного заработка</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-ob-udovletvorenii-dozvolennym"><span class="num"></span><span class="lbl">1.9. Мольба об удовлетворении дозволенным</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-ob-udele-iz-nevedomogo"><span class="num"></span><span class="lbl">1.10. Мольба об уделе из неведомого</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-2-put-pokloneniya-allahu-ibada"><span class="num"></span><span class="lbl">Глава 2. Путь поклонения Аллаху (ибада)</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dveri-obrascheniya-k-allahu"><span class="num"></span><span class="lbl">2.1. Открытие двери обращения к Аллаху</span></a></li>
+<li class="toc-l2">
+      <a href="#osvobozhdenie-serdca-dlya-hushu"><span class="num"></span><span class="lbl">2.2. Освобождение сердца для хушу</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-nauscheniy-i-koldovstva-na-ibadu"><span class="num"></span><span class="lbl">2.3. Аннулирование наущений и колдовства на ибаду</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-radosti-v-molitve"><span class="num"></span><span class="lbl">2.4. Мольба о радости в молитве</span></a></li>
+<li class="toc-l2">
+      <a href="#otkrytie-vrat-korana"><span class="num"></span><span class="lbl">2.5. Открытие врат Корана</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-pomoschi-v-poklonenii"><span class="num"></span><span class="lbl">2.6. Мольба о помощи в поклонении</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-smyagchenii-serdca"><span class="num"></span><span class="lbl">2.7. Мольба о смягчении сердца</span></a></li>
+<li class="toc-l2">
+      <a href="#otkrytie-puti-pokayaniya"><span class="num"></span><span class="lbl">2.8. Открытие пути покаяния</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-nochnoy-molitve-i-poste"><span class="num"></span><span class="lbl">2.9. Мольба о ночной молитве и посте</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-chistom-serdce-pred-allahom"><span class="num"></span><span class="lbl">2.10. Мольба о чистом сердце пред Аллахом</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-3-put-uspeha-i-pobedy-taufik"><span class="num"></span><span class="lbl">Глава 3. Путь успеха и победы (тауфик)</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dverey-taufika"><span class="num"></span><span class="lbl">3.1. Открытие дверей тауфика</span></a></li>
+<li class="toc-l2">
+      <a href="#razvyazyvanie-uzlov-na-puti-k-uspehu"><span class="num"></span><span class="lbl">3.2. Развязывание узлов на пути к успеху</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-kozney-i-koldovstva-na-uspeh"><span class="num"></span><span class="lbl">3.3. Аннулирование козней и колдовства на успех</span></a></li>
+<li class="toc-l2">
+      <a href="#oblegchenie-trudnogo"><span class="num"></span><span class="lbl">3.4. Облегчение трудного</span></a></li>
+<li class="toc-l2">
+      <a href="#vyhod-iz-tesnoty"><span class="num"></span><span class="lbl">3.5. Выход из тесноты</span></a></li>
+<li class="toc-l2">
+      <a href="#napravlenie-k-blagomu"><span class="num"></span><span class="lbl">3.6. Направление к благому</span></a></li>
+<li class="toc-l2">
+      <a href="#pomosch-nad-nespravedlivymi"><span class="num"></span><span class="lbl">3.7. Помощь над несправедливыми</span></a></li>
+<li class="toc-l2">
+      <a href="#otkrytie-dverey-blaga"><span class="num"></span><span class="lbl">3.8. Открытие дверей блага</span></a></li>
+<li class="toc-l2">
+      <a href="#blagoy-itog-dela"><span class="num"></span><span class="lbl">3.9. Благой итог дела</span></a></li>
+<li class="toc-l2">
+      <a href="#upovanie-na-allaha"><span class="num"></span><span class="lbl">3.10. Упование на Аллаха</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-4-put-znaniya-i-yasnosti-ilm"><span class="num"></span><span class="lbl">Глава 4. Путь знания и ясности (ильм)</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dverey-znaniya"><span class="num"></span><span class="lbl">4.1. Открытие дверей знания</span></a></li>
+<li class="toc-l2">
+      <a href="#yasnost-razuma"><span class="num"></span><span class="lbl">4.2. Ясность разума</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-koldovstva-na-razum"><span class="num"></span><span class="lbl">4.3. Аннулирование колдовства на разум</span></a></li>
+<li class="toc-l2">
+      <a href="#pribavlenie-znaniya-i-mudrosti"><span class="num"></span><span class="lbl">4.4. Прибавление знания и мудрости</span></a></li>
+<li class="toc-l2">
+      <a href="#vernost-resheniy"><span class="num"></span><span class="lbl">4.5. Верность решений</span></a></li>
+<li class="toc-l2">
+      <a href="#svet-serdca"><span class="num"></span><span class="lbl">4.6. Свет сердца</span></a></li>
+<li class="toc-l2">
+      <a href="#put-mudrosti"><span class="num"></span><span class="lbl">4.7. Путь мудрости</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-pamyati-i-prisutstvii-uma"><span class="num"></span><span class="lbl">4.8. Мольба о памяти и присутствии ума</span></a></li>
+<li class="toc-l2">
+      <a href="#razlichenie-istiny-i-lzhi"><span class="num"></span><span class="lbl">4.9. Различение истины и лжи</span></a></li>
+<li class="toc-l2">
+      <a href="#otkrytie-poznavshih"><span class="num"></span><span class="lbl">4.10. Открытие познавших</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-5-put-isceleniya-shifa"><span class="num"></span><span class="lbl">Глава 5. Путь исцеления (шифа)</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dverey-isceleniya"><span class="num"></span><span class="lbl">5.1. Открытие дверей исцеления</span></a></li>
+<li class="toc-l2">
+      <a href="#osvobozhdenie-ot-bolezni"><span class="num"></span><span class="lbl">5.2. Освобождение от болезни</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-koldovstva-i-sglaza-na-telo"><span class="num"></span><span class="lbl">5.3. Аннулирование колдовства и сглаза на тело</span></a></li>
+<li class="toc-l2">
+      <a href="#polnoe-iscelenie"><span class="num"></span><span class="lbl">5.4. Полное исцеление</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-k-iscelyayuschemu"><span class="num"></span><span class="lbl">5.5. Мольба к Исцеляющему</span></a></li>
+<li class="toc-l2">
+      <a href="#unesenie-stradaniya"><span class="num"></span><span class="lbl">5.6. Унесение страдания</span></a></li>
+<li class="toc-l2">
+      <a href="#put-zdorovya-i-sily"><span class="num"></span><span class="lbl">5.7. Путь здоровья и силы</span></a></li>
+<li class="toc-l2">
+      <a href="#zdravie-tela-sluha-i-zreniya"><span class="num"></span><span class="lbl">5.8. Здравие тела, слуха и зрения</span></a></li>
+<li class="toc-l2">
+      <a href="#zdravie-tela-sluha-i-zreniya-2"><span class="num"></span><span class="lbl">5.8. Здравие тела, слуха и зрения</span></a></li>
+<li class="toc-l2">
+      <a href="#vyvedenie-neduga-iz-tela"><span class="num"></span><span class="lbl">5.9. Выведение недуга из тела</span></a></li>
+<li class="toc-l2">
+      <a href="#legkost-tela-i-pokoy-dushi"><span class="num"></span><span class="lbl">5.10. Лёгкость тела и покой души</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-6-put-zaschity-i-bezopasnosti-hifz"><span class="num"></span><span class="lbl">Глава 6. Путь защиты и безопасности (хифз)</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dverey-bezopasnosti"><span class="num"></span><span class="lbl">6.1. Открытие дверей безопасности</span></a></li>
+<li class="toc-l2">
+      <a href="#osvobozhdenie-ot-straha-i-okov-dzhinnov"><span class="num"></span><span class="lbl">6.2. Освобождение от страха и оков джиннов</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-sglaza-i-napravlennogo-vreda"><span class="num"></span><span class="lbl">6.3. Аннулирование сглаза и направленного вреда</span></a></li>
+<li class="toc-l2">
+      <a href="#zaschita-so-vseh-storon"><span class="num"></span><span class="lbl">6.4. Защита со всех сторон</span></a></li>
+<li class="toc-l2">
+      <a href="#krepost-iz-sveta"><span class="num"></span><span class="lbl">6.5. Крепость из света</span></a></li>
+<li class="toc-l2">
+      <a href="#zaschita-ot-vsyakogo-zla"><span class="num"></span><span class="lbl">6.6. Защита от всякого зла</span></a></li>
+<li class="toc-l2">
+      <a href="#put-pokoya-i-umirotvoreniya"><span class="num"></span><span class="lbl">6.7. Путь покоя и умиротворения</span></a></li>
+<li class="toc-l2">
+      <a href="#zaschita-semi-i-doma"><span class="num"></span><span class="lbl">6.8. Защита семьи и дома</span></a></li>
+<li class="toc-l2">
+      <a href="#zaschita-ot-vragov"><span class="num"></span><span class="lbl">6.9. Защита от врагов</span></a></li>
+<li class="toc-l2">
+      <a href="#prebyvanie-pod-zaschitoy-allaha"><span class="num"></span><span class="lbl">6.10. Пребывание под защитой Аллаха</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-7-put-semi-i-braka"><span class="num"></span><span class="lbl">Глава 7. Путь семьи и брака</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dveri-blagogo-braka"><span class="num"></span><span class="lbl">7.1. Открытие двери благого брака</span></a></li>
+<li class="toc-l2">
+      <a href="#razvyazyvanie-uzlov-na-brake-i-v-dome"><span class="num"></span><span class="lbl">7.2. Развязывание узлов на браке и в доме</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-koldovstva-na-semyu"><span class="num"></span><span class="lbl">7.3. Аннулирование колдовства на семью</span></a></li>
+<li class="toc-l2">
+      <a href="#soedinenie-serdec"><span class="num"></span><span class="lbl">7.4. Соединение сердец</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-blagom-supruge"><span class="num"></span><span class="lbl">7.5. Мольба о благом супруге</span></a></li>
+<li class="toc-l2">
+      <a href="#napolnenie-doma-milostyu"><span class="num"></span><span class="lbl">7.6. Наполнение дома милостью</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-blagom-potomstve"><span class="num"></span><span class="lbl">7.7. Мольба о благом потомстве</span></a></li>
+<li class="toc-l2">
+      <a href="#zaschita-semi-ot-razlada"><span class="num"></span><span class="lbl">7.8. Защита семьи от разлада</span></a></li>
+<li class="toc-l2">
+      <a href="#ustranenie-pregrad-k-braku"><span class="num"></span><span class="lbl">7.9. Устранение преград к браку</span></a></li>
+<li class="toc-l2">
+      <a href="#vechnaya-lyubov-i-milost"><span class="num"></span><span class="lbl">7.10. Вечная любовь и милость</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-8-put-raboty-i-dela"><span class="num"></span><span class="lbl">Глава 8. Путь работы и дела</span></a><ol><li class="toc-l2">
+      <a href="#otkrytie-dverey-blagogo-truda"><span class="num"></span><span class="lbl">8.1. Открытие дверей благого труда</span></a></li>
+<li class="toc-l2">
+      <a href="#razvyazyvanie-uzlov-v-rabote"><span class="num"></span><span class="lbl">8.2. Развязывание узлов в работе</span></a></li>
+<li class="toc-l2">
+      <a href="#annulirovanie-zavisti-i-kozney-na-rabote"><span class="num"></span><span class="lbl">8.3. Аннулирование зависти и козней на работе</span></a></li>
+<li class="toc-l2">
+      <a href="#blagoslovenie-v-trude"><span class="num"></span><span class="lbl">8.4. Благословение в труде</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-o-rabote-udovletvoryayuschey-allaha"><span class="num"></span><span class="lbl">8.5. Мольба о работе, удовлетворяющей Аллаха</span></a></li>
+<li class="toc-l2">
+      <a href="#pomosch-v-dele"><span class="num"></span><span class="lbl">8.6. Помощь в деле</span></a></li>
+<li class="toc-l2">
+      <a href="#rost-i-uspeh-v-professii"><span class="num"></span><span class="lbl">8.7. Рост и успех в профессии</span></a></li>
+<li class="toc-l2">
+      <a href="#zaschita-dela-ot-ubytka-i-nespravedlivosti"><span class="num"></span><span class="lbl">8.8. Защита дела от убытка и несправедливости</span></a></li>
+<li class="toc-l2">
+      <a href="#schedrost-ruki-i-obshirnyy-udel"><span class="num"></span><span class="lbl">8.9. Щедрость руки и обширный удел</span></a></li>
+<li class="toc-l2">
+      <a href="#razlichenie-blaga-i-zla-v-dele"><span class="num"></span><span class="lbl">8.10. Различение блага и зла в деле</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#zaklyuchenie"><span class="num">16.</span><span class="lbl">Заключение</span></a></li>
+<li class="toc-l1">
+      <a href="#prilozhenie"><span class="num">17.</span><span class="lbl">Приложение</span></a><ol><li class="toc-l2">
+      <a href="#poryadok-chteniya-dua-po-napravleniyam"><span class="num">17.1.</span><span class="lbl">Порядок чтения дуа по направлениям</span></a></li>
+<li class="toc-l2">
+      <a href="#rekomenduemaya-posledovatelnost-chteniya"><span class="num">17.2.</span><span class="lbl">Рекомендуемая последовательность чтения</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#vudu-omovenie"><span class="num"></span><span class="lbl">1. Вуду (омовение).</span></a></li>
+<li class="toc-l1">
+      <a href="#dva-rakaata-namereniya"><span class="num"></span><span class="lbl">2. Два ракаата намерения.</span></a></li>
+<li class="toc-l1">
+      <a href="#salavat-proroku-allahumma-salli-alya-muhammadin-va-alya-ali-"><span class="num"></span><span class="lbl">3. Салават Пророку<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>: «Аллахумма, салли 'аля Мухаммадин ва 'аля али Мухаммад».</span></a></li>
+<li class="toc-l1">
+      <a href="#al-fatiha-1-raz"><span class="num"></span><span class="lbl">4. Аль-Фатиха — 1 раз.</span></a></li>
+<li class="toc-l1">
+      <a href="#ayat-al-kursi-1-raz"><span class="num"></span><span class="lbl">5. Аят аль-Курси — 1 раз.</span></a></li>
+<li class="toc-l1">
+      <a href="#sury-al-ihlyas-al-falyak-an-nas-po-3-raza"><span class="num"></span><span class="lbl">6. Суры аль-Ихляс, аль-Фаляк, ан-Нас — по 3 раза.</span></a></li>
+<li class="toc-l1">
+      <a href="#dua-vybrannogo-napravleniya-kazhdoe-po-3-7-ili-11-raz"><span class="num"></span><span class="lbl">7. Дуа выбранного направления — каждое по 3, 7 или 11 раз.</span></a></li>
+<li class="toc-l1">
+      <a href="#zavershenie-salavatom-proroku"><span class="num"></span><span class="lbl">8. Завершение салаватом Пророку<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>.</span></a><ol><li class="toc-l2">
+      <a href="#vazhnye-preduprezhdeniya"><span class="num">25.1.</span><span class="lbl">Важные предупреждения</span></a></li></ol></li></ol></nav>
+  <main>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vvedenie"><span class="num">1.</span>Введение</h2>
+<p>Дорогие мои братья и сёстры. Меня зовут Абу Мухаммад, и я составил для вас это руководство от всего сердца. Я знаю, как тяжело, когда пути закрыты, когда руки связаны, когда кажется, что двери не открываются ни вперёд, ни назад. Я прошу Аллаха, чтобы это руководство стало для вас светом и облегчением.</p>
+<p>Читайте эти дуа с убеждением (йакин), с чистым сердцем, и знайте: Аллах слышит каждого, кто зовёт Его искренне.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ</div>
+  <figcaption class="ayah-tr">Ваш Господь сказал: «Взывайте ко Мне — Я отвечу вам».</figcaption>
+  <div class="source">Источник: Сура «Гафир», аят 60</div>
+</figure>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">الدُّعَاءُ هُوَ الْعِبَادَةُ</div>
+  <p>Мольба (дуа) — это и есть поклонение.</p>
+  <footer class="source">Источник: ат-Тирмизи, № 2969; Абу Дауд, № 1479</footer>
+</blockquote>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="podgotovka-k-chteniyu-dua"><span class="num">1.1.</span>Подготовка к чтению дуа</h3>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sovershite-omovenie-vudu-esli-est-vozmozhnost">1. Совершите омовение (вуду), если есть возможность.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="povernites-v-storonu-kibly">2. Повернитесь в сторону киблы.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="podnimite-ruki">3. Поднимите руки.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="nachnite-s-bismillyahi-r-rahmani-r-rahim">4. Начните с «Бисмилляхи-р-Рахмани-р-Рахим».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="prochitayte-salavat-proroku">5. Прочитайте салават Пророку<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="chitayte-kazhdoe-dua-po-3-7-ili-11-raz-kak-pochuvstvuet-serd">6. Читайте каждое дуа по 3, 7 или 11 раз — как почувствует сердце.</h2>
+<aside class="callout"><span class="label">Примечание</span><p>Все дуа в данном руководстве направлены исключительно к Аллаху, в строгом соответствии с Таухидом. В них нет обращения к кому-либо помимо Аллаха, нет запретных формул и нет элементов ширка. Это чистая мольба раба к своему Господу.</p></aside>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-1-put-udela-rizk">Глава 1. Путь удела (ризк)</h2>
+<p>Дорогой мой брат, дорогая сестра. Если ваш ризк зажат, если деньги не приходят, если руки связаны в делах — читайте эти дуа. Аллах — ар-Раззак, Тот, Кто обеспечивает. Он не забыл вас.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ</div>
+  <figcaption class="ayah-tr">А тому, кто боится Аллаха, Он создаст выход и дарует ему удел, откуда тот и не ожидает.</figcaption>
+  <div class="source">Источник: Сура «ат-Таляк», аяты 2–3</div>
+</figure>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-udela">1.1. Открытие дверей удела</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رِزْقِكَ الْمَغْلَقَةَ عَنِّي</div>
+  <p>Аллахумма, ифтах ли абваба ризкика-ль-мугляката анни.</p>
+<p>О Аллах, открой мне двери Твоего удела, закрытые от меня.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе общего принципа мольбы об уделе</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="razvyazyvanie-uzlov-na-puti-rizka">1.2. Развязывание узлов на пути ризка</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ تَمْنَعُ رِزْقِي مِنْ أَنْ يَصِلَ إِلَيَّ</div>
+  <p>Аллахумма, фукка кулля 'укдэтин тамна'у ризки мин ан ясыля иляййа.</p>
+<p>О Аллах, развяжи каждый узел, который мешает моему уделу дойти до меня.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-koldovstva-i-sglaza-na-udel">1.3. Аннулирование колдовства и сглаза на удел</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ أَوْ عَيْنٍ أَوْ حَسَدٍ يَحْجُبُ رِزْقِي</div>
+  <p>Аллахумма, абтиль кулля сихрин ау 'айнин ау хасадин яхджубу ризки.</p>
+<p>О Аллах, аннулируй всякое колдовство, сглаз или зависть, которые закрывают мой удел.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="rasshirenie-udela">1.4. Расширение удела</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ وَسِّعْ لِي فِي رِزْقِي وَبَارِكْ لِي فِيهِ مِنْ حَيْثُ لَا أَحْتَسِبُ</div>
+  <p>Аллахумма, васси' ли фи ризки ва барик ли фихи мин хайсу ля ахтасиб.</p>
+<p>О Аллах, расширь мой удел и благослови его оттуда, откуда я не ожидаю.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-dozvolennom-udele">1.5. Мольба о дозволенном уделе</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ ارْزُقْنِي رِزْقًا حَلَالًا طَيِّبًا مُبَارَكًا فِيهِ</div>
+  <p>Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни ризкан халялян таййибан мубаракан фихи.</p>
+<p>О Аллах, даруй мне удел дозволенный, чистый и благословенный.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе хадиса о дозволенном ризке</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ustranenie-prepyatstviy">1.6. Устранение препятствий</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَزِلْ كُلَّ عَائِقٍ بَيْنِي وَبَيْنَ رِزْقِكَ</div>
+  <p>Аллахумма, азиль кулля 'аикъин байна ва байна ризкика.</p>
+<p>О Аллах, убери всякое препятствие между мной и Твоим уделом.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-dostatke">1.7. Мольба о достатке</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ يَدِي عُلْيَا وَلَا تَجْعَلْهَا سُفْلَى</div>
+  <p>Аллахумма, идж'аль яди 'уля ва ля тадж'альха суфля.</p>
+<p>О Аллах, сделай мою руку верхней (дающей), а не нижней (просящей).</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе хадиса: аль-Бухари, № 1427; Муслим, № 1033</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-dozvolennogo-zarabotka">1.8. Открытие дверей дозволенного заработка</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْكَسْبِ الْحَلَالِ وَسَهِّلْ لِي كُلَّ عَسِيرٍ</div>
+  <p>Аллахумма, ифтах ли абваба-ль-касби-ль-халяль ва саххиль ли кулля 'асыр.</p>
+<p>О Аллах, открой мне двери дозволенного заработка и облегчи мне всякое трудное.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-ob-udovletvorenii-dozvolennym">1.9. Мольба об удовлетворении дозволенным</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ</div>
+  <p>Аллахумма, икфини би-халялика 'ан харамика ва агнини би-фадлика 'амман сивак.</p>
+<p>О Аллах, удовлетвори меня дозволенным Твоим, чтобы я не нуждался в запретном, и обогати меня Своей милостью, чтобы я не нуждался ни в ком, кроме Тебя.</p>
+  <div class="source">Источник: ат-Тирмизи, № 3563; Ахмад, № 658</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-ob-udele-iz-nevedomogo">1.10. Мольба об уделе из неведомого</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ ارْزُقْنِي مِنْ حَيْثُ لَا أَحْتَسِبُ وَافْتَحْ لِي مِنْ حَيْثُ لَا أَعْلَمُ</div>
+  <p>Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни мин хайсу ля ахтасиб ва-ифтах ли мин хайсу ля а'лям.</p>
+<p>О Аллах, даруй мне удел оттуда, откуда я не ожидаю, и открой мне оттуда, откуда я не знаю.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе Суры «ат-Таляк», аят 3</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-2-put-pokloneniya-allahu-ibada">Глава 2. Путь поклонения Аллаху (ибада)</h2>
+<p>Мои дорогие. Иногда шайтан или сихр закрывают человеку путь к Аллаху: намаз становится тяжёлым, Коран не идёт, сердце каменеет. Не отчаивайтесь. Просите Аллаха открыть вам путь к Нему Самому. Это самое великое, что может быть открыто.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</span></p></blockquote>
+<p>Поистине, поминанием Аллаха обретают покой сердца. Источник: Сура «ар-Ра'д», аят 28</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dveri-obrascheniya-k-allahu">2.1. Открытие двери обращения к Аллаху</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي بَابَ الْإِقْبَالِ عَلَيْكَ وَارْزُقْنِي حَلَاوَةَ عِبَادَتِكَ</div>
+  <p>Аллахумма, ифтах ли баба-ль-икъбали 'аляйка ва-рзукни халявата 'ибадатик.</p>
+<p>О Аллах, открой мне дверь обращения к Тебе и даруй мне сладость поклонения Тебе.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="osvobozhdenie-serdca-dlya-hushu">2.2. Освобождение сердца для хушу</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ عَنْ قَلْبِي كُلَّ قَيْدٍ يَمْنَعُنِي مِنَ الْخُشُوعِ فِي صَلَاتِي</div>
+  <p>Аллахумма, фукка 'ан кальби кулля кайдин ямна'уни мина-ль-хушу'и фи саляти.</p>
+<p>О Аллах, сними с моего сердца всякие оковы, которые мешают мне быть смиренным в моей молитве.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-nauscheniy-i-koldovstva-na-ibadu">2.3. Аннулирование наущений и колдовства на ибаду</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ وَسْوَسَةٍ وَكُلَّ سِحْرٍ يَصُدُّنِي عَنْ ذِكْرِكَ</div>
+  <p>Аллахумма, абтиль кулля васвасатин ва кулля сихрин ясуддуни 'ан зикрик.</p>
+<p>О Аллах, аннулируй всякое наущение и всякое колдовство, которые отвращают меня от поминания Тебя.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-radosti-v-molitve">2.4. Мольба о радости в молитве</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ صَلَاتِي قُرَّةَ عَيْنٍ لِي وَلَا تَجْعَلْهَا ثِقْلًا عَلَيَّ</div>
+  <p>Аллахумма, идж'аль саляти куррата 'айнин ли ва ля тадж'альха сиклян 'аляййа.</p>
+<p>О Аллах, сделай мою молитву радостью для моих глаз и не делай её бременем для меня.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">حُبِّبَ إِلَيَّ مِنَ الدُّنْيَا النِّسَاءُ وَالطِّيبُ وَجُعِلَتْ قُرَّةُ عَيْنِي فِي الصَّلَاةِ</div>
+  <p>Полюбилась мне из мирской жизни женщины и благовония, а отрада моих глаз была сделана в молитве.</p>
+  <footer class="source">Источник: ан-Насаи, № 3939; Ахмад, № 12315</footer>
+</blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-vrat-korana">2.5. Открытие врат Корана</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْقُرْآنِ وَاجْعَلْهُ رَبِيعَ قَلْبِي وَنُورَ صَدْرِي</div>
+  <p>Аллахумма, ифтах ли абваба-ль-Кур'ани ва-дж'альху раби'а кальби ва нура садри.</p>
+<p>О Аллах, открой мне врата Корана и сделай его весной моего сердца и светом моей груди.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе дуа из Муснада Ахмада, № 3712</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-pomoschi-v-poklonenii">2.6. Мольба о помощи в поклонении</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ</div>
+  <p>Аллахумма, а'инни 'аля зикрика ва шукрика ва хусни 'ибадатик.</p>
+<p>О Аллах, помоги мне поминать Тебя, благодарить Тебя и поклоняться Тебе наилучшим образом.</p>
+  <div class="source">Источник: Абу Дауд, № 1522; ан-Насаи, № 1303</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-smyagchenii-serdca">2.7. Мольба о смягчении сердца</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَلِنْ قَلْبِي بَعْدَ قَسْوَتِهِ وَأَعِدْ إِلَيَّ خُشُوعِي وَإِيمَانِي</div>
+  <p>Аллахумма, алин кальби ба'да касватихи ва а'ид иляййа хушу'и ва имани.</p>
+<p>О Аллах, смягчи моё сердце после его жестокости и верни мне моё смирение и мою веру.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-puti-pokayaniya">2.8. Открытие пути покаяния</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي سَبِيلَ التَّوْبَةِ النَّصُوحِ وَاقْبَلْنِي بِرَحْمَتِكَ</div>
+  <p>Аллахумма, ифтах ли сабиля-т-таубати-н-насух ва-къбальни би-рахматик.</p>
+<p>О Аллах, открой мне путь искреннего покаяния и прими меня Своей милостью.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-nochnoy-molitve-i-poste">2.9. Мольба о ночной молитве и посте</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ ارْزُقْنِي قِيَامَ اللَّيْلِ وَصِيَامَ النَّهَارِ وَحُبَّ الطَّاعَةِ</div>
+  <p>Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни къияма-ль-ляйли ва сияма-н-нахари ва хубба-т-та'а.</p>
+<p>О Аллах, даруй мне ночную молитву, дневной пост и любовь к поклонению.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-chistom-serdce-pred-allahom">2.10. Мольба о чистом сердце пред Аллахом</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ لَا تَجْعَلْ بَيْنِي وَبَيْنَكَ حَاجِبًا وَلَا سَاتِرًا وَاجْعَلْنِي مِمَّنْ يَأْتِيكَ بِقَلْبٍ سَلِيمٍ</div>
+  <p>Аллахумма, ля тадж'аль байна ва байника хаджибан ва ля сатиран ва-дж'альни мимман я'тика би-кальбин салим.</p>
+<p>О Аллах, не ставь между мной и Тобой ни завесы, ни преграды, и сделай меня из тех, кто приходит к Тебе с чистым сердцем.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе Суры «аш-Шу'ара», аят 89</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-3-put-uspeha-i-pobedy-taufik">Глава 3. Путь успеха и победы (тауфик)</h2>
+<p>Брат мой, сестра моя. Если дела не ладятся, если каждый шаг наталкивается на стену, если успех утекает из рук — это не значит, что Аллах оставил вас. Читайте эти дуа и просите Аллаха даровать вам тауфик — успех, который приходит только от Него.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ</span></p></blockquote>
+<p>Мой успех — только от Аллаха. На Него я уповаю и к Нему обращаюсь. Источник: Сура «Худ», аят 88</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-taufika">3.1. Открытие дверей тауфика</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ التَّوْفِيقِ وَالنَّجَاحِ فِي كُلِّ أَمْرِي</div>
+  <p>Аллахумма, ифтах ли абваба-т-тауфикъи ва-н-наджах фи кулли амри.</p>
+<p>О Аллах, открой мне двери успеха и победы во всех моих делах.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="razvyazyvanie-uzlov-na-puti-k-uspehu">3.2. Развязывание узлов на пути к успеху</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ فِي طَرِيقِي إِلَى النَّجَاحِ</div>
+  <p>Аллахумма, фукка кулля 'укдэтин фи тарикъи иля-н-наджах.</p>
+<p>О Аллах, развяжи каждый узел на моём пути к успеху.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-kozney-i-koldovstva-na-uspeh">3.3. Аннулирование козней и колдовства на успех</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ كَيْدٍ وَكُلَّ سِحْرٍ يَمْنَعُ نَجَاحِي وَتَقَدُّمِي</div>
+  <p>Аллахумма, абтиль кулля кайдин ва кулля сихрин ямна'у наджах ва такаддуми.</p>
+<p>О Аллах, аннулируй всякий коварный замысел и всякое колдовство, которые мешают моему успеху и продвижению.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="oblegchenie-trudnogo">3.4. Облегчение трудного</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ سَهِّلْ لِي كُلَّ عَسِيرٍ وَيَسِّرْ لِي كُلَّ صَعْبٍ</div>
+  <p>Аллахумма, саххиль ли кулля 'асыр ва яссир ли кулля са'б.</p>
+<p>О Аллах, облегчи мне всякое трудное и упрости мне всякое сложное.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا</div>
+  <p>О Аллах, нет лёгкого, кроме того, что Ты сделал лёгким, и Ты делаешь трудное лёгким, если пожелаешь.</p>
+  <footer class="source">Источник: Ибн Хиббан, № 974; аль-Байхаки</footer>
+</blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vyhod-iz-tesnoty">3.5. Выход из тесноты</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ لِي مِنْ كُلِّ هَمٍّ فَرَجًا وَمِنْ كُلِّ ضِيقٍ مَخْرَجًا</div>
+  <p>Аллахумма, идж'аль ли мин кулли хаммин фараджан ва мин кулли дыкъин махраджан.</p>
+<p>О Аллах, сделай мне из каждой печали облегчение и из каждой тесноты выход.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе дуа из Муснада Ахмада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="napravlenie-k-blagomu">3.6. Направление к благому</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ وَفِّقْنِي لِمَا تُحِبُّ وَتَرْضَى وَسَدِّدْ خُطَايَ</div>
+  <p>Аллахумма, ваффикни ли-ма тухиббу ва тарда ва саддид хутая.</p>
+<p>О Аллах, направь меня к тому, что Ты любишь и чем доволен, и выпрями мои шаги.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pomosch-nad-nespravedlivymi">3.7. Помощь над несправедливыми</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ انْصُرْنِي عَلَى مَنْ ظَلَمَنِي وَعَادَانِي وَحَسَدَنِي</div>
+  <p>Аллахумма, ансурни 'аля ман заламани ва 'адани ва хасадани.</p>
+<p>О Аллах, помоги мне над тем, кто поступил со мной несправедливо, враждовал со мной и завидовал мне.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-blaga">3.8. Открытие дверей блага</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْخَيْرِ وَأَغْلِقْ عَنِّي أَبْوَابَ الشَّرِّ</div>
+  <p>Аллахумма, ифтах ли абваба-ль-хайри ва агликъ 'анни абваба-ш-шарр.</p>
+<p>О Аллах, открой мне двери блага и закрой от меня двери зла.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="blagoy-itog-dela">3.9. Благой итог дела</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ عَاقِبَةَ أَمْرِي خَيْرًا وَاجْعَلْ نِهَايَتَهُ فَلَاحًا</div>
+  <p>Аллахумма, идж'аль 'акъибата амри хайран ва-дж'аль нихаятаху фалахан.</p>
+<p>О Аллах, сделай итог моего дела благим и сделай его конец преуспеянием.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="upovanie-na-allaha">3.10. Упование на Аллаха</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ وَكُنْ لِي وَلِيًّا وَنَصِيرًا</div>
+  <p>Аллахумма, ля такильни иля нафси тарфата 'айнин ва кун ли валиййан ва насыран.</p>
+<p>О Аллах, не оставляй меня на самого себя даже на мгновение ока и будь мне Покровителем и Помощником.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе дуа из Сунны: Абу Дауд, № 5090</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-4-put-znaniya-i-yasnosti-ilm">Глава 4. Путь знания и ясности (ильм)</h2>
+<p>Если мысли путаются, если решения не даются, если голова как в тумане — знайте, это тоже может быть закрытый путь. Аллах — аль-'Алим, Всезнающий. Просите Его открыть вам путь к пониманию.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">رَبِّ زِدْنِي عِلْمًا</span></p></blockquote>
+<p>Господь мой, прибавь мне знания. Источник: Сура «Та Ха», аят 114</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-znaniya">4.1. Открытие дверей знания</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ عِلْمِكَ وَفَهْمِكَ وَنُورِ بَصِيرَتِي</div>
+  <p>Аллахумма, ифтах ли абваба 'ильмика ва фахмика ва нури басирати.</p>
+<p>О Аллах, открой мне двери Твоего знания, понимания и света моей проницательности.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="yasnost-razuma">4.2. Ясность разума</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ عَنْ عَقْلِي كُلَّ غَيْمٍ وَضَبَابٍ يَمْنَعُنِي مِنَ الْوُضُوحِ</div>
+  <p>Аллахумма, фукка 'ан 'акли кулля гаймин ва дабабин ямна'уни мина-ль-вудух.</p>
+<p>О Аллах, сними с моего разума всякую тучу и всякий туман, которые мешают мне видеть ясно.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-koldovstva-na-razum">4.3. Аннулирование колдовства на разум</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ يُؤَثِّرُ عَلَى عَقْلِي وَتَفْكِيرِي وَذِكْرِي</div>
+  <p>Аллахумма, абтиль кулля сихрин ю'ассиру 'аля 'акли ва тафкири ва зикри.</p>
+<p>О Аллах, аннулируй всякое колдовство, которое влияет на мой разум, моё мышление и мою память.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pribavlenie-znaniya-i-mudrosti">4.4. Прибавление знания и мудрости</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ زِدْنِي عِلْمًا وَفَهْمًا وَحِكْمَةً</div>
+  <p>Аллахумма, зидни 'ильман ва фахман ва хикма.</p>
+<p>О Аллах, прибавь мне знания, понимания и мудрости.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе Суры «Та Ха», аят 114</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vernost-resheniy">4.5. Верность решений</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ ارْزُقْنِي حُسْنَ التَّدْبِيرِ وَصَوَابَ الْقَرَارِ</div>
+  <p>Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни хусна-т-тадбир ва саваба-ль-карар.</p>
+<p>О Аллах, даруй мне благое управление делами и верность решений.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="svet-serdca">4.6. Свет сердца</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ نَوِّرْ قَلْبِي وَبَصِيرَتِي وَأَزِلْ عَنِّي كُلَّ ظُلْمَةٍ</div>
+  <p>Аллахумма, наувир кальби ва басирати ва азиль 'анни кулля зульма.</p>
+<p>О Аллах, освети моё сердце и мою проницательность и убери от меня всякую тьму.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="put-mudrosti">4.7. Путь мудрости</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي سَبِيلَ الْحِكْمَةِ وَاجْعَلْنِي مِمَّنْ يَسْمَعُ الْقَوْلَ فَيَتَّبِعُ أَحْسَنَهُ</div>
+  <p>Аллахумма, ифтах ли сабиля-ль-хикма ва-дж'альни мимман ясма'у-ль-каувля фаяттаби'у ахсанах.</p>
+<p>О Аллах, открой мне путь мудрости и сделай меня из тех, кто слушает слово и следует лучшему из него.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе Суры «аз-Зумар», аят 18</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-pamyati-i-prisutstvii-uma">4.8. Мольба о памяти и присутствии ума</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَذْهِبْ عَنِّي النِّسْيَانَ وَالْغَفْلَةَ وَارْزُقْنِي حِفْظًا وَحُضُورَ ذِهْنٍ</div>
+  <p>Аллахумма, азхиб 'анни-н-нисьяна ва-ль-гафля ва-рзукни хифзан ва худура зихн.</p>
+<p>О Аллах, уйди от меня забывчивость и беспечность и даруй мне сохранение памяти и присутствие ума.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="razlichenie-istiny-i-lzhi">4.9. Различение истины и лжи</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَرِنِي الْحَقَّ حَقًّا وَارْزُقْنِي اتِّبَاعَهُ وَأَرِنِي الْبَاطِلَ بَاطِلًا وَارْزُقْنِي اجْتِنَابَهُ</div>
+  <p>Аллахумма, арини-ль-хакка хаккан ва-рзукни-ттиба'аху ва арини-ль-батыля батылян ва-рзукни-джтинабах.</p>
+<p>О Аллах, покажи мне истину истиной и даруй мне следование ей, и покажи мне ложь ложью и даруй мне отстранение от неё.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-poznavshih">4.10. Открытие познавших</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ عَلَى قَلْبِي فُتُوحَ الْعَارِفِينَ وَارْزُقْنِي فَهْمَ النَّبِيِّينَ</div>
+  <p>Аллахумма, ифтах 'аля кальби футуха-ль-'арифин ва-рзукни фахма-н-набиййин.</p>
+<p>О Аллах, открой моему сердцу открытия познавших и даруй мне понимание пророков.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-5-put-isceleniya-shifa">Глава 5. Путь исцеления (шифа)</h2>
+<p>Дорогие мои. Болезнь тела — это тоже закрытый путь. Путь к здоровью, к лёгкости, к жизни без боли. Аллах — аш-Шафи, Исцеляющий. Читайте эти дуа и верьте, что Он способен исцелить полностью.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ</span></p></blockquote>
+<p>А когда я заболеваю, Он исцеляет меня. Источник: Сура «аш-Шу'ара», аят 80</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+  <p>О Аллах, Господь людей, унеси страдание, исцели — Ты Исцеляющий, нет исцеления кроме Твоего исцеления, исцеления, после которого не остаётся болезни.</p>
+  <footer class="source">Источник: аль-Бухари, № 5675; Муслим, № 2191</footer>
+</blockquote>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-isceleniya">5.1. Открытие дверей исцеления</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الشِّفَاءِ وَالْعَافِيَةِ فِي جَسَدِي كُلِّهِ</div>
+  <p>Аллахумма, ифтах ли абваба-ш-шифа'и ва-ль-'афияти фи джасади куллихи.</p>
+<p>О Аллах, открой мне двери исцеления и здравия во всём моём теле.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="osvobozhdenie-ot-bolezni">5.2. Освобождение от болезни</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ كُلَّ مَرَضٍ وَكُلَّ أَلَمٍ مُقَيَّدٍ فِي جَسَدِي</div>
+  <p>Аллахумма, фукка кулля марадын ва кулля алямин мукаййадин фи джасади.</p>
+<p>О Аллах, освободи всякую болезнь и всякую боль, скованную в моём теле.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-koldovstva-i-sglaza-na-telo">5.3. Аннулирование колдовства и сглаза на тело</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ وَكُلَّ عَيْنٍ أَوْ مَسٍّ أَصَابَ جَسَدِي</div>
+  <p>Аллахумма, абтиль кулля сихрин ва кулля 'айнин ау массин асаба джасади.</p>
+<p>О Аллах, аннулируй всякое колдовство, всякий сглаз или прикосновение джиннов, поразившее моё тело.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnoe-iscelenie">5.4. Полное исцеление</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اشْفِنِي شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+  <p>Аллахумма, ишфини шифа'ан ля югадиру сакаман.</p>
+<p>О Аллах, исцели меня исцелением, после которого не остаётся болезни.</p>
+  <div class="source">Источник: аль-Бухари, № 5675; Муслим, № 2191</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-k-iscelyayuschemu">5.5. Мольба к Исцеляющему</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً عَاجِلًا غَيْرَ آجِلٍ</div>
+  <p>Аллахумма, Анта-ш-Шафи, ля шифа'а илля шифа'ук, шифа'ан 'аджилян гайра аджиль.</p>
+<p>О Аллах, Ты — Исцеляющий, нет исцеления кроме Твоего исцеления, исцеления скорейшего, а не отложенного.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе хадиса аль-Бухари, № 5675</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="unesenie-stradaniya">5.6. Унесение страдания</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَذْهِبِ الْبَأْسَ رَبَّ النَّاسِ وَاشْفِ أَنْتَ الشَّافِي</div>
+  <p>Аллахумма, азхиби-ль-ба'са Рабба-н-наси ва-шфи Анта-ш-Шафи.</p>
+<p>О Аллах, унеси страдание, Господь людей, и исцели — Ты Исцеляющий.</p>
+  <div class="source">Источник: аль-Бухари, № 5675; Муслим, № 2191</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="put-zdorovya-i-sily">5.7. Путь здоровья и силы</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي سَبِيلَ الصِّحَّةِ وَالْقُوَّةِ وَالنَّشَاطِ</div>
+  <p>Аллахумма, ифтах ли сабиля-с-сихха ва-ль-кувва ва-н-нашат.</p>
+<p>О Аллах, открой мне путь здоровья, силы и бодрости.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zdravie-tela-sluha-i-zreniya">5.8. Здравие тела, слуха и зрения</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ عَافِنِي فِي بَدَنِي وَعَافِنِي فِي سَمْعِي وَعَافِنِي فِي بَصَرِي</div>
+  <p>Аллахумма, 'афини фи бадани ва 'афини фи сам'и ва 'афини фи басари.</p>
+<p>О Аллах, даруй здравие моему телу, даруй здравие моему слуху, даруй здравие моему зрению.</p>
+  <div class="source">Источник: Абу Дауд, № 5090; ат-Тирмизи, № 3</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zdravie-tela-sluha-i-zreniya-2">5.8. Здравие тела, слуха и зрения</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ عَافِنِي فِي بَدَنِي وَعَافِنِي فِي سَمْعِي وَعَافِنِي فِي بَصَرِي</div>
+  <p>Аллахумма, 'афини фи бадани ва 'афини фи сам'и ва 'афини фи басари.</p>
+<p>О Аллах, даруй здравие моему телу, даруй здравие моему слуху, даруй здравие моему зрению.</p>
+  <div class="source">Источник: Абу Дауд, № 5090; ат-Тирмизи, № 3502</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vyvedenie-neduga-iz-tela">5.9. Выведение недуга из тела</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَخْرِجْ كُلَّ دَاءٍ مِنْ جَسَدِي وَطَهِّرْنِي مِنْ كُلِّ أَذًى</div>
+  <p>Аллахумма, ахридж кулля да'ин мин джасади ва таххирни мин кулли азан.</p>
+<p>О Аллах, выведи всякий недуг из моего тела и очисти меня от всякого вреда.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="legkost-tela-i-pokoy-dushi">5.10. Лёгкость тела и покой души</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ جَسَدِي خَفِيفًا وَرُوحِي مُطْمَئِنَّةً وَقَلْبِي سَلِيمًا</div>
+  <p>Аллахумма, идж'аль джасади хафифан ва рухи мутма'инна ва кальби салиман.</p>
+<p>О Аллах, сделай моё тело лёгким, мой дух — умиротворённым, а моё сердце — здоровым.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+<aside class="callout"><span class="label">Примечание</span><p>При чтении дуа из этой главы рекомендуется класть правую руку на больное место и произносить: «Бисмилляхи аркъика, мин кулли шай'ин ю'зика, мин шарри кулли нафсин ау 'айнин хасидин, Аллаху яшфика, бисмилляхи аркъика». Это достоверное дуа из Муслима, № 2186.</p></aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-6-put-zaschity-i-bezopasnosti-hifz">Глава 6. Путь защиты и безопасности (хифз)</h2>
+<p>Мои дорогие. Иногда человек чувствует страх, тревогу, ощущение чужого присутствия, тяжесть в доме. Это тоже закрытый путь — путь безопасности. Читайте эти дуа, и Аллах возведёт вокруг вас крепость.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ</span></p></blockquote>
+<p>Аллах — Покровитель уверовавших. Он выводит их из мраков к свету. Источник: Сура «аль-Бакара», аят 257</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-bezopasnosti">6.1. Открытие дверей безопасности</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ أَمْنِكَ وَحِفْظِكَ وَاحْطُنِي بِعِنَايَتِكَ</div>
+  <p>Аллахумма, ифтах ли абваба амника ва хифзика ва-хтутни би-'инаятик.</p>
+<p>О Аллах, открой мне двери Твоей безопасности и Твоей защиты и окружи меня Своей заботой.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="osvobozhdenie-ot-straha-i-okov-dzhinnov">6.2. Освобождение от страха и оков джиннов</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ عَنِّي كُلَّ خَوْفٍ وَكُلَّ قَيْدٍ مِنَ الْجِنِّ وَالشَّيَاطِينِ</div>
+  <p>Аллахумма, фукка 'анни кулля хауфин ва кулля кайдин мина-ль-джинни ва-ш-шаятын.</p>
+<p>О Аллах, освободи меня от всякого страха и от всяких оков джиннов и шайтанов.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-sglaza-i-napravlennogo-vreda">6.3. Аннулирование сглаза и направленного вреда</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ عَيْنٍ وَكُلَّ حَسَدٍ وَكُلَّ أَذًى مُوَجَّهٍ إِلَيَّ</div>
+  <p>Аллахумма, абтиль кулля 'айнин ва кулля хасадин ва кулля азан муваджжахин иляййа.</p>
+<p>О Аллах, аннулируй всякий сглаз, всякую зависть и всякий вред, направленный на меня.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-so-vseh-storon">6.4. Защита со всех сторон</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي</div>
+  <p>Аллахумма, ихфазни мин байна ядаййа ва мин хальфи ва 'ан ямини ва 'ан шимали ва мин фаукъи.</p>
+<p>О Аллах, защити меня спереди, сзади, справа, слева и сверху.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе дуа из Сунны: Абу Дауд, № 5090; ат-Тирмизи, № 3502</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="krepost-iz-sveta">6.5. Крепость из света</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ حَوْلِي حِصْنًا مِنْ نُورِكَ لَا يَخْتَرِقُهُ عَدُوٌّ وَلَا شَيْطَانٌ</div>
+  <p>Аллахумма, идж'аль хавли хиснан мин нурика ля яхтаврикуху 'адуввун ва ля шайтан.</p>
+<p>О Аллах, возведи вокруг меня крепость из Твоего света, которую не пробьёт ни враг, ни шайтан.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-ot-vsyakogo-zla">6.6. Защита от всякого зла</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَعِذْنِي مِنْ شَرِّ كُلِّ ذِي شَرٍّ وَمِنْ شَرِّ مَا خَلَقْتَ</div>
+  <p>Аллахумма, а'изни мин шарри кулли зи шаррин ва мин шарри ма халякт.</p>
+<p>О Аллах, защити меня от зла всякого обладающего злом и от зла того, что Ты создал.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе дуа из Сунны: Муслим, № 2708</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="put-pokoya-i-umirotvoreniya">6.7. Путь покоя и умиротворения</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي سَبِيلَ السَّكِينَةِ وَالطُّمَأْنِينَةِ وَأَذْهِبْ عَنِّي الْوَسْوَاسَ</div>
+  <p>Аллахумма, ифтах ли сабиля-с-сакина ва-т-тума'нина ва азхиб 'анни-ль-васвас.</p>
+<p>О Аллах, открой мне путь покоя и умиротворения и уйди от меня наущения.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-semi-i-doma">6.8. Защита семьи и дома</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْفَظْ أَهْلِي وَبَيْتِي وَمَالِي مِنْ كُلِّ سُوءٍ وَآفَةٍ</div>
+  <p>Аллахумма, ихфаз ахли ва байти ва мали мин кулли су'ин ва афа.</p>
+<p>О Аллах, защити мою семью, мой дом и моё имущество от всякого зла и напасти.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-ot-vragov">6.9. Защита от врагов</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ لَا تُسَلِّطْ عَلَيَّ مَنْ لَا يَرْحَمُنِي وَلَا تَجْعَلْ لِعَدُوٍّ عَلَيَّ سَبِيلًا</div>
+  <p>Аллахумма, ля тусаллит 'аляййа ман ля ярхамуни ва ля тадж'аль ли-'адуввин 'аляййа сабилян.</p>
+<p>О Аллах, не давай власти надо мной тому, кто не милосерден ко мне, и не давай врагу пути ко мне.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="prebyvanie-pod-zaschitoy-allaha">6.10. Пребывание под защитой Аллаха</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْنِي فِي حِرْزِكَ وَحِصْنِكَ وَكَنَفِكَ مَا دُمْتُ حَيًّا</div>
+  <p>Аллахумма, идж'альни фи хирзика ва хисника ва канафика ма думту хаййан.</p>
+<p>О Аллах, помести меня в Свою охрану, в Свою крепость и под Свою защиту, пока я жив.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+<aside class="callout"><span class="label">Примечание</span><p>Для усиления защиты рекомендуется перед сном и утром читать три последние суры Корана (аль-Ихляс, аль-Фаляк, ан-Нас), Аят аль-Курси и дуа: «А'узу би-кялимати-Лляхи-т-таммати мин шарри ма халяк» (Муслим, № 2708).</p></aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-7-put-semi-i-braka">Глава 7. Путь семьи и брака</h2>
+<p>Братья и сёстры. Если путь к браку закрыт, если в семье разлад, если сердца отдалились друг от друга — не теряйте надежду. Аллах — аль-Вадуд, Любящий. Он соединяет сердца.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</span></p></blockquote>
+<p>Среди Его знамений — то, что Он сотворил из вас самих жён для вас, чтобы вы находили в них покой, и установил между вами любовь и милосердие. Источник: Сура «ар-Рум», аят 21</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dveri-blagogo-braka">7.1. Открытие двери благого брака</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي بَابَ الزَّوَاجِ الصَّالِحِ وَسَهِّلْ لِي أَمْرَهُ</div>
+  <p>Аллахумма, ифтах ли баба-з-заваджи-с-салих ва саххиль ли амрах.</p>
+<p>О Аллах, открой мне дверь благого брака и облегчи мне его дело.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="razvyazyvanie-uzlov-na-brake-i-v-dome">7.2. Развязывание узлов на браке и в доме</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ تَمْنَعُ زَوَاجِي أَوْ تُفْسِدُ بَيْتِي</div>
+  <p>Аллахумма, фукка кулля 'укдэтин тамна'у заваджи ау тусфиду байти.</p>
+<p>О Аллах, развяжи каждый узел, который мешает моему браку или разрушает мой дом.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-koldovstva-na-semyu">7.3. Аннулирование колдовства на семью</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ وَكُلَّ عَيْنٍ أَصَابَتْ بَيْتِي وَزَوْجِيَّتِي</div>
+  <p>Аллахумма, абтиль кулля сихрин ва кулля 'айнин асабат байти ва завджийяти.</p>
+<p>О Аллах, аннулируй всякое колдовство и всякий сглаз, поразившие мой дом и мою супружескую жизнь.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="soedinenie-serdec">7.4. Соединение сердец</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَلِّفْ بَيْنَ قُلُوبِنَا وَأَصْلِحْ ذَاتَ بَيْنِنَا</div>
+  <p>Аллахумма, аллиф байна кулюбина ва аслих зата байна.</p>
+<p>О Аллах, соедини наши сердца и налади наши отношения.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-blagom-supruge">7.5. Мольба о благом супруге</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ ارْزُقْنِي زَوْجًا صَالِحًا تَكُونُ قُرَّةَ عَيْنٍ لِي</div>
+  <p>Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни завджан салихан такуну куррата 'айнин ли.</p>
+<p>О Аллах, даруй мне благого мужа (благую жену), который будет радостью для моих глаз.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+<aside class="callout"><span class="label">Примечание</span><p>Сестра читает: «Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни завджан салихан». Брат читает: «Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни завджатан салихатан».</p></aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="napolnenie-doma-milostyu">7.6. Наполнение дома милостью</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ بَيْتِي مَلِيئًا بِالرَّحْمَةِ وَالسَّكِينَةِ وَالْمَوَدَّةِ</div>
+  <p>Аллахумма, идж'аль байти мали'ан би-р-рахма ва-с-сакина ва-ль-мавадда.</p>
+<p>О Аллах, наполни мой дом милостью, покоем и любовью.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-blagom-potomstve">7.7. Мольба о благом потомстве</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي سَبِيلَ الذُّرِّيَّةِ الصَّالِحَةِ وَارْزُقْنِي أَوْلَادًا أَبْرَارًا</div>
+  <p>Аллахумма, ифтах ли сабиля-з-зурриййати-с-салиха ва-рзукни авлядан абраран.</p>
+<p>О Аллах, открой мне путь благого потомства и даруй мне благочестивых детей.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе Суры «аль-Фуркан», аят 74</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-semi-ot-razlada">7.8. Защита семьи от разлада</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْفَظْ أَهْلِي مِنَ التَّفَرُّقِ وَالْفِتْنَةِ وَالْخُصُومَةِ</div>
+  <p>Аллахумма, ихфаз ахли мина-т-тафаррукъи ва-ль-фитна ва-ль-хусума.</p>
+<p>О Аллах, защити мою семью от разделения, искушения и вражды.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ustranenie-pregrad-k-braku">7.9. Устранение преград к браку</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَزِلْ كُلَّ حَاجِزٍ بَيْنِي وَبَيْنَ مَنْ تُحِبُّ لِي مِنَ الْأَزْوَاجِ</div>
+  <p>Аллахумма, азиль кулля хаджизин байна ва байна ман тухиббу ли мина-ль-азвадж.</p>
+<p>О Аллах, убери всякую преграду между мной и тем, кого Ты предназначил мне в супруги.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vechnaya-lyubov-i-milost">7.10. Вечная любовь и милость</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ مَوَدَّتَنَا دَائِمَةً وَرَحْمَتَنَا بَيْنَنَا قَائِمَةً إِلَى يَوْمِ الدِّينِ</div>
+  <p>Аллахумма, идж'аль маваддатуна да'има ва рахматуна байна къа'има иля яуми-д-дин.</p>
+<p>О Аллах, сделай нашу любовь постоянной и нашу милость между нами стоящей до Судного дня.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-8-put-raboty-i-dela">Глава 8. Путь работы и дела</h2>
+<p>Дорогие мои. Если работа не находится, если дело рушится, если начальник несправедлив, если коллеги завидуют — читайте эти дуа. Аллах — аль-Ваххаб, Дарующий. Он дарует дело и успех в нём.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">فَإِذَا قُضِيَتِ الصَّلَاةُ فَانتَشِرُوا فِي الْأَرْضِ وَابْتَغُوا مِن فَضْلِ اللَّهِ</span></p></blockquote>
+<p>Когда молитва завершена, расходитесь по земле и ищите милость Аллаха. Источник: Сура «аль-Джуму'а», аят 10</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="otkrytie-dverey-blagogo-truda">8.1. Открытие дверей благого труда</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْعَمَلِ الصَّالِحِ وَالْكَسْبِ الْحَلَالِ</div>
+  <p>Аллахумма, ифтах ли абваба-ль-'амали-с-салих ва-ль-касби-ль-халяль.</p>
+<p>О Аллах, открой мне двери благого труда и дозволенного заработка.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="razvyazyvanie-uzlov-v-rabote">8.2. Развязывание узлов в работе</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ فِي عَمَلِي وَرِزْقِي وَتِجَارَتِي</div>
+  <p>Аллахумма, фукка кулля 'укдэтин фи 'амали ва ризки ва тиджарати.</p>
+<p>О Аллах, развяжи каждый узел в моей работе, моём уделе и моей торговле.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="annulirovanie-zavisti-i-kozney-na-rabote">8.3. Аннулирование зависти и козней на работе</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ حَسَدٍ وَكُلَّ كَيْدٍ مِنْ زُمَلَاءَ أَوْ مُنَافِسِينَ</div>
+  <p>Аллахумма, абтиль кулля хасадин ва кулля кайдин мин зумаля'а ау мунафисин.</p>
+<p>О Аллах, аннулируй всякую зависть и всякий коварный замысел от коллег или конкурентов.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="blagoslovenie-v-trude">8.4. Благословение в труде</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ بَارِكْ لِي فِي عَمَلِي وَاجْعَلْهُ نَافِعًا لِي وَلِلنَّاسِ</div>
+  <p>Аллахумма, барик ли фи 'амали ва-дж'альху нафи'ан ли ва ли-н-нас.</p>
+<p>О Аллах, благослови мой труд и сделай его полезным для меня и для людей.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-o-rabote-udovletvoryayuschey-allaha">8.5. Мольба о работе, удовлетворяющей Аллаха</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ ارْزُقْنِي عَمَلًا يُرْضِيكَ وَيُغْنِينِي عَنْ مَسْأَلَةِ النَّاسِ</div>
+  <p>Аллахумма,<span class="ar-inline" lang="ar" dir="rtl">ارز</span>укни 'амаллян юрдика ва югнини 'ан мас'аляти-н-нас.</p>
+<p>О Аллах, даруй мне работу, которая удовлетворит Тебя и избавит меня от просьб к людям.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pomosch-v-dele">8.6. Помощь в деле</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ سَخِّرْ لِي مَنْ يُعِينُنِي عَلَى أَمْرِي وَسَهِّلْ لِي كُلَّ صَعْبٍ</div>
+  <p>Аллахумма, саххир ли ман ю'инуни 'аля амри ва саххиль ли кулля са'б.</p>
+<p>О Аллах, подчини мне того, кто поможет мне в моём деле, и облегчи мне всякое трудное.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="rost-i-uspeh-v-professii">8.7. Рост и успех в профессии</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ لِي سَبِيلَ التَّرَقِّي وَالنَّجَاحِ فِي مِهْنَتِي</div>
+  <p>Аллахумма, ифтах ли сабиля-т-тараккъи ва-н-наджах фи михнати.</p>
+<p>О Аллах, открой мне путь роста и успеха в моей профессии.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaschita-dela-ot-ubytka-i-nespravedlivosti">8.8. Защита дела от убытка и несправедливости</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْفَظْ عَمَلِي مِنَ الْخَسَارَةِ وَالظُّلْمِ وَالْغَدْرِ</div>
+  <p>Аллахумма, ихфаз 'амали мина-ль-хасара ва-з-зульми ва-ль-гадр.</p>
+<p>О Аллах, защити моё дело от убытка, несправедливости и предательства.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="schedrost-ruki-i-obshirnyy-udel">8.9. Щедрость руки и обширный удел</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ يَدِي مَبْسُوطَةً بِالْخَيْرِ وَرِزْقِي وَاسِعًا مُبَارَكًا</div>
+  <p>Аллахумма, идж'аль яди мабсутатан би-ль-хайри ва ризки васи'ан мубаракан.</p>
+<p>О Аллах, сделай мою руку щедрой на благо и мой удел обширным и благословенным.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="razlichenie-blaga-i-zla-v-dele">8.10. Различение блага и зла в деле</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ إِنْ كَانَ هَذَا الْعَمَلُ خَيْرًا لِي فِي دِينِي وَدُنْيَايَ فَافْتَحْهُ لِي وَإِنْ كَانَ شَرًّا فَاصْرِفْهُ عَنِّي</div>
+  <p>Аллахумма, ин кана хаза-ль-'амалю хайран ли фи дини ва дуньяйа фа-ифтахху ли, ва ин кана шарран фа-срифху 'анни.</p>
+<p>О Аллах, если это дело — благо для меня в моей религии и моей мирской жизни, то открой его мне. А если оно — зло, то отведи его от меня.</p>
+  <div class="source">Источник: Авторское дуа Абу Мухаммада, на основе принципа истихары</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="zaklyuchenie"><span class="num">16.</span>Заключение</h2>
+<p>Дорогие мои братья и сёстры.</p>
+<p>Я написал это руководство для вас не просто как набор слов. За каждым дуа — боль, которую я видел в глазах людей, приходивших ко мне. Я видел, как рушились семьи, как люди теряли рассудок от страха, как руки опускались от безысходности. И я видел, как Аллах открывал то, что казалось намертво закрытым.</p>
+<p>Несколько простых советов от меня:</p>
+<p>1. Не торопитесь. Читайте дуа спокойно, с чувством. Не гонитесь за количеством. Одно дуа, прочитанное с дрожащим сердцем, сильнее тысячи, прочитанных на автомате. 2. Повторяйте. Каждое дуа читайте минимум 3 раза. Лучше — 7 или 11. Пусть язык привыкнет, пусть сердце запомнит. 3. Читайте в лучшие времена. Последняя треть ночи, между азаном и икаматом, в суджуде, в пятницу. Это времена, когда дуа поднимаются быстрее. 4. Не сомневайтесь. Аллах сказал: «Взывайте ко Мне — Я отвечу вам». Он не обманывает. Если ответ задерживается — значит, Аллах готовит для вас лучшее или отводит от вас худшее. 5. Совмещайте с Кораном. Перед этими дуа читайте аль-Фатиху, Аят аль-Курси, последние три суры. Это усиливает и защищает. 6. Будьте последовательны. Читайте каждый день хотя бы одно направление. Не бросайте после одного дня. Дайте себе 7, 14, 21 день. 7. Просите прощения (истигфар). Иногда пути закрыты из-за грехов, о которых мы забыли. Частый истигфар открывает двери.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا إِنَّ مَعَ الْعُسْرِ يُسْرًا</span></p></blockquote>
+<p>Поистине, за тягостью следует облегчение. Поистине, за тягостью следует облегчение. Источник: Сура «аш-Шарх», аяты 5–6</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ</div>
+  <p>Поистине, Аллах не теряет награду делающих добро.</p>
+  <footer class="source">Источник: аль-Бухари, № 1467; Муслим, № 1033</footer>
+</blockquote>
+<p>Я прошу Аллаха, чтобы Он открыл вам каждый закрытый путь, развязал каждый узел, аннулировал каждое зло, направленное на вас. Я прошу Его, чтобы Он принял это руководство как средство облегчения для вас.</p>
+<p>Вы не одни. Аллах с вами. И я, ваш брат Абу Мухаммад, рядом с вами в этой борьбе.</p>
+<p>Да облегчит вам Аллах. Да откроет Он вам все двери блага. Да защитит Он вас от всякого зла.</p>
+<p>С любовью и мольбой за вас, Абу Мухаммад</p>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="prilozhenie"><span class="num">17.</span>Приложение</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poryadok-chteniya-dua-po-napravleniyam"><span class="num">17.1.</span>Порядок чтения дуа по направлениям</h3>
+<figure class="table"><table><thead><tr><th>Направление</th><th>Глава</th><th>Количество дуа</th><th>Рекомендуемое время</th></tr></thead><tbody><tr><td>Удел (ризк)</td><td>Глава 1</td><td>10</td><td>Утро, после Фаджра</td></tr><tr><td>Поклонение (ибада)</td><td>Глава 2</td><td>10</td><td>Перед намазом, ночью</td></tr><tr><td>Успех (тауфик)</td><td>Глава 3</td><td>10</td><td>Утро, перед важным делом</td></tr><tr><td>Знание (ильм)</td><td>Глава 4</td><td>10</td><td>Утро, перед учёбой</td></tr><tr><td>Исцеление (шифа)</td><td>Глава 5</td><td>10</td><td>Утро и вечер, перед сном</td></tr><tr><td>Защита (хифз)</td><td>Глава 6</td><td>10</td><td>Утро и вечер</td></tr><tr><td>Семья и брак</td><td>Глава 7</td><td>10</td><td>Любое время, ночь</td></tr><tr><td>Работа и дело</td><td>Глава 8</td><td>10</td><td>Утро, перед выходом</td></tr></tbody></table></figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="rekomenduemaya-posledovatelnost-chteniya"><span class="num">17.2.</span>Рекомендуемая последовательность чтения</h3>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vudu-omovenie">1. Вуду (омовение).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="dva-rakaata-namereniya">2. Два ракаата намерения.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="salavat-proroku-allahumma-salli-alya-muhammadin-va-alya-ali-">3. Салават Пророку<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>: «Аллахумма, салли 'аля Мухаммадин ва 'аля али Мухаммад».</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="al-fatiha-1-raz">4. Аль-Фатиха — 1 раз.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ayat-al-kursi-1-raz">5. Аят аль-Курси — 1 раз.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sury-al-ihlyas-al-falyak-an-nas-po-3-raza">6. Суры аль-Ихляс, аль-Фаляк, ан-Нас — по 3 раза.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="dua-vybrannogo-napravleniya-kazhdoe-po-3-7-ili-11-raz">7. Дуа выбранного направления — каждое по 3, 7 или 11 раз.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="zavershenie-salavatom-proroku">8. Завершение салаватом Пророку<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>.</h2>
+<p>9. Дуа: «Субхана Раббика Рабби-ль-'иззати 'амма ясифун, ва салямун 'аля-ль-мурсалин, ва-ль-хамду ли-Лляхи Рабби-ль-'алямин».</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vazhnye-preduprezhdeniya"><span class="num">25.1.</span>Важные предупреждения</h3>
+<ul><li>Данные дуа не заменяют обращение к врачу при физических заболеваниях. Рукия и дуа идут рука об руку с медицинским лечением.</li><li>При подозрении на серьёзное духовное поражение (сихр, масс) обратитесь к квалифицированному практику Рукии.</li><li>Не используйте данные дуа с намерением навредить кому-либо. Это противоречит Шариату и сути мольбы.</li><li>Все дуа направлены исключительно к Аллаху. Любое обращение к кому-либо помимо Аллаха является ширком и аннулирует пользу мольбы.</li></ul>
+<p>Валляху а'лям. Да благословит Аллах нашего Пророка Мухаммада, его семью и его сподвижников.</p>
+</section>
+</section>
+  </main>
+  <footer class="footnotes">
+  <h2>Примечания</h2>
+  <p class="footnote" id="fn-1"><a class="fn-num" href="#fnref-1">1.</a> Рукия — исцеление с помощью аятов Корана и достоверных дуа из Сунны Пророка<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>, строго в рамках Таухида, без обращения к джиннам, без использования талисманов и запретных формул.</p>
+<p class="footnote" id="fn-2"><a class="fn-num" href="#fnref-2">2.</a> Тауфик — успех и направление от Аллаха. Это не просто удача, а божественное содействие рабу в благом деле.</p>
+<p class="footnote" id="fn-3"><a class="fn-num" href="#fnref-3">3.</a> Хушу' — смирение, сосредоточенность и присутствие сердца в молитве. Противоположность рассеянности.</p>
+<p class="footnote" id="fn-4"><a class="fn-num" href="#fnref-4">4.</a> Истигфар — просьба о прощении у Аллаха. Формула: «Астагфиру-Ллаха ва атубу иляйх».</p>
+</footer>
+  <div class="doc-footer">
+    <span>Руководство по дуа для открытия закрытых путей · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var id = href.slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    try{ history.pushState(null,'',href);}catch(_e){}
+  });
+  if (location.hash && location.hash.length > 1) {
+    setTimeout(function(){
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>
