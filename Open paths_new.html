@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Открытие закрытых путей — Руководство по дуа | Абу Мухаммад</title>
+<meta name="description" content="Шариатское руководство по дуа для открытия закрытых путей: ризк, ибада, тауфик, ильм, шифа, хифз, брак, работа. Автор — Абу Мухаммад.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-950: #0a2818;
+    --green-900: #0f3a24;
+    --green-800: #1a5c3f;
+    --green-700: #2f6b4f;
+    --green-600: #3d8564;
+    --green-500: #52a27e;
+    --green-50: #ecf5ef;
+    --gold-600: #9a7b32;
+    --gold-500: #b8913e;
+    --gold-400: #c9a96e;
+    --gold-300: #d9bf88;
+    --gold-50: #faf5e8;
+    --ink-900: #0f1814;
+    --ink-700: #2d3b35;
+    --ink-500: #5a6a64;
+    --ink-400: #7a8a84;
+    --ink-300: #9aaba5;
+    --ink-200: #c7d2cd;
+    --ink-100: #e8edea;
+    --ink-50: #f5f8f6;
+    --paper: #fefdfb;
+    --paper-2: #f9f7f2;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-xl: 32px;
+    --shadow-xs: 0 1px 2px rgba(15, 58, 36, 0.06);
+    --shadow-sm: 0 2px 8px rgba(15, 58, 36, 0.08);
+    --shadow-md: 0 8px 24px rgba(15, 58, 36, 0.1);
+    --shadow-lg: 0 20px 50px rgba(15, 58, 36, 0.14);
+    --shadow-xl: 0 30px 80px rgba(15, 58, 36, 0.18);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --serif: 'Amiri', 'Scheherazade New', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink-900);
+    background: var(--paper);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ============ NAVIGATION ============ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(254, 253, 251, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(15, 58, 36, 0.08);
+    transition: all 0.3s var(--ease);
+  }
+
+  .nav-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--green-900);
+  }
+
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--green-800), var(--green-600));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-300);
+    font-size: 18px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-logo-text {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-logo-text small {
+    display: block;
+    font-size: 11px;
+    color: var(--ink-500);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-top: -2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-700);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.2s var(--ease);
+  }
+
+  .nav-links a:hover {
+    color: var(--green-700);
+    background: var(--green-50);
+  }
+
+  .nav-cta {
+    background: var(--green-800);
+    color: white !important;
+    padding: 10px 18px !important;
+    border-radius: 10px !important;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-cta:hover {
+    background: var(--green-700) !important;
+    transform: translateY(-1px);
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--ink-900);
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at top left, rgba(47, 107, 79, 0.08), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(184, 145, 62, 0.06), transparent 50%),
+      var(--paper);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z' fill='none' stroke='%232f6b4f' stroke-width='0.3' opacity='0.08'/%3E%3Cpath d='M40 10 L70 40 L40 70 L10 40 Z' fill='none' stroke='%232f6b4f' stroke-width='0.3' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--green-50);
+    border: 1px solid rgba(47, 107, 79, 0.15);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--green-800);
+    margin-bottom: 24px;
+  }
+
+  .hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green-600);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .bismillah {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--gold-500);
+    direction: rtl;
+    margin-bottom: 32px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: clamp(40px, 5.5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+    color: var(--green-950);
+    margin-bottom: 24px;
+  }
+
+  .hero-title .accent {
+    background: linear-gradient(135deg, var(--green-700), var(--gold-500));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .hero-subtitle {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-500);
+    margin-bottom: 40px;
+    max-width: 540px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+    font-family: var(--sans);
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--green-800), var(--green-700));
+    color: white;
+    box-shadow: 0 10px 30px rgba(26, 92, 63, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(26, 92, 63, 0.4);
+  }
+
+  .btn-secondary {
+    background: var(--paper);
+    color: var(--green-800);
+    border: 1.5px solid var(--ink-200);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--green-600);
+    color: var(--green-700);
+    background: var(--green-50);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-800);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 13px;
+    color: var(--ink-500);
+    margin-top: 4px;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+  }
+
+  .hero-ornament {
+    position: absolute;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1;
+  }
+
+  .hero-ornament-circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green-50), transparent);
+    border: 1px solid rgba(47, 107, 79, 0.1);
+  }
+
+  .hero-ornament-circle:nth-child(2) {
+    inset: 8%;
+    border-color: rgba(184, 145, 62, 0.15);
+  }
+
+  .hero-ornament-circle:nth-child(3) {
+    inset: 16%;
+    border-color: rgba(47, 107, 79, 0.1);
+  }
+
+  .hero-ornament-star {
+    position: absolute;
+    inset: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(184, 145, 62, 0.2);
+  }
+
+  .hero-ornament-star::before {
+    content: '';
+    position: absolute;
+    inset: 15%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%232f6b4f' stroke-width='1.5' opacity='0.4'%3E%3Cpath d='M100 10 L190 100 L100 190 L10 100 Z'/%3E%3Cpath d='M100 10 L100 190'/%3E%3Cpath d='M10 100 L190 100'/%3E%3Ccircle cx='100' cy='100' r='50'/%3E%3Ccircle cx='100' cy='100' r='70'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero-ornament-text {
+    position: relative;
+    z-index: 2;
+    font-family: var(--serif);
+    font-size: clamp(48px, 7vw, 88px);
+    color: var(--green-800);
+    direction: rtl;
+    text-align: center;
+    line-height: 1.2;
+    padding: 20px;
+  }
+
+  .hero-float {
+    position: absolute;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .hero-float-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .hero-float-1 {
+    top: 10%;
+    left: -4%;
+    animation-delay: 0s;
+  }
+
+  .hero-float-1 .hero-float-icon {
+    background: var(--gold-50);
+    color: var(--gold-600);
+  }
+
+  .hero-float-2 {
+    bottom: 15%;
+    right: -2%;
+    animation-delay: 1.5s;
+  }
+
+  .hero-float-2 .hero-float-icon {
+    background: var(--green-50);
+    color: var(--green-700);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* ============ SECTION COMMON ============ */
+  section { padding: 100px 0; position: relative; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-600);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    color: var(--green-950);
+    margin-bottom: 20px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: var(--ink-500);
+    line-height: 1.6;
+  }
+
+  /* ============ INTRO ============ */
+  .intro {
+    background: linear-gradient(180deg, var(--paper-2), var(--paper));
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .intro-quote {
+    background: white;
+    padding: 48px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    border: 1px solid var(--ink-100);
+  }
+
+  .intro-quote::before {
+    content: '❝';
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    font-size: 80px;
+    color: var(--gold-400);
+    font-family: var(--serif);
+    line-height: 1;
+  }
+
+  .intro-quote-arabic {
+    font-family: var(--serif);
+    font-size: 28px;
+    direction: rtl;
+    color: var(--green-800);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .intro-quote-text {
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink-700);
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+
+  .intro-quote-source {
+    font-size: 13px;
+    color: var(--ink-500);
+    font-weight: 500;
+  }
+
+  .intro-content h2 {
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    color: var(--green-950);
+    margin-bottom: 24px;
+  }
+
+  .intro-content p {
+    font-size: 17px;
+    color: var(--ink-500);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  /* ============ STEPS (PREPARATION) ============ */
+  .steps {
+    background: var(--green-950);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='%23c9a96e' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+    opacity: 0.8;
+  }
+
+  .steps > .container { position: relative; z-index: 1; }
+
+  .steps .section-title { color: white; }
+  .steps .section-subtitle { color: rgba(255, 255, 255, 0.7); }
+  .steps .section-eyebrow { color: var(--gold-300); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .step-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    transition: all 0.3s var(--ease);
+    backdrop-filter: blur(10px);
+  }
+
+  .step-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(201, 169, 110, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--green-950);
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(184, 145, 62, 0.3);
+  }
+
+  .step-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .step-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+  }
+
+  /* ============ CHAPTERS ============ */
+  .chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .chapter-card {
+    background: white;
+    border: 1px solid var(--ink-100);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    transition: all 0.3s var(--ease);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green-700), var(--gold-500));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease);
+  }
+
+  .chapter-card:hover::before { transform: scaleX(1); }
+
+  .chapter-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+
+  .chapter-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--green-50), var(--gold-50));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(47, 107, 79, 0.1);
+  }
+
+  .chapter-num {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold-600);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .chapter-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--green-900);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .chapter-card p {
+    font-size: 15px;
+    color: var(--ink-500);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .chapter-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid var(--ink-100);
+  }
+
+  .chapter-dua-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-700);
+    background: var(--green-50);
+    padding: 6px 12px;
+    border-radius: 100px;
+  }
+
+  .chapter-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--green-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green-700);
+    transition: all 0.3s var(--ease);
+  }
+
+  .chapter-card:hover .chapter-arrow {
+    background: var(--green-700);
+    color: white;
+    transform: translateX(4px);
+  }
+
+  /* ============ DUAS PANEL ============ */
+  .duas-panel {
+    display: none;
+    background: var(--paper-2);
+    border: 1px solid var(--ink-100);
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    margin-top: 32px;
+    animation: slideDown 0.5s var(--ease);
+  }
+
+  .duas-panel.active { display: block; }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .duas-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .duas-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .duas-panel-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--green-700), var(--green-800));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: var(--shadow-md);
+  }
+
+  .duas-panel-title h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--green-950);
+    letter-spacing: -0.01em;
+  }
+
+  .duas-panel-title p {
+    font-size: 14px;
+    color: var(--ink-500);
+    margin-top: 2px;
+  }
+
+  .duas-panel-close {
+    background: white;
+    border: 1px solid var(--ink-100);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--ink-700);
+    transition: all 0.2s var(--ease);
+  }
+
+  .duas-panel-close:hover {
+    background: var(--ink-100);
+    transform: rotate(90deg);
+  }
+
+  .duas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .dua-card {
+    background: white;
+    border: 1px solid var(--ink-100);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+    position: relative;
+  }
+
+  .dua-card:hover {
+    border-color: var(--green-600);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .dua-card-num {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold-600);
+    background: var(--gold-50);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dua-card-arabic {
+    font-family: var(--serif);
+    font-size: 22px;
+    direction: rtl;
+    color: var(--green-800);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    padding-right: 8px;
+    padding-top: 4px;
+    max-height: 110px;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  .dua-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-900);
+    margin-bottom: 8px;
+    padding-right: 40px;
+    line-height: 1.4;
+  }
+
+  .dua-card-desc {
+    font-size: 13px;
+    color: var(--ink-500);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .dua-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--ink-100);
+    font-size: 12px;
+  }
+
+  .dua-card-tag {
+    color: var(--green-700);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .dua-card-more {
+    color: var(--gold-600);
+    font-weight: 500;
+  }
+
+  /* ============ MODAL ============ */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 40, 24, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease);
+  }
+
+  .modal-overlay.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal {
+    background: white;
+    border-radius: var(--radius-xl);
+    max-width: 720px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+    transform: scale(0.95) translateY(20px);
+    transition: transform 0.4s var(--ease);
+    position: relative;
+  }
+
+  .modal-overlay.active .modal {
+    transform: scale(1) translateY(0);
+  }
+
+  .modal-header {
+    background: linear-gradient(135deg, var(--green-800), var(--green-900));
+    color: white;
+    padding: 40px 40px 32px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .modal-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23c9a96e' stroke-width='0.5' opacity='0.15'%3E%3Cpath d='M50 5 L95 50 L50 95 L5 50 Z'/%3E%3Ccircle cx='50' cy='50' r='30'/%3E%3Ccircle cx='50' cy='50' r='40'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+
+  .modal-header-content { position: relative; z-index: 1; }
+
+  .modal-bismillah {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--gold-300);
+    direction: rtl;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .modal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .modal-chapter {
+    font-size: 14px;
+    opacity: 0.75;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s var(--ease);
+    z-index: 2;
+  }
+
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
+  }
+
+  .modal-body { padding: 40px; }
+
+  .modal-arabic {
+    background: linear-gradient(135deg, var(--green-50), var(--gold-50));
+    border: 1px solid rgba(47, 107, 79, 0.15);
+    border-radius: var(--radius-md);
+    padding: 40px 32px;
+    margin-bottom: 28px;
+    text-align: center;
+    position: relative;
+  }
+
+  .modal-arabic::before,
+  .modal-arabic::after {
+    content: '';
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+    opacity: 0.5;
+  }
+
+  .modal-arabic::before { top: 16px; }
+  .modal-arabic::after { bottom: 16px; }
+
+  .modal-arabic-text {
+    font-family: var(--serif);
+    font-size: clamp(26px, 3.5vw, 36px);
+    direction: rtl;
+    color: var(--green-900);
+    line-height: 2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .modal-section {
+    margin-bottom: 28px;
+  }
+
+  .modal-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-600);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .modal-section-label::before {
+    content: '';
+    width: 16px;
+    height: 2px;
+    background: var(--gold-400);
+  }
+
+  .modal-transliteration {
+    font-size: 16px;
+    color: var(--green-800);
+    line-height: 1.6;
+    font-weight: 500;
+    padding: 16px 20px;
+    background: var(--green-50);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--green-600);
+    font-style: italic;
+  }
+
+  .modal-translation {
+    font-size: 17px;
+    color: var(--ink-700);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .modal-description {
+    font-size: 15px;
+    color: var(--ink-700);
+    line-height: 1.75;
+    padding: 20px;
+    background: var(--paper-2);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--gold-500);
+  }
+
+  .modal-source {
+    font-size: 13px;
+    color: var(--ink-500);
+    padding: 14px 18px;
+    background: var(--ink-50);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--ink-300);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .modal-source-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--ink-300);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+
+  .modal-footer {
+    padding: 24px 40px;
+    border-top: 1px solid var(--ink-100);
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background: var(--paper-2);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  }
+
+  .modal-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s var(--ease);
+    font-family: var(--sans);
+  }
+
+  .modal-btn-primary {
+    background: var(--green-800);
+    color: white;
+  }
+
+  .modal-btn-primary:hover { background: var(--green-700); }
+
+  .modal-btn-secondary {
+    background: white;
+    color: var(--ink-700);
+    border: 1px solid var(--ink-200);
+  }
+
+  .modal-btn-secondary:hover {
+    border-color: var(--green-600);
+    color: var(--green-700);
+  }
+
+  .copy-success {
+    background: var(--green-600) !important;
+    color: white !important;
+  }
+
+  /* ============ FEATURES (TABLE) ============ */
+  .features {
+    background: var(--paper-2);
+  }
+
+  .feature-table-wrap {
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--ink-100);
+    overflow-x: auto;
+  }
+
+  .feature-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+  }
+
+  .feature-table th {
+    background: var(--green-950);
+    color: white;
+    text-align: left;
+    padding: 20px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .feature-table th:first-child { border-radius: 0; }
+
+  .feature-table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--ink-100);
+    font-size: 15px;
+    color: var(--ink-700);
+  }
+
+  .feature-table tr:last-child td { border-bottom: none; }
+
+  .feature-table tr:hover td { background: var(--green-50); }
+
+  .feature-table .direction-name {
+    font-weight: 700;
+    color: var(--green-900);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .feature-table .direction-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--green-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .feature-table .count {
+    display: inline-block;
+    background: var(--gold-50);
+    color: var(--gold-600);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* ============ CONCLUSION ============ */
+  .conclusion {
+    background: linear-gradient(135deg, var(--green-900), var(--green-950));
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .conclusion::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 5 L75 40 L40 75 L5 40 Z' fill='none' stroke='%23c9a96e' stroke-width='0.4' opacity='0.12'/%3E%3C/svg%3E");
+  }
+
+  .conclusion > .container { position: relative; z-index: 1; }
+
+  .conclusion-content {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .conclusion-arabic {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 44px);
+    direction: rtl;
+    color: var(--gold-300);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .conclusion-translation {
+    font-size: 20px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .conclusion-source {
+    font-size: 14px;
+    color: var(--gold-300);
+    margin-bottom: 48px;
+  }
+
+  .conclusion-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    text-align: left;
+    margin-top: 48px;
+  }
+
+  .conclusion-tip {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(10px);
+  }
+
+  .conclusion-tip-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--gold-400);
+    color: var(--green-950);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .conclusion-tip h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .conclusion-tip p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.55;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--ink-900);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 48px 0 32px;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 24px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-logo-text { font-weight: 700; }
+  .footer-logo-text small { display: block; font-size: 12px; color: rgba(255, 255, 255, 0.5); font-weight: 400; }
+
+  .footer-text {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .footer-text .gold { color: var(--gold-300); }
+
+  .footer-disclaimer {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .footer-disclaimer strong {
+    color: var(--gold-300);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ============ TOAST ============ */
+  .toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--green-800);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+    z-index: 2000;
+    transition: transform 0.4s var(--ease);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { min-height: 380px; }
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-links.mobile-open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      padding: 16px;
+      gap: 4px;
+      border-top: 1px solid var(--ink-100);
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  @media (max-width: 640px) {
+    section { padding: 64px 0; }
+    .hero { padding: 100px 0 60px; }
+    .hero-title { font-size: 44px; }
+    .hero-actions { flex-direction: column; }
+    .btn { width: 100%; }
+    .hero-stats { gap: 24px; }
+    .hero-stat-num { font-size: 24px; }
+    .intro-quote { padding: 32px 24px; }
+    .duas-panel { padding: 24px; }
+    .modal-body { padding: 24px; }
+    .modal-header { padding: 32px 24px 24px; }
+    .modal-footer { padding: 20px 24px; flex-direction: column; }
+    .modal-btn { width: 100%; }
+    .duas-grid { grid-template-columns: 1fr; }
+    .container { padding: 0 16px; }
+  }
+
+  /* Scroll animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">☪</div>
+      <div class="nav-logo-text">
+        Абу Мухаммад
+        <small>Лекарь · Шариатская Рукия</small>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#intro">О руководстве</a></li>
+      <li><a href="#preparation">Подготовка</a></li>
+      <li><a href="#chapters">Главы</a></li>
+      <li><a href="#conclusion">Советы</a></li>
+      <li><a href="#chapters" class="nav-cta">Начать чтение</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('mobile-open')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>Шариатская Рукия · 8 направлений</span>
+        </div>
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <h1 class="hero-title">
+          Открытие <span class="accent">закрытых путей</span>
+        </h1>
+        <p class="hero-subtitle">
+          Руководство по дуа для тех, чьи пути закрыты: ризк, ибада, тауфик, ильм, шифа, хифз, семья и работа. Чистая мольба раба к своему Господу — в строгом соответствии с Таухидом.
+        </p>
+        <div class="hero-actions">
+          <a href="#chapters" class="btn btn-primary">
+            Начать чтение
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#preparation" class="btn btn-secondary">
+            Как подготовиться
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">80</div>
+            <div class="hero-stat-label">дуа в 8 главах</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">8</div>
+            <div class="hero-stat-label">направлений жизни</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">в рамках Таухида</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-ornament">
+          <div class="hero-ornament-circle"></div>
+          <div class="hero-ornament-circle"></div>
+          <div class="hero-ornament-circle"></div>
+          <div class="hero-ornament-star">
+            <div class="hero-ornament-text">الدُّعَاء</div>
+          </div>
+        </div>
+        <div class="hero-float hero-float-1">
+          <div class="hero-float-icon">📿</div>
+          <div>
+            <div style="font-weight: 700; color: var(--green-900)">80 дуа</div>
+            <div style="font-size: 12px; color: var(--ink-500)">из Корана и Сунны</div>
+          </div>
+        </div>
+        <div class="hero-float hero-float-2">
+          <div class="hero-float-icon">🌙</div>
+          <div>
+            <div style="font-weight: 700; color: var(--green-900)">Чистый Таухид</div>
+            <div style="font-size: 12px; color: var(--ink-500)">без ширка и талисманов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-quote fade-in">
+        <div class="intro-quote-arabic">وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ</div>
+        <div class="intro-quote-text">«Ваш Господь сказал: "Взывайте ко Мне — Я отвечу вам"».</div>
+        <div class="intro-quote-source">Сура «Гафир», аят 60</div>
+      </div>
+      <div class="intro-content fade-in">
+        <span class="section-eyebrow">От автора</span>
+        <h2>Дорогие мои братья и сёстры</h2>
+        <p>Меня зовут Абу Мухаммад, и я составил для вас это руководство от всего сердца. Я знаю, как тяжело, когда пути закрыты, когда руки связаны, когда кажется, что двери не открываются ни вперёд, ни назад.</p>
+        <p>Я прошу Аллаха, чтобы это руководство стало для вас светом и облегчением. Читайте эти дуа с убеждением (йакин), с чистым сердцем, и знайте: Аллах слышит каждого, кто зовёт Его искренне.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREPARATION -->
+<section class="steps" id="preparation">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">Подготовка</span>
+      <h2 class="section-title">Прежде чем начать</h2>
+      <p class="section-subtitle">Следуйте этим шести шагам для наилучшего принятия ваших дуа</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-in">
+        <div class="step-num">1</div>
+        <h3>Омовение (вуду)</h3>
+        <p>Совершите омовение, если есть возможность. Чистота тела — начало чистоты сердца.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">2</div>
+        <h3>Повернитесь к кибле</h3>
+        <p>Встаньте или сядьте, обратившись лицом в сторону Каабы — это лучшее положение для мольбы.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">3</div>
+        <h3>Поднимите руки</h3>
+        <p>Поднимите руки ладонями вверх — это положение мольбы, которое любил Посланник Аллаха ﷺ.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">4</div>
+        <h3>Басмаля</h3>
+        <p>Начните с «Бисмилляхи-р-Рахмани-р-Рахим» — во имя Аллаха, Милостивого, Милосердного.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">5</div>
+        <h3>Салават Пророку ﷺ</h3>
+        <p>«Аллахумма, салли 'аля Мухаммадин ва 'аля али Мухаммад» — благословение открывает двери принятия.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">6</div>
+        <h3>По 3, 7 или 11 раз</h3>
+        <p>Читайте каждое дуа столько раз, как почувствует сердце. Не торопитесь, не гонитесь за количеством.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section id="chapters">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">8 направлений</span>
+      <h2 class="section-title">Главы руководства</h2>
+      <p class="section-subtitle">Выберите направление, в котором вам нужно открытие. В каждой главе — по 10 дуа с описанием и источниками.</p>
+    </div>
+
+    <div class="chapters-grid" id="chaptersGrid"></div>
+    <div id="duasPanel" class="duas-panel"></div>
+  </div>
+</section>
+
+<!-- FEATURES TABLE -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">Рекомендуемый порядок</span>
+      <h2 class="section-title">Чтение по направлениям</h2>
+      <p class="section-subtitle">Каждое направление имеет своё лучшее время и количество дуа</p>
+    </div>
+    <div class="feature-table-wrap fade-in">
+      <table class="feature-table">
+        <thead>
+          <tr>
+            <th>Направление</th>
+            <th>Глава</th>
+            <th>Дуа</th>
+            <th>Рекомендуемое время</th>
+          </tr>
+        </thead>
+        <tbody id="featureTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section class="conclusion" id="conclusion">
+  <div class="container">
+    <div class="conclusion-content fade-in">
+      <div class="conclusion-arabic">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+      <div class="conclusion-translation">«Поистине, за тягостью следует облегчение. Поистине, за тягостью следует облегчение».</div>
+      <div class="conclusion-source">Сура «аш-Шарх», аяты 5–6</div>
+
+      <h2 style="color: white; font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px;">Советы от Абу Мухаммада</h2>
+      <p style="color: rgba(255,255,255,0.75); max-width: 640px; margin: 0 auto 32px; font-size: 17px;">Не торопитесь. Одно дуа, прочитанное с дрожащим сердцем, сильнее тысячи, прочитанных на автомате.</p>
+
+      <div class="conclusion-tips">
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">1</div>
+          <h4>Не торопитесь</h4>
+          <p>Читайте спокойно, с чувством. Не гонитесь за количеством.</p>
+        </div>
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">2</div>
+          <h4>Повторяйте</h4>
+          <p>Минимум 3 раза, лучше 7 или 11. Пусть сердце запомнит.</p>
+        </div>
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">3</div>
+          <h4>Лучшие времена</h4>
+          <p>Последняя треть ночи, между азаном и икаматом, в суджуде, в пятницу.</p>
+        </div>
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">4</div>
+          <h4>Не сомневайтесь</h4>
+          <p>Аллах не обманывает. Задержка — значит, Он готовит лучшее.</p>
+        </div>
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">5</div>
+          <h4>С Кораном</h4>
+          <p>Аль-Фатиха, Аят аль-Курси, последние три суры — усиливают и защищают.</p>
+        </div>
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">6</div>
+          <h4>Будьте последовательны</h4>
+          <p>Дайте себе 7, 14 или 21 день. Не бросайте после одного дня.</p>
+        </div>
+        <div class="conclusion-tip">
+          <div class="conclusion-tip-num">7</div>
+          <h4>Истигфар</h4>
+          <p>Частое «Астагфиру-Ллах» открывает двери, закрытые забытыми грехами.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">
+        <div class="nav-logo-icon">☪</div>
+        <div class="footer-logo-text">
+          Абу Мухаммад
+          <small>Руководство по дуа · 2025</small>
+        </div>
+      </a>
+      <div class="footer-text">
+        Подготовил <span class="gold">Лекарь Абу Мухаммад</span> · Да благословит Аллах Пророка Мухаммада ﷺ
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <strong>Важные предупреждения</strong>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 8px;">• Данные дуа не заменяют обращение к врачу при физических заболеваниях. Рукия и дуа идут рука об руку с медицинским лечением.</li>
+        <li style="margin-bottom: 8px;">• При подозрении на серьёзное духовное поражение (сихр, масс) обратитесь к квалифицированному практику Рукии.</li>
+        <li style="margin-bottom: 8px;">• Не используйте данные дуа с намерением навредить кому-либо. Это противоречит Шариату.</li>
+        <li>• Все дуа направлены исключительно к Аллаху. Любое обращение к кому-либо помимо Аллаха является ширком.</li>
+      </ul>
+    </div>
+
+    <div class="footer-text" style="margin-top: 24px; font-size: 12px;">
+      Валляху а'лям. Да благословит Аллах нашего Пророка Мухаммада, его семью и его сподвижников.
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-header-content">
+        <div class="modal-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <div class="modal-badge" id="modalBadge">ДУА · ГЛАВА 1</div>
+        <h3 class="modal-title" id="modalTitle">Название дуа</h3>
+        <p class="modal-chapter" id="modalChapter">Глава 1 · Путь удела</p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-arabic">
+        <div class="modal-arabic-text" id="modalArabic" lang="ar" dir="rtl"></div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-label">Транслитерация</div>
+        <div class="modal-transliteration" id="modalTranslit"></div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-label">Перевод</div>
+        <div class="modal-translation" id="modalTranslation"></div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-label">Описание</div>
+        <div class="modal-description" id="modalDescription"></div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-label">Источник</div>
+        <div class="modal-source">
+          <div class="modal-source-icon">i</div>
+          <span id="modalSource"></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Закрыть</button>
+      <button class="modal-btn modal-btn-primary" id="copyBtn" onclick="copyDua()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span id="copyBtnText">Скопировать дуа</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">Скопировано в буфер обмена</span>
+</div>
+
+<script>
+  // ===== DATA =====
+  const chaptersData = [
+    {
+      id: 'rizk',
+      num: 1,
+      title: 'Путь удела',
+      subtitle: 'Ризк',
+      icon: '💰',
+      intro: 'Если ваш ризк зажат, если деньги не приходят, если руки связаны в делах — читайте эти дуа. Аллах — ар-Раззак, Тот, Кто обеспечивает. Он не забыл вас.',
+      time: 'Утро, после Фаджра',
+      duas: [
+        { title: 'Открытие дверей удела', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رِزْقِكَ الْمَغْلَقَةَ عَنِّي', translit: 'Аллахумма, ифтах ли абваба ризкика-ль-мугляката анни.', translation: 'О Аллах, открой мне двери Твоего удела, закрытые от меня.', source: 'Авторское дуа Абу Мухаммада, на основе общего принципа мольбы об уделе', description: 'Это дуа обращено к Аллаху как к Единственному подателю удела. Когда человек чувствует, что все двери заработка закрыты, когда возможности не приходят, когда руки связаны — эта мольба открывает то, что казалось закрытым. Читайте с полной уверенностью (йакин), что Аллах слышит вас.' },
+        { title: 'Развязывание узлов на пути ризка', arabic: 'اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ تَمْنَعُ رِزْقِي مِنْ أَنْ يَصِلَ إِلَيَّ', translit: 'Аллахумма, фукка кулля \'укдэтин тамна\'у ризки мин ан ясыля иляййа.', translation: 'О Аллах, развяжи каждый узел, который мешает моему уделу дойти до меня.', source: 'Авторское дуа Абу Мухаммада', description: 'Узлы на пути ризка могут быть как от сглаза, так и от последствий грехов, или от козней шайтана. Это дуа просит Аллаха развязать каждый узел — видимый и невидимый — который стоит между вами и вашим уделом. Особенно эффективно после чтения «каль хазам» (развязывания узла языка Мусы).' },
+        { title: 'Аннулирование колдовства и сглаза на удел', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ أَوْ عَيْنٍ أَوْ حَسَدٍ يَحْجُبُ رِزْقِي', translit: 'Аллахумма, абтиль кулля сихрин ау \'айнин ау хасадин яхджубу ризки.', translation: 'О Аллах, аннулируй всякое колдовство, сглаз или зависть, которые закрывают мой удел.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Когда ризк блокируется сглазом (айн), завистью (хасад) или колдовством (сихр), это дуа взывает к Аллаху как к аль-Мубтыль — Тому, Кто сводит на нет козни врагов. Читайте после аятов Рукии: Аят аль-Курси, аль-Фаляк, ан-Нас. Особенно эффективно при симптомах: внезапная потеря работы, убытки без причины, невозможность открыть дело.' },
+        { title: 'Расширение удела', arabic: 'اللَّهُمَّ وَسِّعْ لِي فِي رِزْقِي وَبَارِكْ لِي فِيهِ مِنْ حَيْثُ لَا أَحْتَسِبُ', translit: 'Аллахумма, васси\' ли фи ризки ва барик ли фихи мин хайсу ля ахтасиб.', translation: 'О Аллах, расширь мой удел и благослови его оттуда, откуда я не ожидаю.', source: 'Авторское дуа Абу Мухаммада', description: 'Мольба о расширении (тоси\'а) и баракате (благословении) в том, что уже есть. Иногда удел приходит, но бараката в нём нет — деньги утекают, вещи ломаются, достаток не радует. Это дуа просит и количество, и качество, и благословение из неведомых источников.' },
+        { title: 'Мольба о дозволенном уделе', arabic: 'اللَّهُمَّ ارْزُقْنِي رِزْقًا حَلَالًا طَيِّبًا مُبَارَكًا فِيهِ', translit: 'Аллахумма, арзукни ризкан халялян таййибан мубаракан фихи.', translation: 'О Аллах, даруй мне удел дозволенный, чистый и благословенный.', source: 'Авторское дуа Абу Мухаммада, на основе хадиса о дозволенном ризке', description: 'Халяль, таййиб и мубарак — три качества идеального удела. Халяль — дозволенное по Шариату. Таййиб — чистое, не вызывающее сомнения. Мубарак — благословенное, приносящее пользу в обоих мирах. Это дуа ограждает от харамного заработка и делает ризк источником радости, а не беспокойства.' },
+        { title: 'Устранение препятствий', arabic: 'اللَّهُمَّ أَزِلْ كُلَّ عَائِقٍ بَيْنِي وَبَيْنَ رِزْقِكَ', translit: 'Аллахумма, азиль кулля \'аикъин байна ва байна ризкика.', translation: 'О Аллах, убери всякое препятствие между мной и Твоим уделом.', source: 'Авторское дуа Абу Мухаммада', description: 'Препятствия на пути ризка могут быть внешними (враги, бюрократия, обстоятельства) и внутренними (грехи, лень, отсутствие таваккуля). Это дуа взывает к Аллаху убрать все препятствия — как видимые, так и скрытые, как от людей, так и от шайтанов.' },
+        { title: 'Мольба о достатке', arabic: 'اللَّهُمَّ اجْعَلْ يَدِي عُلْيَا وَلَا تَجْعَلْهَا سُفْلَى', translit: 'Аллахумма, идж\'аль яди \'уля ва ля тадж\'альха суфля.', translation: 'О Аллах, сделай мою руку верхней (дающей), а не нижней (просящей).', source: 'Авторское дуа Абу Мухаммада, на основе хадиса: аль-Бухари, № 1427; Муслим, № 1033', description: 'Основано на достоверном хадисе, где Пророк ﷺ говорил: «Верхняя рука лучше нижней». Это дуа — просьба сделать человека самодостаточным, щедрым, дающим, а не просящим. Оно меняет состояние души с нужды на изобилие и достоинство.' },
+        { title: 'Открытие дверей дозволенного заработка', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْكَسْبِ الْحَلَالِ وَسَهِّلْ لِي كُلَّ عَسِيرٍ', translit: 'Аллахумма, ифтах ли абваба-ль-касби-ль-халяль ва саххиль ли кулля \'асыр.', translation: 'О Аллах, открой мне двери дозволенного заработка и облегчи мне всякое трудное.', source: 'Авторское дуа Абу Мухаммада', description: 'Мольба о халяльном касбе (заработке). Это дуа помогает в поисках работы, открытии бизнеса, заключении договоров — всё в рамках дозволенного. Вторая часть «саhhиль ли кулля \'асыр» — просьба облегчить все трудности на пути заработка.' },
+        { title: 'Мольба об удовлетворении дозволенным', arabic: 'اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ', translit: 'Аллахумма, икфини би-халялика \'ан харамика ва агнини би-фадлика \'амман сивак.', translation: 'О Аллах, удовлетвори меня дозволенным Твоим, чтобы я не нуждался в запретном, и обогати меня Своей милостью, чтобы я не нуждался ни в ком, кроме Тебя.', source: 'ат-Тирмизи, № 3563; Ахмад, № 658', description: 'Достоверное дуа из Сунны, которое учил Пророк ﷺ своим сподвижникам. Это мощнейшая мольба о самодостаточности и свободе от людей. Тот, кто читает её регулярно, ограждается от харамных заработков и от унижения перед творениями.' },
+        { title: 'Мольба об уделе из неведомого', arabic: 'اللَّهُمَّ ارْزُقْنِي مِنْ حَيْثُ لَا أَحْتَسِبُ وَافْتَحْ لِي مِنْ حَيْثُ لَا أَعْلَمُ', translit: 'Аллахумма, арзукни мин хайсу ля ахтасиб ва-ифтах ли мин хайсу ля а\'лям.', translation: 'О Аллах, даруй мне удел оттуда, откуда я не ожидаю, и открой мне оттуда, откуда я не знаю.', source: 'Авторское дуа Абу Мухаммада, на основе Суры «ат-Таляк», аят 3', description: 'Основано на знаменитом аяте: «...и дарует ему удел, откуда тот и не ожидает». Это дуа открывает двери неожиданным возможностям, неведомым источникам, чудесам ризка. Читайте, когда все расчёты показывают тупик — Аллах выше всех расчётов.' }
+      ]
+    },
+    {
+      id: 'ibada',
+      num: 2,
+      title: 'Путь поклонения',
+      subtitle: 'Ибада',
+      icon: '🕌',
+      intro: 'Иногда шайтан или сихр закрывают человеку путь к Аллаху: намаз становится тяжёлым, Коран не идёт, сердце каменеет. Просите Аллаха открыть вам путь к Нему Самому.',
+      time: 'Перед намазом, ночью',
+      duas: [
+        { title: 'Открытие двери обращения к Аллаху', arabic: 'اللَّهُمَّ افْتَحْ لِي بَابَ الْإِقْبَالِ عَلَيْكَ وَارْزُقْنِي حَلَاوَةَ عِبَادَتِكَ', translit: 'Аллахумма, ифтах ли баба-ль-икъбали \'аляйка ва-рзукни халявата \'ибадатик.', translation: 'О Аллах, открой мне дверь обращения к Тебе и даруй мне сладость поклонения Тебе.', source: 'Авторское дуа Абу Мухаммада', description: 'Икъбаль — это поворот сердца к Аллаху, искреннее обращение. Халяват аль-ибада — сладость поклонения, которую ощущали праведники. Когда намаз превращается в тяжёлую обязанность, а Коран не трогает сердце — это дуа возвращает живую связь с Господом.' },
+        { title: 'Освобождение сердца для хушу', arabic: 'اللَّهُمَّ فُكَّ عَنْ قَلْبِي كُلَّ قَيْدٍ يَمْنَعُنِي مِنَ الْخُشُوعِ فِي صَلَاتِي', translit: 'Аллахумма, фукка \'ан кальби кулля кайдин ямна\'уни мина-ль-хушу\'и фи саляти.', translation: 'О Аллах, сними с моего сердца всякие оковы, которые мешают мне быть смиренным в моей молитве.', source: 'Авторское дуа Абу Мухаммада', description: 'Хушу\' (смирение в намазе) — это сердце молитвы. Шайтан, сглаз и грехи могут наложить «оковы» на сердце, и человек молится рассеянно, не чувствуя присутствия перед Аллахом. Это дуа снимает эти оковы и возвращает сладость сосредоточенности.' },
+        { title: 'Аннулирование наущений и колдовства на ибаду', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ وَسْوَسَةٍ وَكُلَّ سِحْرٍ يَصُدُّنِي عَنْ ذِكْرِكَ', translit: 'Аллахумма, абтиль кулля васвасатин ва кулля сихрин ясуддуни \'ан зикрик.', translation: 'О Аллах, аннулируй всякое наущение и всякое колдовство, которые отвращают меня от поминания Тебя.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Васваса (наущения шайтана) и сихр, направленный на ибаду — частые причины, по которым человек отходит от намаза и Корана. Это дуа — часть шариатской рукии для тех, кто чувствует духовную блокаду. Читайте вместе с аятами, отменяющими колдовство (Сура Та Ха, аят 69).' },
+        { title: 'Мольба о радости в молитве', arabic: 'اللَّهُمَّ اجْعَلْ صَلَاتِي قُرَّةَ عَيْنٍ لِي وَلَا تَجْعَلْهَا ثِقْلًا عَلَيَّ', translit: 'Аллахумма, идж\'аль саляти куррата \'айнин ли ва ля тадж\'альха сиклян \'аляййа.', translation: 'О Аллах, сделай мою молитву радостью для моих глаз и не делай её бременем для меня.', source: 'Авторское дуа Абу Мухаммада', description: 'Куррат \'айн — «отрада глаз», то, что приносит радость и покой. Пророк ﷺ говорил: «Отрада моих глаз была сделана в молитве». Это дуа превращает намаз из обязанности в источник радости и утешения.' },
+        { title: 'Открытие врат Корана', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْقُرْآنِ وَاجْعَلْهُ رَبِيعَ قَلْبِي وَنُورَ صَدْرِي', translit: 'Аллахумма, ифтах ли абваба-ль-Кур\'ани ва-дж\'альху раби\'а кальби ва нура садри.', translation: 'О Аллах, открой мне врата Корана и сделай его весной моего сердца и светом моей груди.', source: 'Авторское дуа Абу Мухаммада, на основе дуа из Муснада Ахмада, № 3712', description: 'Раби\' аль-кальб — «весна сердца». Как весна оживляет землю, так Коран оживляет сердце. Это дуа помогает тем, кто хочет понять Коран, запомнить его, почувствовать его действие. Особенно важно для тех, кто только начал изучать Книгу Аллаха.' },
+        { title: 'Мольба о помощи в поклонении', arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ', translit: 'Аллахумма, а\'инни \'аля зикрика ва шукрика ва хусни \'ибадатик.', translation: 'О Аллах, помоги мне поминать Тебя, благодарить Тебя и поклоняться Тебе наилучшим образом.', source: 'Абу Дауд, № 1522; ан-Насаи, № 1303', description: 'Достоверное дуа, которому Пророк ﷺ учил Муаза ибн Джабаля. Три столпа богоугодной жизни: зикр (поминание), шукр (благодарность) и хусн аль-ибада (прекрасное поклонение). Тот, кто соединит эти три качества, достигнет вершины.' },
+        { title: 'Мольба о смягчении сердца', arabic: 'اللَّهُمَّ أَلِنْ قَلْبِي بَعْدَ قَسْوَتِهِ وَأَعِدْ إِلَيَّ خُشُوعِي وَإِيمَانِي', translit: 'Аллахумма, алин кальби ба\'да касватихи ва а\'ид иляййа хушу\'и ва имани.', translation: 'О Аллах, смягчи моё сердце после его жестокости и верни мне моё смирение и мою веру.', source: 'Авторское дуа Абу Мухаммада', description: 'Касват аль-кальб — «жестокость сердца» — опасное духовное состояние, когда сердце перестаёт чувствовать, не трогается Кораном, не плачет от поминания Аллаха. Это дуа просит смягчить сердце и вернуть веру на прежнее место.' },
+        { title: 'Открытие пути покаяния', arabic: 'اللَّهُمَّ افْتَحْ لِي سَبِيلَ التَّوْبَةِ النَّصُوحِ وَاقْبَلْنِي بِرَحْمَتِكَ', translit: 'Аллахумма, ифтах ли сабиля-т-таубати-н-насух ва-къбальни би-рахматик.', translation: 'О Аллах, открой мне путь искреннего покаяния и прими меня Своей милостью.', source: 'Авторское дуа Абу Мухаммада', description: 'Тауба ан-насух — искреннее, чистое покаяние, при котором человек не возвращается к греху. Это дуа открывает дверь к тауба и просит Аллаха принять покаяние Своей милостью, а не по заслугам раба.' },
+        { title: 'Мольба о ночной молитве и посте', arabic: 'اللَّهُمَّ ارْزُقْنِي قِيَامَ اللَّيْلِ وَصِيَامَ النَّهَارِ وَحُبَّ الطَّاعَةِ', translit: 'Аллахумма, арзукни къияма-ль-ляйли ва сияма-н-нахари ва хубба-т-та\'а.', translation: 'О Аллах, даруй мне ночную молитву, дневной пост и любовь к поклонению.', source: 'Авторское дуа Абу Мухаммада', description: 'Кыям аль-ляйль (ночная молитва) и сыйям (пост) — два крыла, на которых праведники приближаются к Аллаху. Это дуа просит не просто делать, но и любить это. Любовь к поклонению — великий дар.' },
+        { title: 'Мольба о чистом сердце пред Аллахом', arabic: 'اللَّهُمَّ لَا تَجْعَلْ بَيْنِي وَبَيْنَكَ حَاجِبًا وَلَا سَاتِرًا وَاجْعَلْنِي مِمَّنْ يَأْتِيكَ بِقَلْبٍ سَلِيمٍ', translit: 'Аллахумма, ля тадж\'аль байна ва байника хаджибан ва ля сатиран ва-дж\'альни мимман я\'тика би-кальбин салим.', translation: 'О Аллах, не ставь между мной и Тобой ни завесы, ни преграды, и сделай меня из тех, кто приходит к Тебе с чистым сердцем.', source: 'Авторское дуа Абу Мухаммада, на основе Суры «аш-Шу\'ара», аят 89', description: 'Кальб салим (здоровое, чистое сердце) — единственное, что спасёт в Судный день, как сказано в Коране. Это дуа просит Аллаха убрать все завесы между рабом и Господом и даровать чистоту сердца.' }
+      ]
+    },
+    {
+      id: 'taufik',
+      num: 3,
+      title: 'Путь успеха',
+      subtitle: 'Тауфик',
+      icon: '🏆',
+      intro: 'Если дела не ладятся, если каждый шаг наталкивается на стену, если успех утекает из рук — читайте эти дуа и просите Аллаха даровать вам тауфик.',
+      time: 'Утро, перед важным делом',
+      duas: [
+        { title: 'Открытие дверей тауфика', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ التَّوْفِيقِ وَالنَّجَاحِ فِي كُلِّ أَمْرِي', translit: 'Аллахумма, ифтах ли абваба-т-тауфикъи ва-н-наджах фи кулли амри.', translation: 'О Аллах, открой мне двери успеха и победы во всех моих делах.', source: 'Авторское дуа Абу Мухаммада', description: 'Тауфик — это божественное содействие успеху, которое приходит только от Аллаха. Это не просто удача, а направление от Господа. Это дуа охватывает все дела человека — и мирские, и духовные.' },
+        { title: 'Развязывание узлов на пути к успеху', arabic: 'اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ فِي طَرِيقِي إِلَى النَّجَاحِ', translit: 'Аллахумма, фукка кулля \'укдэтин фи тарикъи иля-н-наджах.', translation: 'О Аллах, развяжи каждый узел на моём пути к успеху.', source: 'Авторское дуа Абу Мухаммада', description: 'Узлы на пути успеха — это препятствия от людей, от шайтанов, от собственных слабостей. Каждый раз, когда вы чувствуете «застревание», читайте это дуа с убеждением.' },
+        { title: 'Аннулирование козней и колдовства на успех', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ كَيْدٍ وَكُلَّ سِحْرٍ يَمْنَعُ نَجَاحِي وَتَقَدُّمِي', translit: 'Аллахумма, абтиль кулля кайдин ва кулля сихрин ямна\'у наджах ва такаддуми.', translation: 'О Аллах, аннулируй всякий коварный замысел и всякое колдовство, которые мешают моему успеху и продвижению.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Кейд (коварный замысел) и сихр часто направлены против успешных людей. Это дуа — часть рукии для тех, чей успех саботируется врагами или колдовством. Читайте вместе с аятами о разрушении козней Фараона (Сура Та Ха, 69).' },
+        { title: 'Облегчение трудного', arabic: 'اللَّهُمَّ سَهِّلْ لِي كُلَّ عَسِيرٍ وَيَسِّرْ لِي كُلَّ صَعْبٍ', translit: 'Аллахумма, саххиль ли кулля \'асыр ва яссир ли кулля са\'б.', translation: 'О Аллах, облегчи мне всякое трудное и упрости мне всякое сложное.', source: 'Авторское дуа Абу Мухаммада', description: 'Простое и сильное дуа для ситуаций, где всё идёт тяжело — учёба, работа, отношения, лечение. Аллах — аль-Муйассир, облегчающий. Читайте перед экзаменами, собеседованиями, важными встречами.' },
+        { title: 'Выход из тесноты', arabic: 'اللَّهُمَّ اجْعَلْ لِي مِنْ كُلِّ هَمٍّ فَرَجًا وَمِنْ كُلِّ ضِيقٍ مَخْرَجًا', translit: 'Аллахумма, идж\'аль ли мин кулли хаммин фараджан ва мин кулли дыкъин махраджан.', translation: 'О Аллах, сделай мне из каждой печали облегчение и из каждой тесноты выход.', source: 'Авторское дуа Абу Мухаммада, на основе дуа из Муснада Ахмада', description: 'Хамм (печаль, тревога) и дыкъ (теснота, безвыходность) — два состояния, которые сковывают человека. Это дуа просит выход из каждого такого состояния — фарадж и махрадж.' },
+        { title: 'Направление к благому', arabic: 'اللَّهُمَّ وَفِّقْنِي لِمَا تُحِبُّ وَتَرْضَى وَسَدِّدْ خُطَايَ', translit: 'Аллахумма, ваффикни ли-ма тухиббу ва тарда ва саддид хутая.', translation: 'О Аллах, направь меня к тому, что Ты любишь и чем доволен, и выпрями мои шаги.', source: 'Авторское дуа Абу Мухаммада', description: 'Это дуа — о тауфике в самом глубоком смысле: чтобы каждый шаг был к тому, что любит Аллах. Выпрямление шагов (тасдид) — это когда человек не отклоняется от правильного пути.' },
+        { title: 'Помощь над несправедливыми', arabic: 'اللَّهُمَّ انْصُرْنِي عَلَى مَنْ ظَلَمَنِي وَعَادَانِي وَحَسَدَنِي', translit: 'Аллахумма, ансурни \'аля ман заламани ва \'адани ва хасадани.', translation: 'О Аллах, помоги мне над тем, кто поступил со мной несправедливо, враждовал со мной и завидовал мне.', source: 'Авторское дуа Абу Мухаммада', description: 'Мольба о насре (помощи) над тремя типами врагов: залим (несправедливый), \'ади (враждующий), хасид (завистник). Это не мольба о мести, а просьба о справедливой помощи Аллаха против притеснителей.' },
+        { title: 'Открытие дверей блага', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْخَيْرِ وَأَغْلِقْ عَنِّي أَبْوَابَ الشَّرِّ', translit: 'Аллахумма, ифтах ли абваба-ль-хайри ва агликъ \'анни абваба-ш-шарр.', translation: 'О Аллах, открой мне двери блага и закрой от меня двери зла.', source: 'Авторское дуа Абу Мухаммада', description: 'Двойная мольба: открыть все двери хайра (блага) и закрыть все двери шарра (зла). Это универсальное дуа для любого начинания — перед путешествием, новым делом, важным решением.' },
+        { title: 'Благой итог дела', arabic: 'اللَّهُمَّ اجْعَلْ عَاقِبَةَ أَمْرِي خَيْرًا وَاجْعَلْ نِهَايَتَهُ فَلَاحًا', translit: 'Аллахумма, идж\'аль \'акъибата амри хайран ва-дж\'аль нихаятаху фалахан.', translation: 'О Аллах, сделай итог моего дела благим и сделай его конец преуспеянием.', source: 'Авторское дуа Абу Мухаммада', description: '\'Акиба — это конечный результат, итог. Фалах — преуспеяние, успех в обоих мирах. Это дуа просит, чтобы любое дело, каким бы трудным оно ни было, закончилось благом и успехом.' },
+        { title: 'Упование на Аллаха', arabic: 'اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ وَكُنْ لِي وَلِيًّا وَنَصِيرًا', translit: 'Аллахумма, ля такильни иля нафси тарфата \'айнин ва кун ли валиййан ва насыран.', translation: 'О Аллах, не оставляй меня на самого себя даже на мгновение ока и будь мне Покровителем и Помощником.', source: 'Авторское дуа Абу Мухаммада, на основе дуа из Сунны: Абу Дауд, № 5090', description: 'Одно из важнейших дуа Сунны. Если Аллах оставит человека на самого себя хотя бы на мгновение ока — он погибнет. Это признание собственной слабости и полная передача себя Аллаху.' }
+      ]
+    },
+    {
+      id: 'ilm',
+      num: 4,
+      title: 'Путь знания',
+      subtitle: 'Ильм',
+      icon: '📚',
+      intro: 'Если мысли путаются, если решения не даются, если голова как в тумане — знайте, это тоже может быть закрытый путь. Аллах — аль-\'Алим, Всезнающий.',
+      time: 'Утро, перед учёбой',
+      duas: [
+        { title: 'Открытие дверей знания', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ عِلْمِكَ وَفَهْمِكَ وَنُورِ بَصِيرَتِي', translit: 'Аллахумма, ифтах ли абваба \'ильмика ва фахмика ва нури басирати.', translation: 'О Аллах, открой мне двери Твоего знания, понимания и света моей проницательности.', source: 'Авторское дуа Абу Мухаммада', description: 'Три уровня: \'ильм (знание фактов), фахм (глубокое понимание), нур аль-басыра (свет проницательности). Это дуа для студентов, учителей, всех, кто учится и обучает.' },
+        { title: 'Ясность разума', arabic: 'اللَّهُمَّ فُكَّ عَنْ عَقْلِي كُلَّ غَيْمٍ وَضَبَابٍ يَمْنَعُنِي مِنَ الْوُضُوحِ', translit: 'Аллахумма, фукка \'ан \'акли кулля гаймин ва дабабин ямна\'уни мина-ль-вудух.', translation: 'О Аллах, сними с моего разума всякую тучу и всякий туман, которые мешают мне видеть ясно.', source: 'Авторское дуа Абу Мухаммада', description: 'Гайм (туча) и дабаб (туман) разума — это состояние, когда мысли не ясны, решения не приходят, голова «как в тумане». Может быть следствием переутомления, стресса или духовного поражения. Это дуа снимает этот туман.' },
+        { title: 'Аннулирование колдовства на разум', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ يُؤَثِّرُ عَلَى عَقْلِي وَتَفْكِيرِي وَذِكْرِي', translit: 'Аллахумма, абтиль кулля сихрин ю\'ассиру \'аля \'акли ва тафкири ва зикри.', translation: 'О Аллах, аннулируй всякое колдовство, которое влияет на мой разум, моё мышление и мою память.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Сихр может быть направлен на разум — и тогда человек теряет концентрацию, память, способность мыслить ясно. Часто это признак духовного поражения. Читайте это дуа как часть рукии, особенно если проблемы с учёбой появились внезапно.' },
+        { title: 'Прибавление знания и мудрости', arabic: 'اللَّهُمَّ زِدْنِي عِلْمًا وَفَهْمًا وَحِكْمَةً', translit: 'Аллахумма, зидни \'ильман ва фахман ва хикма.', translation: 'О Аллах, прибавь мне знания, понимания и мудрости.', source: 'Авторское дуа Абу Мухаммада, на основе Суры «Та Ха», аят 114', description: 'Расширенная версия коранического дуа «Рабби зидни \'ильма». Добавлены фахм (понимание) и хикма (мудрость) — три качества, без которых знание остаётся мёртвым.' },
+        { title: 'Верность решений', arabic: 'اللَّهُمَّ ارْزُقْنِي حُسْنَ التَّدْبِيرِ وَصَوَابَ الْقَرَارِ', translit: 'Аллахумма, арзукни хусна-т-тадбир ва саваба-ль-карар.', translation: 'О Аллах, даруй мне благое управление делами и верность решений.', source: 'Авторское дуа Абу Мухаммада', description: 'Хусн ат-тадбир — благое планирование и управление. Саваб аль-карар — правильные решения. Это дуа для руководителей, предпринимателей, всех, кто принимает решения, влияющие на жизнь.' },
+        { title: 'Свет сердца', arabic: 'اللَّهُمَّ نَوِّرْ قَلْبِي وَبَصِيرَتِي وَأَزِلْ عَنِّي كُلَّ ظُلْمَةٍ', translit: 'Аллахумма, наувир кальби ва басирати ва азиль \'анни кулля зульма.', translation: 'О Аллах, освети моё сердце и мою проницательность и убери от меня всякую тьму.', source: 'Авторское дуа Абу Мухаммада', description: 'Нур (свет) сердца — это когда человек видит истину, отличает её от лжи, чувствует правильное направление. Зульма (тьма) — это невежество, сомнения, заблуждение. Это дуа — о духовном просветлении.' },
+        { title: 'Путь мудрости', arabic: 'اللَّهُمَّ افْتَحْ لِي سَبِيلَ الْحِكْمَةِ وَاجْعَلْنِي مِمَّنْ يَسْمَعُ الْقَوْلَ فَيَتَّبِعُ أَحْسَنَهُ', translit: 'Аллахумма, ифтах ли сабиля-ль-хикма ва-дж\'альни мимман ясма\'у-ль-кауля фаяттаби\'у ахсанах.', translation: 'О Аллах, открой мне путь мудрости и сделай меня из тех, кто слушает слово и следует лучшему из него.', source: 'Авторское дуа Абу Мухаммада, на основе Суры «аз-Зумар», аят 18', description: 'Основано на описании «улу-ль-альбаб» (обладателей разума) в Коране. Мудрость — это умение выбирать лучшее из услышанного. Это дуа для тех, кто хочет быть из людей разума.' },
+        { title: 'Мольба о памяти и присутствии ума', arabic: 'اللَّهُمَّ أَذْهِبْ عَنِّي النِّسْيَانَ وَالْغَفْلَةَ وَارْزُقْنِي حِفْظًا وَحُضُورَ ذِهْنٍ', translit: 'Аллахумма, азхиб \'анни-н-нисьяна ва-ль-гафля ва-рзукни хифзан ва худура зихн.', translation: 'О Аллах, уйди от меня забывчивость и беспечность и даруй мне сохранение памяти и присутствие ума.', source: 'Авторское дуа Абу Мухаммада', description: 'Нисьян (забывчивость) и гафля (беспечность) — два врага знания. Хифз (сохранение) и худур аз-зихн (присутствие ума) — то, что нужно ученику и учёному. Читайте перед занятиями, экзаменами, важными встречами.' },
+        { title: 'Различение истины и лжи', arabic: 'اللَّهُمَّ أَرِنِي الْحَقَّ حَقًّا وَارْزُقْنِي اتِّبَاعَهُ وَأَرِنِي الْبَاطِلَ بَاطِلًا وَارْزُقْنِي اجْتِنَابَهُ', translit: 'Аллахумма, арини-ль-хакка хаккан ва-рзукни-ттиба\'аху ва арини-ль-батыля батылян ва-рзукни-джтинабах.', translation: 'О Аллах, покажи мне истину истиной и даруй мне следование ей, и покажи мне ложь ложью и даруй мне отстранение от неё.', source: 'Авторское дуа Абу Мухаммада', description: 'Одно из важнейших дуа. Знание — это не только накопление фактов, но и различение (аль-фуркан). Это дуа даёт ясность видеть, что есть истина и что есть ложь, и силу следовать первому и избегать второго.' },
+        { title: 'Открытие познавших', arabic: 'اللَّهُمَّ افْتَحْ عَلَى قَلْبِي فُتُوحَ الْعَارِفِينَ وَارْزُقْنِي فَهْمَ النَّبِيِّينَ', translit: 'Аллахумма, ифтах \'аля кальби футуха-ль-\'арифин ва-рзукни фахма-н-набиййин.', translation: 'О Аллах, открой моему сердцу открытия познавших и даруй мне понимание пророков.', source: 'Авторское дуа Абу Мухаммада', description: 'Футух аль-\'арифин — «открытия познавших» — это глубокие духовные прозрения, которые приходят к тем, кто приблизился к Аллаху. Фахм ан-набиййин — понимание, которым обладали пророки. Это дуа для тех, кто стремится к глубине веры.' }
+      ]
+    },
+    {
+      id: 'shifa',
+      num: 5,
+      title: 'Путь исцеления',
+      subtitle: 'Шифа',
+      icon: '🤲',
+      intro: 'Болезнь тела — это тоже закрытый путь. Аллах — аш-Шафи, Исцеляющий. Читайте эти дуа и верьте, что Он способен исцелить полностью.',
+      time: 'Утро и вечер, перед сном',
+      duas: [
+        { title: 'Открытие дверей исцеления', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الشِّفَاءِ وَالْعَافِيَةِ فِي جَسَدِي كُلِّهِ', translit: 'Аллахумма, ифтах ли абваба-ш-шифа\'и ва-ль-\'афияти фи джасади куллихи.', translation: 'О Аллах, открой мне двери исцеления и здравия во всём моём теле.', source: 'Авторское дуа Абу Мухаммада', description: 'Шифа — исцеление от болезни, \'афия — общее здравие и благополучие. Это дуа охватывает всё тело, а не только больной орган. Читайте как общее начало перед другими дуа об исцелении.' },
+        { title: 'Освобождение от болезни', arabic: 'اللَّهُمَّ فُكَّ كُلَّ مَرَضٍ وَكُلَّ أَلَمٍ مُقَيَّدٍ فِي جَسَدِي', translit: 'Аллахумма, фукка кулля марадын ва кулля алямин мукаййадин фи джасади.', translation: 'О Аллах, освободи всякую болезнь и всякую боль, скованную в моём теле.', source: 'Авторское дуа Абу Мухаммада', description: 'Болезнь может быть «скована» в теле — не проходит, не реагирует на лечение, возвращается снова. Это дуа просит Аллаха освободить тело от оков недуга.' },
+        { title: 'Аннулирование колдовства и сглаза на тело', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ وَكُلَّ عَيْنٍ أَوْ مَسٍّ أَصَابَ جَسَدِي', translit: 'Аллахумма, абтиль кулля сихрин ва кулля \'айнин ау массин асаба джасади.', translation: 'О Аллах, аннулируй всякое колдовство, всякий сглаз или прикосновение джиннов, поразившее моё тело.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Сихр, \'айн (сглаз) и масс (прикосновение джинна) — три главные духовные причины телесных болезней. Это дуа — основа шариатской рукии при физических недугах. Читайте после Аят аль-Курси и трёх последних сур.' },
+        { title: 'Полное исцеление', arabic: 'اللَّهُمَّ اشْفِنِي شِفَاءً لَا يُغَادِرُ سَقَمًا', translit: 'Аллахумма, ишфини шифа\'ан ля югадиру сакаман.', translation: 'О Аллах, исцели меня исцелением, после которого не остаётся болезни.', source: 'аль-Бухари, № 5675; Муслим, № 2191', description: 'Одно из самых сильных дуа об исцелении, переданное от Пророка ﷺ. Шифа\' ля югадиру сакаман — «исцеление, не оставляющее болезни». Читайте его при всякой болезни, кладя руку на больное место.' },
+        { title: 'Мольба к Исцеляющему', arabic: 'اللَّهُمَّ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً عَاجِلًا غَيْرَ آجِلٍ', translit: 'Аллахумма, Анта-ш-Шафи, ля шифа\'а илля шифа\'ук, шифа\'ан \'аджилян гайра аджиль.', translation: 'О Аллах, Ты — Исцеляющий, нет исцеления кроме Твоего исцеления, исцеления скорейшего, а не отложенного.', source: 'Авторское дуа Абу Мухаммада, на основе хадиса аль-Бухари, № 5675', description: 'Признание ат-Таухида в исцелении: только Аллах исцеляет по-настоящему. Врачи и лекарства — лишь причины, которые Он создаёт. \'Аджиль — скорое, не отложенное. Это дуа для тех, кто устал ждать выздоровления.' },
+        { title: 'Унесение страдания', arabic: 'اللَّهُمَّ أَذْهِبِ الْبَأْسَ رَبَّ النَّاسِ وَاشْفِ أَنْتَ الشَّافِي', translit: 'Аллахумма, азхиби-ль-ба\'са Рабба-н-наси ва-шфи Анта-ш-Шафи.', translation: 'О Аллах, унеси страдание, Господь людей, и исцели — Ты Исцеляющий.', source: 'аль-Бухари, № 5675; Муслим, № 2191', description: 'Сокращённая форма великого дуа, которым Пророк ﷺ исцелял больных. Ба\'с — это сильная боль, страдание. Читайте при острой боли, во время приступов, когда нужна немедленная помощь.' },
+        { title: 'Путь здоровья и силы', arabic: 'اللَّهُمَّ افْتَحْ لِي سَبِيلَ الصِّحَّةِ وَالْقُوَّةِ وَالنَّشَاطِ', translit: 'Аллахумма, ифтах ли сабиля-с-сихха ва-ль-кувва ва-н-нашат.', translation: 'О Аллах, открой мне путь здоровья, силы и бодрости.', source: 'Авторское дуа Абу Мухаммада', description: 'Сихха (здоровье), кувва (сила), нашат (бодрость) — три качества активного человека. Это дуа для тех, кто восстанавливается после болезни, кто чувствует слабость, кому нужны силы для служения Аллаху и помощи людям.' },
+        { title: 'Здравие тела, слуха и зрения', arabic: 'اللَّهُمَّ عَافِنِي فِي بَدَنِي وَعَافِنِي فِي سَمْعِي وَعَافِنِي فِي بَصَرِي', translit: 'Аллахумма, \'афини фи бадани ва \'афини фи сам\'и ва \'афини фи басари.', translation: 'О Аллах, даруй здравие моему телу, даруй здравие моему слуху, даруй здравие моему зрению.', source: 'Абу Дауд, № 5090; ат-Тирмизи, № 3502', description: 'Достоверное дуа Сунны, которое Пророк ﷺ читал ежедневно. Тело, слух и зрение — три главных «окна» человека в мир. Сохранить их здоровье — значит сохранить качество жизни и способность поклоняться Аллаху.' },
+        { title: 'Выведение недуга из тела', arabic: 'اللَّهُمَّ أَخْرِجْ كُلَّ دَاءٍ مِنْ جَسَدِي وَطَهِّرْنِي مِنْ كُلِّ أَذًى', translit: 'Аллахумма, ахридж кулля да\'ин мин джасади ва таххирни мин кулли азан.', translation: 'О Аллах, выведи всякий недуг из моего тела и очисти меня от всякого вреда.', source: 'Авторское дуа Абу Мухаммада', description: 'Два действия: ихрадж (выведение болезни из тела) и татхир (очищение от вреда). Подходит для хронических болезней, которые долго не проходят. Читайте с полной верой в силу Аллаха.' },
+        { title: 'Лёгкость тела и покой души', arabic: 'اللَّهُمَّ اجْعَلْ جَسَدِي خَفِيفًا وَرُوحِي مُطْمَئِنَّةً وَقَلْبِي سَلِيمًا', translit: 'Аллахумма, идж\'аль джасади хафифан ва рухи мутма\'инна ва кальби салиман.', translation: 'О Аллах, сделай моё тело лёгким, мой дух — умиротворённым, а моё сердце — здоровым.', source: 'Авторское дуа Абу Мухаммада', description: 'Три уровня здоровья: тело (хафиф — лёгкое, без тяжести), дух (мутма\'инна — умиротворённый), сердце (салим — здоровое, чистое). Это дуа завершает цикл исцеления, возвращая человека к полной гармонии.' }
+      ]
+    },
+    {
+      id: 'hifz',
+      num: 6,
+      title: 'Путь защиты',
+      subtitle: 'Хифз',
+      icon: '🛡️',
+      intro: 'Иногда человек чувствует страх, тревогу, ощущение чужого присутствия, тяжесть в доме. Читайте эти дуа, и Аллах возведёт вокруг вас крепость.',
+      time: 'Утро и вечер',
+      duas: [
+        { title: 'Открытие дверей безопасности', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ أَمْنِكَ وَحِفْظِكَ وَاحْطُنِي بِعِنَايَتِكَ', translit: 'Аллахумма, ифтах ли абваба амника ва хифзика ва-хтутни би-\'инаятик.', translation: 'О Аллах, открой мне двери Твоей безопасности и Твоей защиты и окружи меня Своей заботой.', source: 'Авторское дуа Абу Мухаммада', description: 'Амн (безопасность), хифз (защита), \'иная (забота) — три уровня божественного покровительства. Это дуа для тех, кто чувствует себя уязвимым, кто боится, кто не чувствует себя в безопасности.' },
+        { title: 'Освобождение от страха и оков джиннов', arabic: 'اللَّهُمَّ فُكَّ عَنِّي كُلَّ خَوْفٍ وَكُلَّ قَيْدٍ مِنَ الْجِنِّ وَالشَّيَاطِينِ', translit: 'Аллахумма, фукка \'анни кулля хауфин ва кулля кайдин мина-ль-джинни ва-ш-шаятын.', translation: 'О Аллах, освободи меня от всякого страха и от всяких оков джиннов и шайтанов.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Хауф (страх) может быть обычным, а может быть духовным — от масс джиннов или от шайтанов. Кайд (оковы) — когда джинн сковывает человека, не даёт двигаться, действовать. Это дуа освобождает от обоих.' },
+        { title: 'Аннулирование сглаза и направленного вреда', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ عَيْنٍ وَكُلَّ حَسَدٍ وَكُلَّ أَذًى مُوَجَّهٍ إِلَيَّ', translit: 'Аллахумма, абтиль кулля \'айнин ва кулля хасадин ва кулля азан муваджжахин иляййа.', translation: 'О Аллах, аннулируй всякий сглаз, всякую зависть и всякий вред, направленный на меня.', source: 'Авторское дуа Абу Мухаммада', description: 'Три типа направленного зла: \'айн (сглаз от взгляда), хасад (зависть), азан муваджжах (намеренно направленный вред). Это дуа нейтрализует все три. Читайте, если чувствуете, что кто-то желает вам зла.' },
+        { title: 'Защита со всех сторон', arabic: 'اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي', translit: 'Аллахумма, ихфазни мин байна ядаййа ва мин хальфи ва \'ан ямини ва \'ан шимали ва мин фаукъи.', translation: 'О Аллах, защити меня спереди, сзади, справа, слева и сверху.', source: 'Авторское дуа Абу Мухаммада, на основе дуа из Сунны: Абу Дауд, № 5090', description: 'Пятисторонняя защита — отовсюду, откуда может прийти опасность. Основано на дуа, которое Пророк ﷺ читал утром и вечером. Это создаёт «духовный купол» вокруг человека.' },
+        { title: 'Крепость из света', arabic: 'اللَّهُمَّ اجْعَلْ حَوْلِي حِصْنًا مِنْ نُورِكَ لَا يَخْتَرِقُهُ عَدُوٌّ وَلَا شَيْطَانٌ', translit: 'Аллахумма, идж\'аль хавли хиснан мин нурика ля яхтаврикуху \'адуввун ва ля шайтан.', translation: 'О Аллах, возведи вокруг меня крепость из Твоего света, которую не пробьёт ни враг, ни шайтан.', source: 'Авторское дуа Абу Мухаммада', description: 'Хисн (крепость) из нура Аллаха — непробиваемая защита. Это метафора сильнейшей защиты, которую Аллах даёт Своим рабам. Читайте перед выходом из дома, перед сном, в местах, где чувствуете опасность.' },
+        { title: 'Защита от всякого зла', arabic: 'اللَّهُمَّ أَعِذْنِي مِنْ شَرِّ كُلِّ ذِي شَرٍّ وَمِنْ شَرِّ مَا خَلَقْتَ', translit: 'Аллахумма, а\'изни мин шарри кулли зи шаррин ва мин шарри ма халякт.', translation: 'О Аллах, защити меня от зла всякого обладающего злом и от зла того, что Ты создал.', source: 'Авторское дуа Абу Мухаммада, на основе дуа из Сунны: Муслим, № 2708', description: 'Одно из великих дуа Сунны. Охватывает всё зло — от джиннов, людей, животных, явлений природы. Тот, кто читает его искренне, находится под защитой Аллаха от всего творения.' },
+        { title: 'Путь покоя и умиротворения', arabic: 'اللَّهُمَّ افْتَحْ لِي سَبِيلَ السَّكِينَةِ وَالطُّمَأْنِينَةِ وَأَذْهِبْ عَنِّي الْوَسْوَاسَ', translit: 'Аллахумма, ифтах ли сабиля-с-сакина ва-т-тума\'нина ва азхиб \'анни-ль-васвас.', translation: 'О Аллах, открой мне путь покоя и умиротворения и уйди от меня наущения.', source: 'Авторское дуа Абу Мухаммада', description: 'Сакина (глубокий покой от Аллаха) и тума\'нина (умиротворение) — дары, которые Аллах даёт Своим рабам. Васвас (наущения) разрушают этот покой. Это дуа для тех, кто страдает от тревоги, бессонницы, навязчивых мыслей.' },
+        { title: 'Защита семьи и дома', arabic: 'اللَّهُمَّ احْفَظْ أَهْلِي وَبَيْتِي وَمَالِي مِنْ كُلِّ سُوءٍ وَآفَةٍ', translit: 'Аллахумма, ихфаз ахли ва байти ва мали мин кулли су\'ин ва афа.', translation: 'О Аллах, защити мою семью, мой дом и моё имущество от всякого зла и напасти.', source: 'Авторское дуа Абу Мухаммада', description: 'Три защищаемых объекта: ахль (семья), байт (дом), маль (имущество). Су\' (зло) и афа (напасть, бедствие) — то, от чего просим защиты. Читайте утром и вечером за свою семью.' },
+        { title: 'Защита от врагов', arabic: 'اللَّهُمَّ لَا تُسَلِّطْ عَلَيَّ مَنْ لَا يَرْحَمُنِي وَلَا تَجْعَلْ لِعَدُوٍّ عَلَيَّ سَبِيلًا', translit: 'Аллахумма, ля тусаллит \'аляййа ман ля ярхамуни ва ля тадж\'аль ли-\'адуввин \'аляййа сабилян.', translation: 'О Аллах, не давай власти надо мной тому, кто не милосерден ко мне, и не давай врагу пути ко мне.', source: 'Авторское дуа Абу Мухаммада', description: 'Мольба о двух вещах: 1) не давать власти не милосердным над вами, 2) не давать врагу пути (сабиль) к вам. Читайте, если чувствуете давление со стороны начальства, конкурентов, врагов.' },
+        { title: 'Пребывание под защитой Аллаха', arabic: 'اللَّهُمَّ اجْعَلْنِي فِي حِرْزِكَ وَحِصْنِكَ وَكَنَفِكَ مَا دُمْتُ حَيًّا', translit: 'Аллахумма, идж\'альни фи хирзика ва хисника ва канафика ма думту хаййан.', translation: 'О Аллах, помести меня в Свою охрану, в Свою крепость и под Свою защиту, пока я жив.', source: 'Авторское дуа Абу Мухаммада', description: 'Хирз (охрана), хисн (крепость), канаф (крыло, защита) — три образа божественного укрытия. «Ма думту хаййан» — пока я жив, то есть навсегда. Это дуа для тех, кто хочет постоянно пребывать под защитой Аллаха.' }
+      ]
+    },
+    {
+      id: 'family',
+      num: 7,
+      title: 'Путь семьи и брака',
+      subtitle: 'Никях',
+      icon: '💍',
+      intro: 'Если путь к браку закрыт, если в семье разлад, если сердца отдалились — не теряйте надежду. Аллах — аль-Вадуд, Любящий. Он соединяет сердца.',
+      time: 'Любое время, ночь',
+      duas: [
+        { title: 'Открытие двери благого брака', arabic: 'اللَّهُمَّ افْتَحْ لِي بَابَ الزَّوَاجِ الصَّالِحِ وَسَهِّلْ لِي أَمْرَهُ', translit: 'Аллахумма, ифтах ли баба-з-заваджи-с-салих ва саххиль ли амрах.', translation: 'О Аллах, открой мне дверь благого брака и облегчи мне его дело.', source: 'Авторское дуа Абу Мухаммада', description: 'Завадж салих — благословенный брак с праведным супругом. Это дуа для тех, кто ищет спутника жизни. Читайте с чистым намерением построить семью по Сунне.' },
+        { title: 'Развязывание узлов на браке и в доме', arabic: 'اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ تَمْنَعُ زَوَاجِي أَوْ تُفْسِدُ بَيْتِي', translit: 'Аллахумма, фукка кулля \'укдэтин тамна\'у заваджи ау тусфиду байти.', translation: 'О Аллах, развяжи каждый узел, который мешает моему браку или разрушает мой дом.', source: 'Авторское дуа Абу Мухаммада', description: 'Узлы на браке и в доме — частая причина разводов и ссор. Это могут быть как последствия сглаза, так и козни шайтана, цель которого — разрушить семью. Читайте это дуа вместе с аятами, укрепляющими брак.' },
+        { title: 'Аннулирование колдовства на семью', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ وَكُلَّ عَيْنٍ أَصَابَتْ بَيْتِي وَزَوْجِيَّتِي', translit: 'Аллахумма, абтиль кулля сихрин ва кулля \'айнин асабат байти ва завджийяти.', translation: 'О Аллах, аннулируй всякое колдовство и всякий сглаз, поразившие мой дом и мою супружескую жизнь.', source: 'Авторское дуа Абу Мухаммада, на основе принципов Шариатской Рукии', description: 'Сихр ат-тафрик (разделяющее колдовство) — один из самых опасных видов, разрушающий семьи. Если в доме постоянные ссоры без видимой причины, если супруги не могут находиться вместе — это может быть сихр. Читайте это дуа как часть полной рукии.' },
+        { title: 'Соединение сердец', arabic: 'اللَّهُمَّ أَلِّفْ بَيْنَ قُلُوبِنَا وَأَصْلِحْ ذَاتَ بَيْنِنَا', translit: 'Аллахумма, аллиф байна кулюбина ва аслих зата байна.', translation: 'О Аллах, соедини наши сердца и налади наши отношения.', source: 'Авторское дуа Абу Мухаммада', description: 'Ильф (соединение сердец) — это дар Аллаха, которым Он соединил сподвижников Пророка. Ислях зат аль-байн — налаживание отношений между людьми. Читайте для примирения супругов, родителей и детей, братьев и сестёр.' },
+        { title: 'Мольба о благом супруге', arabic: 'اللَّهُمَّ ارْزُقْنِي زَوْجًا صَالِحًا تَكُونُ قُرَّةَ عَيْنٍ لِي', translit: 'Аллахумма, арзукни завджан салихан такуну куррата \'айнин ли.', translation: 'О Аллах, даруй мне благого мужа (благую жену), который будет радостью для моих глаз.', source: 'Авторское дуа Абу Мухаммада', description: 'Сестра читает: «завджан салихан». Брат читает: «завджатан салихатан». Куррат \'айн — отрада глаз, супруг(а), который радует одним своим присутствием. Это дуа для тех, кто ищет вторую половину.' },
+        { title: 'Наполнение дома милостью', arabic: 'اللَّهُمَّ اجْعَلْ بَيْتِي مَلِيئًا بِالرَّحْمَةِ وَالسَّكِينَةِ وَالْمَوَدَّةِ', translit: 'Аллахумма, идж\'аль байти мали\'ан би-р-рахма ва-с-сакина ва-ль-мавадда.', translation: 'О Аллах, наполни мой дом милостью, покоем и любовью.', source: 'Авторское дуа Абу Мухаммада', description: 'Три качества, которыми Аллах описал брак в Коране: рахма (милость), сакина (покой), мавадда (любовь). Читайте это дуа, чтобы дом стал местом умиротворения, а не раздоров.' },
+        { title: 'Мольба о благом потомстве', arabic: 'اللَّهُمَّ افْتَحْ لِي سَبِيلَ الذُّرِّيَّةِ الصَّالِحَةِ وَارْزُقْنِي أَوْلَادًا أَبْرَارًا', translit: 'Аллахумма, ифтах ли сабиля-з-зурриййати-с-салиха ва-рзукни авлядан абраран.', translation: 'О Аллах, открой мне путь благого потомства и даруй мне благочестивых детей.', source: 'Авторское дуа Абу Мухаммада, на основе Суры «аль-Фуркан», аят 74', description: 'Зурриййа салиха и авляд абрар — благое, праведное потомство. Это дуа для тех, кто не может иметь детей, или у кого дети идут неверным путём. Аллах — аль-Ваххаб, Дарующий. Он даровал детей Закарьи и Ибрахиму в глубокой старости.' },
+        { title: 'Защита семьи от разлада', arabic: 'اللَّهُمَّ احْفَظْ أَهْلِي مِنَ التَّفَرُّقِ وَالْفِتْنَةِ وَالْخُصُومَةِ', translit: 'Аллахумма, ихфаз ахли мина-т-тафаррукъи ва-ль-фитна ва-ль-хусума.', translation: 'О Аллах, защити мою семью от разделения, искушения и вражды.', source: 'Авторское дуа Абу Мухаммада', description: 'Тафаррук (разделение), фитна (искушение, смута), хусума (вражда) — три главные угрозы семье. Это дуа — ежедневная защита от разрушения семейных уз.' },
+        { title: 'Устранение преград к браку', arabic: 'اللَّهُمَّ أَزِلْ كُلَّ حَاجِزٍ بَيْنِي وَبَيْنَ مَنْ تُحِبُّ لِي مِنَ الْأَزْوَاجِ', translit: 'Аллахумма, азиль кулля хаджизин байна ва байна ман тухиббу ли мина-ль-азвадж.', translation: 'О Аллах, убери всякую преграду между мной и тем, кого Ты предназначил мне в супруги.', source: 'Авторское дуа Абу Мухаммада', description: 'Иногда путь к браку закрыт — человек не может найти супруга, или отношения постоянно прерываются. Хаджиз (преграда) может быть от людей, от шайтанов или от собственных страхов. Это дуа убирает все преграды.' },
+        { title: 'Вечная любовь и милость', arabic: 'اللَّهُمَّ اجْعَلْ مَوَدَّتَنَا دَائِمَةً وَرَحْمَتَنَا بَيْنَنَا قَائِمَةً إِلَى يَوْمِ الدِّينِ', translit: 'Аллахумма, идж\'аль маваддатуна да\'има ва рахматуна байна къа\'има иля яуми-д-дин.', translation: 'О Аллах, сделай нашу любовь постоянной и нашу милость между нами стоящей до Судного дня.', source: 'Авторское дуа Абу Мухаммада', description: 'Мавадда да\'има — постоянная любовь, рахма ка\'има — стоящая милость. До яуми-д-дин (Судного дня) — и далее, в Раю. Это дуа о вечной любви, которая не угаснет ни в этой жизни, ни в следующей.' }
+      ]
+    },
+    {
+      id: 'work',
+      num: 8,
+      title: 'Путь работы и дела',
+      subtitle: 'Амаль',
+      icon: '💼',
+      intro: 'Если работа не находится, если дело рушится, если начальник несправедлив, если коллеги завидуют — читайте эти дуа. Аллах — аль-Ваххаб, Дарующий.',
+      time: 'Утро, перед выходом',
+      duas: [
+        { title: 'Открытие дверей благого труда', arabic: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ الْعَمَلِ الصَّالِحِ وَالْكَسْبِ الْحَلَالِ', translit: 'Аллахумма, ифтах ли абваба-ль-\'амали-с-салих ва-ль-касби-ль-халяль.', translation: 'О Аллах, открой мне двери благого труда и дозволенного заработка.', source: 'Авторское дуа Абу Мухаммада', description: '\'Амаль салих — праведный труд, полезный для общества. Касб халяль — дозволенный заработок. Это дуа для тех, кто ищет работу или хочет, чтобы его дело было и прибыльным, и благим.' },
+        { title: 'Развязывание узлов в работе', arabic: 'اللَّهُمَّ فُكَّ كُلَّ عَقْدَةٍ فِي عَمَلِي وَرِزْقِي وَتِجَارَتِي', translit: 'Аллахумма, фукка кулля \'укдэтин фи \'амали ва ризки ва тиджарати.', translation: 'О Аллах, развяжи каждый узел в моей работе, моём уделе и моей торговле.', source: 'Авторское дуа Абу Мухаммада', description: 'Узлы в работе — это то, что мешает делам идти гладко: конфликты, бюрократия, срывы сделок. Это дуа развязывает каждый такой узел, открывая путь к успеху.' },
+        { title: 'Аннулирование зависти и козней на работе', arabic: 'اللَّهُمَّ أَبْطِلْ كُلَّ حَسَدٍ وَكُلَّ كَيْدٍ مِنْ زُمَلَاءَ أَوْ مُنَافِسِينَ', translit: 'Аллахумма, абтиль кулля хасадин ва кулля кайдин мин зумаля\'а ау мунафисин.', translation: 'О Аллах, аннулируй всякую зависть и всякий коварный замысел от коллег или конкурентов.', source: 'Авторское дуа Абу Мухаммада', description: 'Зависть на работе — одна из самых частых причин неудач. Кейд (коварный замысел) конкурентов может разрушить даже успешное дело. Это дуа нейтрализует оба вида зла. Читайте перед важными встречами и переговорами.' },
+        { title: 'Благословение в труде', arabic: 'اللَّهُمَّ بَارِكْ لِي فِي عَمَلِي وَاجْعَلْهُ نَافِعًا لِي وَلِلنَّاسِ', translit: 'Аллахумма, барик ли фи \'амали ва-дж\'альху нафи\'ан ли ва ли-н-нас.', translation: 'О Аллах, благослови мой труд и сделай его полезным для меня и для людей.', source: 'Авторское дуа Абу Мухаммада', description: 'Баракат — это когда небольшое даёт много. Нафи\' — полезный для себя и для людей. Лучший труд — тот, что приносит пользу и тебе, и обществу. Это дуа превращает работу в ибаду (поклонение).' },
+        { title: 'Мольба о работе, удовлетворяющей Аллаха', arabic: 'اللَّهُمَّ ارْزُقْنِي عَمَلًا يُرْضِيكَ وَيُغْنِينِي عَنْ مَسْأَلَةِ النَّاسِ', translit: 'Аллахумма, арзукни \'амаллян юрдика ва югнини \'ан мас\'аляти-н-нас.', translation: 'О Аллах, даруй мне работу, которая удовлетворит Тебя и избавит меня от просьб к людям.', source: 'Авторское дуа Абу Мухаммада', description: 'Два условия идеальной работы: 1) юрдыка — чтобы Аллах был ею доволен, 2) югник — чтобы она избавила от нужды в людях. Это дуа для тех, кто ищет работу, которая будет и халяльной, и достойной.' },
+        { title: 'Помощь в деле', arabic: 'اللَّهُمَّ سَخِّرْ لِي مَنْ يُعِينُنِي عَلَى أَمْرِي وَسَهِّلْ لِي كُلَّ صَعْبٍ', translit: 'Аллахумма, саххир ли ман ю\'инуни \'аля амри ва саххиль ли кулля са\'б.', translation: 'О Аллах, подчини мне того, кто поможет мне в моём деле, и облегчи мне всякое трудное.', source: 'Авторское дуа Абу Мухаммада', description: 'Тасхир — «подчинение» людей вашему делу. Это когда нужные люди сами приходят и помогают. Второе — облегчение трудного. Читайте перед проектами, запуском дела, когда нужна команда.' },
+        { title: 'Рост и успех в профессии', arabic: 'اللَّهُمَّ افْتَحْ لِي سَبِيلَ التَّرَقِّي وَالنَّجَاحِ فِي مِهْنَتِي', translit: 'Аллахумма, ифтах ли сабиля-т-тараккъи ва-н-наджах фи михнати.', translation: 'О Аллах, открой мне путь роста и успеха в моей профессии.', source: 'Авторское дуа Абу Мухаммада', description: 'Тараккъи (рост, повышение) и нажах (успех) в михна (профессии). Это дуа для карьерного роста, для повышения квалификации, для признания в своей сфере.' },
+        { title: 'Защита дела от убытка и несправедливости', arabic: 'اللَّهُمَّ احْفَظْ عَمَلِي مِنَ الْخَسَارَةِ وَالظُّلْمِ وَالْغَدْرِ', translit: 'Аллахумма, ихфаз \'амали мина-ль-хасара ва-з-зульми ва-ль-гадр.', translation: 'О Аллах, защити моё дело от убытка, несправедливости и предательства.', source: 'Авторское дуа Абу Мухаммада', description: 'Три опасности для дела: хасара (убыток), зульм (несправедливость со стороны партнёров, властей), гадр (предательство). Это дуа защищает дело от всех трёх угроз.' },
+        { title: 'Щедрость руки и обширный удел', arabic: 'اللَّهُمَّ اجْعَلْ يَدِي مَبْسُوطَةً بِالْخَيْرِ وَرِزْقِي وَاسِعًا مُبَارَكًا', translit: 'Аллахумма, идж\'аль яди мабсутатан би-ль-хайри ва ризки васи\'ан мубаракан.', translation: 'О Аллах, сделай мою руку щедрой на благо и мой удел обширным и благословенным.', source: 'Авторское дуа Абу Мухаммада', description: 'Йад мабсута — «раскрытая, щедрая рука». Ризк васи\' мубарак — обширный и благословенный удел. Это дуа для тех, кто хочет не только иметь, но и давать. Щедрость — путь к увеличению удела.' },
+        { title: 'Различение блага и зла в деле', arabic: 'اللَّهُمَّ إِنْ كَانَ هَذَا الْعَمَلُ خَيْرًا لِي فِي دِينِي وَدُنْيَايَ فَافْتَحْهُ لِي وَإِنْ كَانَ شَرًّا فَاصْرِفْهُ عَنِّي', translit: 'Аллахумма, ин кана хаза-ль-\'амалю хайран ли фи дини ва дуньяйа фа-ифтахху ли, ва ин кана шарран фа-срифху \'анни.', translation: 'О Аллах, если это дело — благо для меня в моей религии и моей мирской жизни, то открой его мне. А если оно — зло, то отведи его от меня.', source: 'Авторское дуа Абу Мухаммада, на основе принципа истихары', description: 'Вариация знаменитой истихары. Перед любым решением — новой работой, партнёрством, проектом — читайте это дуа. Оно доверяет Аллаху выбор лучшего пути для вашей религии и мирской жизни.' }
+      ]
+    }
+  ];
+
+  const timeMap = {
+    rizk: 'Утро, после Фаджра',
+    ibada: 'Перед намазом, ночью',
+    taufik: 'Утро, перед важным делом',
+    ilm: 'Утро, перед учёбой',
+    shifa: 'Утро и вечер, перед сном',
+    hifz: 'Утро и вечер',
+    family: 'Любое время, ночь',
+    work: 'Утро, перед выходом'
+  };
+
+  // ===== RENDER CHAPTERS =====
+  function renderChapters() {
+    const grid = document.getElementById('chaptersGrid');
+    grid.innerHTML = chaptersData.map(ch => `
+      <div class="chapter-card fade-in" data-chapter="${ch.id}">
+        <div class="chapter-icon">${ch.icon}</div>
+        <div class="chapter-num">ГЛАВА ${ch.num} · ${ch.subtitle.toUpperCase()}</div>
+        <h3>${ch.title}</h3>
+        <p>${ch.intro.substring(0, 130)}${ch.intro.length > 130 ? '...' : ''}</p>
+        <div class="chapter-meta">
+          <span class="chapter-dua-count">10 дуа</span>
+          <div class="chapter-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.querySelectorAll('.chapter-card').forEach(card => {
+      card.addEventListener('click', () => openChapter(card.dataset.chapter));
+    });
+  }
+
+  function openChapter(id) {
+    const ch = chaptersData.find(c => c.id === id);
+    if (!ch) return;
+
+    const panel = document.getElementById('duasPanel');
+    panel.innerHTML = `
+      <div class="duas-panel-header">
+        <div class="duas-panel-title">
+          <div class="duas-panel-icon">${ch.icon}</div>
+          <div>
+            <h3>Глава ${ch.num}. ${ch.title}</h3>
+            <p>${ch.subtitle} · ${ch.duas.length} дуа · ${ch.time}</p>
+          </div>
+        </div>
+        <button class="duas-panel-close" onclick="closeChapter()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <p style="font-size: 16px; color: var(--ink-700); margin-bottom: 28px; line-height: 1.7; font-style: italic;">
+        «${ch.intro}»
+      </p>
+      <div class="duas-grid">
+        ${ch.duas.map((d, i) => `
+          <div class="dua-card" onclick="openDua('${ch.id}', ${i})">
+            <div class="dua-card-num">${i + 1}</div>
+            <div class="dua-card-arabic" lang="ar" dir="rtl">${d.arabic}</div>
+            <div class="dua-card-title">${d.title}</div>
+            <div class="dua-card-desc">${d.description}</div>
+            <div class="dua-card-footer">
+              <span class="dua-card-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                Дуа
+              </span>
+              <span class="dua-card-more">Открыть →</span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    panel.classList.add('active');
+    setTimeout(() => {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+
+  function closeChapter() {
+    document.getElementById('duasPanel').classList.remove('active');
+  }
+
+  // ===== MODAL =====
+  let currentDua = null;
+
+  function openDua(chId, index) {
+    const ch = chaptersData.find(c => c.id === chId);
+    const d = ch.duas[index];
+    currentDua = { ch, d, index };
+
+    document.getElementById('modalBadge').textContent = `ДУА ${index + 1} · ГЛАВА ${ch.num}`;
+    document.getElementById('modalTitle').textContent = d.title;
+    document.getElementById('modalChapter').textContent = `Глава ${ch.num}. ${ch.title} · ${ch.subtitle}`;
+    document.getElementById('modalArabic').textContent = d.arabic;
+    document.getElementById('modalTranslit').textContent = d.translit;
+    document.getElementById('modalTranslation').textContent = d.translation;
+    document.getElementById('modalDescription').textContent = d.description;
+    document.getElementById('modalSource').textContent = d.source;
+
+    document.getElementById('copyBtnText').textContent = 'Скопировать дуа';
+    document.getElementById('copyBtn').classList.remove('copy-success');
+
+    document.getElementById('modalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modalOverlay').addEventListener('click', (e) => {
+    if (e.target.id === 'modalOverlay') closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ===== COPY =====
+  function copyDua() {
+    if (!currentDua) return;
+    const { d, ch, index } = currentDua;
+    const text = `﴿ ${d.arabic} ﴾\n\n${d.translit}\n\n«${d.translation}»\n\n${d.description}\n\n📖 ${d.source}\n\n— Глава ${ch.num}. ${ch.title} (Дуа ${index + 1})`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyBtn');
+      const btnText = document.getElementById('copyBtnText');
+      btn.classList.add('copy-success');
+      btnText.textContent = '✓ Скопировано!';
+      showToast('Дуа скопировано в буфер обмена');
+      setTimeout(() => {
+        btn.classList.remove('copy-success');
+        btnText.textContent = 'Скопировать дуа';
+      }, 2500);
+    }).catch(() => {
+      showToast('Не удалось скопировать');
+    });
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toastText').textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+  }
+
+  // ===== FEATURES TABLE =====
+  function renderFeaturesTable() {
+    const tbody = document.getElementById('featureTableBody');
+    tbody.innerHTML = chaptersData.map(ch => `
+      <tr>
+        <td>
+          <div class="direction-name">
+            <div class="direction-icon">${ch.icon}</div>
+            <div>
+              <div>${ch.title}</div>
+              <div style="font-size: 12px; color: var(--ink-500); font-weight: 400; margin-top: 2px;">${ch.subtitle}</div>
+            </div>
+          </div>
+        </td>
+        <td>Глава ${ch.num}</td>
+        <td><span class="count">${ch.duas.length}</span></td>
+        <td>${ch.time}</td>
+      </tr>
+    `).join('');
+  }
+
+  // ===== INIT =====
+  renderChapters();
+  renderFeaturesTable();
+
+  // Fade-in animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Nav scroll effect
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      nav.style.boxShadow = '0 4px 20px rgba(15, 58, 36, 0.08)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
