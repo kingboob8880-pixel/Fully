@@ -1,0 +1,974 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Прямой путь: Заклинание верой</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --paper-alt: #f5f7f5;
+  --ink: #1b221f;
+  --ink-soft: #4a5751;
+  --rule: #dce1dd;
+  --accent: #2f6b4f;
+  --accent-soft: #eaf2ed;
+  --gold: #9a7b32;
+  --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(20,30,25,.05);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: var(--base);
+  /* Плавная прокрутка только для якорей, без влияния на колесо мыши */
+  scroll-behavior: auto;
+  scroll-padding-top: 88px;
+}
+
+/* Отступ для якорей */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-break: normal;
+  /* Важно: не блокировать вертикальную прокрутку */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; width: 100%; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля ---- */
+.bismillah-slot { display: flex; width: 100%; direction: ltr; }
+.bismillah {
+  display: block; max-width: 100%;
+  font-family: var(--arabic); direction: rtl;
+  font-size: 1.75em; color: var(--gold);
+  line-height: 2.1; margin: 0;
+  letter-spacing: 0.02em; white-space: pre-wrap;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page { margin-bottom: 3rem; padding: 1.5rem 0; position: relative; }
+.bism-pos-center-page::after {
+  content: ""; display: block; width: 60px; height: 1px;
+  background: var(--gold); margin: .8rem auto 0; opacity: .45;
+}
+.title-page-bism-center { padding-top: 3rem; }
+.title-page-bism-center .bismillah-slot { margin-top: 1.5rem; margin-bottom: 3.5rem; }
+.title-page-bism-center .title-page-body { text-align: center; }
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+.bismillah:not([dir="rtl"]) { font-family: var(--serif); font-style: italic; direction: ltr; letter-spacing: .04em; }
+
+.institution {
+  font-family: var(--sans); font-size: .76em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3rem;
+}
+.book-title {
+  font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+}
+.book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.rule-orn {
+  width: 160px; height: 14px; margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦"; position: absolute; inset: 0; margin: auto;
+  width: 1.8em; height: 1em; line-height: .85;
+  background: var(--paper); color: var(--gold); font-size: .85rem;
+}
+.book-author { font-size: 1.08em; font-weight: 700; margin: 0 0 .4rem; }
+.book-meta { font-family: var(--sans); font-size: .84em; color: var(--ink-soft); line-height: 1.6; }
+.epigraph { max-width: 38ch; margin: 2.8rem auto 0; font-style: italic; color: var(--ink-soft); font-size: .96em; }
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 1.3rem; font-weight: 600; border: 0; padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink); text-decoration: none;
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .1rem; border-radius: 4px;
+}
+.toc a:hover { color: var(--accent); background: rgba(47,107,79,.06); }
+.toc a:active { background: rgba(47,107,79,.1); }
+.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.8em; font-size: .9em; font-weight: 500; }
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+.chapter > h2 {
+  font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
+  color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
+}
+.section > h3 { font-size: 1.25em; font-weight: 700; margin: 2.6rem 0 1rem; }
+.subsection > h4 { font-size: 1.08em; font-weight: 700; margin: 1.9rem 0 .8rem; color: var(--ink-soft); }
+.chapter:first-of-type > h2 { margin-top: 0; }
+section[data-kind="front"] > h2, section[data-kind="back"] > h2 {
+  text-align: center; border-bottom: 0; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 1.3em; font-weight: 700;
+}
+section[data-kind="front"] > h2::after, section[data-kind="back"] > h2::after {
+  content: ""; display: block; width: 72px; height: 1.5px;
+  background: var(--gold); margin: .9rem auto 0; border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem; text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
+
+.lead { font-size: 1.07em; color: var(--ink-soft); text-indent: 0; line-height: 1.65; }
+strong { font-weight: 700; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+a {
+  color: var(--accent); text-underline-offset: .22em; text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover { color: var(--gold); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
+  background: var(--paper-alt); padding: .12em .4em; border-radius: 3px; border: 1px solid var(--rule);
+  word-break: break-all;
+}
+hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
+.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+
+/* ========== СПИСКИ ========== */
+ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold); font-style: italic; color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source, blockquote.quote footer {
+  display: block; margin-top: .7rem; font-family: var(--sans);
+  font-style: normal; font-size: .78em; color: var(--ink-soft);
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0; padding: 1.8rem 2rem;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+  border-radius: 8px; position: relative; text-align: center;
+}
+.ayah::before, .ayah::after {
+  content: ""; position: absolute; left: 1.6rem; right: 1.6rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .45;
+}
+.ayah::before { top: .65rem; } .ayah::after { bottom: .65rem; }
+.ar-block {
+  font-family: var(--arabic); direction: rtl; unicode-bidi: isolate;
+  text-align: center; font-size: 1.6em; line-height: 2.3;
+  color: var(--ink); overflow-wrap: anywhere; word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+.ayah-tr { margin-top: 1rem; font-style: italic; font-size: .97em; text-indent: 0; color: var(--ink-soft); }
+.ayah .source { margin-top: .7rem; text-align: center; color: var(--accent); font-weight: 500; font-size: .8em; }
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС / ДУА ========== */
+.hadith {
+  margin: 1.9rem 0; padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 5px; background: var(--paper-alt);
+}
+.hadith .label, .dua .label, .callout .label {
+  display: block; font-family: var(--sans); font-size: .66em;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .65rem; font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+.dua {
+  margin: 1.9rem 0; padding: 1.5rem 1.8rem;
+  background: var(--paper-alt); border: 1.5px dashed var(--gold);
+  border-radius: 8px; text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+.callout { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 5px; font-size: .94em; }
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; unicode-bidi: isolate; direction: rtl; }
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] { font-family: var(--arabic); font-size: 1.35em; line-height: 2.2; text-indent: 0; }
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table { margin: 2.2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft); text-align: center; margin-top: .7rem; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
+th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
+tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+/* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
+sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
+.footnotes { margin-top: 4rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule); font-size: .85em; color: var(--ink-soft); }
+.footnotes h2, .bibliography h2 { font-family: var(--sans); font-size: .76em; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 600; }
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num { color: var(--accent); margin-right: .55em; font-weight: 700; }
+.bibliography ol { list-style: none; counter-reset: bib; padding-left: 0; }
+.bibliography li { counter-increment: bib; padding-left: 2.8rem; position: relative; margin: .7rem 0; font-size: .94em; line-height: 1.55; }
+.bibliography li::before { content: counter(bib) "."; position: absolute; left: 0; top: 0; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule);
+  font-family: var(--sans); font-size: .72em; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page { padding: 2.2rem 1.4rem 3rem; }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .45rem .1rem; min-height: 44px; }
+  .ayah { padding: 1.2rem 1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table { display: block; width: 100%; overflow-x: auto; }
+  table { min-width: 36rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page { size: A4; margin: 22mm 20mm 22mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.55; overflow: visible; }
+  .page { box-shadow: none; padding: 0; max-width: none; min-height: 0; }
+  .wrap { max-width: none; }
+  .title-page { page-break-after: always; border-bottom: 0; }
+  .title-page::after { display: none; }
+  .toc { page-break-after: always; background: none; border: 0; padding: 0; }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .doc-footer { display: none; }
+  .ayah, .hadith, .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Прямой путь: Заклинание верой</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2026</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#glava-1-fundament-chto-znachit-zaklinat-veroy"><span class="num"></span><span class="lbl">Глава 1. Фундамент: что значит заклинать верой</span></a><ol><li class="toc-l2">
+      <a href="#raznica-mezhdu-chteniem-i-zaklinaniem-veroy"><span class="num"></span><span class="lbl">1.1. Разница между чтением и заклинанием верой</span></a></li>
+<li class="toc-l2">
+      <a href="#hadis-dzhibrilya-klyuch-ko-vsemu"><span class="num"></span><span class="lbl">1.2. Хадис Джибриля: ключ ко всему</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-vera-samoe-moschnoe-sredstvo"><span class="num"></span><span class="lbl">1.3. Почему вера — самое мощное средство</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-2-chetyre-elementa-pryamogo-puti"><span class="num"></span><span class="lbl">Глава 2. Четыре элемента прямого пути</span></a><ol><li class="toc-l2">
+      <a href="#obschaya-formula"><span class="num"></span><span class="lbl">2.1. Общая формула</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#otnesenie-deystviya-k-allahu"><span class="num"></span><span class="lbl">1. Отнесение действия к Аллаху</span></a></li>
+<li class="toc-l1">
+      <a href="#ukazanie-sredstva-vliyaniya"><span class="num"></span><span class="lbl">2. Указание средства влияния</span></a></li>
+<li class="toc-l1">
+      <a href="#mesto-porazheniya"><span class="num"></span><span class="lbl">3. Место поражения</span></a></li>
+<li class="toc-l1">
+      <a href="#vid-neduga-po-zhelaniyu"><span class="num"></span><span class="lbl">4. Вид недуга (по желанию)</span></a><ol><li class="toc-l2">
+      <a href="#arabskaya-formula-namereniya"><span class="num"></span><span class="lbl">2.2. Арабская формула намерения</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-na-arabskom"><span class="num"></span><span class="lbl">2.3. Почему на арабском</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-3-pervyy-element-otnesenie-deystviya-k-allahu"><span class="num"></span><span class="lbl">Глава 3. Первый элемент: Отнесение действия к Аллаху</span></a><ol><li class="toc-l2">
+      <a href="#chto-eto-znachit"><span class="num"></span><span class="lbl">3.1. Что это значит</span></a></li>
+<li class="toc-l2">
+      <a href="#grammatika-otneseniya"><span class="num"></span><span class="lbl">3.2. Грамматика отнесения</span></a></li>
+<li class="toc-l2">
+      <a href="#dovod-iz-hadisa-dzhibrilya"><span class="num"></span><span class="lbl">3.3. Довод из хадиса Джибриля</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-4-vtoroy-element-sredstvo-vliyaniya-tauhid"><span class="num"></span><span class="lbl">Глава 4. Второй элемент: Средство влияния — Таухид</span></a><ol><li class="toc-l2">
+      <a href="#chto-takoe-tauhid-kak-sredstvo"><span class="num"></span><span class="lbl">4.1. Что такое таухид как средство</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-tauhid-silnee-vsego"><span class="num"></span><span class="lbl">4.2. Почему таухид сильнее всего</span></a></li>
+<li class="toc-l2">
+      <a href="#koran-kak-tauhid"><span class="num"></span><span class="lbl">4.3. Коран как таухид</span></a></li>
+<li class="toc-l2">
+      <a href="#drugie-sredstva-vliyaniya"><span class="num"></span><span class="lbl">4.4. Другие средства влияния</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-5-tretiy-element-mesto-porazheniya"><span class="num"></span><span class="lbl">Глава 5. Третий элемент: Место поражения</span></a><ol><li class="toc-l2">
+      <a href="#ukazanie-konkretnogo-mesta"><span class="num"></span><span class="lbl">5.1. Указание конкретного места</span></a></li>
+<li class="toc-l2">
+      <a href="#obobschenie-ili-detalizaciya"><span class="num"></span><span class="lbl">5.2. Обобщение или детализация</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-6-chetvertyy-element-vid-neduga-po-zhelaniyu"><span class="num"></span><span class="lbl">Глава 6. Четвёртый элемент: Вид недуга (по желанию)</span></a><ol><li class="toc-l2">
+      <a href="#kogda-ukazyvat-vid-neduga"><span class="num"></span><span class="lbl">6.1. Когда указывать вид недуга</span></a></li>
+<li class="toc-l2">
+      <a href="#kogda-ne-ukazyvat"><span class="num"></span><span class="lbl">6.2. Когда не указывать</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-7-zaryazhenie-veroy"><span class="num"></span><span class="lbl">Глава 7. Заряжение верой</span></a><ol><li class="toc-l2">
+      <a href="#chto-takoe-zaryazhenie-veroy"><span class="num"></span><span class="lbl">7.1. Что такое заряжение верой</span></a></li>
+<li class="toc-l2">
+      <a href="#poryadok-zaryazheniya"><span class="num"></span><span class="lbl">7.2. Порядок заряжения</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#h-100"><span class="num">12.</span><span class="lbl"><span class="ar-inline" lang="ar" dir="rtl">لَا إِلَهَ إِلَّا اللَّهُ</span></span></a><ol><li class="toc-l2">
+      <a href="#lya-ilyaha-illya-allah"><span class="num">12.1.</span><span class="lbl">Ля иляха илля Аллах</span></a></li>
+<li class="toc-l2">
+      <a href="#skolko-raz-delat-namerenie"><span class="num"></span><span class="lbl">7.3. Сколько раз делать намерение</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-8-praktika-kak-chitat"><span class="num"></span><span class="lbl">Глава 8. Практика: как читать</span></a><ol><li class="toc-l2">
+      <a href="#polnaya-posledovatelnost-seansa"><span class="num"></span><span class="lbl">8.1. Полная последовательность сеанса</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#h-138"><span class="num">14.</span><span class="lbl"><span class="ar-inline" lang="ar" dir="rtl">الحَمْدُ لِلَّهِ الَّذِي شَفَى بِقُدْرَتِهِ</span></span></a><ol><li class="toc-l2">
+      <a href="#alhamdu-lillyahil-lyazi-shafa-bikudratihi"><span class="num">14.1.</span><span class="lbl">Альхамду лилляхиль-лязи шафа бикудратихи</span></a></li>
+<li class="toc-l2">
+      <a href="#sostoyanie-serdca-vo-vremya-chteniya"><span class="num"></span><span class="lbl">8.2. Состояние сердца во время чтения</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-9-primery-primeneniya"><span class="num"></span><span class="lbl">Глава 9. Примеры применения</span></a><ol><li class="toc-l2">
+      <a href="#iscelenie-ot-koldovstva-v-golove"><span class="num"></span><span class="lbl">9.1. Исцеление от колдовства в голове</span></a></li>
+<li class="toc-l2">
+      <a href="#iscelenie-ot-sglaza-v-grudi"><span class="num"></span><span class="lbl">9.2. Исцеление от сглаза в груди</span></a></li>
+<li class="toc-l2">
+      <a href="#izgnanie-dzhinna-iz-zhivota"><span class="num"></span><span class="lbl">9.3. Изгнание джинна из живота</span></a></li>
+<li class="toc-l2">
+      <a href="#obschee-iscelenie-vsego-tela"><span class="num"></span><span class="lbl">9.4. Общее исцеление всего тела</span></a></li>
+<li class="toc-l2">
+      <a href="#iscelenie-cherez-sadaka"><span class="num"></span><span class="lbl">9.5. Исцеление через садака</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-10-pochemu-eto-rabotaet-duhovnaya-mehanika"><span class="num"></span><span class="lbl">Глава 10. Почему это работает: духовная механика</span></a><ol><li class="toc-l2">
+      <a href="#ty-provodnik"><span class="num"></span><span class="lbl">10.1. Ты — проводник</span></a></li>
+<li class="toc-l2">
+      <a href="#vera-opredelyaet-propusknuyu-sposobnost"><span class="num"></span><span class="lbl">10.2. Вера определяет пропускную способность</span></a></li>
+<li class="toc-l2">
+      <a href="#allah-bog-ty-zaklinaesh-ot-imeni-boga"><span class="num"></span><span class="lbl">10.3. Аллах — Бог. Ты заклинаешь от Имени Бога</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-11-chto-razrushaet-pryamoy-put"><span class="num"></span><span class="lbl">Глава 11. Что разрушает прямой путь</span></a><ol><li class="toc-l2">
+      <a href="#somnenie"><span class="num"></span><span class="lbl">11.1. Сомнение</span></a></li>
+<li class="toc-l2">
+      <a href="#ozhidanie-rezultata"><span class="num"></span><span class="lbl">11.2. Ожидание результата</span></a></li>
+<li class="toc-l2">
+      <a href="#gordynya"><span class="num"></span><span class="lbl">11.3. Гордыня</span></a></li>
+<li class="toc-l2">
+      <a href="#mehanicheskoe-chtenie"><span class="num"></span><span class="lbl">11.4. Механическое чтение</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-12-svyaz-s-predyduschimi-znaniyami"><span class="num"></span><span class="lbl">Глава 12. Связь с предыдущими знаниями</span></a><ol><li class="toc-l2">
+      <a href="#pryamoy-put-i-volevoy-akt"><span class="num"></span><span class="lbl">12.1. Прямой путь и волевой акт</span></a></li>
+<li class="toc-l2">
+      <a href="#pryamoy-put-i-hitab-al-isaba"><span class="num"></span><span class="lbl">12.2. Прямой путь и Хитаб аль-Исаба</span></a></li>
+<li class="toc-l2">
+      <a href="#pryamoy-put-i-zaklinanie-veroy"><span class="num"></span><span class="lbl">12.3. Прямой путь и заклинание верой</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#svyaschennyy-koran"><span class="num"></span><span class="lbl">1. Священный Коран</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-al-buhari"><span class="num"></span><span class="lbl">2. Сахих аль-Бухари</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-muslim"><span class="num"></span><span class="lbl">3. Сахих Муслим</span></a></li>
+<li class="toc-l1">
+      <a href="#sunan-at-tirmizi"><span class="num"></span><span class="lbl">4. Сунан ат-Тирмизи</span></a></li>
+<li class="toc-l1">
+      <a href="#musnad-ahmada"><span class="num"></span><span class="lbl">5. Муснад Ахмада</span></a></li>
+<li class="toc-l1">
+      <a href="#ibn-al-kayyim-madaridzh-as-salikin"><span class="num"></span><span class="lbl">6. Ибн аль-Каййим, «Мадаридж ас-Саликин»</span></a></li>
+<li class="toc-l1">
+      <a href="#an-navavi-sharh-sahih-muslim"><span class="num"></span><span class="lbl">7. Ан-Навави, «Шарх Сахих Муслим»</span></a></li></ol></nav>
+  <main>
+<p>Введение</p>
+<p>Есть путь длинный. Есть путь короткий. И есть путь прямой.</p>
+<p>Длинный путь — это когда раки читает часы, перебирает аяты, пробует одно за другим, ищет, сомневается, надеется. Этот путь тоже ведёт к цели — но через усталость, через потерю силы, через рассеивание намерения.</p>
+<p>Короткий путь — это когда раки знает, что делает. Он берёт один аят, одно намерение, одну веру — и бьёт. Точно. Без лишних движений.</p>
+<p>Но прямой путь — это нечто иное. Это когда раки не просто читает и не просто направляет. Это когда он встаёт перед Аллахом и говорит: «О Аллах, исцели. Ты — Исцеляющий. Я — лишь проводник Твоей воли. Исцели через веру, которая живёт в моём сердце. Исцели через единобожие, которое горит в моей груди».</p>
+<p>Это заклинание верой. Не техникой. Не количеством. Не длительностью. Верой.</p>
+<p>Эта книга — о прямом пути. О том, как заклинать так, чтобы Аллах действовал. Не через раки как через посредника, который «старается». А через раки как через проводника, через которого течёт сила Аллаха — потому что раки убрал всё лишнее и оставил только одно: веру в Того, Кто исцеляет.</p>
+<p>Пророк<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>сказал:</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى</div>
+  <p>Поистине, дела — только по намерениям, и поистине, каждому человеку — только то, что он намеревался</p>
+  <footer class="source">Источник: аль-Бухари, № 1; Муслим, № 1907</footer>
+</blockquote>
+<p>Если намерение — это корень, то вера — это ствол, а исцеление — это плод. Без корня дерево не растёт. Без ствола плод не держится. Без плода дерево бесполезно.</p>
+<p>В этой книге мы построим дерево целиком: корень, ствол и плод. За одно намерение. За одно чтение. За одно действие сердца.</p>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-1-fundament-chto-znachit-zaklinat-veroy">Глава 1. Фундамент: что значит заклинать верой</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="raznica-mezhdu-chteniem-i-zaklinaniem-veroy">1.1. Разница между чтением и заклинанием верой</h3>
+<p>Когда человек читает Коран механически — он произносит слова. Слова святы. Слова несут баракат. Но воздействие — направленное, точное, мгновенное — требует большего, чем произношение.</p>
+<p>Заклинание верой — это когда за каждым словом стоит не просто произношение, а живое, горящее, непоколебимое убеждение: «Аллах исцеляет. Аллах развязывает. Аллах изгоняет. Я верю в это так, как верю в то, что солнце взойдёт завтра».</p>
+<p>Это не надежда. Надежда говорит: «Может быть, поможет». Вера говорит: «Аллах уже исцеляет. Я вижу это сердцем».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="hadis-dzhibrilya-klyuch-ko-vsemu">1.2. Хадис Джибриля: ключ ко всему</h3>
+<p>Когда Пророк<span class="ar-inline" lang="ar" dir="rtl">ﷺ</span>заболел, к нему пришёл ангел Джибриль (мир ему) и произнёс:</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ، اللَّهُ يَشْفِيكَ</div>
+  <p>Бисмилляхи аркыйк, мин кулли шай'ин юзийк, Аллаху яшфийк</p>
+<p>С именем Аллаха заклинаю тебя, от всего, что причиняет тебе вред, Аллах исцеляет тебя</p>
+  <footer class="source">Источник: Муслим, № 2186</footer>
+</blockquote>
+<p>Обратите внимание на последнюю часть этого заклинания:<span class="ar-inline" lang="ar" dir="rtl">اللَّهُ يَشْفِيكَ</span>— «Аллах исцеляет тебя».</p>
+<p>Джибриль не сказал: «Пусть исцелится». Не сказал: «Надеюсь, исцелится». Не сказал: «Текст исцеляет». Он сказал: «Аллах исцеляет тебя». Прямое отнесение действия к Аллаху. Убеждённое. Настоящее. Без сомнения.</p>
+<p>Это и есть сердце прямого пути: отнести действие к Аллаху. Не к себе. Не к аяту. Не к чтению. К Аллаху.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-vera-samoe-moschnoe-sredstvo">1.3. Почему вера — самое мощное средство</h3>
+<p>Аллах сказал:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ</div>
+  <figcaption class="ayah-tr">И Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 82</div>
+</figure>
+<p>Обратите внимание: исцеление — для верующих. Для тех, кто верит. Сила Корана раскрывается не через произношение, а через веру того, кто произносит. Чем сильнее вера — тем мощнее воздействие. Чем слабее вера — тем слабее результат.</p>
+<p>Это закон. Не метафора. Закон.</p>
+<p>Заклинание верой — это использование этого закона напрямую. Раки не просто читает аят. Он читает аят, вложив в него всю свою веру в Аллаха. И Аллах отвечает в соответствии с этой верой.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-2-chetyre-elementa-pryamogo-puti">Глава 2. Четыре элемента прямого пути</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="obschaya-formula">2.1. Общая формула</h3>
+<p>Прямой путь заклинания верой состоит из четырёх элементов, произносимых в одном намерении, в одном действии сердца:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="otnesenie-deystviya-k-allahu">1. Отнесение действия к Аллаху</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ukazanie-sredstva-vliyaniya">2. Указание средства влияния</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="mesto-porazheniya">3. Место поражения</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vid-neduga-po-zhelaniyu">4. Вид недуга (по желанию)</h2>
+<p>Эти четыре элемента — не четыре отдельных действия. Это одно действие. Одна фраза. Одно намерение. Произносится в сердце за одно мгновение. И в этом мгновении — вся сила.</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="arabskaya-formula-namereniya">2.2. Арабская формула намерения</h3>
+<p>Основная формула:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنْ كُلِّ مَرَضٍ فِي [المَكَان]</div>
+  <p>Йашфийаллаху бит-таухиди мин кулли мародын фи [место]</p>
+<p>Да исцелит Аллах через единобожие от всякой болезни в [место]</p>
+  
+</aside>
+<p>Для конкретного недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنَ السِّحْرِ فِي الرَّأْسِ</div>
+  <p>Йашфийаллаху бит-таухиди минас-сихри фир-ра'си</p>
+<p>Да исцелит Аллах через единобожие от колдовства в голове</p>
+  
+</aside>
+<p>Для общего исцеления:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنْ كُلِّ سَقَمٍ فِي كُلِّ الجَسَدِ</div>
+  <p>Йашфийаллаху бит-таухиди мин кулли сакамин фи куллиль-джасад</p>
+<p>Да исцелит Аллах через единобожие от всякой болезни во всём теле</p>
+  
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-na-arabskom">2.3. Почему на арабском</h3>
+<p>Арабский язык — это язык Корана. Намерение на арабском лаконично. Оно занимает одно мгновение. Сердце не тратит время на длинные русские конструкции. Одно слово «<span class="ar-inline" lang="ar" dir="rtl">يَشْفِيَ</span>» — и в нём всё: «да исцелит». Одно слово «<span class="ar-inline" lang="ar" dir="rtl">اللَّهُ</span>» — и в нём всё: Тот, Кто исцеляет. Одно слово «<span class="ar-inline" lang="ar" dir="rtl">بِالتَّوْحِيدِ</span>» — и в нём всё средство: вера, единобожие, Коран.</p>
+<p>Это скорость. Это точность. Это сила в одном звуке.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-3-pervyy-element-otnesenie-deystviya-k-allahu">Глава 3. Первый элемент: Отнесение действия к Аллаху</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-eto-znachit">3.1. Что это значит</h3>
+<p>Отнести действие к Аллаху — значит сказать сердцем: «Не я исцеляю. Не аят исцеляет. Не моё чтение исцеляет. Аллах исцеляет. Я — причина. Аллах — Источник».</p>
+<p>Это не слабость. Это не пассивность. Это высшая степень силы. Потому что когда ты относишь действие к Аллаху — ты подключаешь себя к Тому, у Кого вся сила. Ты становишься проводником. А через проводника течёт не его сила — сила Аллаха.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="grammatika-otneseniya">3.2. Грамматика отнесения</h3>
+<p>В арабском языке отнесение действия к Аллаху выражается через глагол в форме просьбы-приказа:</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ</span>— «Да исцелит Аллах»</p></blockquote>
+<p><span class="ar-inline" lang="ar" dir="rtl">يَحُلَّ اللَّهُ</span>— «Да развяжет Аллах»<span class="ar-inline" lang="ar" dir="rtl">يُبْطِلَ اللَّهُ</span>— «Да аннулирует Аллах»</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">يُخْرِجَ اللَّهُ</span>— «Да изгонет Аллах»</p>
+<p><span class="ar-inline" lang="ar" dir="rtl">يَحْفَظَ اللَّهُ</span>— «Да защитит Аллах»</p></blockquote>
+<p>Каждый из этих глаголов — это не просьба в обычном смысле. Это убеждённое заявление веры. Ты не просишь, сомневаясь. Ты заявляешь, зная. Ты говоришь: «Аллах исцелит» — не потому что надеешься, а потому что знаешь.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="dovod-iz-hadisa-dzhibrilya">3.3. Довод из хадиса Джибриля</h3>
+<p>В хадисе Джибриля мы видим именно это отнесение:</p>
+<p><span class="ar-inline" lang="ar" dir="rtl">اللَّهُ يَشْفِيكَ</span>— «Аллах исцеляет тебя»</p>
+<p>Не «пусть исцелит». Не «может исцелит». А «Аллах исцеляет тебя». Настоящее время. Убеждённость. Как будто исцеление уже происходит.</p>
+<p>Когда ты произносишь «<span class="ar-inline" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ</span>» в намерении — ты входишь в это же состояние. Ты говоришь сердцем: «Аллах исцеляет. Сейчас. В это мгновение. Через меня».</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-4-vtoroy-element-sredstvo-vliyaniya-tauhid">Глава 4. Второй элемент: Средство влияния — Таухид</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-takoe-tauhid-kak-sredstvo">4.1. Что такое таухид как средство</h3>
+<p>Таухид — единобожие — это не просто слова «Ля иляха илля Аллах». Таухид — это вся суть Корана. Каждый аят Корана несёт в себе таухид. Каждая сура — это проявление единобожия.</p>
+<p>Когда ты говоришь «бит-таухид» — «через единобожие» — ты указываешь Аллаху на средство, через которое просишь Его действовать. И это средство — самое мощное из всего, что существует. Потому что таухид — это связь раба с Господом. Это канал, по которому течёт сила Аллаха.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-tauhid-silnee-vsego">4.2. Почему таухид сильнее всего</h3>
+<p>Аллах сказал:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">ذَٰلِكَ بِأَنَّ اللَّهَ هُوَ الْحَقُّ وَأَنَّ مَا يَدْعُونَ مِن دُونِهِ هُوَ الْبَاطِلُ</div>
+  <figcaption class="ayah-tr">Это потому, что Аллах — Истина, а то, чему поклоняются помимо Него — ложь</figcaption>
+  <div class="source">Источник: Сура «аль-Хадж», аят 62</div>
+</figure>
+<p>Таухид — это истина. Сихр — это ложь. Айн — это ложь. Джинн, сидящий в теле — это ложь. Когда истина сталкивается с ложью — ложь исчезает. Не борется. Не сопротивляется. Исчезает. Как тьма исчезает, когда включают свет.</p>
+<p>Заклинание таухидом — это включение света. Не борьба со тьмой. Не переговоры с тьмой. Включение света. И тьма уходит сама.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="koran-kak-tauhid">4.3. Коран как таухид</h3>
+<p>Весь Коран — это таухид. Каждый аят. Каждая сура. Когда ты читаешь Коран с намерением «через таухид» — ты не просто читаешь текст. Ты активируешь веру. Ты направляешь веру. Ты заклинаешь верой.</p>
+<p>Неважно, какой аят ты читаешь. Фатиха — это таухид. Аят аль-Курси — это таухид. Аль-Ихлас — это таухид. Аль-Бакара — это таухид. Любой аят, прочитанный с верой в единобожие, становится таухидом. Становится светом. Становится силой.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="drugie-sredstva-vliyaniya">4.4. Другие средства влияния</h3>
+<p>В намерении можно указать и другие благие дела как средство:</p>
+<ul><li>Через Коран (<span class="ar-inline" lang="ar" dir="rtl">بِالقُرْآن</span>— биль-Кур'ан)</li><li>Через единобожие (<span class="ar-inline" lang="ar" dir="rtl">بِالتَّوْحِيدِ</span>— бит-таухид)</li><li>Через азан (<span class="ar-inline" lang="ar" dir="rtl">بِالأَذَانِ</span>— биль-азан)</li><li>Через намаз (<span class="ar-inline" lang="ar" dir="rtl">بِالصَّلَاةِ</span>— бис-саля)</li><li>Через садака (<span class="ar-inline" lang="ar" dir="rtl">بِالصَّدَقَةِ</span>— бис-садака)</li></ul>
+<p>Но в контексте рукьи самый верный и самый мощный путь — это Коран и единобожие. Потому что Коран — это слова Аллаха. А таухид — это суть этих слов. Два вместе — это прямой канал к силе Аллаха.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-5-tretiy-element-mesto-porazheniya">Глава 5. Третий элемент: Место поражения</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ukazanie-konkretnogo-mesta">5.1. Указание конкретного места</h3>
+<p>Когда ты указываешь место поражения — ты направляешь силу. Ты говоришь: «Аллах, исцели через таухид — вот здесь. В этом месте. В этом органе».</p>
+<p>Это не ограничение Аллаха. Аллах не ограничен. Но это направление твоей веры. Вера, направленная в точку, бьёт сильнее, чем вера рассеянная.</p>
+<p>Примеры:</p>
+<ul><li><span class="ar-inline" lang="ar" dir="rtl">فِي الرَّأْسِ</span>(фир-ра'си) — в голове</li><li><span class="ar-inline" lang="ar" dir="rtl">فِي الصَّدْرِ</span>(фис-садри) — в груди</li><li><span class="ar-inline" lang="ar" dir="rtl">فِي البَطْنِ</span>(филь-батни) — в животе</li><li><span class="ar-inline" lang="ar" dir="rtl">فِي الرَّحِمِ</span>(фир-рахими) — в матке</li><li><span class="ar-inline" lang="ar" dir="rtl">فِي الأَرْجُلِ</span>(филь-арджули) — в ногах</li><li><span class="ar-inline" lang="ar" dir="rtl">فِي الظَّهْرِ</span>(физ-захри) — в спине</li><li><span class="ar-inline" lang="ar" dir="rtl">فِي كُلِّ الجَسَدِ</span>(фи куллиль-джасад) — во всём теле</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="obobschenie-ili-detalizaciya">5.2. Обобщение или детализация</h3>
+<p>Если ты не знаешь точно, где поражение — скажи «во всём теле». Аллах знает. Он направит силу туда, где нужно.</p>
+<p>Если знаешь точно — укажи конкретно. Это усиливает направленность. Это как луч: чем уже — тем мощнее в точке. Чем шире — тем мягче, но охватывает больше.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-6-chetvertyy-element-vid-neduga-po-zhelaniyu">Глава 6. Четвёртый элемент: Вид недуга (по желанию)</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kogda-ukazyvat-vid-neduga">6.1. Когда указывать вид недуга</h3>
+<p>Если тебе известен вид недуга — укажи его. Это не обязательно, но это усиливает точность.</p>
+<p>Примеры:</p>
+<ul><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ السِّحْرِ</span>(минас-сихри) — от колдовства</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ العَيْنِ</span>(миналь-'айни) — от сглаза</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ الجِنِّ</span>(миналь-джинни) — от джинна</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ الحَسَدِ</span>(миналь-хасади) — от зависти</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ المَسِّ</span>(миналь-масси) — от прикосновения</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ الخَوْفِ</span>(миналь-хауфи) — от страха</li><li><span class="ar-inline" lang="ar" dir="rtl">مِنَ المَرَضِ</span>(миналь-маради) — от болезни</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kogda-ne-ukazyvat">6.2. Когда не указывать</h3>
+<p>Если вид недуга неизвестен — не указывай. Скажи просто «мин кулли марод» — от всякой болезни. Аллах знает, что в теле. Тебе не обязательно называть. Достаточно направить веру.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-7-zaryazhenie-veroy">Глава 7. Заряжение верой</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-takoe-zaryazhenie-veroy">7.1. Что такое заряжение верой</h3>
+<p>В других методах заряжение — это повторение намерения 40, 70, 100 раз. В прямом пути заряжение — это укрепление веры. Не повторение слов. Укрепление убеждённости.</p>
+<p>Как укрепить веру? Через таухид. Через чтение о таухиде. Через осознание того, Кто стоит за словами.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poryadok-zaryazheniya">7.2. Порядок заряжения</h3>
+<p>Шаг первый: Чтение таухида</p>
+<p>Перед сеансом — прочитай в сердце или вслух:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="h-100"><span class="num">12.</span><span class="ar-inline" lang="ar" dir="rtl">لَا إِلَهَ إِلَّا اللَّهُ</span></h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="lya-ilyaha-illya-allah"><span class="num">12.1.</span>Ля иляха илля Аллах</h3>
+<p>Нет божества, достойного поклонения, кроме Аллаха</p>
+<p>Прочитай столько раз, сколько нужно, чтобы почувствовать: «Да. Аллах — Единственный. Аллах — Могущественный. Аллах — Исцеляющий. Никто не исцеляет кроме Него».</p>
+<p>Шаг второй: Осознание силы таухида</p>
+<p>Почувствуй в сердце: таухид, который ты произнёс — это не просто слова. Это ключ. Ключ, который открывает все двери. Ключ, перед которым отступает всякая тьма. Ключ, который соединяет тебя с Тем, у Кого вся сила.</p>
+<p>Шаг третий: Убеждённость</p>
+<p>Скажи себе в сердце: «Я верю. Я знаю. Аллах исцелит. Не может не исцелить. Потому что Он обещал. Потому что Коран — исцеление. Потому что таухид — свет. И свет не может не победить тьму».</p>
+<p>Это и есть заряжение верой. Не 100 повторений намерения. Одно осознание. Одно укрепление убеждённости. И если вера сильная — одного раза намерения достаточно.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="skolko-raz-delat-namerenie">7.3. Сколько раз делать намерение</h3>
+<p>Если вера в Аллах и так усилена чтением о таухиде, осознанием Его силы, убеждённостью в Его обещании — одного раза намерения достаточно. Инша Аллах, этого хватит.</p>
+<p>Если чувствуешь, что вера сегодня слабее обычного — повтори намерение несколько раз. Три. Семь. Столько, сколько нужно, чтобы почувствовать плотность.</p>
+<p>Не количество повторений определяет силу. Сила определяется качеством веры в момент произнесения.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-8-praktika-kak-chitat">Глава 8. Практика: как читать</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnaya-posledovatelnost-seansa">8.1. Полная последовательность сеанса</h3>
+<p>Шаг первый: Уединение и чистота</p>
+<p>Соверши вуду. Найди тихое место. Отключи телефон. Это пространство между тобой и Аллахом. Никто больше не нужен.</p>
+<p>Шаг второй: Прибежище</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+  <p>А'узу билляхи минаш-шайтанир-раджим</p>
+<p>Прибегаю к Аллаху от изгнанного шайтана</p>
+  <div class="source">Источник: Коран, Сура «ан-Нахль», аят 98</div>
+</aside>
+<p>Три раза. Медленно. Осознавая, что шайтан попытается украсть твою веру в момент чтения.</p>
+<p>Шаг третий: Укрепление веры</p>
+<p>Прочитай в сердце:</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</span></p></blockquote>
+<p>Ля иляха илля Аллаху вахдаху ля шарика лях, ляхуль-мульку ва ляхуль-хамду ва хува 'аля кулли шай'ин кадир Нет божества, кроме Аллаха, Единого, у Которого нет сотоварища. Ему принадлежит власть и Ему хвала, и Он над всякой вещью мощен</p>
+<p>Прочитай столько раз, сколько нужно, чтобы вера наполнила грудь. Чтобы ты почувствовал: «Аллах здесь. Аллах слышит. Аллах исцелит».</p>
+<p>Шаг четвёртый: Намерение</p>
+<p>Произнеси в сердце формулу прямого пути:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنْ كُلِّ مَرَضٍ فِي [المَكَان]</div>
+  <p>Йашфийаллаху бит-таухиди мин кулли мародын фи [место]</p>
+<p>Да исцелит Аллах через единобожие от всякой болезни в [место]</p>
+  
+</aside>
+<p>Один раз. С полной убеждённостью. Без сомнения. Как приказ. Как заявление. Как факт.</p>
+<p>Шаг пятый: Чтение Корана</p>
+<p>Открой уста. Начни читать Коран. Любой аят. Любую суру. Фатиха. Аят аль-Курси. Аль-Ихлас. Что угодно.</p>
+<p>Но читай не механически. Читай, удерживая намерение в сердце. Каждое слово — через веру. Каждый аят — как подтверждение: «Да. Аллах исцеляет. Через таухид. Сейчас».</p>
+<p>Шаг шестой: Удержание состояния</p>
+<p>Во время чтения сердце не должно быть сомневающимся. Не должно быть ждуным. Не должно быть «а вдруг».</p>
+<p>Сердце должно быть убеждённым. Настоящим. Как человек, который знает, что солнце взойдёт. Не надеется. Знает.</p>
+<p>Если почувствуешь, что сомнение закрадывается — остановись. Вернись к таухиду. Прочитай «Ля иляха илля Аллах» в сердце. Укрепи веру. Продолжай.</p>
+<p>Шаг седьмой: Завершение</p>
+<p>После чтения — не выходи резко. Останься в состоянии веры ещё несколько мгновений. Скажи в сердце:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="h-138"><span class="num">14.</span><span class="ar-inline" lang="ar" dir="rtl">الحَمْدُ لِلَّهِ الَّذِي شَفَى بِقُدْرَتِهِ</span></h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="alhamdu-lillyahil-lyazi-shafa-bikudratihi"><span class="num">14.1.</span>Альхамду лилляхиль-лязи шафа бикудратихи</h3>
+<p>Хвала Аллаху, Который исцелил Своей мощью</p>
+<p>И отпусти. Не жди. Не проверяй. Не сомневайся. Аллах исцелил. Ты сделал своё. Результат — у Аллаха.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="sostoyanie-serdca-vo-vremya-chteniya">8.2. Состояние сердца во время чтения</h3>
+<p>Это критически важно. Состояние сердца определяет всё.</p>
+<p>Не сомневайся. Сомнение — это вода, которая гасит огонь веры. Если ты читаешь и думаешь: «А вдруг не подействует?» — вера гаснет. И воздействие слабеет.</p>
+<p>Не жди. Не читай, ожидая результата. Читай, зная результат. Исцеление уже происходит. Ты не ждёшь его. Ты в нём.</p>
+<p>Будь настойчивым. Не агрессивным. Не кричащим. Настойчивым. Как человек, который стучит в дверь и знает, что ему откроют. Не потому что надеется. А потому что знает.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-9-primery-primeneniya">Глава 9. Примеры применения</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="iscelenie-ot-koldovstva-v-golove">9.1. Исцеление от колдовства в голове</h3>
+<p>Намерение:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنَ السِّحْرِ فِي الرَّأْسِ</div>
+  <p>Йашфийаллаху бит-таухиди минас-сихри фир-ра'си</p>
+<p>Да исцелит Аллах через единобожие от колдовства в голове</p>
+  
+</aside>
+<p>Чтение: Аят аль-Курси 7 раз, удерживая намерение.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="iscelenie-ot-sglaza-v-grudi">9.2. Исцеление от сглаза в груди</h3>
+<p>Намерение:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنَ العَيْنِ فِي الصَّدْرِ</div>
+  <p>Йашфийаллаху бит-таухиди миналь-'айни фис-садри</p>
+<p>Да исцелит Аллах через единобожие от сглаза в груди</p>
+  
+</aside>
+<p>Чтение: Сура аль-Фатиха 7 раз, удерживая намерение.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="izgnanie-dzhinna-iz-zhivota">9.3. Изгнание джинна из живота</h3>
+<p>Намерение:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُخْرِجَ اللَّهُ بِالتَّوْحِيدِ كُلَّ جِنٍّ مِنَ البَطْنِ</div>
+  <p>Йухриджаллаху бит-таухиди кулля джиннин миналь-батни</p>
+<p>Да изгонет Аллах через единобожие всякого джинна из живота</p>
+  
+</aside>
+<p>Чтение: Последние два аята суры аль-Бакара, удерживая намерение.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="obschee-iscelenie-vsego-tela">9.4. Общее исцеление всего тела</h3>
+<p>Намерение:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنْ كُلِّ سَقَمٍ فِي كُلِّ الجَسَدِ</div>
+  <p>Йашфийаллаху бит-таухиди мин кулли сакамин фи куллиль-джасад</p>
+<p>Да исцелит Аллах через единобожие от всякой болезни во всём теле</p>
+  
+</aside>
+<p>Чтение: Сура аль-Фатиха 1 раз, Аят аль-Курси 1 раз, три кулюбу по 1 разу. Удерживая намерение.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="iscelenie-cherez-sadaka">9.5. Исцеление через садака</h3>
+<p>Если хочешь указать садака как средство:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالصَّدَقَةِ مِنْ كُلِّ مَرَضٍ فِي [المَكَان]</div>
+  <p>Йашфийаллаху бис-садакати мин кулли мародын фи [место]</p>
+<p>Да исцелит Аллах через милостыню от всякой болезни в [место]</p>
+  
+</aside>
+<p>Дай садака с этим намерением. Аллах исцелит через неё.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-10-pochemu-eto-rabotaet-duhovnaya-mehanika">Глава 10. Почему это работает: духовная механика</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ty-provodnik">10.1. Ты — проводник</h3>
+<p>Ты не источник силы. Аллах — Источник. Ты — проводник. Как провод для электричества. Сам провод не производит ток. Но через него ток течёт.</p>
+<p>Когда ты заклинаешь верой — ты становишься чистым проводом. Без примесей. Без сомнений. Без гордыни. Без показухи. Чистый провод. И через него течёт сила Аллаха.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vera-opredelyaet-propusknuyu-sposobnost">10.2. Вера определяет пропускную способность</h3>
+<p>Чем сильнее вера — тем шире канал. Тем больше силы проходит. Тем мощнее воздействие.</p>
+<p>Слабая вера — тонкий канал. Капля силы. Может помочь, но медленно.</p>
+<p>Сильная вера — широкий канал. Поток силы. Мгновенное воздействие.</p>
+<p>Вот почему заклинание верой — это прямой путь. Ты не строишь канал из ста повторений. Ты открываешь его одним актом веры. И сила течёт.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="allah-bog-ty-zaklinaesh-ot-imeni-boga">10.3. Аллах — Бог. Ты заклинаешь от Имени Бога</h3>
+<p>Подумай об этом. Когда ты говоришь «<span class="ar-inline" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ</span>» — ты призываешь Бога. Творца небес и земли. Того, Кто говорит «Будь!» — и оно бывает. Того, перед Кем джинны трепещут. Того, перед Кем колдовство — ничто.</p>
+<p>Если ты заклинаешь от Имени Бога — Сам Бог отвечает. Не потому что ты достоин. А потому что Он верен Своему слову. А Его слово: Коран — исцеление для верующих.</p>
+<p>Ты веришь? Тогда Аллах исцеляет. Это закон. Это обещание. Это истина.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-11-chto-razrushaet-pryamoy-put">Глава 11. Что разрушает прямой путь</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="somnenie">11.1. Сомнение</h3>
+<p>«А вдруг не подействует?» — это яд для прямого пути. Сомнение закрывает канал. Сила не течёт. Результат не приходит.</p>
+<p>Лечение: Укрепляй веру. Читай о таухиде. Напоминай себе: «Аллах обещал. Коран — исцеление. Я верю. Значит, исцеление уже происходит».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ozhidanie-rezultata">11.2. Ожидание результата</h3>
+<p>Если ты читаешь и ждёшь: «Ну когда же? Когда почувствую? Когда увидю результат?» — ты не веришь. Ты надеешься. А надежда слабее веры.</p>
+<p>Лечение: Читай, зная. Не жди. Исцеление уже идёт. Тебе не нужно его видеть, чтобы оно было.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="gordynya">11.3. Гордыня</h3>
+<p>«Я сильный раки. Я исцеляю». Это ложь. Ты не исцеляешь. Аллах исцеляет. Ты — причина. Не больше.</p>
+<p>Лечение: Перед каждым сеансом говори в сердце: «Я — ничто. Аллах — всё. Без Него я не могу ничего. С Ним — всё возможно».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="mehanicheskoe-chtenie">11.4. Механическое чтение</h3>
+<p>Если ты читаешь аят, а сердце где-то далеко — прямой путь не работает. Слова идут, вера молчит. Канал пуст.</p>
+<p>Лечение: Вернись. Остановись. Прочитай «Ля иляха илля Аллах» в сердце. Укрепи веру. Продолжай.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-12-svyaz-s-predyduschimi-znaniyami">Глава 12. Связь с предыдущими знаниями</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pryamoy-put-i-volevoy-akt">12.1. Прямой путь и волевой акт</h3>
+<p>Волевой акт — это метод удержания намерения. Прямой путь — это метод наполнения намерения верой. Они не противоречат. Они дополняют.</p>
+<p>Волевой акт даёт структуру: как держать, как не терять, как заряжать. Прямой путь даёт содержание: чем наполнять, во что верить, на что уповать.</p>
+<p>Вместе они — меч и рука. Меч без руки бесполезен. Рука без меча слаба. Вместе — сила.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pryamoy-put-i-hitab-al-isaba">12.2. Прямой путь и Хитаб аль-Исаба</h3>
+<p>Хитаб аль-Исаба — это точное обращение к поражённому месту. Прямой путь включает это в себя. Место поражения — третий элемент формулы. Это то же самое.</p>
+<p>Разница в том, что прямой путь не требует девяти ступеней. Он требует одного: веры. Одного намерения. Одного чтения. И Аллах делает остальное.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pryamoy-put-i-zaklinanie-veroy">12.3. Прямой путь и заклинание верой</h3>
+<p>Заклинание верой — это сердце прямого пути. Это то, что отличает его от всех других методов. Не техника. Не количество. Не длительность. Вера.</p>
+<p>Одна Фатиха, прочитанная с полной верой в таухид, бьёт сильнее, чем сто Фатих, прочитанных механически. Это не преувеличение. Это закон.</p>
+<p>Заключение</p>
+<p>Прямой путь — это не для ленивых. Это не для тех, кто хочет «быстро и без усилий». Это для тех, кто понял: сила не в количестве. Сила — в вере.</p>
+<p>Ты можешь прочитать тысячу аятов и не исцелить. Ты можешь прочитать один аят — и исцелить. Разница — в том, что стоит за словом. В вере. В таухиде. В убеждённости.</p>
+<p>Аллах сказал:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ</div>
+  <figcaption class="ayah-tr">Верующие — только те, сердца которых трепещут, когда поминают Аллаха, и чья вера усиливается, когда им читают Его аяты, и которые уповают только на своего Господа</figcaption>
+  <div class="source">Источник: Сура «аль-Анфаль», аят 2</div>
+</figure>
+<p>Верующие — те, чья вера усиливается от аятов. Чьи сердца трепещут от имени Аллаха. Которые уповают только на Него.</p>
+<p>Это и есть заклинание верой. Это и есть прямой путь.</p>
+<p>Заклинай верой. Уповай на Аллаха. Отнеси действие к Нему. Укажи на таухид как средство. Направь на место поражения. И Аллах исцелит. Инша Аллах, ты увидишь чудо. Не потому что ты сильный. А потому что Аллах — Могущественный. И ты дал Ему действовать через себя.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ۚ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ</div>
+  <figcaption class="ayah-tr">Успех мой — только от Аллаха. На Него я уповаю и к Нему обращаюсь</figcaption>
+  <div class="source">Источник: Сура «Худ», аят 88</div>
+</figure>
+<p>Заклинай верой. И Аллах исцелит.</p>
+<p>Валлаху а'лям. А Аллах знает лучше.</p>
+<p>Список литературы</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="svyaschennyy-koran">1. Священный Коран</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-al-buhari">2. Сахих аль-Бухари</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-muslim">3. Сахих Муслим</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sunan-at-tirmizi">4. Сунан ат-Тирмизи</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="musnad-ahmada">5. Муснад Ахмада</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ibn-al-kayyim-madaridzh-as-salikin">6. Ибн аль-Каййим, «Мадаридж ас-Саликин»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="an-navavi-sharh-sahih-muslim">7. Ан-Навави, «Шарх Сахих Муслим»</h2>
+<p>Сводная таблица формул Прямого Пути</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Арабская формула</th><th>Транскрипция</th><th>Перевод</th></tr></thead><tbody><tr><td>Исцеление</td><td><span class="ar-inline" lang="ar" dir="rtl">يَشْفِي اللَّهُ بِالتَّوْحِيدِ</span></td><td>Йашфиллаху бит-таухид</td><td>Аллах исцеляет через Единобожие</td></tr><tr><td>Аннулирование</td><td><span class="ar-inline" lang="ar" dir="rtl">يُبْطِلُ اللَّهُ بِالتَّوْحِيدِ</span></td><td>Йубтылюллаху бит-таухид</td><td>Аллах аннулирует через Единобожие</td></tr><tr><td>Изгнание</td><td><span class="ar-inline" lang="ar" dir="rtl">يُخْرِجُ اللَّهُ بِالتَّوْحِيدِ</span></td><td>Йухриджуллаху бит-таухид</td><td>Аллах изгоняет через Единобожие</td></tr><tr><td>Развязывание</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفُكُّ اللَّهُ بِالتَّوْحِيدِ</span></td><td>Йафуккуллаху бит-таухид</td><td>Аллах развязывает через Единобожие</td></tr><tr><td>Защита</td><td><span class="ar-inline" lang="ar" dir="rtl">يَحْفَظُ اللَّهُ بِالتَّوْحِيدِ</span></td><td>Йахфазуллаху бит-таухид</td><td>Аллах защищает через Единобожие</td></tr><tr><td>Удаление</td><td><span class="ar-inline" lang="ar" dir="rtl">يُذْهِبُ اللَّهُ بِالتَّوْحِيدِ</span></td><td>Йузхибуллаху бит-таухид</td><td>Аллах удаляет через Единобожие</td></tr></tbody></table></figure>
+<p>Сводная таблица мест поражения</p>
+<figure class="table"><table><thead><tr><th>Место</th><th>Арабский</th><th>Транскрипция</th></tr></thead><tbody><tr><td>Всё тело</td><td><span class="ar-inline" lang="ar" dir="rtl">الجَسَد</span></td><td>аль-джасад</td></tr><tr><td>Голова</td><td><span class="ar-inline" lang="ar" dir="rtl">الرَّأْس</span></td><td>ар-ра'с</td></tr><tr><td>Затылок</td><td><span class="ar-inline" lang="ar" dir="rtl">القَفَا</span></td><td>аль-кафа</td></tr><tr><td>Грудь</td><td><span class="ar-inline" lang="ar" dir="rtl">الصَّدْر</span></td><td>ас-садр</td></tr><tr><td>Живот</td><td><span class="ar-inline" lang="ar" dir="rtl">البَطْن</span></td><td>аль-батн</td></tr><tr><td>Матка</td><td><span class="ar-inline" lang="ar" dir="rtl">الرَّحِم</span></td><td>ар-рахим</td></tr><tr><td>Ноги</td><td><span class="ar-inline" lang="ar" dir="rtl">الأَرْجُل</span></td><td>аль-арджуль</td></tr><tr><td>Спина</td><td><span class="ar-inline" lang="ar" dir="rtl">الظَّهْر</span></td><td>аз-захр</td></tr><tr><td>Плечи</td><td><span class="ar-inline" lang="ar" dir="rtl">الأَكْتَاف</span></td><td>аль-актаф</td></tr><tr><td>Сердце</td><td><span class="ar-inline" lang="ar" dir="rtl">القَلْب</span></td><td>аль-кальб</td></tr></tbody></table></figure>
+<p>Сводная таблица видов недуга</p>
+<figure class="table"><table><thead><tr><th>Недуг</th><th>Арабский</th><th>Транскрипция</th></tr></thead><tbody><tr><td>Всякая болезнь</td><td><span class="ar-inline" lang="ar" dir="rtl">كُلّ مَرَض</span></td><td>куллю марод</td></tr><tr><td>Колдовство</td><td><span class="ar-inline" lang="ar" dir="rtl">سِحْر</span></td><td>сихр</td></tr><tr><td>Сглаз</td><td><span class="ar-inline" lang="ar" dir="rtl">عَيْن</span></td><td>'айн</td></tr><tr><td>Зависть</td><td><span class="ar-inline" lang="ar" dir="rtl">حَسَد</span></td><td>хасад</td></tr><tr><td>Джинн</td><td><span class="ar-inline" lang="ar" dir="rtl">جِنّ</span></td><td>джинн</td></tr><tr><td>Прикосновение джинна</td><td><span class="ar-inline" lang="ar" dir="rtl">مَسّ</span></td><td>масс</td></tr><tr><td>Узлы</td><td><span class="ar-inline" lang="ar" dir="rtl">عُقَد</span></td><td>'укад</td></tr><tr><td>Рак</td><td><span class="ar-inline" lang="ar" dir="rtl">سَرَطَان</span></td><td>саратан</td></tr><tr><td>Бесплодие</td><td><span class="ar-inline" lang="ar" dir="rtl">عُقْم</span></td><td>'укм</td></tr></tbody></table></figure>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Прямой путь: Заклинание верой · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var id = href.slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    try{ history.pushState(null,'',href);}catch(_e){}
+  });
+  if (location.hash && location.hash.length > 1) {
+    setTimeout(function(){
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>
