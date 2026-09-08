@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Программа лечения · Лекарь Абу Мухаммад</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  
+  :root {
+    --primary: #0d4f3c;
+    --primary-light: #1a7a5c;
+    --gold: #c9a961;
+    --gold-light: #e6c887;
+    --dark: #0a1f1a;
+    --cream: #f5efe0;
+    --red: #b94a4a;
+    --warning: #d4942a;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #0a1f1a 0%, #143028 50%, #0a1f1a 100%);
+    color: var(--cream);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+
+  .bg-pattern {
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(26, 122, 92, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px 16px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 30px 16px;
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.6), rgba(26, 122, 92, 0.4));
+    border-radius: 24px;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    backdrop-filter: blur(10px);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '﷽';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    margin: 18px 0 10px;
+    letter-spacing: 8px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+  }
+
+  .header .subtitle {
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.75);
+    font-weight: 300;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: rgba(201, 169, 97, 0.15);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+  }
+
+  /* Section */
+  .section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 20px;
+    padding: 22px 18px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+    line-height: 1.4;
+  }
+
+  .section-title .icon {
+    font-size: 22px;
+  }
+
+  .intro-text {
+    font-size: 14.5px;
+    color: var(--cream);
+    margin-bottom: 14px;
+    line-height: 1.7;
+  }
+
+  .arabic-small {
+    font-size: 18px;
+    color: var(--gold);
+    text-align: center;
+    margin: 14px 0;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+  }
+
+  /* Part header */
+  .part-header {
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.7), rgba(10, 31, 26, 0.8));
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .part-number {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+  }
+
+  .part-title-wrap h2 {
+    font-size: 15px;
+    color: var(--gold-light);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+
+  .part-title-wrap p {
+    font-size: 12px;
+    color: rgba(245, 239, 224, 0.65);
+  }
+
+  /* Dua card */
+  .dua-card {
+    background: linear-gradient(180deg, rgba(10, 31, 26, 0.6), rgba(10, 31, 26, 0.3));
+    border: 1px solid rgba(201, 169, 97, 0.25);
+    border-radius: 18px;
+    padding: 20px 16px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dua-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .dua-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .dua-num {
+    background: rgba(201, 169, 97, 0.15);
+    color: var(--gold-light);
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .dua-title {
+    font-size: 15px;
+    color: var(--gold-light);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .dua-desc {
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.7);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .arabic-text {
+    font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+    font-size: 24px;
+    color: var(--gold-light);
+    text-align: center;
+    direction: rtl;
+    line-height: 1.9;
+    padding: 16px 10px;
+    margin: 10px 0;
+    background: rgba(201, 169, 97, 0.06);
+    border-radius: 12px;
+    border: 1px dashed rgba(201, 169, 97, 0.2);
+    letter-spacing: 0.5px;
+  }
+
+  .translit {
+    font-size: 13.5px;
+    color: rgba(245, 239, 224, 0.85);
+    font-style: italic;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .translation {
+    font-size: 13.5px;
+    color: var(--cream);
+    padding: 10px 14px;
+    background: rgba(13, 79, 60, 0.2);
+    border-left: 3px solid var(--primary-light);
+    border-radius: 6px;
+    line-height: 1.6;
+  }
+
+  .label {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  /* Table as cards */
+  .schedule-card {
+    background: rgba(10, 31, 26, 0.5);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+
+  .schedule-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(201, 169, 97, 0.2);
+  }
+
+  .schedule-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .schedule-title {
+    font-size: 13.5px;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .schedule-row {
+    display: flex;
+    padding: 4px 0;
+    font-size: 13px;
+  }
+
+  .schedule-label {
+    color: rgba(245, 239, 224, 0.6);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+
+  .schedule-value {
+    color: var(--cream);
+    flex: 1;
+  }
+
+  /* Tips */
+  .tip {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.08), rgba(13, 79, 60, 0.1));
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245, 239, 224, 0.9);
+  }
+
+  .tip strong {
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .tip-quote {
+    font-style: italic;
+    color: var(--gold-light);
+    padding: 10px 14px;
+    background: rgba(201, 169, 97, 0.08);
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* Price blocks */
+  .price-card {
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.8), rgba(10, 31, 26, 0.9));
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 24px;
+    padding: 24px 20px;
+    margin-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-card.featured {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(13, 79, 60, 0.6));
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 10px 40px rgba(201, 169, 97, 0.15);
+  }
+
+  .price-card.featured::before {
+    content: 'РЕКОМЕНДУЕТСЯ';
+    position: absolute;
+    top: 14px;
+    right: -30px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 4px 40px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: rotate(45deg);
+  }
+
+  .price-label {
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .price-title {
+    font-size: 19px;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .price-amount span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  .price-desc {
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.7);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .price-features li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    font-size: 13.5px;
+    color: rgba(245, 239, 224, 0.88);
+  }
+
+  .price-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.45);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold-light);
+    border: 1.5px solid var(--gold);
+    box-shadow: none;
+  }
+
+  .btn-secondary:active {
+    background: rgba(201, 169, 97, 0.1);
+  }
+
+  .btn-icon {
+    margin-right: 8px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 18px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 30px 16px 10px;
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.6);
+    line-height: 1.8;
+  }
+
+  .footer .arabic-footer {
+    color: var(--gold);
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section, .part-header { animation: fadeIn 0.6s ease-out; }
+</style>
+</head>
+<body>
+<div class="bg-pattern"></div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-ornament">۞ ❋ ۞</div>
+    <h1>Программа лечения</h1>
+    <div class="subtitle">от сглаза, зависти, джинна-собаки и открытия путей</div>
+    <div class="badge">Шариатская Рукъя · Лекарь Абу Мухаммад</div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="section">
+    <div class="arabic-small">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <p class="intro-text">
+      О мой брат (или сестра) в Исламе! Перед вами — <strong>индивидуальная программа Шариатской Рукъи</strong>, составленная на основе Корана, достоверной Сунны и многолетнего опыта исцеления людей.
+    </p>
+    <p class="intro-text">
+      Программа включает 4 части: защиту от джинна-собаки и агрессии в доме, аннулирование сглаза и зависти, открытие путей и общее укрепление духовного щита.
+    </p>
+    <p class="intro-text" style="font-style: italic; color: rgba(245,239,224,0.7);">
+      «Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих» (сура Аль-Исра, 17:82).
+    </p>
+  </div>
+
+  <!-- PART 1 -->
+  <div class="part-header">
+    <div class="part-number">I</div>
+    <div class="part-title-wrap">
+      <h2>Защита от джинна-собаки и агрессии в доме</h2>
+      <p>Базовая защита и очищение жилища</p>
+    </div>
+  </div>
+
+  <!-- Dua 1.1 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">1.1</span>
+      <span class="dua-title">Базовая рукъя от всякого зла</span>
+    </div>
+    <div class="dua-desc">Читать утром и вечером. Читается на себя, дуть на ладони и обтирать лицо и тело.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">بِسْمِ اللَّهِ أَرْقِي مِنْ كُلِّ جِنٍّ وَعَيْنٍ وَحَسَدٍ وَسِحْرٍ فِي جَسَدِي وَنَفْسِي وَبَيْتِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Бисмилляхи, арки мин кулли джиннин ва 'айнин ва хасадин ва сихрин фи джасади ва нафси ва байти.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">С именем Аллаха, я делаю рукъю от всякого джинна, сглаза, зависти и колдовства в моём теле, душе и доме.</div>
+  </div>
+
+  <!-- Dua 1.2 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">1.2</span>
+      <span class="dua-title">Заклинание против джинна-собаки</span>
+    </div>
+    <div class="dua-desc">Читать перед сном и при агрессии. 7 раз на воду — опрыскивать дом и пить.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">بِسْمِ اللَّهِ أَرْقِي تَدْمِيرَ كُلِّ جِنٍّ كَلْبِيٍّ يُؤْذِينِي فِي بَيْتِي وَجَسَدِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Бисмилляхи, арки тадмира кулли джиннин кальбийин ю'зини фи байти ва джасади.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">С именем Аллаха, я заклинаю разрушение всякого джинна-собаки, который причиняет мне вред в моём доме и теле.</div>
+  </div>
+
+  <!-- Dua 1.3 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">1.3</span>
+      <span class="dua-title">Аннулирование агрессии и злобы в доме</span>
+    </div>
+    <div class="dua-desc">Читать при вспышках гнева. 3 раза на масло — мазать грудь и виски.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ أَبْطِلْ وَاقْطَعْ وَأَحْرِقْ كُلَّ غَضَبٍ وَعُدْوَانٍ وَشَرٍّ مِنْ جِنٍّ كَلْبِيٍّ فِي بَيْتِي وَقَلْبِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, абтиль вакта' ва ахрикь кулля гадабин ва 'удванин ва шаррин мин джиннин кальбийин фи байти ва кальби.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, аннулируй, отсеки и сожги всякий гнев, вражду и зло от джинна-собаки в моём доме и моём сердце.</div>
+  </div>
+
+  <!-- PART 2 -->
+  <div class="part-header">
+    <div class="part-number">II</div>
+    <div class="part-title-wrap">
+      <h2>Аннулирование сглаза, зависти и разделения</h2>
+      <p>Снятие сихра ат-тафрик и восстановление сердец</p>
+    </div>
+  </div>
+
+  <!-- Dua 2.1 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">2.1</span>
+      <span class="dua-title">Против сглаза и зависти</span>
+    </div>
+    <div class="dua-desc">Утро и вечер, 3 раза. Читать на воду, давать пить мужу и себе.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ اكْشِفْ كُلَّ عَيْنٍ حَاسِدَةٍ وَكُلَّ حَسَدٍ مِنْ حَاسِدٍ عَلَى زَوَاجِي وَمَحَبَّتِي وَزَوْجِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, икшиф кулля 'айнин хасидатин ва кулля хасадин мин хасидин 'аля заваджи ва махаббати ва завджи.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, сними всякий завистливый сглаз и всякую зависть от завистников с моего брака, моей любви и моего мужа.</div>
+  </div>
+
+  <!-- Dua 2.2 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">2.2</span>
+      <span class="dua-title">Развязывание узлов разделения и обиды</span>
+    </div>
+    <div class="dua-desc">После намаза, 7 раз. Читать на оливковое масло — мазать области сердца и спины.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ فُكَّ كُلَّ عُقْدَةٍ مِنْ سِحْرٍ وَعَيْنٍ وَحَسَدٍ بَيْنِي وَبَيْنَ زَوْجِي وَأَزِلْ كُلَّ ضَغِينَةٍ وَغِلٍّ مِنْ قَلْبِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, фукка кулля 'укдатин мин сихрин ва 'айнин ва хасадин байни ва байна завджи ва азиль кулля дагынатин ва гиллин мин кальби.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, развяжи всякий узел от колдовства, сглаза и зависти между мной и моим мужем, и устрани всякую обиду и злопамятство из моего сердца.</div>
+  </div>
+
+  <!-- Dua 2.3 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">2.3</span>
+      <span class="dua-title">Аннулирование порчи на разделение</span>
+    </div>
+    <div class="dua-desc">Пятница, после полудня, 3 раза. Читать над водой и окроплять углы дома.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ أَبْطِلْ وَاقْطَعْ وَأَحْرِقْ كُلَّ سِحْرِ تَفْرِيقٍ وَكُلَّ حَسَدٍ وَعَيْنٍ تُرِيدُ فِرَاقِي مِنْ زَوْجِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, абтиль вакта' ва ахрикь кулля сихри тафрикин ва кулля хасадин ва 'айнин туриду фираки мин завджи.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, аннулируй, отсеки и сожги всякое колдовство разделения и всякую зависть и сглаз, которые хотят моей разлуки с мужем.</div>
+  </div>
+
+  <!-- PART 3 -->
+  <div class="part-header">
+    <div class="part-number">III</div>
+    <div class="part-title-wrap">
+      <h2>Открытие путей (субуль) и восстановление отношений</h2>
+      <p>Духовное раскрытие закрытых дверей</p>
+    </div>
+  </div>
+
+  <!-- Dua 3.1 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">3.1</span>
+      <span class="dua-title">Открытие закрытых путей в браке и жизни</span>
+    </div>
+    <div class="dua-desc">Ежедневно утром, 3 раза. На стакан воды — выпивать и давать мужу.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ افْتَحْ لِي كُلَّ سُبُلِي الْمُغْلَقَةَ فِي زَوَاجِي وَحَيَاتِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, ифтах ли кулля субули-ль-мугляка фи заваджи ва хаяти.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, открой мне все мои закрытые пути в моём браке и моей жизни.</div>
+  </div>
+
+  <!-- Dua 3.2 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">3.2</span>
+      <span class="dua-title">Развязывание завязанных путей к мужу</span>
+    </div>
+    <div class="dua-desc">Ежедневно утром, 3 раза. На стакан воды — выпивать и давать мужу.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ فُكَّ كُلَّ سُبُلِي الْمَعْقُودَةَ بَيْنِي وَبَيْنَ زَوْجِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, фукка кулля субули-ль-ма'куда байни ва байна завджи.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, развяжи все мои завязанные пути между мной и моим мужем.</div>
+  </div>
+
+  <!-- Dua 3.3 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">3.3</span>
+      <span class="dua-title">Устранение колдовства на всех путях</span>
+    </div>
+    <div class="dua-desc">Ежедневно утром, 3 раза. На стакан воды — выпивать и давать мужу.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ فِي كُلِّ سَبِيلٍ مِنْ سُبُلِي، وَخُصُوصًا فِي سَبِيلِ الْمَوَدَّةِ وَالرَّحْمَةِ مَعَ زَوْجِي</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, абтиль кулля сихрин фи кулли сабилин мин субули, ва хусусан фи сабили-ль-маваддати ва-р-рахмати ма'а завджи.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, аннулируй всякое колдовство на каждом из моих путей, и особенно на пути любви и милости с моим мужем.</div>
+  </div>
+
+  <!-- PART 4 -->
+  <div class="part-header">
+    <div class="part-number">IV</div>
+    <div class="part-title-wrap">
+      <h2>Общее укрепление и защита</h2>
+      <p>Укрепление хисна и исцеление сердца</p>
+    </div>
+  </div>
+
+  <!-- Dua 4.1 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">4.1</span>
+      <span class="dua-title">Защита дома и семьи</span>
+    </div>
+    <div class="dua-desc">При входе и выходе из дома. 1 раз + Аят аль-Курси.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ احْفَظْ بَيْتِي وَأَهْلِي مِنْ كُلِّ شَرٍّ وَعَيْنٍ وَحَسَدٍ وَجِنٍّ</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, ихфаз байти ва ахли мин кулли шаррин ва 'айнин ва хасадин ва джиннин.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, защити мой дом и мою семью от всякого зла, сглаза, зависти и джиннов.</div>
+  </div>
+
+  <!-- Dua 4.2 -->
+  <div class="dua-card">
+    <div class="dua-header">
+      <span class="dua-num">4.2</span>
+      <span class="dua-title">Исцеление от обиды и гнева</span>
+    </div>
+    <div class="dua-desc">Перед сном, 7 раз. Читать на грудь, представляя свет.</div>
+    
+    <div class="label">Арабский</div>
+    <div class="arabic-text">اللَّهُمَّ اشْفِ قَلْبِي مِنَ الغِلِّ وَالضَّغِينَةِ عَلَى زَوْجِي، وَارْزُقْنِي الْحِلْمَ وَالْمَحَبَّةَ</div>
+    
+    <div class="label">Транскрипция</div>
+    <div class="translit">Аллахумма, ишфи кальби мина-ль-гилли ва-д-дагынати 'аля завджи, варзукни-ль-хильма ва-ль-махаббата.</div>
+    
+    <div class="label">Перевод</div>
+    <div class="translation">О Аллах, исцели моё сердце от злопамятства и обиды на мужа, и даруй мне терпение и любовь.</div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">📋</span>
+      <span>Рекомендации по применению</span>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">1.1 Базовая рукъя</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">Утро и вечер</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">3 раза</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Читать на себя, дуть на ладони, обтирать лицо и тело</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">1.2 От джинна-собаки</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">Перед сном и при агрессии</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">7 раз</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Читать на воду, опрыскивать дом, пить</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">1.3 Аннулирование агрессии</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">При вспышках гнева</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">3 раза</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Читать на масло, мазать грудь и виски</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">2.1 Снятие сглаза</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">Утро и вечер</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">3 раза</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Читать на воду, давать пить мужу и себе</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">2.2 Развязывание узлов</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">После намаза</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">7 раз</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">На оливковое масло, мазать сердце и спину</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">2.3 Уничтожение разделения</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">Пятница, после полудня</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">3 раза</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Над водой и окроплять углы дома</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">3.1–3.3 Открытие путей</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">Ежедневно утром</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">3 раза каждое</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">На стакан воды, выпивать и давать мужу</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">4.1 Защита дома</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">При входе и выходе</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">1 раз + Аят аль-Курси</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Читать в дверях дома</div></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header">
+        <div class="schedule-dot"></div>
+        <div class="schedule-title">4.2 Исцеление сердца</div>
+      </div>
+      <div class="schedule-row"><div class="schedule-label">Когда:</div><div class="schedule-value">Перед сном</div></div>
+      <div class="schedule-row"><div class="schedule-label">Сколько:</div><div class="schedule-value">7 раз</div></div>
+      <div class="schedule-row"><div class="schedule-label">Как:</div><div class="schedule-value">Читать на грудь, представляя свет</div></div>
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">💡</span>
+      <span>Дополнительные наставления</span>
+    </div>
+
+    <div class="tip">
+      <strong>🤲 НАМЕРЕНИЕ (НИЯТ)</strong>
+      Перед чтением любой формулы произнесите в сердце:
+      <div class="tip-quote">«Ради Аллаха, чтобы Аллах исцелил меня, мой дом, моего мужа и наши отношения от всякого зла, сглаза, зависти, колдовства и джиннов, и открыл мне пути любви и согласия» — ×40 раз мысленно</div>
+    </div>
+
+    <div class="tip">
+      <strong>📖 АЯТ АЛЬ-КУРСИ (2:255)</strong>
+      Читайте <strong>3 раза утром и вечером</strong> — это сильнейшая защита от любого зла. Посланник Аллаха ﷺ сказал, что читающий его не будет подпущен шайтаном до утра.
+    </div>
+
+    <div class="tip">
+      <strong>🛡 СУРЫ АЛЬ-ФАЛЯК И АН-НАС</strong>
+      Читайте <strong>3 раза после каждого дуа</strong> — они сжигают сглаз и зависть, разрушают колдовство и очищают духовное пространство вокруг вас.
+    </div>
+
+    <div class="tip">
+      <strong>⏳ ПРОДОЛЖИТЕЛЬНОСТЬ КУРСА</strong>
+      Читайте ежедневно в течение <strong>40 дней</strong> (по примеру пророков), затем, при улучшении, сократите до 1 раза в день для поддержания защиты.
+    </div>
+
+    <div class="tip">
+      <strong>🏠 ПОВЕДЕНИЕ В ДОМЕ</strong>
+      Избегайте конфликтов, увеличьте количество зикра (поминания Аллаха), читайте дуа вместе с мужем — это укрепляет защиту и взаимопонимание. Включайте в доме суру Аль-Бакара — шайтан бежит из дома, где она читается.
+    </div>
+  </div>
+
+  <div class="divider">۞</div>
+
+  <!-- PRICES -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">💎</span>
+      <span>Лечение под руководством Лекаря</span>
+    </div>
+    
+    <p class="intro-text" style="margin-bottom: 18px;">
+      Самостоятельное применение программы возможно, но при вашем диагнозе <strong>рекомендуется сопровождение лекаря</strong> — для точной диагностики, коррекции и полного снятия поражений. Выберите подходящий формат:
+    </p>
+  </div>
+
+  <!-- PRICE 1 -->
+  <div class="price-card">
+    <div class="price-label">БАЗОВЫЙ</div>
+    <div class="price-title">Одноразовое лечение</div>
+    <div class="price-amount">3 000 <span>₽</span></div>
+    <div class="price-desc">Разовый сеанс Шариатской Рукъи с диагностикой и базовыми рекомендациями</div>
+    <ul class="price-features">
+      <li>Диагностика состояния</li>
+      <li>Один сеанс Рукъи</li>
+      <li>Базовые рекомендации</li>
+      <li>Дуа за пациента</li>
+    </ul>
+    <a href="https://t.me/Ruqoq" class="btn btn-secondary">
+      <span class="btn-icon">✉</span>Связаться с лекарем
+    </a>
+  </div>
+
+  <!-- PRICE 2 -->
+  <div class="price-card featured">
+    <div class="price-label">ПОЛНЫЙ КУРС</div>
+    <div class="price-title">Полное лечение</div>
+    <div class="price-amount">15 000 <span>₽</span></div>
+    <div class="price-desc">Комплексный курс Рукъи со снятием порчи, сглаза, изгнанием джинна и сопровождением до полного исцеления</div>
+    <ul class="price-features">
+      <li>Полная духовная диагностика</li>
+      <li>Многоэтапное снятие сихра</li>
+      <li>Изгнание джинна в образе собаки</li>
+      <li>Очищение дома и семьи</li>
+      <li>Восстановление отношений супругов</li>
+      <li>Индивидуальная программа аятов</li>
+      <li>Постоянное сопровождение</li>
+      <li>Коррекция до полного исцеления</li>
+      <li>Рекомендации Пророческой медицины</li>
+    </ul>
+    <a href="https://t.me/Ruqoq" class="btn">
+      <span class="btn-icon">✉</span>Связаться с лекарем
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="arabic-footer">اللهم اشفِ و أنت الشافي</span>
+    «О Аллах, исцели, ведь лишь Ты — Исцеляющий»
+    <br><br>
+    Да дарует Аллах полное исцеление, гармонию в семье, баракат в доме и защиту от всякого зла.
+    <br><br>
+    <strong style="color: var(--gold-light);">Лекарь Абу Мухаммад</strong>
+    <br>
+    <span style="font-size: 12px;">Шариатская Рукъя · Таухид · Сунна</span>
+  </div>
+
+</div>
+</body>
+</html>
