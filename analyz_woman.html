@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анализ состояния · Лекарь Абу Мухаммад</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  
+  :root {
+    --primary: #0d4f3c;
+    --primary-light: #1a7a5c;
+    --gold: #c9a961;
+    --gold-light: #e6c887;
+    --dark: #0a1f1a;
+    --cream: #f5efe0;
+    --red: #b94a4a;
+    --warning: #d4942a;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #0a1f1a 0%, #143028 50%, #0a1f1a 100%);
+    color: var(--cream);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+
+  .bg-pattern {
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(26, 122, 92, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px 16px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 30px 16px;
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.6), rgba(26, 122, 92, 0.4));
+    border-radius: 24px;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    backdrop-filter: blur(10px);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '﷽';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    margin: 18px 0 10px;
+    letter-spacing: 8px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .header .subtitle {
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.75);
+    font-weight: 300;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: rgba(201, 169, 97, 0.15);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+  }
+
+  /* Section */
+  .section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 20px;
+    padding: 22px 18px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+  }
+
+  .section-title .icon {
+    font-size: 22px;
+  }
+
+  .greeting {
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .arabic {
+    font-size: 20px;
+    color: var(--gold);
+    text-align: center;
+    margin: 14px 0;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    letter-spacing: 1px;
+  }
+
+  /* Symptom cards */
+  .symptom {
+    background: rgba(10, 31, 26, 0.5);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .symptom:last-child { margin-bottom: 0; }
+
+  .symptom-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .symptom-num {
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .symptom-title {
+    font-weight: 600;
+    color: var(--gold-light);
+    font-size: 15px;
+  }
+
+  .symptom-body {
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.88);
+    line-height: 1.7;
+    padding-left: 38px;
+  }
+
+  .symptom-body strong {
+    color: var(--gold-light);
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 10px;
+    background: rgba(185, 74, 74, 0.2);
+    border: 1px solid rgba(185, 74, 74, 0.4);
+    color: #e88a8a;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .tag.warn {
+    background: rgba(212, 148, 42, 0.2);
+    border-color: rgba(212, 148, 42, 0.4);
+    color: #e6b56a;
+  }
+
+  .tag.danger {
+    background: rgba(185, 74, 74, 0.25);
+    border-color: rgba(185, 74, 74, 0.5);
+    color: #f09898;
+  }
+
+  /* Diagnosis */
+  .diagnosis {
+    background: linear-gradient(135deg, rgba(185, 74, 74, 0.12), rgba(13, 79, 60, 0.15));
+    border: 1px solid rgba(185, 74, 74, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 8px;
+  }
+
+  .diagnosis h3 {
+    color: #e88a8a;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .diagnosis p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245, 239, 224, 0.9);
+  }
+
+  /* Offer */
+  .offer-intro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+
+  .offer-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .offer-list li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.9);
+    border-bottom: 1px dashed rgba(201, 169, 97, 0.15);
+  }
+
+  .offer-list li:last-child { border-bottom: none; }
+
+  .offer-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 16px;
+  }
+
+  /* Price blocks */
+  .price-card {
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.8), rgba(10, 31, 26, 0.9));
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 24px;
+    padding: 24px 20px;
+    margin-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-card.featured {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(13, 79, 60, 0.6));
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 10px 40px rgba(201, 169, 97, 0.15);
+  }
+
+  .price-card.featured::before {
+    content: 'РЕКОМЕНДУЕТСЯ';
+    position: absolute;
+    top: 14px;
+    right: -30px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 4px 40px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: rotate(45deg);
+  }
+
+  .price-label {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .price-title {
+    font-size: 20px;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .price-amount span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  .price-desc {
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.7);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .price-features li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    font-size: 13.5px;
+    color: rgba(245, 239, 224, 0.88);
+  }
+
+  .price-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+  }
+
+  .btn:hover, .btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.45);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold-light);
+    border: 1.5px solid var(--gold);
+    box-shadow: none;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(201, 169, 97, 0.1);
+  }
+
+  .btn-icon {
+    margin-right: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 16px 10px;
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.6);
+    line-height: 1.8;
+  }
+
+  .footer .arabic-small {
+    color: var(--gold);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 18px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section { animation: fadeIn 0.6s ease-out; }
+</style>
+</head>
+<body>
+<div class="bg-pattern"></div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-ornament">۞ ❋ ۞</div>
+    <h1>Лекарь Абу Мухаммад</h1>
+    <div class="subtitle">Шариатская Рукъя · Духовное исцеление</div>
+    <div class="badge">ЛИЧНЫЙ АНАЛИЗ СОСТОЯНИЯ</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="section">
+    <div class="arabic">السلام عليكم ورحمة الله وبركاته</div>
+    <p class="greeting">
+      Я, <strong>Абу Мухаммад</strong>, практикующий лекарь Шариатской Рукъи, внимательно изучил ваше обращение. Вы доверили мне свою тяжёлую ситуацию, и я хочу вас заверить — с дозволения Всевышнего Аллаха, <strong>из этой тьмы есть выход</strong>. Вы не одиноки в своей беде, и то, что вы обратились за помощью — это уже первый шаг к исцелению.
+    </p>
+    <p class="greeting" style="font-style: italic; color: rgba(245,239,224,0.7);">
+      Аллах Всевышний говорит: «Воистину, за трудностью наступает облегчение» (сура «Аш-Шарх», 94:6).
+    </p>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">🔍</span>
+      <span>Глубокий анализ вашего состояния</span>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">1</div>
+        <div class="symptom-title">Конфликты с мужем и угрозы развода</div>
+      </div>
+      <div class="symptom-body">
+        Частые вспышки гнева вашего супруга, его злость и слова о разводе — это <strong>один из самых тревожных признаков духовного поражения семьи</strong>. Пророк Мухаммад ﷺ предупреждал, что шайтан ставит свой трон на воде и посылает свои войска, и <em>«самый приближенный к нему тот, кто сеет наибольшую рознь между людьми, особенно между супругами»</em> (Муслим). Когда мужчина без видимой причины вспыхивает и произносит слова о разводе — это говорит о том, что между вами и вашим мужем <strong>действует сила, направленная на разрушение семьи</strong>.
+        <br><span class="tag danger">Признак духовного разлучения</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">2</div>
+        <div class="symptom-title">Потеря доверия между супругами</div>
+      </div>
+      <div class="symptom-body">
+        Вы пишете, что между вами практически не осталось доверия. Это <strong>разрушение основы брака — рахма (милости) и мавадда (любви)</strong>, о которых говорит Аллах в Коране (сура «Ар-Рум», 30:21). Когда доверие исчезает без явных причин — это признак того, что <strong>в дом проникло духовное зло</strong>, которое отравляет сердца супругов подозрениями, обидами и холодностью.
+        <br><span class="tag warn">Разрушение семейной гармонии</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">3</div>
+        <div class="symptom-title">Финансовые трудности и остановка дел</div>
+      </div>
+      <div class="symptom-body">
+        Вы описываете, что дела будто полностью остановились, постоянно возникают препятствия. Это <strong>классический признак блокады бараката (благословения) в риске</strong>. Всевышний Аллах дарует пропитание верующим, но когда на человека или семью воздействуют через сглаз, зависть или порчу — <strong>баракат уходит, деньги утекают сквозь пальцы, сделки срываются, возможности закрываются</strong>. Это не случайность, а результат духовного поражения.
+        <br><span class="tag danger">Блокада бараката</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">4</div>
+        <div class="symptom-title">Зависть со стороны родственников и коллег</div>
+      </div>
+      <div class="symptom-body">
+        Вы чувствуете много негатива и зависти от родственников мужа, друзей и людей, с которыми работаете. Посланник Аллаха ﷺ сказал: <em>«Сглаз — это истина»</em> (Бухари, Муслим). Зависть (хасад) — это духовный яд, который проникает в жизнь человека через глаза и мысли завистников. Когда множество людей завидуют одновременно — <strong>образуется тяжёлое духовное облако</strong>, которое давит на семью, разрушает здоровье, отношения и достаток.
+        <br><span class="tag warn">Множественная зависть и сглаз</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">5</div>
+        <div class="symptom-title">Моральное и физическое истощение</div>
+      </div>
+      <div class="symptom-body">
+        Вы описываете сильное истощение, отсутствие сил и желания что-либо делать, постоянный плач и чувство беспомощности. Это <strong>признаки того, что ваше духовное состояние серьёзно пострадало</strong>. Когда человек подвергается длительному воздействию сглаза или порчи, его жизненная энергия истощается, воля ослабевает, появляется апатия и отчаяние. Шайтан стремится довести верующего до такого состояния, чтобы он потерял надежду на Аллаха.
+        <br><span class="tag danger">Духовное истощение</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">6</div>
+        <div class="symptom-title">Невозможность решать вопросы детей</div>
+      </div>
+      <div class="symptom-body">
+        Трое детей — двойняшки 15 лет и младший 13 лет — нуждаются в вашем внимании, но вы не можете решать их школьные и другие вопросы. Это <strong>признак того, что духовное поражение затрагивает всю семью</strong>, включая детей. Когда мать находится в таком состоянии, дети тоже страдают — их успехи в учёбе снижаются, могут появиться проблемы со здоровьем или поведением. <strong>Дети часто становятся невинными жертвами духовных атак на семью</strong>.
+        <br><span class="tag warn">Воздействие на всю семью</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">7</div>
+        <div class="symptom-title">Тяжёлая жизненная ситуация в чужой стране</div>
+      </div>
+      <div class="symptom-body">
+        Вы живёте в Стамбуле, ваш супруг — турок. Жизнь в чужой стране, вдали от родных, <strong>сама по себе является испытанием</strong>, которое усиливает любое духовное поражение. Когда человек изолирован, лишён поддержки семьи и друзей, <strong>духовные атаки становятся особенно болезненными</strong>. Но помните — Аллах не оставляет Своих рабов, и помощь может прийти откуда вы даже не ожидаете.
+        <br><span class="tag warn">Усиление испытания</span>
+      </div>
+    </div>
+
+    <!-- DIAGNOSIS -->
+    <div class="diagnosis">
+      <h3>⚠ Общий вывод</h3>
+      <p>
+        Уважаемая сестра, на основании вашего обращения я вижу <strong>комплексное духовное поражение вашей семьи</strong>, которое включает:
+        <br>• <strong>Духовное воздействие на брак</strong> — направленное на разлучение вас с мужем;
+        <br>• <strong>Блокаду бараката в риске</strong> — финансовая остановка дел;
+        <br>• <strong>Множественный сглаз и зависть</strong> — от родственников, друзей, коллег;
+        <br>• <strong>Духовное истощение</strong> — потеря сил, воли, надежды;
+        <br>• <strong>Воздействие на всю семью</strong> — включая детей.
+        <br><br>
+        Если не принять меры сейчас, ситуация будет усугубляться: возможен развод, дальнейшее ухудшение здоровья, проблемы с детьми, полная финансовая разруха. <strong>Но с соизволения Аллаха, всё это излечимо</strong> — через правильную, чистую Шариатскую Рукъя, строго по Корану и Сунне.
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFER -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">💎</span>
+      <span>Предложение лечения</span>
+    </div>
+
+    <p class="offer-intro">
+      Уважаемая сестра! Я готов взять вас и вашу семью на <strong>сопровождение и провести полный курс Шариатской Рукъи</strong> — строго по Корану и достоверной Сунне, без каких-либо запретных методов, талисманов или обращений к колдунам.
+    </p>
+
+    <p class="offer-intro"><strong>Что входит в моё лечение:</strong></p>
+
+    <ul class="offer-list">
+      <li>Точная диагностика типа духовного поражения вашей семьи</li>
+      <li>Индивидуальная программа чтения аятов Корана и достоверных дуа</li>
+      <li>Снятие воздействия на брак и восстановление отношений с мужем</li>
+      <li>Разблокировка бараката в риске и открытие путей</li>
+      <li>Защита от сглаза и зависти родственников, друзей, коллег</li>
+      <li>Восстановление ваших сил и духовного состояния</li>
+      <li>Защита ваших детей от духовного воздействия</li>
+      <li>Очищение вашего дома в Стамбуле</li>
+      <li>Сопровождение и коррекция программы до полного исцеления</li>
+      <li>Рекомендации по Пророческой медицине (Тибб ан-Набави)</li>
+      <li>Искреннее дуа за вас и вашу семью</li>
+    </ul>
+  </div>
+
+  <div class="divider">۞</div>
+
+  <!-- PRICE 1 -->
+  <div class="price-card">
+    <div class="price-label">БАЗОВЫЙ</div>
+    <div class="price-title">Одноразовое лечение</div>
+    <div class="price-amount">3 000 <span>₽</span></div>
+    <div class="price-desc">Разовый сеанс Шариатской Рукъи с диагностикой и базовыми рекомендациями</div>
+    <ul class="price-features">
+      <li>Диагностика состояния</li>
+      <li>Один сеанс Рукъи</li>
+      <li>Базовые рекомендации</li>
+      <li>Дуа за вас и вашу семью</li>
+    </ul>
+    <a href="https://t.me/Ruqoq" class="btn btn-secondary">
+      <span class="btn-icon">✉</span>Связаться с лекарем
+    </a>
+  </div>
+
+  <!-- PRICE 2 -->
+  <div class="price-card featured">
+    <div class="price-label">ПОЛНЫЙ КУРС</div>
+    <div class="price-title">Полное лечение</div>
+    <div class="price-amount">20 000 <span>₽</span></div>
+    <div class="price-desc">Комплексный курс Рукъи с полным сопровождением до исцеления всей семьи</div>
+    <ul class="price-features">
+      <li>Полная духовная диагностика</li>
+      <li>Снятие воздействия на брак</li>
+      <li>Разблокировка бараката в риске</li>
+      <li>Защита от сглаза и зависти</li>
+      <li>Восстановление вашего состояния</li>
+      <li>Защита ваших детей</li>
+      <li>Очищение дома в Стамбуле</li>
+      <li>Постоянное сопровождение</li>
+      <li>Коррекция до полного исцеления</li>
+      <li>Рекомендации Пророческой медицины</li>
+    </ul>
+    <a href="https://t.me/Ruqoq" class="btn">
+      <span class="btn-icon">✉</span>Связаться с лекарем
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="arabic-small">اللهم اشفِ و أنت الشافي</span>
+    «О Аллах, исцели, ведь лишь Ты — Исцеляющий»
+    <br><br>
+    Да дарует вам Аллах полное исцеление, восстановит вашу семью, откроет пути к достатку и вернёт вам силы, радость и надежду. Вы не одна — Аллах с вами, и помощь готова помочь.
+    <br><br>
+    <strong style="color: var(--gold-light);">Лекарь Абу Мухаммад</strong>
+    <br>
+    <span style="font-size: 12px;">Шариатская Рукъя · Таухид · Сунна</span>
+  </div>
+
+</div>
+</body>
+</html>
