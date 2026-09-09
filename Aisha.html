@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анализ состояния сестры Амины · Лекарь Абу Мухаммад</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  
+  :root {
+    --primary: #0d4f3c;
+    --primary-light: #1a7a5c;
+    --gold: #c9a961;
+    --gold-light: #e6c887;
+    --dark: #0a1f1a;
+    --cream: #f5efe0;
+    --red: #b94a4a;
+    --warning: #d4942a;
+    --blue: #4a7ab9;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #0a1f1a 0%, #143028 50%, #0a1f1a 100%);
+    color: var(--cream);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+
+  .bg-pattern {
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(26, 122, 92, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px 16px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 30px 16px;
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.6), rgba(26, 122, 92, 0.4));
+    border-radius: 24px;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    backdrop-filter: blur(10px);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '﷽';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    margin: 18px 0 10px;
+    letter-spacing: 8px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .header .subtitle {
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.75);
+    font-weight: 300;
+  }
+
+  .patient-badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: rgba(201, 169, 97, 0.15);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+  }
+
+  /* Section */
+  .section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 20px;
+    padding: 22px 18px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+  }
+
+  .section-title .icon {
+    font-size: 22px;
+  }
+
+  .greeting {
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .arabic {
+    font-size: 20px;
+    color: var(--gold);
+    text-align: center;
+    margin: 14px 0;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    letter-spacing: 1px;
+  }
+
+  /* Patient info */
+  .patient-info {
+    background: rgba(74, 122, 185, 0.1);
+    border: 1px solid rgba(74, 122, 185, 0.3);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+
+  .patient-info h4 {
+    color: #8ab8e8;
+    font-size: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .patient-info ul {
+    list-style: none;
+  }
+
+  .patient-info li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.88);
+    display: flex;
+    gap: 8px;
+  }
+
+  .patient-info li::before {
+    content: '•';
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* Symptom cards */
+  .symptom {
+    background: rgba(10, 31, 26, 0.5);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .symptom:last-child { margin-bottom: 0; }
+
+  .symptom-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .symptom-num {
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .symptom-title {
+    font-weight: 600;
+    color: var(--gold-light);
+    font-size: 15px;
+  }
+
+  .symptom-body {
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.88);
+    line-height: 1.7;
+    padding-left: 38px;
+  }
+
+  .symptom-body strong {
+    color: var(--gold-light);
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 10px;
+    background: rgba(185, 74, 74, 0.2);
+    border: 1px solid rgba(185, 74, 74, 0.4);
+    color: #e88a8a;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .tag.warn {
+    background: rgba(212, 148, 42, 0.2);
+    border-color: rgba(212, 148, 42, 0.4);
+    color: #e6b56a;
+  }
+
+  .tag.danger {
+    background: rgba(185, 74, 74, 0.25);
+    border-color: rgba(185, 74, 74, 0.5);
+    color: #f09898;
+  }
+
+  .tag.info {
+    background: rgba(74, 122, 185, 0.2);
+    border-color: rgba(74, 122, 185, 0.4);
+    color: #8ab8e8;
+  }
+
+  /* Diagnosis */
+  .diagnosis {
+    background: linear-gradient(135deg, rgba(185, 74, 74, 0.12), rgba(13, 79, 60, 0.15));
+    border: 1px solid rgba(185, 74, 74, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 8px;
+  }
+
+  .diagnosis h3 {
+    color: #e88a8a;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .diagnosis p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245, 239, 224, 0.9);
+  }
+
+  /* Recommendation */
+  .recommendation {
+    background: linear-gradient(135deg, rgba(74, 122, 185, 0.12), rgba(13, 79, 60, 0.15));
+    border: 1px solid rgba(74, 122, 185, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 16px;
+  }
+
+  .recommendation h3 {
+    color: #8ab8e8;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .recommendation p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245, 239, 224, 0.9);
+  }
+
+  .recommendation strong {
+    color: var(--gold-light);
+  }
+
+  /* Offer */
+  .offer-intro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+
+  .offer-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .offer-list li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.9);
+    border-bottom: 1px dashed rgba(201, 169, 97, 0.15);
+  }
+
+  .offer-list li:last-child { border-bottom: none; }
+
+  .offer-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 16px;
+  }
+
+  /* Price blocks */
+  .price-card {
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.8), rgba(10, 31, 26, 0.9));
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 24px;
+    padding: 24px 20px;
+    margin-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-card.featured {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(13, 79, 60, 0.6));
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 10px 40px rgba(201, 169, 97, 0.15);
+  }
+
+  .price-card.featured::before {
+    content: 'РЕКОМЕНДУЕТСЯ';
+    position: absolute;
+    top: 14px;
+    right: -30px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 4px 40px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: rotate(45deg);
+  }
+
+  .price-label {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .price-title {
+    font-size: 20px;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .price-amount span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  .price-desc {
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.7);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .price-features li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    font-size: 13.5px;
+    color: rgba(245, 239, 224, 0.88);
+  }
+
+  .price-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+  }
+
+  .btn:hover, .btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.45);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold-light);
+    border: 1.5px solid var(--gold);
+    box-shadow: none;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(201, 169, 97, 0.1);
+  }
+
+  .btn-icon {
+    margin-right: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 16px 10px;
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.6);
+    line-height: 1.8;
+  }
+
+  .footer .arabic-small {
+    color: var(--gold);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 18px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section { animation: fadeIn 0.6s ease-out; }
+</style>
+</head>
+<body>
+<div class="bg-pattern"></div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-ornament">۞ ❋ ۞</div>
+    <h1>Лекарь Абу Мухаммад</h1>
+    <div class="subtitle">Шариатская Рукъя · Духовное исцеление</div>
+    <div class="patient-badge">АНАЛИЗ СОСТОЯНИЯ СЕСТРЫ АМИНЫ</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="section">
+    <div class="arabic">السلام عليكم ورحمة الله وبركاته</div>
+    <p class="greeting">
+      Мир тебе, милость Аллаха и Его благословение, уважаемая сестра <strong>Амина</strong>! Я, <strong>Абу Мухаммад</strong>, практикующий лекарь Шариатской Рукъи, внимательно изучил твои жалобы. С дозволения Всевышнего Аллаха, я провёл глубокий разбор твоего состояния, опираясь на признаки, указанные в Коране и Сунне, а также на опыт работы с людьми, страдающими от духовных недугов.
+    </p>
+    <p class="greeting" style="font-style: italic; color: rgba(245,239,224,0.7);">
+      Помни: «Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих» (сура «Аль-Исра», 17:82).
+    </p>
+  </div>
+
+  <!-- PATIENT INFO -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">👤</span>
+      <span>Информация о пациентке</span>
+    </div>
+    
+    <div class="patient-info">
+      <h4>Основные данные:</h4>
+      <ul>
+        <li>Возраст: 17 лет</li>
+        <li>Место: Татарстан</li>
+        <li>В Исламе: 2,5 года (альхамдулиллях)</li>
+        <li>Статус: Практикующая мусульманка</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">🔍</span>
+      <span>Глубокий анализ состояния</span>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">1</div>
+        <div class="symptom-title">Панические атаки и страх</div>
+      </div>
+      <div class="symptom-body">
+        Сильнейшие панические атаки, страх смерти, невозможность выходить из дома, заходить в ванную — это <strong>классические признаки духовного поражения</strong>, которое проявляется через психосоматику. Шайтан вселяет в сердце верующего <em>«хауф»</em> (иррациональный страх), чтобы ослабить его веру и отдалить от поклонения. Страх открытых пространств (агорафобия) часто связан с <strong>присутствием джинна</strong>, который вызывает чувство незащищённости вне дома.
+        <br><span class="tag danger">Признак присутствия джинна</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">2</div>
+        <div class="symptom-title">Тахикардия и тремор в намазе</div>
+      </div>
+      <div class="symptom-body">
+        Когда ты стоишь в намазе, начинается тахикардия и трясутся руки — это <strong>прямое указание на то, что джинн препятствует твоему поклонению</strong>. Шайтан ненавидит намаз больше всего, ибо это связь раба с Господом. Он вызывает физические реакции, чтобы ты боялась молиться или теряла концентрацию (хушу). Это серьёзный духовный симптом.
+        <br><span class="tag danger">Препятствие поклонению</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">3</div>
+        <div class="symptom-title">Кошмары со шайтанами</div>
+      </div>
+      <div class="symptom-body">
+        Сны, в которых ты видишь шайтанов в разных обликах — это <strong>«хульм мин аш-шайтан»</strong> (сны от шайтана). Посланник Аллаха ﷺ сказал: <em>«Хороший сон — от Аллаха, а плохой — от шайтана»</em> (Бухари). Множественные кошмары с шайтанами указывают на <strong>активное духовное нападение</strong>, особенно во время сна, когда душа частично покидает тело.
+        <br><span class="tag warn">Духовные атаки во сне</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">4</div>
+        <div class="symptom-title">Невозможность читать Коран во сне</div>
+      </div>
+      <div class="symptom-body">
+        Когда ты пытаешься читать Коран во сне, но не можешь говорить — это <strong>один из самых явных признаков того, что джинн блокирует твою связь с Кораном</strong>. Во сне душа более уязвима, и шайтаны пытаются «заткнуть» тебя, чтобы ты не могла призывать защиту Аллаха. Это очень серьёзный симптом, требующий духовного лечения.
+        <br><span class="tag danger">Блокировка Корана</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">5</div>
+        <div class="symptom-title">Тревога, бессонница, тоска, апатия</div>
+      </div>
+      <div class="symptom-body">
+        Постоянная тревога, проблемы со сном, тоска и апатия — это <strong>следствие духовного истощения</strong>. Когда джинн присутствует в теле или рядом с человеком, он питается эмоциональной энергией, вызывая депрессивные состояния. Отвращение к близким людям — это попытка шайтана <strong>изолировать тебя от поддержки</strong>, чтобы ты осталась одна со своим страданием.
+        <br><span class="tag warn">Духовное истощение</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">6</div>
+        <div class="symptom-title">Видения чёрных животных и женщины</div>
+      </div>
+      <div class="symptom-body">
+        То, что ты несколько раз видела чёрных животных и женщину с чёрными волосами — <strong>это не галлюцинации, а реальные духовные видения</strong>. Чёрные животные (особенно собаки, кошки, змеи) — это частые облики джиннов. Женщина с чёрными волосами может быть <strong>джиннией</strong> или <strong>умм ас-сибъян</strong> (мать детей — злой дух, атакующий молодых). Эти видения — прямое доказательство присутствия джиннов рядом с тобой или в тебе.
+        <br><span class="tag danger">Видимые джинны</span>
+      </div>
+    </div>
+
+    <div class="symptom">
+      <div class="symptom-header">
+        <div class="symptom-num">7</div>
+        <div class="symptom-title">Реакция на Рукъю (сонливость)</div>
+      </div>
+      <div class="symptom-body">
+        Когда тебе читали аяты Рукъи, ты чувствовала сильную сонливость, но не было плохой реакции — это <strong>хороший знак</strong>, означающий, что: (1) Рукъя действует на духовное поражение; (2) джинн слабеет от Корана и «засыпает»; (3) у тебя нет тяжёлых форм сихра, требующих экстренного вмешательства. Сонливость — это <strong>реакция джинна на аяты Аллаха</strong>.
+        <br><span class="tag info">Положительная реакция на Рукъю</span>
+      </div>
+    </div>
+
+    <!-- DIAGNOSIS -->
+    <div class="diagnosis">
+      <h3>⚠ Духовный диагноз</h3>
+      <p>
+        Перед нами <strong>комплексное духовное поражение</strong>, сочетающее в себе:
+        <br>• <strong>Присутствие джинна</strong> (или нескольких джиннов) в теле или рядом с тобой;
+        <br>• <strong>Возможный сглаз (айн) или зависть (хасад)</strong> от людей;
+        <br>• <strong>Духовные атаки во сне</strong> со стороны шайтанов;
+        <br>• <strong>Психосоматические проявления</strong> (панические атаки, тревожность, агорафобия).
+        <br><br>
+        Симптомы указывают на то, что джинн(ы) пытаются <strong>помешать твоему поклонению</strong>, ослабить веру и изолировать от семьи. Однако <strong>реакция на Рукъю положительная</strong>, что говорит о том, что поражение поддаётся лечению.
+      </p>
+    </div>
+
+    <!-- RECOMMENDATION -->
+    <div class="recommendation">
+      <h3>💡 Моя рекомендация</h3>
+      <p>
+        Уважаемая сестра Амина! Ты задала очень важный вопрос: <strong>«Нужно ли идти к врачам или достаточно Шариатского лечения?»</strong>
+        <br><br>
+        Мой ответ как лекаря, практикующего Рукъю:
+        <br><br>
+        <strong>1. Начни с Шариатского лечения (Рукъя)</strong> — твои симптомы имеют явную духовную природу (видения джиннов, кошмары со шайтанами, блокировка Корана во сне, реакция на Рукъю). Это лечится Кораном и Сунной.
+        <br><br>
+        <strong>2. Если после полного курса Рукъи</strong> панические атаки и тревожность останутся — тогда <strong>обратись к психотерапевту</strong> (желательно мусульманскому), чтобы проработать психологические последствия. Духовное и психологическое лечение <strong>не противоречат друг другу</strong>.
+        <br><br>
+        <strong>3. Не откладывай лечение</strong> — чем дольше джинн находится рядом или в теле, тем сильнее он укореняется. Но не бойся — <strong>с дозволения Аллаха, ты исцелишься</strong>, ибо Коран сильнее любого шайтана.
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFER -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">💎</span>
+      <span>Предложение лечения</span>
+    </div>
+
+    <p class="offer-intro">
+      Уважаемая сестра Амина! После глубокого анализа твоего состояния, я готов взять тебя на <strong>сопровождение и провести полный курс Шариатской Рукъи</strong> — строго по Корану и достоверной Сунне, без каких-либо запретных методов, талисманов, обращений к колдунам или шарлатанам.
+    </p>
+
+    <p class="offer-intro"><strong>Что входит в моё лечение:</strong></p>
+
+    <ul class="offer-list">
+      <li>Точная диагностика типа духовного поражения (джинн, сглаз, зависть)</li>
+      <li>Индивидуальная программа чтения аятов Корана и достоверных дуа</li>
+      <li>Работа с джиннами — изгнание по Шариату</li>
+      <li>Защита от духовных атак во сне</li>
+      <li>Снятие страха и тревожности через Рукъю</li>
+      <li>Очищение ауры и укрепление хисна (духовного щита)</li>
+      <li>Сопровождение и коррекция программы до полного исцеления</li>
+      <li>Рекомендации по Пророческой медицине (Тибб ан-Набави)</li>
+      <li>Дуа за тебя с искренним намерением</li>
+      <li>Поддержка в укреплении веры и практики Ислама</li>
+    </ul>
+  </div>
+
+  <div class="divider">۞</div>
+
+  <!-- PRICE 1 -->
+  <div class="price-card">
+    <div class="price-label">БАЗОВЫЙ</div>
+    <div class="price-title">Одноразовое лечение</div>
+    <div class="price-amount">3 000 <span>₽</span></div>
+    <div class="price-desc">Разовый сеанс Шариатской Рукъи с диагностикой и базовыми рекомендациями</div>
+    <ul class="price-features">
+      <li>Диагностика состояния</li>
+      <li>Один сеанс Рукъи</li>
+      <li>Базовые рекомендации</li>
+      <li>Дуа за пациентку</li>
+    </ul>
+    <a href="https://t.me/Ruqoq" class="btn btn-secondary">
+      <span class="btn-icon">✉</span>Связаться с лекарем
+    </a>
+  </div>
+
+  <!-- PRICE 2 -->
+  <div class="price-card featured">
+    <div class="price-label">ПОЛНЫЙ КУРС</div>
+    <div class="price-title">Полное лечение</div>
+    <div class="price-amount">15 000 <span>₽</span></div>
+    <div class="price-desc">Комплексный курс Рукъи с изгнанием джиннов, снятием сглаза, защитой от атак и сопровождением до полного исцеления</div>
+    <ul class="price-features">
+      <li>Полная духовная диагностика</li>
+      <li>Многоэтапное изгнание джиннов</li>
+      <li>Снятие сглаза и зависти</li>
+      <li>Защита от ночных атак</li>
+      <li>Снятие панических атак и страха</li>
+      <li>Индивидуальная программа аятов</li>
+      <li>Постоянное сопровождение</li>
+      <li>Коррекция до полного исцеления</li>
+      <li>Рекомендации Пророческой медицины</li>
+      <li>Поддержка в укреплении имана</li>
+    </ul>
+    <a href="https://t.me/Ruqoq" class="btn">
+      <span class="btn-icon">✉</span>Связаться с лекарем
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="arabic-small">اللهم اشفِ و أنت الشافي</span>
+    «О Аллах, исцели, ведь лишь Ты — Исцеляющий»
+    <br><br>
+    Да дарует тебе Аллах полное исцеление, спокойствие души, крепкий иман и защиту от всякого зла. Ты сильная сестра, и с помощью Аллаха ты справишься!
+    <br><br>
+    <strong style="color: var(--gold-light);">Лекарь Абу Мухаммад</strong>
+    <br>
+    <span style="font-size: 12px;">Шариатская Рукъя · Таухид · Сунна</span>
+  </div>
+
+</div>
+</body>
+</html>
