@@ -1,0 +1,881 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Прямой путь: Заклинание верой. Часть вторая: Пути влияния</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --paper-alt: #f5f7f5;
+  --ink: #1b221f;
+  --ink-soft: #4a5751;
+  --rule: #dce1dd;
+  --accent: #2f6b4f;
+  --accent-soft: #eaf2ed;
+  --gold: #9a7b32;
+  --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(20,30,25,.05);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: var(--base);
+  /* Плавная прокрутка только для якорей, без влияния на колесо мыши */
+  scroll-behavior: auto;
+  scroll-padding-top: 88px;
+}
+
+/* Отступ для якорей */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-break: normal;
+  /* Важно: не блокировать вертикальную прокрутку */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; width: 100%; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля ---- */
+.bismillah-slot { display: flex; width: 100%; direction: ltr; }
+.bismillah {
+  display: block; max-width: 100%;
+  font-family: var(--arabic); direction: rtl;
+  font-size: 1.75em; color: var(--gold);
+  line-height: 2.1; margin: 0;
+  letter-spacing: 0.02em; white-space: pre-wrap;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page { margin-bottom: 3rem; padding: 1.5rem 0; position: relative; }
+.bism-pos-center-page::after {
+  content: ""; display: block; width: 60px; height: 1px;
+  background: var(--gold); margin: .8rem auto 0; opacity: .45;
+}
+.title-page-bism-center { padding-top: 3rem; }
+.title-page-bism-center .bismillah-slot { margin-top: 1.5rem; margin-bottom: 3.5rem; }
+.title-page-bism-center .title-page-body { text-align: center; }
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+.bismillah:not([dir="rtl"]) { font-family: var(--serif); font-style: italic; direction: ltr; letter-spacing: .04em; }
+
+.institution {
+  font-family: var(--sans); font-size: .76em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3rem;
+}
+.book-title {
+  font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+}
+.book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.rule-orn {
+  width: 160px; height: 14px; margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦"; position: absolute; inset: 0; margin: auto;
+  width: 1.8em; height: 1em; line-height: .85;
+  background: var(--paper); color: var(--gold); font-size: .85rem;
+}
+.book-author { font-size: 1.08em; font-weight: 700; margin: 0 0 .4rem; }
+.book-meta { font-family: var(--sans); font-size: .84em; color: var(--ink-soft); line-height: 1.6; }
+.epigraph { max-width: 38ch; margin: 2.8rem auto 0; font-style: italic; color: var(--ink-soft); font-size: .96em; }
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 1.3rem; font-weight: 600; border: 0; padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink); text-decoration: none;
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .1rem; border-radius: 4px;
+}
+.toc a:hover { color: var(--accent); background: rgba(47,107,79,.06); }
+.toc a:active { background: rgba(47,107,79,.1); }
+.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.8em; font-size: .9em; font-weight: 500; }
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+.chapter > h2 {
+  font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
+  color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
+}
+.section > h3 { font-size: 1.25em; font-weight: 700; margin: 2.6rem 0 1rem; }
+.subsection > h4 { font-size: 1.08em; font-weight: 700; margin: 1.9rem 0 .8rem; color: var(--ink-soft); }
+.chapter:first-of-type > h2 { margin-top: 0; }
+section[data-kind="front"] > h2, section[data-kind="back"] > h2 {
+  text-align: center; border-bottom: 0; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 1.3em; font-weight: 700;
+}
+section[data-kind="front"] > h2::after, section[data-kind="back"] > h2::after {
+  content: ""; display: block; width: 72px; height: 1.5px;
+  background: var(--gold); margin: .9rem auto 0; border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem; text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
+
+.lead { font-size: 1.07em; color: var(--ink-soft); text-indent: 0; line-height: 1.65; }
+strong { font-weight: 700; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+a {
+  color: var(--accent); text-underline-offset: .22em; text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover { color: var(--gold); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
+  background: var(--paper-alt); padding: .12em .4em; border-radius: 3px; border: 1px solid var(--rule);
+  word-break: break-all;
+}
+hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
+.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+
+/* ========== СПИСКИ ========== */
+ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold); font-style: italic; color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source, blockquote.quote footer {
+  display: block; margin-top: .7rem; font-family: var(--sans);
+  font-style: normal; font-size: .78em; color: var(--ink-soft);
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0; padding: 1.8rem 2rem;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+  border-radius: 8px; position: relative; text-align: center;
+}
+.ayah::before, .ayah::after {
+  content: ""; position: absolute; left: 1.6rem; right: 1.6rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .45;
+}
+.ayah::before { top: .65rem; } .ayah::after { bottom: .65rem; }
+.ar-block {
+  font-family: var(--arabic); direction: rtl; unicode-bidi: isolate;
+  text-align: center; font-size: 1.6em; line-height: 2.3;
+  color: var(--ink); overflow-wrap: anywhere; word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+.ayah-tr { margin-top: 1rem; font-style: italic; font-size: .97em; text-indent: 0; color: var(--ink-soft); }
+.ayah .source { margin-top: .7rem; text-align: center; color: var(--accent); font-weight: 500; font-size: .8em; }
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС / ДУА ========== */
+.hadith {
+  margin: 1.9rem 0; padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 5px; background: var(--paper-alt);
+}
+.hadith .label, .dua .label, .callout .label {
+  display: block; font-family: var(--sans); font-size: .66em;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .65rem; font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+.dua {
+  margin: 1.9rem 0; padding: 1.5rem 1.8rem;
+  background: var(--paper-alt); border: 1.5px dashed var(--gold);
+  border-radius: 8px; text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+.callout { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 5px; font-size: .94em; }
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; unicode-bidi: isolate; direction: rtl; }
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] { font-family: var(--arabic); font-size: 1.35em; line-height: 2.2; text-indent: 0; }
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table { margin: 2.2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft); text-align: center; margin-top: .7rem; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
+th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
+tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+/* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
+sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
+.footnotes { margin-top: 4rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule); font-size: .85em; color: var(--ink-soft); }
+.footnotes h2, .bibliography h2 { font-family: var(--sans); font-size: .76em; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 600; }
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num { color: var(--accent); margin-right: .55em; font-weight: 700; }
+.bibliography ol { list-style: none; counter-reset: bib; padding-left: 0; }
+.bibliography li { counter-increment: bib; padding-left: 2.8rem; position: relative; margin: .7rem 0; font-size: .94em; line-height: 1.55; }
+.bibliography li::before { content: counter(bib) "."; position: absolute; left: 0; top: 0; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule);
+  font-family: var(--sans); font-size: .72em; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page { padding: 2.2rem 1.4rem 3rem; }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .45rem .1rem; min-height: 44px; }
+  .ayah { padding: 1.2rem 1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table { display: block; width: 100%; overflow-x: auto; }
+  table { min-width: 36rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page { size: A4; margin: 22mm 20mm 22mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.55; overflow: visible; }
+  .page { box-shadow: none; padding: 0; max-width: none; min-height: 0; }
+  .wrap { max-width: none; }
+  .title-page { page-break-after: always; border-bottom: 0; }
+  .title-page::after { display: none; }
+  .toc { page-break-after: always; background: none; border: 0; padding: 0; }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .doc-footer { display: none; }
+  .ayah, .hadith, .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Прямой путь: Заклинание верой. Часть вторая: Пути влияния</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2026</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#glava-13-chto-takoe-put-v-duhovnom-smysle"><span class="num"></span><span class="lbl">Глава 13. Что такое путь в духовном смысле</span></a><ol><li class="toc-l2">
+      <a href="#opredelenie-puti"><span class="num"></span><span class="lbl">13.1. Определение пути</span></a></li>
+<li class="toc-l2">
+      <a href="#put-k-allahu-pervyy-i-glavnyy"><span class="num"></span><span class="lbl">13.2. Путь к Аллаху — первый и главный</span></a></li>
+<li class="toc-l2">
+      <a href="#put-k-pacientu-vtoroy"><span class="num"></span><span class="lbl">13.3. Путь к пациенту — второй</span></a></li>
+<li class="toc-l2">
+      <a href="#put-ot-pacienta-k-nedugu-tretiy"><span class="num"></span><span class="lbl">13.4. Путь от пациента к недугу — третий</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-14-pochemu-chtecy-chitayut-chasami-bez-rezultata"><span class="num"></span><span class="lbl">Глава 14. Почему чтецы читают часами без результата</span></a><ol><li class="toc-l2">
+      <a href="#opisanie-problemy"><span class="num"></span><span class="lbl">14.1. Описание проблемы</span></a></li>
+<li class="toc-l2">
+      <a href="#chto-proishodit-na-samom-dele"><span class="num"></span><span class="lbl">14.2. Что происходит на самом деле</span></a></li>
+<li class="toc-l2">
+      <a href="#pravilnyy-podhod-otkryt-puti-zaranee"><span class="num"></span><span class="lbl">14.3. Правильный подход: открыть пути заранее</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-15-otkrytie-puti-k-allahu"><span class="num"></span><span class="lbl">Глава 15. Открытие пути к Аллаху</span></a><ol><li class="toc-l2">
+      <a href="#kak-prosit-allaha-ukrepit-put-s-nim"><span class="num"></span><span class="lbl">15.1. Как просить Аллаха укрепить путь с Ним</span></a></li>
+<li class="toc-l2">
+      <a href="#dua-dlya-otkrytiya-puti-k-allahu-pered-seansom"><span class="num"></span><span class="lbl">15.2. Дуа для открытия пути к Аллаху перед сеансом</span></a></li>
+<li class="toc-l2">
+      <a href="#priznaki-togo-chto-put-k-allahu-otkryt"><span class="num"></span><span class="lbl">15.3. Признаки того, что путь к Аллаху открыт</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-16-otkrytie-puti-k-pacientu"><span class="num"></span><span class="lbl">Глава 16. Открытие пути к пациенту</span></a><ol><li class="toc-l2">
+      <a href="#formula-otkrytiya-puti-dlya-isceleniya"><span class="num"></span><span class="lbl">16.1. Формула открытия пути для исцеления</span></a></li>
+<li class="toc-l2">
+      <a href="#rasshirennaya-formula-s-ukazaniem-mesta"><span class="num"></span><span class="lbl">16.2. Расширенная формула с указанием места</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-eto-rabotaet"><span class="num"></span><span class="lbl">16.3. Почему это работает</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-17-process-chteniya-posle-otkrytiya-putey"><span class="num"></span><span class="lbl">Глава 17. Процесс чтения после открытия путей</span></a><ol><li class="toc-l2">
+      <a href="#polnaya-posledovatelnost-seansa"><span class="num"></span><span class="lbl">17.1. Полная последовательность сеанса</span></a></li>
+<li class="toc-l2">
+      <a href="#shag-pervyy-uedinenie-i-chistota"><span class="num">5.2.</span><span class="lbl">Шаг первый: Уединение и чистота</span></a></li>
+<li class="toc-l2">
+      <a href="#shag-vtoroy-pribezhische"><span class="num">5.3.</span><span class="lbl">Шаг второй: Прибежище</span></a></li>
+<li class="toc-l2">
+      <a href="#shag-tretiy-otkrytie-puti-k-allahu"><span class="num">5.4.</span><span class="lbl">Шаг третий: Открытие пути к Аллаху</span></a></li>
+<li class="toc-l2">
+      <a href="#shag-chetvertyy-namerenie-po-metodu-pryamogo-puti"><span class="num">5.5.</span><span class="lbl">Шаг четвёртый: Намерение (по методу прямого пути)</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#h-96"><span class="num">6.</span><span class="lbl"><span class="ar-inline" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنْ كُلِّ مَرَضٍ فِي</span>[<span class="ar-inline" lang="ar" dir="rtl">المَكَان</span>]</span></a><ol><li class="toc-l2">
+      <a href="#yashfiyallahu-bit-tauhidi-min-kulli-marodyn-fi-mesto"><span class="num">6.1.</span><span class="lbl">Йашфийаллаху бит-таухиди мин кулли мародын фи [место]</span></a></li>
+<li class="toc-l2">
+      <a href="#shag-pyatyy-otkrytie-puti-k-pacientu"><span class="num">6.2.</span><span class="lbl">Шаг пятый: Открытие пути к пациенту</span></a></li>
+<li class="toc-l2">
+      <a href="#shag-shestoy-nachalo-chteniya-napravlenie-k-pacientu"><span class="num">6.3.</span><span class="lbl">Шаг шестой: Начало чтения — направление к пациенту</span></a></li>
+<li class="toc-l2">
+      <a href="#kak-imenno-chitat-napravlyayas-k-pacientu"><span class="num"></span><span class="lbl">17.2. Как именно читать, направляясь к пациенту</span></a></li>
+<li class="toc-l2">
+      <a href="#chto-chitat-posle-otkrytiya-putey"><span class="num"></span><span class="lbl">17.3. Что читать после открытия путей</span></a></li>
+<li class="toc-l2">
+      <a href="#protiv-sihra-ayat-117-119-sury-al-a-raf-posoh-musy"><span class="num">6.6.</span><span class="lbl">Против сихра: Аят 117-119 суры аль-А'раф (посох Мусы)</span></a></li>
+<li class="toc-l2">
+      <a href="#protiv-sglaza-ayat-51-sury-al-kalyam"><span class="num">6.7.</span><span class="lbl">Против сглаза: Аят 51 суры аль-Калям</span></a></li>
+<li class="toc-l2">
+      <a href="#protiv-dzhinna-ayat-18-sury-al-a-raf-izgnanie"><span class="num">6.8.</span><span class="lbl">Против джинна: Аят 18 суры аль-А'раф (изгнание)</span></a></li>
+<li class="toc-l2">
+      <a href="#dlya-obschego-isceleniya-al-fatiha-ayat-al-kursi-tri-kulyubu"><span class="num">6.9.</span><span class="lbl">Для общего исцеления: Аль-Фатиха, Аят аль-Курси, три кулюбу</span></a></li>
+<li class="toc-l2">
+      <a href="#priznaki-togo-chto-sila-techet-cherez-otkrytyy-put"><span class="num"></span><span class="lbl">17.4. Признаки того, что сила течёт через открытый путь</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-18-praktika-ezhednevnaya-trenirovka-putey"><span class="num"></span><span class="lbl">Глава 18. Практика: ежедневная тренировка путей</span></a><ol><li class="toc-l2">
+      <a href="#pochemu-eto-trebuet-praktiki"><span class="num"></span><span class="lbl">18.1. Почему это требует практики</span></a></li>
+<li class="toc-l2">
+      <a href="#ezhednevnoe-uprazhnenie-dlya-trenirovki-putey"><span class="num"></span><span class="lbl">18.2. Ежедневное упражнение для тренировки путей</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-19-otvety-na-chastye-voprosy"><span class="num"></span><span class="lbl">Глава 19. Ответы на частые вопросы</span></a><ol><li class="toc-l2">
+      <a href="#nuzhno-li-proiznosit-dua-otkrytiya-puti-vsluh-ili-dostatochn"><span class="num"></span><span class="lbl">19.1. Нужно ли произносить дуа открытия пути вслух или достаточно в сердце?</span></a></li>
+<li class="toc-l2">
+      <a href="#chto-delat-esli-put-ne-otkryvaetsya"><span class="num"></span><span class="lbl">19.2. Что делать, если путь не открывается?</span></a></li>
+<li class="toc-l2">
+      <a href="#mozhno-li-otkryt-puti-dlya-neskolkih-pacientov-odnovremenno"><span class="num"></span><span class="lbl">19.3. Можно ли открыть пути для нескольких пациентов одновременно?</span></a></li>
+<li class="toc-l2">
+      <a href="#skolko-raz-povtoryat-dua-otkrytiya-puti"><span class="num"></span><span class="lbl">19.4. Сколько раз повторять дуа открытия пути?</span></a></li>
+<li class="toc-l2">
+      <a href="#chto-delat-esli-vo-vremya-chteniya-put-zakrylsya"><span class="num"></span><span class="lbl">19.5. Что делать, если во время чтения путь закрылся?</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-20-duhovnaya-anatomiya-putey"><span class="num"></span><span class="lbl">Глава 20. Духовная анатомия путей</span></a><ol><li class="toc-l2">
+      <a href="#gde-nahodyatsya-puti-v-tele"><span class="num"></span><span class="lbl">20.1. Где находятся пути в теле</span></a></li>
+<li class="toc-l2">
+      <a href="#chto-zakryvaet-puti"><span class="num"></span><span class="lbl">20.2. Что закрывает пути</span></a></li>
+<li class="toc-l2">
+      <a href="#chto-otkryvaet-puti"><span class="num"></span><span class="lbl">20.3. Что открывает пути</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#svyaschennyy-koran"><span class="num"></span><span class="lbl">1. Священный Коран</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-al-buhari"><span class="num"></span><span class="lbl">2. Сахих аль-Бухари</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-muslim"><span class="num"></span><span class="lbl">3. Сахих Муслим</span></a></li>
+<li class="toc-l1">
+      <a href="#sunan-at-tirmizi"><span class="num"></span><span class="lbl">4. Сунан ат-Тирмизи</span></a></li>
+<li class="toc-l1">
+      <a href="#musnad-ahmada"><span class="num"></span><span class="lbl">5. Муснад Ахмада</span></a></li>
+<li class="toc-l1">
+      <a href="#ibn-al-kayyim-madaridzh-as-salikin"><span class="num"></span><span class="lbl">6. Ибн аль-Каййим, «Мадаридж ас-Саликин»</span></a></li>
+<li class="toc-l1">
+      <a href="#an-navavi-sharh-sahih-muslim"><span class="num"></span><span class="lbl">7. Ан-Навави, «Шарх Сахих Муслим»</span></a></li>
+<li class="toc-l1">
+      <a href="#ibn-hadzhar-fath-al-bari"><span class="num"></span><span class="lbl">8. Ибн Хаджар, «Фатх аль-Бари»</span></a></li></ol></nav>
+  <main>
+<p>Введение</p>
+<p>В первой части мы говорили о четырёх элементах прямого пути: отнесение действия к Аллаху, средство влияния, место поражения и вид недуга. Мы говорили о том, как заклинать верой, как относить исцеление к Аллаху и как направлять таухид на болезнь.</p>
+<p>Но есть вопрос, который остаётся за кадром. Вопрос, без которого всё сказанное может остаться теорией.</p>
+<p>Вопрос этот: как сила доходит от Аллаха к пациенту через тебя?</p>
+<p>Ответ: через пути.</p>
+<p>Заклинание — это духовное влияние. А влияние не может идти через закрытую дверь. Ему нужен путь. Канал. Дорога. В Исламе это называется сабиль — путь. И пока этот путь не открыт — сила не течёт. Ты можешь читать аяты часами, но если путь закрыт — слова остаются звуком. Красивым звуком. Священным звуком. Но звуком без воздействия.</p>
+<p>Эта часть — о путях. О том, как их открыть. О том, как просить Аллаха открыть их. И о том, как направить силу через открытый путь к пациенту.</p>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-13-chto-takoe-put-v-duhovnom-smysle">Глава 13. Что такое путь в духовном смысле</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="opredelenie-puti">13.1. Определение пути</h3>
+<p>Путь в духовном смысле — это связь между душой и тем, к кому она обращается. Когда душа обращается к Аллаху — она налаживает путь к Аллаху. Когда душа обращается к больному месту — она налаживает путь к этому месту. Когда душа обращается к пациенту — она налаживает путь к пациенту.</p>
+<p>Люди в наше время называют это каналами. Энергетическими каналами. Но в Исламе это известно как путь — сабиль. И это точнее. Потому что канал — это просто труба. А путь — это дорога, по которой кто-то идёт. По пути идёт сила. По пути идёт воля. По пути идёт намерение.</p>
+<p>Аллах сказал:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
+  <figcaption class="ayah-tr">А тех, которые усердствуют ради Нас, Мы непременно поведём Нашими путями. Поистине, Аллах — с теми, кто творит добро</figcaption>
+  <div class="source">Источник: Сура «аль-'Анкабут», аят 69</div>
+</figure>
+<p>Обратите внимание: Мы поведём их НАШИМИ ПУТЯМИ. Субулана — Наши пути. Не один путь — много путей. Аллах ведёт раба по путям. И эти пути — дороги, по которым течёт Его помощь, Его сила, Его исцеление.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="put-k-allahu-pervyy-i-glavnyy">13.2. Путь к Аллаху — первый и главный</h3>
+<p>Прежде чем сила потечёт к пациенту — она должна потечь от Аллаха. А для этого путь к Аллаху должен быть открыт. Широк. Доступен. Крепок.</p>
+<p>Что значит путь к Аллаху открыт? Это значит:</p>
+<ul><li>Сердце обращено к Нему</li><li>Вера живая, не механическая</li><li>Намерение чистое, без примесей рия и кибра</li><li>Нет грехов, создающих завесу между сердцем и Аллахом</li><li>Нет сомнений, создающих трещину в канале</li></ul>
+<p>Когда путь к Аллаху открыт — сила течёт свободно. Как вода по открытой трубе. Без препятствий. Без задержек.</p>
+<p>Когда путь к Аллаху закрыт или узок — сила не течёт. Или течёт слабо. Каплями. И тогда раки читает часами, а результата нет.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="put-k-pacientu-vtoroy">13.3. Путь к пациенту — второй</h3>
+<p>Когда путь к Аллаху открыт и сила начала течь — нужен второй путь: от тебя к пациенту. От твоего сердца — к его телу. От твоей воли — к его недугу.</p>
+<p>Этот путь создаётся намерением. Когда ты говоришь: «Намереваюсь исцелить Фатиму» — ты прокладываешь путь от себя к Фатиме. Когда ты указываешь место: «В голове» — ты направляешь путь в голову. Когда ты указываешь недуг: «От сихра» — ты направляешь путь именно туда, где сидит сихр.</p>
+<p>Без этого второго пути сила от Аллаха доходит до тебя — но не доходит до пациента. Она остаётся в тебе. Ты чувствуешь тепло, энергию, наполненность — но пациент не получает ничего. Потому что путь к нему не проложен.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="put-ot-pacienta-k-nedugu-tretiy">13.4. Путь от пациента к недугу — третий</h3>
+<p>Когда сила дошла до пациента — нужен третий путь: внутри него. От его тела — к месту поражения. От общего — к конкретному. От поверхности — к глубине.</p>
+<p>Этот путь создаётся указанием места поражения. Когда ты говоришь «фир-ра'си» — в голове — ты прокладываешь путь внутри пациента к голове. Когда ты говоришь «филь-батни» — в животе — путь идёт в живот.</p>
+<p>Три пути. Три дороги. Все должны быть открыты. Все три — в одном намерении.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-14-pochemu-chtecy-chitayut-chasami-bez-rezultata">Глава 14. Почему чтецы читают часами без результата</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="opisanie-problemy">14.1. Описание проблемы</h3>
+<p>Многие раки сталкиваются с этим. Они садятся перед пациентом. Начинают читать. Проходит десять минут. Двадцать. Тридцать. Час. Может быть, два часа. Голос устал. Горло пересохло. А пациент сидит неподвижно. Ничего не меняется. Никакой реакции.</p>
+<p>И тогда раки думает: «Может, я читаю не те аяты? Может, нужно добавить ещё? Может, пациент не поддаётся?»</p>
+<p>Но правда в другом. Правда в том, что пути были закрыты. И всё это время — тридцать минут, час, два часа — чтение шло в закрытую дверь. Слова шли. Баракат слов был. Но воздействия не было. Потому что воздействие идёт через путь. А путь был закрыт.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-proishodit-na-samom-dele">14.2. Что происходит на самом деле</h3>
+<p>Когда раки начинает читать без открытия путей, происходит следующее:</p>
+<p>Первые 10-15 минут: Слова звучат. Но пути ещё не проложены. Сила не течёт. Пациент ничего не чувствует.</p>
+<p>15-30 минут: Если намерение живое и упорное — пути начинают формироваться. Медленно. По капле. Как вода пробивает камень.</p>
+<p>30-60 минут: Пути достаточно сформированы, чтобы сила начала течь. Пациент начинает чувствовать. Реакция появляется.</p>
+<p>60-120 минут: Сила течёт через сформированные пути. Результат приходит.</p>
+<p>Вот почему некоторые чтецы видят реакцию только через час или два. Не потому что аяты слабые. А потому что пути формировались долго. Потому что они не открыли их заранее. Они потратили первые тридцать-сорок минут на то, чтобы пробить стену, а не на то, чтобы исцелять.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pravilnyy-podhod-otkryt-puti-zaranee">14.3. Правильный подход: открыть пути заранее</h3>
+<p>Прямой путь — это не пробивать стену часами. Прямой путь — это попросить Аллаха открыть путь. И Он откроет. Мгновенно. Потому что Он — аль-Фаттах, Открывающий.</p>
+<p>Когда ты в начале сеанса говоришь: «О Аллах, открой путь для исцеления» — ты не пробиваешь стену сам. Ты просишь Того, у Кого ключи от всех дверей. И Он открывает.</p>
+<p>После этого ты начинаешь читать. И сила течёт сразу. Без задержки. Без тридцати минут пробивания. Сразу. Потому что путь уже открыт.</p>
+<p>Это и есть разница между прямым путём и длинным путём. Длинный путь пробивает. Прямой путь просит — и получает.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-15-otkrytie-puti-k-allahu">Глава 15. Открытие пути к Аллаху</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kak-prosit-allaha-ukrepit-put-s-nim">15.1. Как просить Аллаха укрепить путь с Ним</h3>
+<p>Путь к Аллаху — это не то, что ты строишь своими руками. Это то, что Аллах прокладывает тебе навстречу. Но ты должен попросить. Ты должен обратиться. Ты должен сказать: «О Аллах, открой мне путь к Тебе. Укрепи мою связь с Тобой. Сделай мой путь к Тебе широким и прямым».</p>
+<p>Это и есть суть аята:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ</div>
+  <figcaption class="ayah-tr">Ихдинас-сыраталь-мустаким<br>Веди нас прямым путём</figcaption>
+  <div class="source">Источник: Сура «аль-Фатиха», аят 6</div>
+</figure>
+<p>Каждый раз, когда ты читаешь «Ихдинас-сыраталь-мустаким» — ты просишь Аллаха: «Открой мне путь. Веди меня. Сделай мою дорогу к Тебе прямой. Без поворотов. Без завес. Без препятствий».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="dua-dlya-otkrytiya-puti-k-allahu-pered-seansom">15.2. Дуа для открытия пути к Аллаху перед сеансом</h3>
+<p>Перед каждым сеансом рукьи — произнеси в сердце или вслух:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ بَيْنِي وَبَيْنَكَ بَابًا لَا يُغْلَقُ، وَطَرِيقًا لَا يُسَدُّ، وَنُورًا لَا يَنْطَفِئُ. اللَّهُمَّ اجْعَلْنِي مِمَّنْ يَسْعَى إِلَيْكَ عَلَى صِرَاطٍ مُسْتَقِيمٍ</div>
+  <p>Аллахуммафтах байна ва байнака бабан ля йугляк, ва тарикан ля йусадд, ва нуран ля йантасыф. Аллахуммадж'альни мимман йас'а иляйка 'аля сыратин мустаким</p>
+<p>О Аллах, открой между мной и Тобой дверь, которая не закрывается, и путь, который не преграждается, и свет, который не гаснет. О Аллах, сделай меня из тех, кто стремится к Тебе по прямому пути</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Прочитай один раз. Осознавая каждое слово. Или три раза, если чувствуешь, что путь узок или завесы много.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="priznaki-togo-chto-put-k-allahu-otkryt">15.3. Признаки того, что путь к Аллаху открыт</h3>
+<p>Как понять, что путь открыт? Ты почувствуешь:</p>
+<ul><li>Лёгкость в груди. Как будто что-то распахнулось внутри.</li><li>Тишину в голове. Мысли прекращаются. Остаётся только присутствие.</li><li>Ощущение, что Аллах слышит. Не надежда, что слышит. Знание, что слышит.</li><li>Готовность действовать. Слова сами просятся наружу.</li><li>Отсутствие страха. Нет тревоги перед сеансом. Есть спокойная уверенность.</li></ul>
+<p>Если ты не чувствуешь этого — остановись. Не начинай читать. Повтори дуа. Укрепи намерение. Попроси ещё раз. Лучше потратить две минуты на открытие пути, чем час на пробивание стены.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-16-otkrytie-puti-k-pacientu">Глава 16. Открытие пути к пациенту</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="formula-otkrytiya-puti-dlya-isceleniya">16.1. Формула открытия пути для исцеления</h3>
+<p>Когда путь к Аллаху открыт — следующий шаг: попросить Аллаха открыть путь к пациенту. Путь для исцеления. Путь для силы.</p>
+<p>Формула:</p>
+<p>Для женщины:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ سَبِيلًا لِشِفَائِهَا</div>
+  <p>Аллахуммафтах сабилян ли-шифа'иха</p>
+<p>О Аллах, открой путь для её исцеления</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Для мужчины:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ سَبِيلًا لِشِفَائِهِ</div>
+  <p>Аллахуммафтах сабилян ли-шифа'ихи</p>
+<p>О Аллах, открой путь для его исцеления</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Это произносится в сердце или вслух. Один раз. С полной убеждённостью. Как просьба к Тому, Кто открывает все двери. Как приказ в вере: «О Аллах, открой путь — и я направляю силу через этот путь».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="rasshirennaya-formula-s-ukazaniem-mesta">16.2. Расширенная формула с указанием места</h3>
+<p>Если ты знаешь место поражения — укажи его в просьбе об открытии пути:</p>
+<p>Для женщины, поражение в голове:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ سَبِيلًا لِشِفَائِهَا فِي رَأْسِهَا</div>
+  <p>Аллахуммафтах сабилян ли-шифа'иха фи ра'сиха</p>
+<p>О Аллах, открой путь для её исцеления в её голове</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Для мужчины, поражение в животе:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُмَّ افْتَحْ سَبِيلًا لِشِفَائِهِ فِي بَطْنِهِ</div>
+  <p>Аллахуммафтах сабилян ли-шифа'ихи фи батнихи</p>
+<p>О Аллах, открой путь для его исцеления в его животе</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Для общего исцеления всего тела:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ سَبِيلًا لِشِفَائِهَا فِي كُلِّ جَسَدِهَا</div>
+  <p>Аллахуммафтах сабилян ли-шифа'иха фи кулли джасади-ха</p>
+<p>О Аллах, открой путь для её исцеления во всём её теле</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-eto-rabotaet">16.3. Почему это работает</h3>
+<p>Когда ты говоришь «Аллахуммафтах сабилян ли-шифа'иха» — ты делаешь три вещи одновременно:</p>
+<p>Первое: Ты обращаешься к Аллаху. Ты признаёшь, что путь открывает Он. Не ты. Не твоя техника. Не твой опыт. Он.</p>
+<p>Второе: Ты указываешь цель. Не просто «открой путь». А «открой путь для исцеления». Конкретно. Ясно.</p>
+<p>Третье: Ты указываешь адресата. «Для неё». «Для него». Не абстрактно. А конкретному человеку.</p>
+<p>Это и есть четыре элемента прямого пути в одном предложении. Отнесение к Аллаху (Аллахуммафтах — Аллах открывает). Средство (сабилян ли-шифа'и — путь для исцеления). Место (фи ра'сиха — в её голове). Адресат (ли-шифа'иха — для её исцеления).</p>
+<p>Всё в одной фразе. За одно мгновение. Путь открыт.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-17-process-chteniya-posle-otkrytiya-putey">Глава 17. Процесс чтения после открытия путей</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="polnaya-posledovatelnost-seansa">17.1. Полная последовательность сеанса</h3>
+<p>Теперь, когда мы знаем, как открыть пути, соберём всё в единую последовательность. Это то, как должен проходить каждый сеанс заклинания верой.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shag-pervyy-uedinenie-i-chistota"><span class="num">5.2.</span>Шаг первый: Уединение и чистота</h3>
+<p>Соверши вуду. Найди тихое место. Оставь всё лишнее.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shag-vtoroy-pribezhische"><span class="num">5.3.</span>Шаг второй: Прибежище</h3>
+<p>А'узу билляхи минаш-шайтанир-раджим — три раза.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shag-tretiy-otkrytie-puti-k-allahu"><span class="num">5.4.</span>Шаг третий: Открытие пути к Аллаху</h3>
+<p>Произнеси в сердце или вслух:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ بَيْنِي وَبَيْنَكَ، وَثَبِّتْ قَلْبِي عَلَى دِينِكَ</div>
+  <p>Аллахуммафтах байна ва байнак, ва саббит кальби 'аля диник</p>
+<p>О Аллах, открой между мной и Тобой, и укрепи моё сердце на Твоей религии</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Почувствуй, как путь распахивается. Как грудь наполняется. Как тишина входит.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shag-chetvertyy-namerenie-po-metodu-pryamogo-puti"><span class="num">5.5.</span>Шаг четвёртый: Намерение (по методу прямого пути)</h3>
+<p>Произнеси в сердце формулу из первой части:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="h-96"><span class="num">6.</span><span class="ar-inline" lang="ar" dir="rtl">يَشْفِيَ اللَّهُ بِالتَّوْحِيدِ مِنْ كُلِّ مَرَضٍ فِي</span>[<span class="ar-inline" lang="ar" dir="rtl">المَكَان</span>]</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="yashfiyallahu-bit-tauhidi-min-kulli-marodyn-fi-mesto"><span class="num">6.1.</span>Йашфийаллаху бит-таухиди мин кулли мародын фи [место]</h3>
+<p>Да исцелит Аллах через единобожие от всякой болезни в [место]</p>
+<p>Один раз. С полной убеждённостью. Если вера сильная — одного раза достаточно. Если чувствуешь слабость — повтори три или семь раз.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shag-pyatyy-otkrytie-puti-k-pacientu"><span class="num">6.2.</span>Шаг пятый: Открытие пути к пациенту</h3>
+<p>Произнеси:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ سَبِيلًا لِشِفَائِهَا فِي [المَكَان]</div>
+  <p>Аллахуммафтах сабилян ли-шифа'иха фи [место]</p>
+<p>О Аллах, открой путь для её исцеления в [место]</p>
+  
+</aside>
+<p>Или для мужчины:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ سَبِيلًا لِشِفَائِهِ فِي [المَكَان]</div>
+  <p>Аллахуммафтах сабилян ли-шифа'ихи фи [место]</p>
+<p>О Аллах, открой путь для его исцеления в [место]</p>
+  
+</aside>
+<p>Один раз. Осознавая, что ты просишь Аллаха проложить дорогу от тебя к пациенту.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shag-shestoy-nachalo-chteniya-napravlenie-k-pacientu"><span class="num">6.3.</span>Шаг шестой: Начало чтения — направление к пациенту</h3>
+<p>Теперь — открой уста. Начни читать Коран.</p>
+<p>Но читай не в пространство. Не в потолок. Не в пустоту. Читай, направляясь к пациенту.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kak-imenno-chitat-napravlyayas-k-pacientu">17.2. Как именно читать, направляясь к пациенту</h3>
+<p>Это ключевой момент. После того как пути открыты — чтение должно быть направленным. Не рассеянным. Не механическим. Направленным.</p>
+<p>Вот как это делается:</p>
+<p>Первое: Взгляд. Смотри на пациента. Или на то место, где находится его поражение. Смотри не узким лучом — а широким. Охватывая всю область. Как будто твой взгляд — это поток света, который льётся на пациента.</p>
+<p>Второе: Внутреннее направление. Пока ты читаешь вслух — внутри, в сердце, ты держишь направление. Ты «видишь» сердцем, как слова выходят из тебя и входят в пациента. Не как звук — а как свет. Как тепло. Как сила.</p>
+<p>Третье: Удержание намерения. Каждые несколько аятов — мысленно возвращайся к намерению. «Что я делаю? Куда я направляю? Ради Кого?» Это занимает доли секунды. Но это поддерживает путь открытым.</p>
+<p>Четвёртое: Внутренний приказ. В глубине сердца, под словами Корана, держи тихий приказ: «Иди. Входи. Исцеляй. Именем Аллаха». Это не произносится вслух. Это живёт в сердце как фон. Как направление.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-chitat-posle-otkrytiya-putey">17.3. Что читать после открытия путей</h3>
+<p>После того как пути открыты — читай то, что соответствует недугу. Но помни: весь Коран — это таухид. Любой аят, прочитанный с верой, действует. Однако для точности:</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="protiv-sihra-ayat-117-119-sury-al-a-raf-posoh-musy"><span class="num">6.6.</span>Против сихра: Аят 117-119 суры аль-А'раф (посох Мусы)</h3>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="protiv-sglaza-ayat-51-sury-al-kalyam"><span class="num">6.7.</span>Против сглаза: Аят 51 суры аль-Калям</h3>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="protiv-dzhinna-ayat-18-sury-al-a-raf-izgnanie"><span class="num">6.8.</span>Против джинна: Аят 18 суры аль-А'раф (изгнание)</h3>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="dlya-obschego-isceleniya-al-fatiha-ayat-al-kursi-tri-kulyubu"><span class="num">6.9.</span>Для общего исцеления: Аль-Фатиха, Аят аль-Курси, три кулюбу</h3>
+<p>Для укрепления веры: Аят аль-Курси, сура аль-Ихлас</p>
+<p>Не нужно много. Не нужно часами. Если пути открыты — достаточно одного аята. Семи повторений. Может быть, трёх. Сила течёт сразу. Результат приходит быстро.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="priznaki-togo-chto-sila-techet-cherez-otkrytyy-put">17.4. Признаки того, что сила течёт через открытый путь</h3>
+<p>Когда пути открыты и сила течёт — ты почувствуешь:</p>
+<ul><li>Тепло в ладонях или в груди</li><li>Лёгкое давление в том месте, куда направляешь</li><li>Ощущение, что слова «весят» больше обычного</li><li>Пациент начинает реагировать быстро: зевает, вздыхает, меняется в лице, чувствует тепло или покалывание</li></ul>
+<p>Если ничего из этого нет — проверь пути. Может быть, ты не открыл их. Может быть, сомнение закрыло их. Может быть, намерение рассеялось. Остановись. Вернись. Попроси Аллаха открыть пути заново. Продолжай.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-18-praktika-ezhednevnaya-trenirovka-putey">Глава 18. Практика: ежедневная тренировка путей</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-eto-trebuet-praktiki">18.1. Почему это требует практики</h3>
+<p>Мои дорогие, то, что здесь написано — это не теория. Это практичные знания и опыт. Пути не открываются сами по себе в первый раз. Их нужно учиться открывать. Как мышцу. Как навык. Как мастерство.</p>
+<p>Первый раз может быть трудно. Путь может не открыться сразу. Намерение может рассеяться. Это нормально. Это тренировка.</p>
+<p>Но каждый день, каждый сеанс, каждая попытка — делает путь шире. Делает тебя увереннее. Делает связь крепче. И через неделю, через месяц — пути будут открываться мгновенно. Одним словом. Одной мыслью. Одним намерением.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ezhednevnoe-uprazhnenie-dlya-trenirovki-putey">18.2. Ежедневное упражнение для тренировки путей</h3>
+<p>Упражнение первое: Открытие пути к Аллаху (5 минут)</p>
+<p>Сядь. Закрой глаза. Прибежище. Произнеси в сердце: «Аллахуммафтах байна ва байнак» — О Аллах, открой между мной и Тобой. Повтори 7 раз. Медленно. Осознавая. Почувствуй, как грудь распахивается. Как тишина входит. Как связь крепнет. Это ежедневная тренировка. Каждое утро. Пять минут.</p>
+<p>Упражнение второе: Открытие пути к объекту (10 минут)</p>
+<p>Поставь перед собой стакан воды. Это твой «пациент». Произнеси в сердце: «Аллахуммафтах сабилян ли-шифа'и хазаль-ма'и» — О Аллах, открой путь для исцеления этой воды. Повтори 3 раза. Затем читай аль-Фатиху 7 раз над стаканом, направляя силу в воду. Выпей. Ощути разницу. Это тренировка направления. Каждые два дня.</p>
+<p>Упражнение третье: Полный сеанс на себя (15 минут)</p>
+<p>Сядь. Прибежище. Открой путь к Аллаху. Произнеси намерение: «Йашфийаллаху бит-таухиди мин кулли мародын фи джасадий» — Да исцелит Аллах через единобожие от всякой болезни в моём теле. Открой путь к себе: «Аллахуммафтах сабилян ли-шифа'ий фи кулли джасадий» — О Аллах, открой путь для моего исцеления во всём моём теле. Читай аль-Фатиху 7 раз, направляя на себя. Это еженедельная тренировка. Раз в неделю.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-19-otvety-na-chastye-voprosy">Глава 19. Ответы на частые вопросы</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="nuzhno-li-proiznosit-dua-otkrytiya-puti-vsluh-ili-dostatochn">19.1. Нужно ли произносить дуа открытия пути вслух или достаточно в сердце?</h3>
+<p>Достаточно в сердце. Аллах слышит сердце. Но если тебе помогает произнести вслух — произнеси. Главное — осознание. Не звук.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-delat-esli-put-ne-otkryvaetsya">19.2. Что делать, если путь не открывается?</h3>
+<p>Если ты чувствуешь, что путь закрыт — не спеши читать. Остановись. Спроси себя: есть ли сомнение? Есть ли грех, создающий завесу? Есть ли рия? Есть ли спешка?</p>
+<p>Убери препятствие. Попроси прощения. Повтори дуа открытия. Дай себе время. Лучше две минуты тишины с открытым путём, чем час чтения с закрытым.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="mozhno-li-otkryt-puti-dlya-neskolkih-pacientov-odnovremenno">19.3. Можно ли открыть пути для нескольких пациентов одновременно?</h3>
+<p>Можно. Скажи: «Аллахуммафтах сабилян ли-шифа'и хазаль-джама'а» — О Аллах, открой путь для исцеления этой группы. Но помни: чем больше адресатов — тем шире поток и тем меньше точность. Для тяжёлых случаев лучше работать с одним. Для лёгких — можно с несколькими.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="skolko-raz-povtoryat-dua-otkrytiya-puti">19.4. Сколько раз повторять дуа открытия пути?</h3>
+<p>Один раз достаточно, если вера сильная. Три раза — если чувствуешь, что нужна крепость. Семь раз — если путь очень узкий или завесы много. Не больше семи. Семь — это полнота.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-delat-esli-vo-vremya-chteniya-put-zakrylsya">19.5. Что делать, если во время чтения путь закрылся?</h3>
+<p>Это бывает. Намерение рассеялось. Мысль пришла. Сомнение закралось. Остановись. Замолчи на 10 секунд. Вернись к намерению. Произнеси в сердце: «Аллахуммафтах сабилян ли-шифа'иха» — и продолжай чтение. Не отчаивайся. Просто вернись.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-20-duhovnaya-anatomiya-putey">Глава 20. Духовная анатомия путей</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="gde-nahodyatsya-puti-v-tele">20.1. Где находятся пути в теле</h3>
+<p>Пути — это не физические каналы. Их нельзя увидеть. Но их можно почувствовать.</p>
+<p>Путь к Аллаху — из сердца. Из центра груди. Оттуда душа обращается вверх, к Аллаху. Когда этот путь открыт — ты чувствуешь лёгкость, расширение, свет в груди.</p>
+<p>Путь к пациенту — из сердца наружу. Через грудь, через руки, через голос, через взгляд. Когда этот путь открыт — ты чувствуешь, как сила выходит из тебя и идёт к пациенту.</p>
+<p>Путь внутри пациента — от места, куда вошла сила, к месту поражения. Этот путь прокладывается твоим намерением. Когда ты указываешь «фи ра'сиха» — в её голове — ты направляешь путь туда.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-zakryvaet-puti">20.2. Что закрывает пути</h3>
+<p>Пути закрываются:</p>
+<ul><li>Сомнением: «А вдруг не подействует?»</li><li>Рассеянностью: мысли о другом во время чтения</li><li>Рия: желание, чтобы пациент увидел твоё мастерство</li><li>Спешкой: желание быстрее закончить</li><li>Грехами: завеса между сердцем и Аллахом</li><li>Страхом: боязнь джинна, боязнь неудачи</li><li>Гордыней: «Я сам исцеляю»</li></ul>
+<p>Каждое из этих состояний — это камень на пути. Убери камень — путь откроется.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-otkryvaet-puti">20.3. Что открывает пути</h3>
+<p>Пути открываются:</p>
+<ul><li>Просьбой к Аллаху: «Аллахуммафтах сабилян»</li><li>Верой: твёрдой, непоколебимой, как гора</li><li>Искренностью: только ради Аллаха</li><li>Таухидом: осознанием, что нет силы кроме как от Аллаха</li><li>Терпением: не спешить, не отчаиваться</li><li>Покаянием: убрать грехи, создающие завесу</li></ul>
+<p>Заключение</p>
+<p>Мои дорогие, путь — это всё. Без пути нет воздействия. Без пути нет исцеления. Без пути сила остаётся там, где она родилась, и не доходит туда, где нужна.</p>
+<p>Но путь — это не то, что ты строишь сам. Путь — это то, что Аллах открывает тебе навстречу. Твоя задача — попросить. Обратиться. Сказать: «О Аллах, открой мне путь. Открой путь к Тебе. Открой путь к моему пациенту. Открой путь для исцеления».</p>
+<p>И Он откроет. Потому что Он обещал.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ</div>
+  <figcaption class="ayah-tr">И сказал ваш Господь: «Взывайте ко Мне — Я отвечу вам»</figcaption>
+  <div class="source">Источник: Сура «Гафир», аят 60</div>
+</figure>
+<p>Проси — и Он откроет. Обращайся — и Он ответит. Заклинай верой — и Он исцелит.</p>
+<p>Прямой путь — это не пробивать стену. Прямой путь — это попросить Того, у Кого ключи от всех дверей. И войти. И направить силу. И исцелить.</p>
+<p>Заклинай верой. Проси открыть путь. И Аллах исцелит.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنْفُسِهِمْ</div>
+  <figcaption class="ayah-tr">Поистине, Аллах не меняет положения людей, пока они не изменят самих себя</figcaption>
+  <div class="source">Источник: Сура «ар-Ра'д», аят 11</div>
+</figure>
+<p>Измени себя. Открой путь. И Аллах изменит положение твоего пациента.</p>
+<p>Валлаху а'лям. А Аллах знает лучше.</p>
+<p>Список литературы</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="svyaschennyy-koran">1. Священный Коран</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-al-buhari">2. Сахих аль-Бухари</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-muslim">3. Сахих Муслим</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sunan-at-tirmizi">4. Сунан ат-Тирмизи</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="musnad-ahmada">5. Муснад Ахмада</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ibn-al-kayyim-madaridzh-as-salikin">6. Ибн аль-Каййим, «Мадаридж ас-Саликин»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="an-navavi-sharh-sahih-muslim">7. Ан-Навави, «Шарх Сахих Муслим»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ibn-hadzhar-fath-al-bari">8. Ибн Хаджар, «Фатх аль-Бари»</h2>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Прямой путь: Заклинание верой. Часть вторая: Пути влияния · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var id = href.slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    try{ history.pushState(null,'',href);}catch(_e){}
+  });
+  if (location.hash && location.hash.length > 1) {
+    setTimeout(function(){
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>
