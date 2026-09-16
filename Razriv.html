@@ -1,0 +1,970 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Разрыв путей колдовства: Метод полного отсечения каналов и изгнания</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --paper-alt: #f5f7f5;
+  --ink: #1b221f;
+  --ink-soft: #4a5751;
+  --rule: #dce1dd;
+  --accent: #2f6b4f;
+  --accent-soft: #eaf2ed;
+  --gold: #9a7b32;
+  --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(20,30,25,.05);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: var(--base);
+  /* Плавная прокрутка только для якорей, без влияния на колесо мыши */
+  scroll-behavior: auto;
+  scroll-padding-top: 88px;
+}
+
+/* Отступ для якорей */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-break: normal;
+  /* Важно: не блокировать вертикальную прокрутку */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; width: 100%; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля ---- */
+.bismillah-slot { display: flex; width: 100%; direction: ltr; }
+.bismillah {
+  display: block; max-width: 100%;
+  font-family: var(--arabic); direction: rtl;
+  font-size: 1.75em; color: var(--gold);
+  line-height: 2.1; margin: 0;
+  letter-spacing: 0.02em; white-space: pre-wrap;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page { margin-bottom: 3rem; padding: 1.5rem 0; position: relative; }
+.bism-pos-center-page::after {
+  content: ""; display: block; width: 60px; height: 1px;
+  background: var(--gold); margin: .8rem auto 0; opacity: .45;
+}
+.title-page-bism-center { padding-top: 3rem; }
+.title-page-bism-center .bismillah-slot { margin-top: 1.5rem; margin-bottom: 3.5rem; }
+.title-page-bism-center .title-page-body { text-align: center; }
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+.bismillah:not([dir="rtl"]) { font-family: var(--serif); font-style: italic; direction: ltr; letter-spacing: .04em; }
+
+.institution {
+  font-family: var(--sans); font-size: .76em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3rem;
+}
+.book-title {
+  font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+}
+.book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.rule-orn {
+  width: 160px; height: 14px; margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦"; position: absolute; inset: 0; margin: auto;
+  width: 1.8em; height: 1em; line-height: .85;
+  background: var(--paper); color: var(--gold); font-size: .85rem;
+}
+.book-author { font-size: 1.08em; font-weight: 700; margin: 0 0 .4rem; }
+.book-meta { font-family: var(--sans); font-size: .84em; color: var(--ink-soft); line-height: 1.6; }
+.epigraph { max-width: 38ch; margin: 2.8rem auto 0; font-style: italic; color: var(--ink-soft); font-size: .96em; }
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 1.3rem; font-weight: 600; border: 0; padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink); text-decoration: none;
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .1rem; border-radius: 4px;
+}
+.toc a:hover { color: var(--accent); background: rgba(47,107,79,.06); }
+.toc a:active { background: rgba(47,107,79,.1); }
+.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.8em; font-size: .9em; font-weight: 500; }
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+.chapter > h2 {
+  font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
+  color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
+}
+.section > h3 { font-size: 1.25em; font-weight: 700; margin: 2.6rem 0 1rem; }
+.subsection > h4 { font-size: 1.08em; font-weight: 700; margin: 1.9rem 0 .8rem; color: var(--ink-soft); }
+.chapter:first-of-type > h2 { margin-top: 0; }
+section[data-kind="front"] > h2, section[data-kind="back"] > h2 {
+  text-align: center; border-bottom: 0; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 1.3em; font-weight: 700;
+}
+section[data-kind="front"] > h2::after, section[data-kind="back"] > h2::after {
+  content: ""; display: block; width: 72px; height: 1.5px;
+  background: var(--gold); margin: .9rem auto 0; border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem; text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
+
+.lead { font-size: 1.07em; color: var(--ink-soft); text-indent: 0; line-height: 1.65; }
+strong { font-weight: 700; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+a {
+  color: var(--accent); text-underline-offset: .22em; text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover { color: var(--gold); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
+  background: var(--paper-alt); padding: .12em .4em; border-radius: 3px; border: 1px solid var(--rule);
+  word-break: break-all;
+}
+hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
+.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+
+/* ========== СПИСКИ ========== */
+ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold); font-style: italic; color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source, blockquote.quote footer {
+  display: block; margin-top: .7rem; font-family: var(--sans);
+  font-style: normal; font-size: .78em; color: var(--ink-soft);
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0; padding: 1.8rem 2rem;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+  border-radius: 8px; position: relative; text-align: center;
+}
+.ayah::before, .ayah::after {
+  content: ""; position: absolute; left: 1.6rem; right: 1.6rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .45;
+}
+.ayah::before { top: .65rem; } .ayah::after { bottom: .65rem; }
+.ar-block {
+  font-family: var(--arabic); direction: rtl; unicode-bidi: isolate;
+  text-align: center; font-size: 1.6em; line-height: 2.3;
+  color: var(--ink); overflow-wrap: anywhere; word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+.ayah-tr { margin-top: 1rem; font-style: italic; font-size: .97em; text-indent: 0; color: var(--ink-soft); }
+.ayah .source { margin-top: .7rem; text-align: center; color: var(--accent); font-weight: 500; font-size: .8em; }
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС / ДУА ========== */
+.hadith {
+  margin: 1.9rem 0; padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 5px; background: var(--paper-alt);
+}
+.hadith .label, .dua .label, .callout .label {
+  display: block; font-family: var(--sans); font-size: .66em;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .65rem; font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+.dua {
+  margin: 1.9rem 0; padding: 1.5rem 1.8rem;
+  background: var(--paper-alt); border: 1.5px dashed var(--gold);
+  border-radius: 8px; text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+.callout { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 5px; font-size: .94em; }
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; unicode-bidi: isolate; direction: rtl; }
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] { font-family: var(--arabic); font-size: 1.35em; line-height: 2.2; text-indent: 0; }
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table { margin: 2.2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft); text-align: center; margin-top: .7rem; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
+th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
+tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+/* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
+sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
+.footnotes { margin-top: 4rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule); font-size: .85em; color: var(--ink-soft); }
+.footnotes h2, .bibliography h2 { font-family: var(--sans); font-size: .76em; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 600; }
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num { color: var(--accent); margin-right: .55em; font-weight: 700; }
+.bibliography ol { list-style: none; counter-reset: bib; padding-left: 0; }
+.bibliography li { counter-increment: bib; padding-left: 2.8rem; position: relative; margin: .7rem 0; font-size: .94em; line-height: 1.55; }
+.bibliography li::before { content: counter(bib) "."; position: absolute; left: 0; top: 0; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule);
+  font-family: var(--sans); font-size: .72em; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page { padding: 2.2rem 1.4rem 3rem; }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .45rem .1rem; min-height: 44px; }
+  .ayah { padding: 1.2rem 1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table { display: block; width: 100%; overflow-x: auto; }
+  table { min-width: 36rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page { size: A4; margin: 22mm 20mm 22mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.55; overflow: visible; }
+  .page { box-shadow: none; padding: 0; max-width: none; min-height: 0; }
+  .wrap { max-width: none; }
+  .title-page { page-break-after: always; border-bottom: 0; }
+  .title-page::after { display: none; }
+  .toc { page-break-after: always; background: none; border: 0; padding: 0; }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .doc-footer { display: none; }
+  .ayah, .hadith, .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Разрыв путей колдовства: Метод полного отсечения каналов и изгнания</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2026</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#glava-1-anatomiya-kanalov-koldovstva"><span class="num"></span><span class="lbl">Глава 1. Анатомия каналов колдовства</span></a><ol><li class="toc-l2">
+      <a href="#chto-takoe-puti-koldovstva"><span class="num"></span><span class="lbl">1.1. Что такое пути колдовства</span></a></li>
+<li class="toc-l2">
+      <a href="#vertikalnoe-i-gorizontalnoe-vliyanie"><span class="num"></span><span class="lbl">1.2. Вертикальное и горизонтальное влияние</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-neobhodimo-snachala-otsech-puti"><span class="num"></span><span class="lbl">1.3. Почему необходимо сначала отсечь пути</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-2-etap-pervyy-otsechenie-putey-koldovstva"><span class="num"></span><span class="lbl">Глава 2. Этап первый: Отсечение путей колдовства</span></a><ol><li class="toc-l2">
+      <a href="#namerenie-1-otsechenie-putey-koldovstva-v-tele"><span class="num"></span><span class="lbl">2.1. Намерение 1. Отсечение путей колдовства в теле</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-ob-otsechenii"><span class="num"></span><span class="lbl">2.2. Аят, соответствующий намерению об отсечении</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata"><span class="num"></span><span class="lbl">2.3. Краткое дуа после аята</span></a></li>
+<li class="toc-l2">
+      <a href="#namerenie-2-otsechenie-putey-koldovstva-mezhdu-zhertvoy-i-ko"><span class="num"></span><span class="lbl">2.4. Намерение 2. Отсечение путей колдовства между жертвой и колдунами</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-ob-otsechenii-vneshnih-sv"><span class="num"></span><span class="lbl">2.5. Аят, соответствующий намерению об отсечении внешних связей</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata-2"><span class="num"></span><span class="lbl">2.6. Краткое дуа после аята</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-3-etap-vtoroy-razvyazyvanie-uzlov-otsechennyh-putey"><span class="num"></span><span class="lbl">Глава 3. Этап второй: Развязывание узлов отсечённых путей</span></a><ol><li class="toc-l2">
+      <a href="#pochemu-nuzhno-razvyazyvat-uzly-posle-otsecheniya"><span class="num"></span><span class="lbl">3.1. Почему нужно развязывать узлы после отсечения</span></a></li>
+<li class="toc-l2">
+      <a href="#namerenie-3-razvyazyvanie-uzlov-putey-koldovstva"><span class="num"></span><span class="lbl">3.2. Намерение 3. Развязывание узлов путей колдовства</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-o-razvyazyvanii"><span class="num"></span><span class="lbl">3.3. Аят, соответствующий намерению о развязывании</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata-3"><span class="num"></span><span class="lbl">3.4. Краткое дуа после аята</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-4-etap-tretiy-zaschita-otsechennyh-putey"><span class="num"></span><span class="lbl">Глава 4. Этап третий: Защита отсечённых путей</span></a><ol><li class="toc-l2">
+      <a href="#pochemu-zaschita-obyazatelna"><span class="num"></span><span class="lbl">4.1. Почему защита обязательна</span></a></li>
+<li class="toc-l2">
+      <a href="#namerenie-4-ustanovka-zaschity-na-telo-i-dushu"><span class="num"></span><span class="lbl">4.2. Намерение 4. Установка защиты на тело и душу</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-o-zaschite"><span class="num"></span><span class="lbl">4.3. Аят, соответствующий намерению о защите</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata-4"><span class="num"></span><span class="lbl">4.4. Краткое дуа после аята</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-5-etap-chetvertyy-razrushenie-samogo-koldovstva"><span class="num"></span><span class="lbl">Глава 5. Этап четвёртый: Разрушение самого колдовства</span></a><ol><li class="toc-l2">
+      <a href="#pochemu-koldovstvo-razrushaetsya-posle-otsecheniya-putey"><span class="num"></span><span class="lbl">5.1. Почему колдовство разрушается после отсечения путей</span></a></li>
+<li class="toc-l2">
+      <a href="#namerenie-5-annulirovanie-koldovstva-v-tele"><span class="num"></span><span class="lbl">5.2. Намерение 5. Аннулирование колдовства в теле</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-ob-annulirovanii-koldovst"><span class="num"></span><span class="lbl">5.3. Аят, соответствующий намерению об аннулировании колдовства</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata-5"><span class="num"></span><span class="lbl">5.4. Краткое дуа после аята</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-6-etap-pyatyy-razrushenie-kreposti-dzhinna-i-izgnanie"><span class="num"></span><span class="lbl">Глава 6. Этап пятый: Разрушение крепости джинна и изгнание</span></a><ol><li class="toc-l2">
+      <a href="#krepost-dzhinna"><span class="num"></span><span class="lbl">6.1. Крепость джинна</span></a></li>
+<li class="toc-l2">
+      <a href="#namerenie-6-razrushenie-kreposti-dzhinna"><span class="num"></span><span class="lbl">6.2. Намерение 6. Разрушение крепости джинна</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-o-razrushenii-kreposti"><span class="num"></span><span class="lbl">6.3. Аят, соответствующий намерению о разрушении крепости</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata-6"><span class="num"></span><span class="lbl">6.4. Краткое дуа после аята</span></a></li>
+<li class="toc-l2">
+      <a href="#namerenie-7-izgnanie-dzhinna"><span class="num"></span><span class="lbl">6.5. Намерение 7. Изгнание джинна</span></a></li>
+<li class="toc-l2">
+      <a href="#ayat-sootvetstvuyuschiy-namereniyu-ob-izgnanii"><span class="num"></span><span class="lbl">6.6. Аят, соответствующий намерению об изгнании</span></a></li>
+<li class="toc-l2">
+      <a href="#kratkoe-dua-posle-ayata-7"><span class="num"></span><span class="lbl">6.7. Краткое дуа после аята</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-7-povtornyy-razryv-pri-soprotivlenii"><span class="num"></span><span class="lbl">Глава 7. Повторный разрыв при сопротивлении</span></a><ol><li class="toc-l2">
+      <a href="#kogda-dzhinn-derzhitsya"><span class="num"></span><span class="lbl">7.1. Когда джинн держится</span></a></li>
+<li class="toc-l2">
+      <a href="#poryadok-povtoreniya"><span class="num"></span><span class="lbl">7.2. Порядок повторения</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#vernutsya-k-namereniyu-1-otsechenie-putey-v-tele-prochitat-a"><span class="num"></span><span class="lbl">1. Вернуться к Намерению 1: Отсечение путей в теле. Прочитать аят об отсечении. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#vernutsya-k-namereniyu-2-otsechenie-putey-mezhdu-zhertvoy-i-"><span class="num"></span><span class="lbl">2. Вернуться к Намерению 2: Отсечение путей между жертвой и колдунами. Прочитать аят. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#razvyazat-uzly-povtorno-namerenie-3-ayat-dua"><span class="num"></span><span class="lbl">3. Развязать узлы повторно. Намерение 3. Аят. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#obnovit-zaschitu-namerenie-4-ayat-dua"><span class="num"></span><span class="lbl">4. Обновить защиту. Намерение 4. Аят. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#snova-razrushit-koldovstvo-namerenie-5-ayat-dua"><span class="num"></span><span class="lbl">5. Снова разрушить колдовство. Намерение 5. Аят. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#snova-razrushit-krepost-dzhinna-namerenie-6-ayat-dua"><span class="num"></span><span class="lbl">6. Снова разрушить крепость джинна. Намерение 6. Аят. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#snova-izgnat-namerenie-7-ayat-dua"><span class="num"></span><span class="lbl">7. Снова изгнать. Намерение 7. Аят. Дуа.</span></a></li>
+<li class="toc-l1">
+      <a href="#glava-8-svyaz-s-metodom-volevogo-akta"><span class="num"></span><span class="lbl">Глава 8. Связь с методом Волевого акта</span></a><ol><li class="toc-l2">
+      <a href="#zaryazhenie-namereniya-pered-kazhdym-etapom"><span class="num"></span><span class="lbl">8.1. Заряжение намерения перед каждым этапом</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#sformulirovat-namerenie-v-serdce-chetko-i-konkretno"><span class="num"></span><span class="lbl">1. Сформулировать намерение в сердце чётко и конкретно.</span></a></li>
+<li class="toc-l1">
+      <a href="#povtorit-ego-v-serdce-ot-soroka-do-semidesyati-raz-poka-ne-p"><span class="num"></span><span class="lbl">2. Повторить его в сердце от сорока до семидесяти раз, пока не почувствуешь плотность.</span></a></li>
+<li class="toc-l1">
+      <a href="#uderzhivat-ego-vo-vremya-chteniya-ayata"><span class="num"></span><span class="lbl">3. Удерживать его во время чтения аята.</span></a></li>
+<li class="toc-l1">
+      <a href="#ne-teryat-ego-vo-vremya-dua"><span class="num"></span><span class="lbl">4. Не терять его во время дуа.</span></a><ol><li class="toc-l2">
+      <a href="#ispolzovanie-metoda-arkiyka-pri-napravlenii"><span class="num"></span><span class="lbl">8.2. Использование метода «Аркийка» при направлении</span></a></li>
+<li class="toc-l2">
+      <a href="#perifericheskoe-zrenie-pri-rabote-s-telom-celikom"><span class="num"></span><span class="lbl">8.3. Периферическое зрение при работе с телом целиком</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-9-prakticheskaya-tablica-protokola"><span class="num"></span><span class="lbl">Глава 9. Практическая таблица протокола</span></a></li>
+<li class="toc-l1">
+      <a href="#glava-10-nastavlenie-lekarya"><span class="num"></span><span class="lbl">Глава 10. Наставление лекаря</span></a><ol><li class="toc-l2">
+      <a href="#poryadok-obyazatelen"><span class="num"></span><span class="lbl">10.1. Порядок обязателен</span></a></li>
+<li class="toc-l2">
+      <a href="#sosredotochenie-na-organe"><span class="num"></span><span class="lbl">10.2. Сосредоточение на органе</span></a></li>
+<li class="toc-l2">
+      <a href="#uverennost-i-otsutstvie-somneniy"><span class="num"></span><span class="lbl">10.3. Уверенность и отсутствие сомнений</span></a></li>
+<li class="toc-l2">
+      <a href="#posle-seansa"><span class="num"></span><span class="lbl">10.4. После сеанса</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#svyaschennyy-koran"><span class="num"></span><span class="lbl">1. Священный Коран</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-al-buhari"><span class="num"></span><span class="lbl">2. Сахих аль-Бухари</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-muslim"><span class="num"></span><span class="lbl">3. Сахих Муслим</span></a></li>
+<li class="toc-l1">
+      <a href="#sunan-at-tirmizi"><span class="num"></span><span class="lbl">4. Сунан ат-Тирмизи</span></a></li>
+<li class="toc-l1">
+      <a href="#musnad-ahmada"><span class="num"></span><span class="lbl">5. Муснад Ахмада</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-volevoy-akt-iskusstvo-uderzhaniya-namereniya-v-"><span class="num"></span><span class="lbl">6. Абу Мухаммад, «Волевой акт: Искусство удержания намерения в сердце»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-zaryad-vystrel-uglublennaya-programma-uprazhnen"><span class="num"></span><span class="lbl">7. Абу Мухаммад, «Заряд — Выстрел: Углублённая программа упражнений»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-vliyanie-voley-metod-osoznannogo-zaklinaniya"><span class="num"></span><span class="lbl">8. Абу Мухаммад, «Влияние волей: Метод осознанного заклинания»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-pervaya"><span class="num"></span><span class="lbl">9. Абу Мухаммад, «Прямой путь заклинания верой. Часть первая»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-vtoraya-put"><span class="num"></span><span class="lbl">10. Абу Мухаммад, «Прямой путь заклинания верой. Часть вторая: Пути влияния»</span></a></li></ol></nav>
+  <main>
+<p>Введение</p>
+<p>Мои дорогие, в этой книге мы раскроем один из самых глубоких и мощных методов Шариатской Рукии. Известно, что когда колдуны делают колдовство, они направляют его к путям души жертвы, к её каналам, находясь на расстоянии или даже вблизи. Если они делают колдовство через предметы, то тот же эффект — задействование каналов жертвы — достигается через размещение этих предметов рядом с жертвой.</p>
+<p>Для разрушения колдовства навсегда я уверен, что следует разрубить пути колдовства, откуда бы оно ни исходило, и читать именно на это, чтобы Аллах разорвал пути колдовства и защитил от них. Если пути отрезаны и защищены от влияния, то по умолчанию колдовство теряет своё воздействие на пациента. Джинны, которые находятся в теле пациента из-за колдовства, приходят в расстройство и легко покидают тело жертвы.</p>
+<p>Колдовство влияет либо вертикально, либо горизонтально. Но от того, что делается общее намерение, чтобы Аллах Кораном отрезал все пути колдовства, все они будут отрезаны иншаАллах.</p>
+<p>В этой книге дан полный пошаговый протокол: от разрыва каналов до разрушения крепости джинна и его окончательного изгнания.</p>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-1-anatomiya-kanalov-koldovstva">Глава 1. Анатомия каналов колдовства</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-takoe-puti-koldovstva">1.1. Что такое пути колдовства</h3>
+<p>Пути колдовства — это духовные каналы, через которые сила колдовства поступает к жертве. Они подобны проводам, по которым течёт ток. Пока провод цел — ток течёт. Пока канал открыт — колдовство действует.</p>
+<p>Колдун, находясь за километры от жертвы, направляет колдовство через эти каналы. Предметы колдовства — узлы, закопанные вещи, подброшенные предметы — служат якорями, которые крепят канал к телу жертвы.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vertikalnoe-i-gorizontalnoe-vliyanie">1.2. Вертикальное и горизонтальное влияние</h3>
+<p>Вертикальное влияние — когда колдовство направлено сверху вниз: на голову, на мозг, на разум. Это колдовство на безумие, на потерю памяти, на путаницу в мыслях.</p>
+<p>Горизонтальное влияние — когда колдовство направлено от колдуна или от предмета к телу жертвы: на сердце, на живот, на ноги. Это колдовство на разлуку, на болезнь, на блокировку.</p>
+<p>Общее намерение на отсечение всех путей покрывает оба направления иншаАллах.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-neobhodimo-snachala-otsech-puti">1.3. Почему необходимо сначала отсечь пути</h3>
+<p>Если начать изгонять джинна или разрушать колдовство, не отрезав каналы, то:</p>
+<ul><li>Джинн будет цепляться за канал как за якорь</li><li>Колдовство будет подпитываться извне через открытый канал</li><li>После временного улучшения колдовство вернётся через тот же канал</li><li>Джинн, изгнанный из тела, вернётся по открытому пути</li></ul>
+<p>Поэтому первый шаг — всегда отсечение. Как хирург сначала перекрывает кровоток, а потом оперирует.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-2-etap-pervyy-otsechenie-putey-koldovstva">Глава 2. Этап первый: Отсечение путей колдовства</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-1-otsechenie-putey-koldovstva-v-tele">2.1. Намерение 1. Отсечение путей колдовства в теле</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَقْطَعَ اللَّهُ بِالْقُرْآنِ سُبُلَ السِّحْرِ فِي جَسَدِكَ</div>
+  <p>Йакта'а-Ллаху биль-Кур'ани субуля-с-сихри фи джасадика</p>
+<p>Да отсечёт Аллах Кораном пути колдовства в твоём теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Это намерение произносится в сердце. Один раз, если вера сильная. Три или семь раз, если вера требует укрепления.</p>
+<aside class="callout"><span class="label">Примечание</span><p>Если человека беспокоит определённый орган, следует сосредоточиться на том органе. Например, если пути колдовства идут на голову, намерение направляется на голову: «Да отсечёт Аллах Кораном пути колдовства в твоей голове». Если на живот — «в твоём животе». Но общее намерение «в твоём теле» покрывает всё.</p></aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-ob-otsechenii">2.2. Аят, соответствующий намерению об отсечении</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِذْ تَبَرَّأَ الَّذِينَ اتُّبِعُوا مِنَ الَّذِينَ اتَّبَعُوا وَرَأَوُا الْعَذَابَ وَتَقَطَّعَتْ بِهِمُ الْأَسْبَابُ</div>
+  <figcaption class="ayah-tr">Когда те, за кем следовали, отрекутся от тех, кто следовал за ними, и увидят они наказание, и разорвутся между ними связи</figcaption>
+  <div class="source">Источник: Сура «аль-Бакара», аят 166</div>
+</figure>
+<p>Слово<span class="ar-inline" lang="ar" dir="rtl">وَتَقَطَّعَتْ</span>(ва такатта'ат) означает «разорвались», «рассеклись», «были отрезаны». Это именно то действие, которое мы намереваемся: разрыв связей между колдовством и телом.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata">2.3. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبَبٍ لِلسِّحْرِ فِي هَذَا الْجَسَدِ، وَاقْطَعْ كُلَّ طَرِيقٍ بَيْنَ السِّحْرِ وَبَيْنَ هَذَا الْعَبْدِ</div>
+  <p>Аллахуммакт'а' кулля сабабин лис-сихри фи хазаль-джасад, вакт'а' кулля тарикын байнас-сихри ва байна хазаль-'абд</p>
+<p>О Аллах, отсекни всякую связь колдовства в этом теле, и отсекни всякий путь между колдовством и этим рабом</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-2-otsechenie-putey-koldovstva-mezhdu-zhertvoy-i-ko">2.4. Намерение 2. Отсечение путей колдовства между жертвой и колдунами</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَقْطَعَ اللَّهُ بِالْقُرْآنِ سُبُلَ السِّحْرِ فِي بَيْنِكَ وَبَيْنَ السَّحَرَةِ</div>
+  <p>Йакта'а-Ллаху биль-Кур'ани субуля-с-сихри фи байника ва байна-с-сахара</p>
+<p>Да отсечёт Аллах Кораном пути колдовства между тобой и колдунами</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Это намерение отсекает внешний канал: тот, по которому колдун направляет колдовство извне. Даже если колдун за тысячу километров — канал будет отрезан иншаАллах.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-ob-otsechenii-vneshnih-sv">2.5. Аят, соответствующий намерению об отсечении внешних связей</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">فَقُطِعَ دَابِرُ الْقَوْمِ الَّذِينَ ظَلَمُوا وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</div>
+  <figcaption class="ayah-tr">И был истреблён последний корень народа, который поступал несправедливо. И хвала Аллаху, Господу миров</figcaption>
+  <div class="source">Источник: Сура «аль-Ан'ам», аят 45</div>
+</figure>
+<p>Слово<span class="ar-inline" lang="ar" dir="rtl">فَقُطِعَ</span>(фа куты'а) означает «был отрезан», «был пресечён». Слово<span class="ar-inline" lang="ar" dir="rtl">دَابِرُ</span>(дабир) означает «последний корень», «самое основание». Это полное уничтожение связи от корня.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata-2">2.6. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبَبٍ بَيْنَ هَذَا الْعَبْدِ وَبَيْنَ كُلِّ سَاحِرٍ وَجِنٍّ وَشَيْطَانٍ، وَلَا تَدَعْ لَهُمْ إِلَيْهِ سَبِيلًا</div>
+  <p>Аллахуммакт'а' кулля сабабин байна хазаль-'абди ва байна кулли сахирин ва джиннин ва шайтан, ва ля тада' лахум иляйхи сабиля</p>
+<p>О Аллах, отсекни всякую связь между этим рабом и всяким колдуном, джинном и шайтаном, и не оставляй им к нему пути</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-3-etap-vtoroy-razvyazyvanie-uzlov-otsechennyh-putey">Глава 3. Этап второй: Развязывание узлов отсечённых путей</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-nuzhno-razvyazyvat-uzly-posle-otsecheniya">3.1. Почему нужно развязывать узлы после отсечения</h3>
+<p>После того как пути отрезаны, на них остаются узлы. Это то, что колдун завязал, чтобы закрепить колдовство. Даже отрезанный путь может сохранять узел, за который цепляется остаток силы или джинн.</p>
+<p>Например: если пути колдовства шли на голову, то после отсечения нужно развязать узлы путей колдовства на голову. Если на живот — узлы на живот.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-3-razvyazyvanie-uzlov-putey-koldovstva">3.2. Намерение 3. Развязывание узлов путей колдовства</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَحُلَّ اللَّهُ بِالْقُرْآنِ عُقَدَ سُبُلِ السِّحْرِ فِي رَأْسِكَ</div>
+  <p>Йахулля-Ллаху биль-Кур'ани 'укада субули-с-сихри фи ра'сика</p>
+<p>Да развяжет Аллах Кораном узлы путей колдовства в твоей голове</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Для живота:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَحُلَّ اللَّهُ بِالْقُرْآنِ عُقَدَ سُبُلِ السِّحْرِ فِي بَطْنِكَ</div>
+  <p>Йахулля-Ллаху биль-Кур'ани 'укада субули-с-сихри фи батника</p>
+<p>Да развяжет Аллах Кораном узлы путей колдовства в твоём животе</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Для всего тела:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَحُلَّ اللَّهُ بِالْقُرْآنِ عُقَدَ سُبُلِ السِّحْرِ فِي جَسَدِكَ</div>
+  <p>Йахулля-Ллаху биль-Кур'ани 'укада субули-с-сихри фи джасадика</p>
+<p>Да развяжет Аллах Кораном узлы путей колдовства в твоём теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-o-razvyazyvanii">3.3. Аят, соответствующий намерению о развязывании</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي</div>
+  <figcaption class="ayah-tr">Господь мой! Раскрой мне грудь, облегчи мне дело моё и развяжи узел с языка моего, чтобы понимали речь мою</figcaption>
+  <div class="source">Источник: Сура «Та Ха», аяты 25-28</div>
+</figure>
+<p>Слово<span class="ar-inline" lang="ar" dir="rtl">وَاحْلُلْ</span>(вахлуль) означает «развяжи», «распусти», «разреши». Это прямое обращение к Аллаху с просьбой развязать узел.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata-3">3.4. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْلُلْ كُلَّ عُقْدَةٍ مِنْ عُقَدِ السِّحْرِ فِي هَذَا الْجَسَدِ، وَفُكَّ كُلَّ قَيْدٍ وَكُلَّ رَبْطٍ</div>
+  <p>Аллахуммахлуль кулля 'укдатин мин 'укади-с-сихри фи хазаль-джасад, ва фукка кулля кайдин ва кулля рабт</p>
+<p>О Аллах, развяжи каждый узел из узлов колдовства в этом теле, и освободи от всякой цепи и всякой привязки</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-4-etap-tretiy-zaschita-otsechennyh-putey">Глава 4. Этап третий: Защита отсечённых путей</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-zaschita-obyazatelna">4.1. Почему защита обязательна</h3>
+<p>После отсечения путей и развязывания узлов необходимо поставить защиту. Иначе:</p>
+<ul><li>Колдун может направить новое колдовство по старому руслу</li><li>Шайтан может попытаться восстановить канал</li><li>Джинн может попытаться вернуться через незащищённое место</li></ul>
+<p>Защита ставится путём прочтения заклинания для хисна — крепости тела и души пациента.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-4-ustanovka-zaschity-na-telo-i-dushu">4.2. Намерение 4. Установка защиты на тело и душу</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَحْفَظَ اللَّهُ بِالْقُرْآنِ جَسَدَكَ وَرُوحَكَ مِنْ كُلِّ سِحْرٍ وَجِنٍّ وَعَيْنٍ</div>
+  <p>Йахфаза-Ллаху биль-Кур'ани джасадака ва рухака мин кулли сихрин ва джиннин ва 'айн</p>
+<p>Да защитит Аллах Кораном твоё тело и твою душу от всякого колдовства, джинна и сглаза</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-o-zaschite">4.3. Аят, соответствующий намерению о защите</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَجَعَلْنَا مِن بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ</div>
+  <figcaption class="ayah-tr">Мы установили преграду перед ними и преграду позади них и покрыли их, так что они не видят</figcaption>
+  <div class="source">Источник: Сура «Йа Син», аят 9</div>
+</figure>
+<p>Этот аят создаёт духовную преграду —<span class="ar-inline" lang="ar" dir="rtl">سدًّا</span>(саддан) — между пациентом и всяким злом. Преграда спереди и сзади означает полную защиту со всех сторон.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata-4">4.4. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ هَذَا الْجَسَدَ حِصْنًا حَصِينًا لَا يَدْخُلُهُ سِحْرٌ وَلَا جِنٌّ وَلَا عَيْنٌ وَلَا شَيْطَانٌ</div>
+  <p>Аллахуммадж'аль хазаль-джасада хиснан хасынан ля йадхулюху сихрун ва ля джиннун ва ля 'айнун ва ля шайтан</p>
+<p>О Аллах, сделай это тело укреплённой крепостью, в которую не войдёт ни колдовство, ни джинн, ни сглаз, ни шайтан</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-5-etap-chetvertyy-razrushenie-samogo-koldovstva">Глава 5. Этап четвёртый: Разрушение самого колдовства</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-koldovstvo-razrushaetsya-posle-otsecheniya-putey">5.1. Почему колдовство разрушается после отсечения путей</h3>
+<p>После разрыва каналов колдовство внутри тела теряет питание извне. Оно становится изолированным. Как огонь, лишённый кислорода. Теперь его можно разрушить полностью.</p>
+<p>Не следует забывать о самом колдовстве после разрыва каналов и развязывания узлов. Необходимо почитать и против самого колдовства, а затем уже переходить к выведению.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-5-annulirovanie-koldovstva-v-tele">5.2. Намерение 5. Аннулирование колдовства в теле</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُبْطِلَ اللَّهُ بِالْقُرْآنِ كُلَّ سِحْرٍ فِي جَسَدِكَ</div>
+  <p>Йубтыля-Ллаху биль-Кур'ани кулля сихрин фи джасадика</p>
+<p>Да аннулирует Аллах Кораном всякое колдовство в твоём теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-ob-annulirovanii-koldovst">5.3. Аят, соответствующий намерению об аннулировании колдовства</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنْ أَلْقِ عَصَاكَ فَإِذَا هِيَ تَلْقَفُ مَا يَأْفِكُونَ فَوَقَعَ الْحَقُّ وَبَطَلَ مَا كَانُوا يَعْمَلُونَ</div>
+  <figcaption class="ayah-tr">И внушили Мы Мусе: «Брось свою палку!» И вот она поглощает то, что они измышляют. И утвердилась истина, и оказалось тщетным то, что они совершали</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аяты 117-118</div>
+</figure>
+<p>Слово<span class="ar-inline" lang="ar" dir="rtl">وَبَطَلَ</span>(ва батала) означает «оказалось тщетным», «аннулировалось», «потеряло силу». Это именно то, что происходит с колдовством, когда оно лишено каналов питания и разрушается словом Аллаха.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata-5">5.4. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ سِحْرٍ فِي هَذَا الْجَسَدِ، مَأْكُولًا كَانَ أَوْ مَشْرُوبًا أَوْ مَرْشُوشًا أَوْ مَدْفُونًا</div>
+  <p>Аллахумма абтыль кулля сихрин фи хазаль-джасад, ма'кулян кана ау машрубан ау маршушан ау мадфуна</p>
+<p>О Аллах, аннулируй всякое колдовство в этом теле: съеденное, выпитое, рассыпанное или закопанное</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-6-etap-pyatyy-razrushenie-kreposti-dzhinna-i-izgnanie">Глава 6. Этап пятый: Разрушение крепости джинна и изгнание</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="krepost-dzhinna">6.1. Крепость джинна</h3>
+<p>Если в теле пациента утвердился джинн, он строит себе крепость — хисн. Эта крепость может быть:</p>
+<ul><li>Из колдовства, которое ещё осталось в теле</li><li>Из страха пациента</li><li>Из грехов, за которые джинн цепляется</li><li>Из давности пребывания</li></ul>
+<p>Следует рушить его хисн путём чтения заклинания против его защиты, а затем либо джинн убежит, либо мы прочтём на выведение.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-6-razrushenie-kreposti-dzhinna">6.2. Намерение 6. Разрушение крепости джинна</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَهْدِمَ اللَّهُ بِالْقُرْآنِ حِصْنَ كُلِّ جِنٍّ فِي جَسَدِكَ</div>
+  <p>Йахдима-Ллаху биль-Кур'ани хисна кулли джиннин фи джасадика</p>
+<p>Да разрушит Аллах Кораном крепость всякого джинна в твоём теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-o-razrushenii-kreposti">6.3. Аят, соответствующий намерению о разрушении крепости</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَقُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ</div>
+  <figcaption class="ayah-tr">Мы сказали: «О огонь, стань прохладой и безопасностью для Ибрахима»</figcaption>
+  <div class="source">Источник: Сура «аль-Анбийа», аят 69</div>
+</figure>
+<p>Этот аят показывает, как Аллах меняет природу вещи. Огонь, который должен был сжигать, стал прохладой. Так же крепость джинна, которая должна была защищать его, разрушается и становится его ловушкой.</p>
+<p>Также применяется:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا</div>
+  <figcaption class="ayah-tr">И скажи: «Пришла истина, и исчезла ложь. Поистине, ложь обречена на исчезновение»</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 81</div>
+</figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata-6">6.4. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اهْدِمْ حِصْنَ كُلِّ جِنٍّ فِي هَذَا الْجَسَدِ، وَدَمِّرْ دُرُوعَهُ وَتَحْصِينَاتِهِ</div>
+  <p>Аллахуммахдим хисна кулли джиннин фи хазаль-джасад, ва даммир дуру'аху ва тахсынатих</p>
+<p>О Аллах, разрушь крепость всякого джинна в этом теле, и уничтожь его доспехи и укрепления</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="namerenie-7-izgnanie-dzhinna">6.5. Намерение 7. Изгнание джинна</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُخْرِجَ اللَّهُ بِالْقُرْآنِ كُلَّ جِنٍّ مِنْ جَسَدِكَ</div>
+  <p>Йухриджа-Ллаху биль-Кур'ани кулля джиннин мин джасадика</p>
+<p>Да изгонит Аллах Кораном всякого джинна из твоего тела</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ayat-sootvetstvuyuschiy-namereniyu-ob-izgnanii">6.6. Аят, соответствующий намерению об изгнании</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">قَالَ اخْرُجْ مِنْهَا مَذْءُومًا مَّدْحُورًا لَّمَن تَبِعَكَ مِنْهُمْ لَأَمْلَأَنَّ جَهَنَّمَ مِنكُمْ أَجْمَعِينَ</div>
+  <figcaption class="ayah-tr">Сказал Он: «Выйди из неё порицаемым, отвергнутым! Тех из них, кто последует за тобой, Я непременно заполню Геенной — всеми вами вместе»</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аят 18</div>
+</figure>
+<p>Слово<span class="ar-inline" lang="ar" dir="rtl">اخْرُجْ</span>(ухрудж) — это прямой приказ: «Выйди!» Это не просьба. Это не переговоры. Это приказ Того, перед Кем джинн обязан подчиниться.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kratkoe-dua-posle-ayata-7">6.7. Краткое дуа после аята</h3>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَخْرِجْ كُلَّ جِنٍّ مِنْ هَذَا الْجَسَدِ، وَلَا تُبْقِ مِنْهُ شَيْئًا، وَلَا تُمَكِّنْ لَهُ عَوْدَةً</div>
+  <p>Аллахумма ахридж кулля джиннин мин хазаль-джасад, ва ля тубкы минху шай'ан, ва ля тумакин ляху 'ауда</p>
+<p>О Аллах, изгони всякого джинна из этого тела, и не оставляй от него ничего, и не давай ему возможности вернуться</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-7-povtornyy-razryv-pri-soprotivlenii">Глава 7. Повторный разрыв при сопротивлении</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kogda-dzhinn-derzhitsya">7.1. Когда джинн держится</h3>
+<p>Если наблюдается, что джинн держится и не уходит после первого полного цикла, это означает одно из двух:</p>
+<ul><li>Остался скрытый канал, который не был отрезан</li><li>Узел был развязан не полностью</li></ul>
+<p>В этом случае не следует кричать на джинна или вступать с ним в переговоры. Следует вновь читать на разрыв путей повторно, а затем снова на выведение.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poryadok-povtoreniya">7.2. Порядок повторения</h3>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vernutsya-k-namereniyu-1-otsechenie-putey-v-tele-prochitat-a">1. Вернуться к Намерению 1: Отсечение путей в теле. Прочитать аят об отсечении. Дуа.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="vernutsya-k-namereniyu-2-otsechenie-putey-mezhdu-zhertvoy-i-">2. Вернуться к Намерению 2: Отсечение путей между жертвой и колдунами. Прочитать аят. Дуа.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="razvyazat-uzly-povtorno-namerenie-3-ayat-dua">3. Развязать узлы повторно. Намерение 3. Аят. Дуа.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="obnovit-zaschitu-namerenie-4-ayat-dua">4. Обновить защиту. Намерение 4. Аят. Дуа.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="snova-razrushit-koldovstvo-namerenie-5-ayat-dua">5. Снова разрушить колдовство. Намерение 5. Аят. Дуа.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="snova-razrushit-krepost-dzhinna-namerenie-6-ayat-dua">6. Снова разрушить крепость джинна. Намерение 6. Аят. Дуа.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="snova-izgnat-namerenie-7-ayat-dua">7. Снова изгнать. Намерение 7. Аят. Дуа.</h2>
+<p>Каждый повторный цикл сильнее предыдущего, потому что с каждым разом вера раки крепнет, а сопротивление джинна слабеет.</p>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-8-svyaz-s-metodom-volevogo-akta">Глава 8. Связь с методом Волевого акта</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="zaryazhenie-namereniya-pered-kazhdym-etapom">8.1. Заряжение намерения перед каждым этапом</h3>
+<p>Каждое из семи намерений этой книги должно быть заряжено по методу Волевого акта. Это означает:</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sformulirovat-namerenie-v-serdce-chetko-i-konkretno">1. Сформулировать намерение в сердце чётко и конкретно.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="povtorit-ego-v-serdce-ot-soroka-do-semidesyati-raz-poka-ne-p">2. Повторить его в сердце от сорока до семидесяти раз, пока не почувствуешь плотность.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="uderzhivat-ego-vo-vremya-chteniya-ayata">3. Удерживать его во время чтения аята.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="ne-teryat-ego-vo-vremya-dua">4. Не терять его во время дуа.</h2>
+<p>Одно намерение без заряжения — это капля. Заряженное намерение — это поток.</p>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ispolzovanie-metoda-arkiyka-pri-napravlenii">8.2. Использование метода «Аркийка» при направлении</h3>
+<p>В момент произнесения намерения и чтения аята следует использовать внутренний волевой удар:</p>
+<ul><li>Короткая дозарядка сердечным чтением аята три-пять раз</li><li>Резкий волевой посыл к месту поражения</li><li>Мгновенное направление силы в цель</li></ul>
+<p>Без пауз. Как выстрел. Как удар меча.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="perifericheskoe-zrenie-pri-rabote-s-telom-celikom">8.3. Периферическое зрение при работе с телом целиком</h3>
+<p>Если намерение общее — на всё тело — следует использовать периферическое зрение. Смотреть не в одну точку, а охватывать всё тело пациента широким лучом. Так сила распределяется равномерно.</p>
+<p>Если намерение точечное — на конкретный орган — взгляд сужается и направляется именно туда.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-9-prakticheskaya-tablica-protokola">Глава 9. Практическая таблица протокола</h2>
+<figure class="table"><table><thead><tr><th>Этап</th><th>Намерение</th><th>Аят</th><th>Дуа</th></tr></thead><tbody><tr><td>1. Отсечение путей в теле</td><td>Йакта'а-Ллаху биль-Кур'ани субуля-с-сихри фи джасадика</td><td>Сура аль-Бакара, 166</td><td>Аллахуммакт'а' кулля сабабин</td></tr><tr><td>2. Отсечение путей от колдунов</td><td>Йакта'а-Ллаху биль-Кур'ани субуля-с-сихри фи байника ва байна-с-сахара</td><td>Сура аль-Ан'ам, 45</td><td>Аллахуммакт'а' кулля сабабин байна</td></tr><tr><td>3. Развязывание узлов</td><td>Йахулля-Ллаху биль-Кур'ани 'укада субули-с-сихри</td><td>Сура Та Ха, 25-28</td><td>Аллахуммахлуль кулля 'укдатин</td></tr><tr><td>4. Защита хисн</td><td>Йахфаза-Ллаху биль-Кур'ани джасадака ва рухака</td><td>Сура Йа Син, 9</td><td>Аллахуммадж'аль хазаль-джасада хиснан</td></tr><tr><td>5. Аннулирование колдовства</td><td>Йубтыля-Ллаху биль-Кур'ани кулля сихрин</td><td>Сура аль-А'раф, 117-118</td><td>Аллахумма абтыль кулля сихрин</td></tr><tr><td>6. Разрушение крепости джинна</td><td>Йахдима-Ллаху биль-Кур'ани хисна кулли джиннин</td><td>Сура аль-Исра, 81</td><td>Аллахуммахдим хисна кулли джиннин</td></tr><tr><td>7. Изгнание джинна</td><td>Йухриджа-Ллаху биль-Кур'ани кулля джиннин</td><td>Сура аль-А'раф, 18</td><td>Аллахумма ахридж кулля джиннин</td></tr></tbody></table></figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-10-nastavlenie-lekarya">Глава 10. Наставление лекаря</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poryadok-obyazatelen">10.1. Порядок обязателен</h3>
+<p>Не следует пропускать этапы. Не следует начинать с изгнания, не отрезав пути. Не следует разрушать колдовство, не развязав узлов. Порядок — это не бюрократия. Это логика боя.</p>
+<p>Сначала лишить врага подкрепления. Потом разрушить его укрепления. Потом изгнать его. И поставить защиту на место, где он сидел.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="sosredotochenie-na-organe">10.2. Сосредоточение на органе</h3>
+<p>Если человек жалуется на конкретный орган — голову, живот, грудь, ноги — следует сосредоточиться на этом органе. Намерение направляется туда. Взгляд направляется туда. Слова аята направляются туда.</p>
+<p>Но если нет ясности, где именно колдовство — общее намерение «в теле» покрывает всё.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="uverennost-i-otsutstvie-somneniy">10.3. Уверенность и отсутствие сомнений</h3>
+<p>В момент произнесения каждого намерения и каждого аята не должно быть сомнений. «А сработает ли?», «А правильно ли я делаю?», «А вдруг джинн не уйдёт?» — каждая такая мысль ослабляет удар.</p>
+<p>Ты — причина. Аллах — Источник. Твоя задача — направить. Результат — от Аллаха.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ</div>
+  <figcaption class="ayah-tr">Поистине, Аллах не меняет положения людей, пока они не изменят самих себя</figcaption>
+  <div class="source">Источник: Сура «ар-Ра'д», аят 11</div>
+</figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="posle-seansa">10.4. После сеанса</h3>
+<p>После завершения всех этапов:</p>
+<ul><li>Прочитать печать: Бисмилляхи аркы [имя пациента или «нафси»] Аллаху яшфи — двадцать-тридцать раз</li><li>Не выходить резко из состояния намерения</li><li>Попить воду с рукъёй</li><li>Не хвалиться. Скажи: «Аллах исцелил»</li><li>Сохранять намерение в сердце ещё несколько минут после сеанса</li></ul>
+<p>Заключение</p>
+<p>Мои дорогие, этот метод — не набор слов. Это живая система, выстроенная на понимании того, как колдовство входит, как оно держится и как оно уходит.</p>
+<p>Пути — это то, по чему течёт сила. Отрежь пути — и сила иссякнет. Развяжи узлы — и крепление падёт. Поставь защиту — и новое не войдёт. Разрушь колдовство — и оно исчезнет. Сломай крепость джинна — и ему не за что держаться. Изгони — и он уйдёт.</p>
+<p>Всё это — Кораном. Всё это — с именем Аллаха. Всё это — через намерение, заряженное верой.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ</div>
+  <figcaption class="ayah-tr">И Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 82</div>
+</figure>
+<p>Да исцелит Аллах каждого, над кем читается это заклинание. Да отсечёт Он пути всякого колдовства. Да изгонит Он всякого джинна. Да защитит Он рабов Своих крепостью, которую не пробить.</p>
+<p>Валлаху а'лям. А Аллах знает лучше.</p>
+<p>Список литературы</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="svyaschennyy-koran">1. Священный Коран</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-al-buhari">2. Сахих аль-Бухари</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-muslim">3. Сахих Муслим</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sunan-at-tirmizi">4. Сунан ат-Тирмизи</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="musnad-ahmada">5. Муснад Ахмада</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-volevoy-akt-iskusstvo-uderzhaniya-namereniya-v-">6. Абу Мухаммад, «Волевой акт: Искусство удержания намерения в сердце»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-zaryad-vystrel-uglublennaya-programma-uprazhnen">7. Абу Мухаммад, «Заряд — Выстрел: Углублённая программа упражнений»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-vliyanie-voley-metod-osoznannogo-zaklinaniya">8. Абу Мухаммад, «Влияние волей: Метод осознанного заклинания»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-pervaya">9. Абу Мухаммад, «Прямой путь заклинания верой. Часть первая»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-vtoraya-put">10. Абу Мухаммад, «Прямой путь заклинания верой. Часть вторая: Пути влияния»</h2>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Разрыв путей колдовства: Метод полного отсечения каналов и изгнания · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var id = href.slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    try{ history.pushState(null,'',href);}catch(_e){}
+  });
+  if (location.hash && location.hash.length > 1) {
+    setTimeout(function(){
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>
