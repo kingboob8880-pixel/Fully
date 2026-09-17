@@ -1,0 +1,911 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Духовный заряд Кораном: Мольбы об открытии путей к корням души</title>
+<meta name="author" content="Абу Мухаммад">
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --paper-alt: #f5f7f5;
+  --ink: #1b221f;
+  --ink-soft: #4a5751;
+  --rule: #dce1dd;
+  --accent: #2f6b4f;
+  --accent-soft: #eaf2ed;
+  --gold: #9a7b32;
+  --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(20,30,25,.05);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: var(--base);
+  /* Плавная прокрутка только для якорей, без влияния на колесо мыши */
+  scroll-behavior: auto;
+  scroll-padding-top: 88px;
+}
+
+/* Отступ для якорей */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-break: normal;
+  /* Важно: не блокировать вертикальную прокрутку */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; width: 100%; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля ---- */
+.bismillah-slot { display: flex; width: 100%; direction: ltr; }
+.bismillah {
+  display: block; max-width: 100%;
+  font-family: var(--arabic); direction: rtl;
+  font-size: 1.75em; color: var(--gold);
+  line-height: 2.1; margin: 0;
+  letter-spacing: 0.02em; white-space: pre-wrap;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page { margin-bottom: 3rem; padding: 1.5rem 0; position: relative; }
+.bism-pos-center-page::after {
+  content: ""; display: block; width: 60px; height: 1px;
+  background: var(--gold); margin: .8rem auto 0; opacity: .45;
+}
+.title-page-bism-center { padding-top: 3rem; }
+.title-page-bism-center .bismillah-slot { margin-top: 1.5rem; margin-bottom: 3.5rem; }
+.title-page-bism-center .title-page-body { text-align: center; }
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+.bismillah:not([dir="rtl"]) { font-family: var(--serif); font-style: italic; direction: ltr; letter-spacing: .04em; }
+
+.institution {
+  font-family: var(--sans); font-size: .76em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3rem;
+}
+.book-title {
+  font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+}
+.book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.rule-orn {
+  width: 160px; height: 14px; margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦"; position: absolute; inset: 0; margin: auto;
+  width: 1.8em; height: 1em; line-height: .85;
+  background: var(--paper); color: var(--gold); font-size: .85rem;
+}
+.book-author { font-size: 1.08em; font-weight: 700; margin: 0 0 .4rem; }
+.book-meta { font-family: var(--sans); font-size: .84em; color: var(--ink-soft); line-height: 1.6; }
+.epigraph { max-width: 38ch; margin: 2.8rem auto 0; font-style: italic; color: var(--ink-soft); font-size: .96em; }
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 1.3rem; font-weight: 600; border: 0; padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink); text-decoration: none;
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .1rem; border-radius: 4px;
+}
+.toc a:hover { color: var(--accent); background: rgba(47,107,79,.06); }
+.toc a:active { background: rgba(47,107,79,.1); }
+.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.8em; font-size: .9em; font-weight: 500; }
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+.chapter > h2 {
+  font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
+  color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
+}
+.section > h3 { font-size: 1.25em; font-weight: 700; margin: 2.6rem 0 1rem; }
+.subsection > h4 { font-size: 1.08em; font-weight: 700; margin: 1.9rem 0 .8rem; color: var(--ink-soft); }
+.chapter:first-of-type > h2 { margin-top: 0; }
+section[data-kind="front"] > h2, section[data-kind="back"] > h2 {
+  text-align: center; border-bottom: 0; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 1.3em; font-weight: 700;
+}
+section[data-kind="front"] > h2::after, section[data-kind="back"] > h2::after {
+  content: ""; display: block; width: 72px; height: 1.5px;
+  background: var(--gold); margin: .9rem auto 0; border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem; text-indent: 1.6em;
+  
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
+
+.lead { font-size: 1.07em; color: var(--ink-soft); text-indent: 0; line-height: 1.65; }
+strong { font-weight: 700; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+a {
+  color: var(--accent); text-underline-offset: .22em; text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover { color: var(--gold); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
+  background: var(--paper-alt); padding: .12em .4em; border-radius: 3px; border: 1px solid var(--rule);
+  word-break: break-all;
+}
+hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
+.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+
+/* ========== СПИСКИ ========== */
+ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold); font-style: italic; color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source, blockquote.quote footer {
+  display: block; margin-top: .7rem; font-family: var(--sans);
+  font-style: normal; font-size: .78em; color: var(--ink-soft);
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0; padding: 1.8rem 2rem;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+  border-radius: 8px; position: relative; text-align: center;
+}
+.ayah::before, .ayah::after {
+  content: ""; position: absolute; left: 1.6rem; right: 1.6rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .45;
+}
+.ayah::before { top: .65rem; } .ayah::after { bottom: .65rem; }
+.ar-block {
+  font-family: var(--arabic); direction: rtl; unicode-bidi: isolate;
+  text-align: center; font-size: 1.6em; line-height: 2.3;
+  color: var(--ink); overflow-wrap: anywhere; word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+.ayah-tr { margin-top: 1rem; font-style: italic; font-size: .97em; text-indent: 0; color: var(--ink-soft); }
+.ayah .source { margin-top: .7rem; text-align: center; color: var(--accent); font-weight: 500; font-size: .8em; }
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС / ДУА ========== */
+.hadith {
+  margin: 1.9rem 0; padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 5px; background: var(--paper-alt);
+}
+.hadith .label, .dua .label, .callout .label {
+  display: block; font-family: var(--sans); font-size: .66em;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .65rem; font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+.dua {
+  margin: 1.9rem 0; padding: 1.5rem 1.8rem;
+  background: var(--paper-alt); border: 1.5px dashed var(--gold);
+  border-radius: 8px; text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+.callout { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 5px; font-size: .94em; }
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; unicode-bidi: isolate; direction: rtl; }
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] { font-family: var(--arabic); font-size: 1.35em; line-height: 2.2; text-indent: 0; }
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table { margin: 2.2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft); text-align: center; margin-top: .7rem; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
+th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
+tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+/* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
+sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
+.footnotes { margin-top: 4rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule); font-size: .85em; color: var(--ink-soft); }
+.footnotes h2, .bibliography h2 { font-family: var(--sans); font-size: .76em; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 600; }
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num { color: var(--accent); margin-right: .55em; font-weight: 700; }
+.bibliography ol { list-style: none; counter-reset: bib; padding-left: 0; }
+.bibliography li { counter-increment: bib; padding-left: 2.8rem; position: relative; margin: .7rem 0; font-size: .94em; line-height: 1.55; }
+.bibliography li::before { content: counter(bib) "."; position: absolute; left: 0; top: 0; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule);
+  font-family: var(--sans); font-size: .72em; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page { padding: 2.2rem 1.4rem 3rem; }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .45rem .1rem; min-height: 44px; }
+  .ayah { padding: 1.2rem 1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table { display: block; width: 100%; overflow-x: auto; }
+  table { min-width: 36rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page { size: A4; margin: 22mm 20mm 22mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.55; overflow: visible; }
+  .page { box-shadow: none; padding: 0; max-width: none; min-height: 0; }
+  .wrap { max-width: none; }
+  .title-page { page-break-after: always; border-bottom: 0; }
+  .title-page::after { display: none; }
+  .toc { page-break-after: always; background: none; border: 0; padding: 0; }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .doc-footer { display: none; }
+  .ayah, .hadith, .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Духовный заряд Кораном: Мольбы об открытии путей к корням души</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  <p class="book-author">Абу Мухаммад</p>
+  
+  <p class="book-meta">2026</p>
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
+      <a href="#glava-1-korni-dushi-i-puti-korana-k-nim"><span class="num"></span><span class="lbl">Глава 1. Корни души и пути Корана к ним</span></a><ol><li class="toc-l2">
+      <a href="#chto-takoe-korni-dushi"><span class="num"></span><span class="lbl">1.1. Что такое корни души</span></a></li>
+<li class="toc-l2">
+      <a href="#pochemu-koran-zaryazhaet-korni"><span class="num"></span><span class="lbl">1.2. Почему Коран заряжает корни</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-ob-otkrytii-putey-zachem-ona-nuzhna"><span class="num"></span><span class="lbl">1.3. Мольба об открытии путей: зачем она нужна</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-2-osnovnaya-formula-molby"><span class="num"></span><span class="lbl">Глава 2. Основная формула мольбы</span></a><ol><li class="toc-l2">
+      <a href="#arabskaya-konstrukciya"><span class="num"></span><span class="lbl">2.1. Арабская конструкция</span></a></li>
+<li class="toc-l2">
+      <a href="#pravila-proizneseniya"><span class="num"></span><span class="lbl">2.2. Правила произнесения</span></a></li>
+<li class="toc-l2">
+      <a href="#sostoyanie-serdca-pri-molbe"><span class="num"></span><span class="lbl">2.3. Состояние сердца при мольбе</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-3-dvenadcat-korney-dushi-polnyy-perechen-molb"><span class="num"></span><span class="lbl">Глава 3. Двенадцать корней души: полный перечень мольб</span></a><ol><li class="toc-l2">
+      <a href="#iman-vera"><span class="num"></span><span class="lbl">3.1. Иман — Вера</span></a></li>
+<li class="toc-l2">
+      <a href="#ihlas-iskrennost"><span class="num"></span><span class="lbl">3.2. Ихлас — Искренность</span></a></li>
+<li class="toc-l2">
+      <a href="#yakyn-ubezhdennost"><span class="num"></span><span class="lbl">3.3. Якын — Убеждённость</span></a></li>
+<li class="toc-l2">
+      <a href="#kuvva-mosch"><span class="num"></span><span class="lbl">3.4. Кувва — Мощь</span></a></li>
+<li class="toc-l2">
+      <a href="#poistine-allah-nadelyayuschiy-udelom-obladayuschiy-moschyu-n"><span class="num">3.5.</span><span class="lbl">Поистине, Аллах — Наделяющий уделом, Обладающий мощью, Непоколебимый</span></a></li>
+<li class="toc-l2">
+      <a href="#haul-sposobnost-deystvovat"><span class="num"></span><span class="lbl">3.5. Хауль — Способность действовать</span></a></li>
+<li class="toc-l2">
+      <a href="#kuvvat-ar-rukya-sila-zaklinaniya"><span class="num"></span><span class="lbl">3.6. Кувват ар-рукья — Сила заклинания</span></a></li>
+<li class="toc-l2">
+      <a href="#sakina-spokoystvie"><span class="num"></span><span class="lbl">3.7. Сакина — Спокойствие</span></a></li>
+<li class="toc-l2">
+      <a href="#tavakkul-upovanie"><span class="num"></span><span class="lbl">3.8. Таваккуль — Упование</span></a></li>
+<li class="toc-l2">
+      <a href="#dostatochno-nam-allaha-i-on-luchshiy-pokrovitel"><span class="num">3.10.</span><span class="lbl">Достаточно нам Аллаха, и Он — лучший Покровитель</span></a></li>
+<li class="toc-l2">
+      <a href="#shudzhaa-hrabrost"><span class="num"></span><span class="lbl">3.9. Шуджаа — Храбрость</span></a></li>
+<li class="toc-l2">
+      <a href="#ne-oslabevayte-i-ne-pechaltes-togda-kak-vy-vyshe-vseh-esli-v"><span class="num">3.12.</span><span class="lbl">Не ослабевайте и не печальтесь, тогда как вы — выше всех, если вы верующие</span></a></li>
+<li class="toc-l2">
+      <a href="#nur-svet"><span class="num"></span><span class="lbl">3.10. Нур — Свет</span></a></li>
+<li class="toc-l2">
+      <a href="#allah-svet-nebes-i-zemli"><span class="num">3.14.</span><span class="lbl">Аллах — Свет небес и земли</span></a></li>
+<li class="toc-l2">
+      <a href="#hikma-mudrost"><span class="num"></span><span class="lbl">3.11. Хикма — Мудрость</span></a></li>
+<li class="toc-l2">
+      <a href="#hilm-vyderzhka"><span class="num"></span><span class="lbl">3.12. Хильм — Выдержка</span></a></li>
+<li class="toc-l2">
+      <a href="#i-sderzhivayuschih-gnev-i-proschayuschih-lyudey-allah-lyubit"><span class="num">3.17.</span><span class="lbl">И сдерживающих гнев, и прощающих людей — Аллах любит творящих добро</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-4-polnaya-posledovatelnost-zaryazheniya"><span class="num"></span><span class="lbl">Глава 4. Полная последовательность заряжения</span></a><ol><li class="toc-l2">
+      <a href="#podgotovka"><span class="num"></span><span class="lbl">4.1. Подготовка</span></a></li>
+<li class="toc-l2">
+      <a href="#molba-ob-otkrytii-putey"><span class="num"></span><span class="lbl">4.2. Мольба об открытии путей</span></a></li>
+<li class="toc-l2">
+      <a href="#chtenie-korana-dlya-zaryada"><span class="num"></span><span class="lbl">4.3. Чтение Корана для заряда</span></a></li>
+<li class="toc-l2">
+      <a href="#uderzhanie-zaryada"><span class="num"></span><span class="lbl">4.4. Удержание заряда</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#glava-5-prakticheskie-nastavleniya"><span class="num"></span><span class="lbl">Глава 5. Практические наставления</span></a><ol><li class="toc-l2">
+      <a href="#vremya-zaryazheniya"><span class="num"></span><span class="lbl">5.1. Время заряжения</span></a></li>
+<li class="toc-l2">
+      <a href="#kolichestvo-povtoreniy"><span class="num"></span><span class="lbl">5.2. Количество повторений</span></a></li>
+<li class="toc-l2">
+      <a href="#priznaki-sostoyavshegosya-zaryada"><span class="num"></span><span class="lbl">5.3. Признаки состоявшегося заряда</span></a></li>
+<li class="toc-l2">
+      <a href="#oshibki-kotorye-razrushayut-zaryad"><span class="num"></span><span class="lbl">5.4. Ошибки, которые разрушают заряд</span></a></li>
+<li class="toc-l2">
+      <a href="#i-skazal-vash-gospod-vzyvayte-ko-mne-ya-otvechu-vam"><span class="num">5.5.</span><span class="lbl">И сказал ваш Господь: «Взывайте ко Мне — Я отвечу вам»</span></a></li></ol></li>
+<li class="toc-l1">
+      <a href="#svyaschennyy-koran"><span class="num"></span><span class="lbl">1. Священный Коран</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-al-buhari"><span class="num"></span><span class="lbl">2. Сахих аль-Бухари</span></a></li>
+<li class="toc-l1">
+      <a href="#sahih-muslim"><span class="num"></span><span class="lbl">3. Сахих Муслим</span></a></li>
+<li class="toc-l1">
+      <a href="#sunan-at-tirmizi"><span class="num"></span><span class="lbl">4. Сунан ат-Тирмизи</span></a></li>
+<li class="toc-l1">
+      <a href="#musnad-ahmada"><span class="num"></span><span class="lbl">5. Муснад Ахмада</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-volevoy-akt-iskusstvo-uderzhaniya-namereniya-v-"><span class="num"></span><span class="lbl">6. Абу Мухаммад, «Волевой акт: Искусство удержания намерения в сердце»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-zaryad-vybros-uglublennaya-programma-uprazhneni"><span class="num"></span><span class="lbl">7. Абу Мухаммад, «Заряд — Выброс: Углублённая программа упражнений»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-vliyanie-voley-metod-osoznannogo-zaklinaniya"><span class="num"></span><span class="lbl">8. Абу Мухаммад, «Влияние волей: Метод осознанного заклинания»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-pervaya"><span class="num"></span><span class="lbl">9. Абу Мухаммад, «Прямой путь заклинания верой. Часть первая»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-vtoraya-put"><span class="num"></span><span class="lbl">10. Абу Мухаммад, «Прямой путь заклинания верой. Часть вторая: Пути влияния»</span></a></li>
+<li class="toc-l1">
+      <a href="#abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-tretya-ostr"><span class="num"></span><span class="lbl">11. Абу Мухаммад, «Прямой путь заклинания верой. Часть третья: Острое влияние за одно мгновение»</span></a></li></ol></nav>
+  <main>
+<p>Введение</p>
+<p>Мои дорогие, в этой инструкции мы разберём один из самых тонких и самых важных инструментов лекаря: как зарядиться Кораном не механически, а по воле Аллаха, через мольбу об открытии путей Корана к корням нашей души.</p>
+<p>Коран — это не просто текст. Это свет, мощь, убеждённость, спокойствие, мудрость. Но этот свет не входит в сердце сам по себе. Ему нужен путь. И этот путь открывает только Аллах. Наша задача — попросить Его открыть этот путь. Сказать: «О Аллах, открой пути Корана к моей вере. К моей искренности. К моей мощи. К моему спокойствию». И тогда Коран входит в эти корни, наполняет их, заряжает их. И лекарь становится не просто чтецом, а проводником живой силы.</p>
+<p>Эта инструкция построена на методе Волевого акта и методе Заряд — Выброс. Она является практическим продолжением книги «Прямой путь заклинания верой». Здесь даны конкретные мольбы для каждого корня души, соответствующие им аяты и полный порядок заряжения.</p>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-1-korni-dushi-i-puti-korana-k-nim">Глава 1. Корни души и пути Корана к ним</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chto-takoe-korni-dushi">1.1. Что такое корни души</h3>
+<p>Корни души — это глубинные качества, на которых держится духовная жизнь человека. Это не эмоции и не мысли. Это фундамент.</p>
+<p>К ним относятся: вера, искренность, убеждённость, мощь, способность действовать, спокойствие, упование, храбрость, свет, мудрость, выдержка и сила заклинания.</p>
+<p>Когда корень силён — человек стоит крепко. Когда корень слаб — человек шатается от любого ветра. Лекарь, у которого корни слабы, читает Коран, но сила не проходит через него. Потому что его сосуд пуст.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pochemu-koran-zaryazhaet-korni">1.2. Почему Коран заряжает корни</h3>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ</div>
+  <figcaption class="ayah-tr">И Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 82</div>
+</figure>
+<p>Коран — это не только исцеление для тела. Это питание для души. Каждый аят несёт в себе конкретный свет. Аят аль-Курси несёт защиту и величие. Сура аль-Ихлас несёт чистоту единобожия. Аяты о терпении несут стойкость. Аяты о свете несут просвещение.</p>
+<p>Когда Коран входит в корень души, он наполняет его. Вера становится глубже. Искренность чище. Мощь крепче. Спокойствие устойчивее.</p>
+<p>Но Коран не входит сам. Ему нужен открытый путь.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-ob-otkrytii-putey-zachem-ona-nuzhna">1.3. Мольба об открытии путей: зачем она нужна</h3>
+<p>Путь к корню души может быть закрыт. Закрыт грехами. Закрыт рассеянностью. Закрыт сомнением. Закрыт гордыней. Закрыт спешкой.</p>
+<p>Мольба об открытии путей — это просьба к Аллаху убрать эти преграды. Сказать: «О Аллах, открой пути Корана к моей вере». И Аллах открывает. Потому что Он — аль-Фаттах, Открывающий.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الإِيمَانِ فِي قَلْبِي</span></p></blockquote>
+<p>Да откроет Аллах все пути Корана к вере в моём сердце</p>
+<p>Это не просто слова. Это ключ. Когда ты произносишь эту мольбу с присутствием сердца, ты поворачиваешь ключ в замке. И дверь открывается. И Коран входит.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-2-osnovnaya-formula-molby">Глава 2. Основная формула мольбы</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="arabskaya-konstrukciya">2.1. Арабская конструкция</h3>
+<p>Основная формула строится по одной модели:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى [КОРЕНЬ] فِي [МЕСТО]</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иля [корень] фи [место]</p>
+<p>Да откроет Аллах все пути Корана к [корень] в [место]</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Где [корень] — одно из двенадцати качеств души. Где [место] — сердце, язык, грудь, тело.</p>
+<p>Альтернативная форма через прямую просьбу:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْتَحْ كُلَّ سُبُلِ الْقُرْآنِ إِلَى [КОРЕНЬ] فِي [МЕСТُو]</div>
+  <p>Аллахуммафтах кулля субулиль-Куран иля [корень] фи [место]</p>
+<p>О Аллах, открой все пути Корана к [корень] в [место]</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Обе формы равнозначны. Первая — пожелание. Вторая — прямая просьба. Используй ту, которая ближе сердцу.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="pravila-proizneseniya">2.2. Правила произнесения</h3>
+<ul><li>Произносить в сердце, без движения губ. Или вслух, тихим голосом.</li><li>Произносить медленно, осознавая каждое слово.</li><li>Не спешить. Эта мольба — не заклинание. Это разговор с Аллахом.</li><li>После произнесения мольбы — сделать паузу. Почувствовать, как путь открывается.</li><li>Затем переходить к чтению Корана.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="sostoyanie-serdca-pri-molbe">2.3. Состояние сердца при мольбе</h3>
+<aside class="callout"><span class="label">Примечание</span><p>Мольба об открытии путей не работает механически. Если ты произносишь её языком, а сердце смотрит в потолок — путь не откроется. Сердце должно быть направлено к Аллаху. Ты должен чувствовать, что просишь у Того, Кто владеет всеми ключами. Если чувствуешь рассеянность — остановись. Вернись. Произнеси прибежище. Начни заново.</p></aside>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-3-dvenadcat-korney-dushi-polnyy-perechen-molb">Глава 3. Двенадцать корней души: полный перечень мольб</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="iman-vera">3.1. Иман — Вера</h3>
+<p>Корень веры — это фундамент. Без него всё остальное рушится. Когда вера крепка — лекарь не сомневается. Не боится. Не отступает.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الإِيمَانِ فِي قَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-имани фи кальби</p>
+<p>Да откроет Аллах все пути Корана к вере в моём сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُم بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُم مُّهْتَدُونَ</div>
+  <figcaption class="ayah-tr">Те, которые уверовали и не облекли свою веру в несправедливость — им безопасность, и они на прямом пути</figcaption>
+  <div class="source">Источник: Сура «аль-Ан'ам», аят 82</div>
+</figure>
+<p>Пояснение: читай этот аят после мольбы. Вера наполняется. Ты чувствуешь, как сомнение уходит, а уверенность входит.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ihlas-iskrennost">3.2. Ихлас — Искренность</h3>
+<p>Корень искренности — это чистота намерения. Без ихласа рукья становится показухой. Аллах не даёт силы тому, кто читает ради людей.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الإِخْلَاصِ فِي قَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-ихляси фи кальби</p>
+<p>Да откроет Аллах все пути Корана к искренности в моём сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ</div>
+  <figcaption class="ayah-tr">А ведь им было велено лишь поклоняться Аллаху, очищая перед Ним свою веру</figcaption>
+  <div class="source">Источник: Сура «аль-Баййина», аят 5</div>
+</figure>
+<p>Пояснение: произноси эту мольбу перед каждым сеансом. Искренность очищает канал между тобой и Аллахом.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="yakyn-ubezhdennost">3.3. Якын — Убеждённость</h3>
+<p>Корень убеждённости — это знание без тени сомнения. Якын сильнее имана. Иман может колебаться. Якын — нет.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْيَقِينِ فِي قَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-якыни фи кальби</p>
+<p>Да откроет Аллах все пути Корана к убеждённости в моём сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ</span></p></blockquote>
+<p>И которые веруют в то, что ниспослано тебе, и в то, что ниспослано до тебя, и в Последнюю жизнь они убеждены Источник: Сура «аль-Бакара», аят 4</p>
+<p>Пояснение: якын нужен, когда ты стоишь перед тяжёлым случаем. Когда джинн сопротивляется. Когда колдовство сильное. Якын говорит: «Аллах победит. Без вариантов».</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kuvva-mosch">3.4. Кувва — Мощь</h3>
+<p>Корень мощи — это духовная сила. Не физическая. Духовная. Та сила, которая стоит за словом лекаря и заставляет джинна дрожать.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْقُوَّةِ فِي قَلْبِي وَرُوحِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-куввати фи кальби ва рухи</p>
+<p>Да откроет Аллах все пути Корана к мощи в моём сердце и духе</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">إِنَّ اللَّهَ هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ الْمَتِينُ</span></p></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="poistine-allah-nadelyayuschiy-udelom-obladayuschiy-moschyu-n"><span class="num">3.5.</span>Поистине, Аллах — Наделяющий уделом, Обладающий мощью, Непоколебимый</h3>
+<p>Источник: Сура «аз-Зарият», аят 58</p>
+<p>Пояснение: читай этот аят, когда чувствуешь слабость после тяжёлого сеанса. Мощь возвращается.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="haul-sposobnost-deystvovat">3.5. Хауль — Способность действовать</h3>
+<p>Хауль — это способность начать, изменить, сдвинуть. Кувва — это сила выдержать и довести. Хауль — искра. Кувва — пламя.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْحَوْلِ فِي نَفْسِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-хаули фи нафси</p>
+<p>Да откроет Аллах все пути Корана к способности действовать в моей душе</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий хадис:</p>
+<blockquote class="hadith">
+  <span class="label">Хадис</span>
+  <div class="ar-block" lang="ar" dir="rtl">لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ كَنْزٌ مِنْ كُنُوزِ الْجَنَّةِ</div>
+  <p>Нет мощи и способности ни у кого, кроме Аллаха — это клад из кладов Рая</p>
+  <footer class="source">Источник: аль-Бухари, № 4205; Муслим, № 2704</footer>
+</blockquote>
+<p>Пояснение: произноси «Ля хауля ва ля куввата илля биллях» после мольбы. Эта фраза открывает оба корня одновременно: и хауль, и кувва.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kuvvat-ar-rukya-sila-zaklinaniya">3.6. Кувват ар-рукья — Сила заклинания</h3>
+<p>Это отдельный корень. Не просто мощь души, а конкретная сила, которая стоит за словом заклинания. Та сила, от которой джинн кричит, а колдовство рассыпается.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى قُوَّةِ الرُّقْيَةِ فِي لِسَانِي وَقَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иля кувват ар-рукъйати фи лисани ва кальби</p>
+<p>Да откроет Аллах все пути Корана к силе заклинания в моём языке и сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ</div>
+  <figcaption class="ayah-tr">И Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 82</div>
+</figure>
+<p>Пояснение: эту мольбу читай перед каждым сеансом рукьи. Она наполняет твои слова тем самым зарядом, который делает их живыми.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="sakina-spokoystvie">3.7. Сакина — Спокойствие</h3>
+<p>Корень спокойствия — это то, что не даёт лекарю паниковать. Когда джинн кричит. Когда пациент бьётся. Когда сеанс затягивается. Сакина держит сердце ровным.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى السَّكِينَةِ فِي قَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляс-сакинати фи кальби</p>
+<p>Да откроет Аллах все пути Корана к спокойствию в моём сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">هُوَ الَّذِي أَنزَلَ السَّكِينَةَ فِي قُلُوبِ الْمُؤْمِنِينَ لِيَزْدَادُوا إِيمَانًا مَّعَ إِيمَانِهِمْ</span></p></blockquote>
+<p>Он — Тот, Кто ниспослал покой в сердца верующих, чтобы они прибавили веру к своей вере Источник: Сура «аль-Фатх», аят 4</p>
+<p>Пояснение: сакина нужна во время боя. Без неё лекарь суетится, теряет намерение, торопится. Сакина даёт ровность. Ровность даёт точность. Точность даёт результат.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="tavakkul-upovanie">3.8. Таваккуль — Упование</h3>
+<p>Корень упования — это полное доверие Аллаху в результате. Ты делаешь всё, что можешь. А результат — от Него. Таваккуль снимает тревогу за исход.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى التَّوَكُّلِ فِي قَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран илят-таваккули фи кальби</p>
+<p>Да откроет Аллах все пути Корана к упованию в моём сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ</span></p></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="dostatochno-nam-allaha-i-on-luchshiy-pokrovitel"><span class="num">3.10.</span>Достаточно нам Аллаха, и Он — лучший Покровитель</h3>
+<p>Источник: Сура «аль-Имран», аят 173</p>
+<p>Пояснение: таваккуль лечит страх неудачи. «Я сделал всё. Результат — от Аллаха. Я не отвечаю за то, что не в моей власти». Это освобождает сердце и даёт силу.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="shudzhaa-hrabrost">3.9. Шуджаа — Храбрость</h3>
+<p>Корень храбрости — это то, что не даёт лекарю отступить. Когда перед тобой ифрит. Когда колдун угрожает. Когда случай пугает. Шуджаа говорит: «Я не отступлю. Аллах со мной».</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الشَّجَاعَةِ فِي قَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляш-шуджа'ати фи кальби</p>
+<p>Да откроет Аллах все пути Корана к храбрости в моём сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَلَا تَهِنُوا وَلَا تَحْزَنُوا وَأَنتُمُ الْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ</span></p></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="ne-oslabevayte-i-ne-pechaltes-togda-kak-vy-vyshe-vseh-esli-v"><span class="num">3.12.</span>Не ослабевайте и не печальтесь, тогда как вы — выше всех, если вы верующие</h3>
+<p>Источник: Сура «аль-Имран», аят 139</p>
+<p>Пояснение: читай этот аят перед тяжёлым сеансом. Шуджаа входит. Страх уходит. Ты стоишь как гора.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="nur-svet">3.10. Нур — Свет</h3>
+<p>Корень света — это внутреннее видение. Нур позволяет лекарю «видеть» сердцем: где колдовство, где джинн, где сглаз. Это не визуализация. Это духовное чутьё.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى النُّورِ فِي قَلْبِي وَبَصِيرَتِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран илян-нури фи кальби ва басыйрати</p>
+<p>Да откроет Аллах все пути Корана к свету в моём сердце и внутреннем зрении</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ</span></p></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="allah-svet-nebes-i-zemli"><span class="num">3.14.</span>Аллах — Свет небес и земли</h3>
+<p>Источник: Сура «ан-Нур», аят 35</p>
+<p>Пояснение: нур нужен для диагностики. Когда ты не знаешь, что именно у пациента. Когда симптомы неясны. Нур освещает путь.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="hikma-mudrost">3.11. Хикма — Мудрость</h3>
+<p>Корень мудрости — это понимание, когда и что делать. Хикма не даёт лекарю лезть туда, куда не надо. Не даёт читать часами то, что можно сказать одной фразой. Хикма экономит силу.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْحِكْمَةِ فِي عَقْلِي وَقَلْبِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-хикмати фи 'акли ва кальби</p>
+<p>Да откроет Аллах все пути Корана к мудрости в моём разуме и сердце</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">يُؤْتِي الْحِكْمَةَ مَن يَشَاءُ وَمَن يُؤْتَ الْحِكْمَةَ فَقَدْ أُوتِيَ خَيْرًا كَثِيرًا</div>
+  <figcaption class="ayah-tr">Он дарует мудрость, кому пожелает. А кому дарована мудрость — тому даровано великое благо</figcaption>
+  <div class="source">Источник: Сура «аль-Бакара», аят 269</div>
+</figure>
+<p>Пояснение: хикма приходит с опытом и с мольбой. Проси её перед каждым новым случаем.</p>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="hilm-vyderzhka">3.12. Хильм — Выдержка</h3>
+<p>Корень выдержки — это способность не срываться. Не злиться на пациента. Не злиться на джинна. Не злиться на себя. Хильм держит лекаря ровным, когда всё идёт не так.</p>
+<p>Мольба об открытии:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْحِلْمِ فِي نَفْسِي</div>
+  <p>Йафтахиллаху кулля субулиль-Куран иляль-хильми фи нафси</p>
+<p>Да откроет Аллах все пути Корана к выдержке в моей душе</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Соответствующий аят:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَالْكَاظِمِينَ الْغَيْظَ وَالْعَافِينَ عَنِ النَّاسِ وَاللَّهُ يُحِبُّ الْمُحْسِنِينَ</span></p></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="i-sderzhivayuschih-gnev-i-proschayuschih-lyudey-allah-lyubit"><span class="num">3.17.</span>И сдерживающих гнев, и прощающих людей — Аллах любит творящих добро</h3>
+<p>Источник: Сура «аль-Имран», аят 134</p>
+<p>Пояснение: хильм нужен, когда пациент не слушается. Когда сеанс затягивается. Когда хочется бросить всё. Хильм говорит: «Подожди. Продолжай. Аллах видит».</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-4-polnaya-posledovatelnost-zaryazheniya">Глава 4. Полная последовательность заряжения</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="podgotovka">4.1. Подготовка</h3>
+<ul><li>Соверши вуду.</li><li>Найди тихое место. Отключи телефон.</li><li>Сядь удобно. Закрой глаза.</li><li>Произнеси прибежище три раза:</li></ul>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+  <p>А'узу билляхи минаш-шайтанир-раджим</p>
+<p>Прибегаю к Аллаху от изгнанного шайтана</p>
+  <div class="source">Источник: Сура «ан-Нахль», аят 98</div>
+</aside>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="molba-ob-otkrytii-putey">4.2. Мольба об открытии путей</h3>
+<p>Выбери те корни, которые тебе нужны сегодня. Не обязательно все двенадцать. Для обычного дня — иман, ихлас, кувва. Для тяжёлого сеанса — добавь шуджаа, сакина, кувват ар-рукья. Для диагностики — нур, хикма.</p>
+<p>Произнеси мольбу для каждого выбранного корня:</p>
+<ul><li>Один раз вслух, медленно.</li><li>Три раза в сердце, без движения губ.</li><li>После каждой мольбы — пауза. Почувствуй, как путь открывается.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="chtenie-korana-dlya-zaryada">4.3. Чтение Корана для заряда</h3>
+<p>После мольбы — начни читать Коран. Это и есть тот свет, который войдёт в открытые пути.</p>
+<p>Метод сердечного чтения из книги «Заряд — Выброс»:</p>
+<ul><li>Читай в сердце, без движения губ.</li><li>Аят аль-Курси или сура аль-Ихлас.</li><li>15–20 минут.</li><li>Представляй, как свет оседает в груди, в сердце, в том корне, который ты открыл мольбой.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="uderzhanie-zaryada">4.4. Удержание заряда</h3>
+<p>После заряжения не вскакивай. Останься в состоянии ещё несколько минут. Не открывай глаза резко. Не бросайся к телефону. Заряд должен закрепиться.</p>
+<p>Затем произнеси печать:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللهِ أَرْقِينِي اللهُ يَشْفِينِي</div>
+  <p>Бисмилляхи аркыний Аллаху яшфиний</p>
+<p>С именем Аллаха заклинаю себя, Аллах исцеляет меня</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Повтори 20–30 раз в сердце. Это закрепляет заряд.</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="glava-5-prakticheskie-nastavleniya">Глава 5. Практические наставления</h2>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="vremya-zaryazheniya">5.1. Время заряжения</h3>
+<figure class="table"><table><thead><tr><th>Время</th><th>Что заряжать</th><th>Зачем</th></tr></thead><tbody><tr><td>После Фаджра</td><td>Иман, ихлас, кувва, нур</td><td>Фундамент на весь день</td></tr><tr><td>Перед сеансом</td><td>Кувват ар-рукья, шуджаа, сакина, якын</td><td>Боевая готовность</td></tr><tr><td>После тяжёлого сеанса</td><td>Таваккуль, хильм, сакина</td><td>Восстановление</td></tr><tr><td>Перед сном</td><td>Ихлас, таваккуль, нур</td><td>Очищение и защита</td></tr></tbody></table></figure>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="kolichestvo-povtoreniy">5.2. Количество повторений</h3>
+<ul><li>Мольба об открытии: 1 раз вслух + 3 раза в сердце для каждого корня.</li><li>Чтение Корана для заряда: 15–20 минут.</li><li>Печать: 20–30 раз.</li><li>Полная последовательность: 25–30 минут.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="priznaki-sostoyavshegosya-zaryada">5.3. Признаки состоявшегося заряда</h3>
+<ul><li>Тепло или тяжесть в груди.</li><li>Тишина в голове. Мысли прекращаются.</li><li>Ощущение наполненности. Как будто внутри что-то большое и плотное.</li><li>Готовность действовать. Слова сами просятся наружу.</li><li>Отсутствие страха. Спокойная уверенность.</li><li>Ощущение, что Аллах рядом. Не надежда. Знание.</li></ul>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="oshibki-kotorye-razrushayut-zaryad">5.4. Ошибки, которые разрушают заряд</h3>
+<ul><li>Механическое произнесение мольбы. Язык говорит, сердце молчит.</li><li>Спешка. Пробежал по мольбам, не почувствовав ни одной.</li><li>Сомнение. «А откроется ли? А сработает ли?»</li><li>Рассеянность. Мысли о другом во время чтения Корана.</li><li>Гордыня. «Я сам заряжусь. Мне не нужно просить».</li><li>Грехи. Завеса между сердцем и Аллахом.</li></ul>
+<aside class="callout"><span class="label">Примечание</span><p>Если заряд не состоялся — не отчаивайся. Проверь сердце. Возможно, есть грех, создающий завесу. Возможно, была спешка. Возможно, сердце было не направлено. Сделай таубу. Вернись к мольбе. Попробуй снова. Аллах не закрывает дверь перед тем, кто стучит искренне.</p></aside>
+<p>Сводная таблица всех мольб</p>
+<figure class="table"><table><thead><tr><th>№</th><th>Корень</th><th>Арабский</th><th>Транскрипция</th><th>Перевод</th></tr></thead><tbody><tr><td>1</td><td>Вера</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الإِيمَانِ فِي قَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-имани фи кальби</td><td>Да откроет Аллах все пути Корана к вере в моём сердце</td></tr><tr><td>2</td><td>Искренность</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الإِخْلَاصِ فِي قَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-ихляси фи кальби</td><td>Да откроет Аллах все пути Корана к искренности в моём сердце</td></tr><tr><td>3</td><td>Убеждённость</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْيَقِينِ فِي قَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-якыни фи кальби</td><td>Да откроет Аллах все пути Корана к убеждённости в моём сердце</td></tr><tr><td>4</td><td>Мощь</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْقُوَّةِ فِي قَلْبِي وَرُوحِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-куввати фи кальби ва рухи</td><td>Да откроет Аллах все пути Корана к мощи в моём сердце и духе</td></tr><tr><td>5</td><td>Способность</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْحَوْلِ فِي نَفْسِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-хаули фи нафси</td><td>Да откроет Аллах все пути Корана к способности действовать в моей душе</td></tr><tr><td>6</td><td>Сила заклинания</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى قُوَّةِ الرُّقْيَةِ فِي لِسَانِي وَقَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иля кувват ар-рукъйати фи лисани ва кальби</td><td>Да откроет Аллах все пути Корана к силе заклинания в моём языке и сердце</td></tr><tr><td>7</td><td>Спокойствие</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى السَّكِينَةِ فِي قَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляс-сакинати фи кальби</td><td>Да откроет Аллах все пути Корана к спокойствию в моём сердце</td></tr><tr><td>8</td><td>Упование</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى التَّوَكُّلِ فِي قَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран илят-таваккули фи кальби</td><td>Да откроет Аллах все пути Корана к упованию в моём сердце</td></tr><tr><td>9</td><td>Храбрость</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الشَّجَاعَةِ فِي قَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляш-шуджа'ати фи кальби</td><td>Да откроет Аллах все пути Корана к храбрости в моём сердце</td></tr><tr><td>10</td><td>Свет</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى النُّورِ فِي قَلْبِي وَبَصِيرَتِي</span></td><td>Йафтахиллаху кулля субулиль-Куран илян-нури фи кальби ва басыйрати</td><td>Да откроет Аллах все пути Корана к свету в моём сердце и внутреннем зрении</td></tr><tr><td>11</td><td>Мудрость</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْحِكْمَةِ فِي عَقْلِي وَقَلْبِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-хикмати фи 'акли ва кальби</td><td>Да откроет Аллах все пути Корана к мудрости в моём разуме и сердце</td></tr><tr><td>12</td><td>Выдержка</td><td><span class="ar-inline" lang="ar" dir="rtl">يَفْتَحِ اللهُ كُلَّ سُبُلِ الْقُرْآنِ إِلَى الْحِلْمِ فِي نَفْسِي</span></td><td>Йафтахиллаху кулля субулиль-Куран иляль-хильми фи нафси</td><td>Да откроет Аллах все пути Корана к выдержке в моей душе</td></tr></tbody></table></figure>
+<p>Заключение</p>
+<p>Мои дорогие, эта инструкция — не ритуал. Это разговор с Аллахом. Каждый раз, когда ты произносишь: «О Аллах, открой пути Корана к моей вере» — ты признаёшь, что без Него ты пуст. Что без Его открытия Коран не войдёт. Что без Его света сердце остаётся тёмным.</p>
+<p>Это и есть Таухид в действии. Не просто сказать «Ля иляха илля Аллах». А жить этим. Просить у Аллаха каждый корень. Каждую каплю силы. Каждое зерно света. И получать. Потому что Он обещал.</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ</span></p></blockquote>
+</section>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="i-skazal-vash-gospod-vzyvayte-ko-mne-ya-otvechu-vam"><span class="num">5.5.</span>И сказал ваш Господь: «Взывайте ко Мне — Я отвечу вам»</h3>
+<p>Источник: Сура «Гафир», аят 60</p>
+<p>Проси — и Он откроет. Обращайся — и Он ответит. Читай Коран — и Он наполнит.</p>
+<p>Заряжайся не механически. Заряжайся через мольбу. Через просьбу. Через Таухид. И Аллах сделает тебя проводником Своего света.</p>
+<p>Валлаху а'лям. А Аллах знает лучше.</p>
+<p>Список литературы</p>
+</section>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="svyaschennyy-koran">1. Священный Коран</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-al-buhari">2. Сахих аль-Бухари</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sahih-muslim">3. Сахих Муслим</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sunan-at-tirmizi">4. Сунан ат-Тирмизи</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="musnad-ahmada">5. Муснад Ахмада</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-volevoy-akt-iskusstvo-uderzhaniya-namereniya-v-">6. Абу Мухаммад, «Волевой акт: Искусство удержания намерения в сердце»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-zaryad-vybros-uglublennaya-programma-uprazhneni">7. Абу Мухаммад, «Заряд — Выброс: Углублённая программа упражнений»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-vliyanie-voley-metod-osoznannogo-zaklinaniya">8. Абу Мухаммад, «Влияние волей: Метод осознанного заклинания»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-pervaya">9. Абу Мухаммад, «Прямой путь заклинания верой. Часть первая»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-vtoraya-put">10. Абу Мухаммад, «Прямой путь заклинания верой. Часть вторая: Пути влияния»</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="abu-muhammad-pryamoy-put-zaklinaniya-veroy-chast-tretya-ostr">11. Абу Мухаммад, «Прямой путь заклинания верой. Часть третья: Острое влияние за одно мгновение»</h2>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Духовный заряд Кораном: Мольбы об открытии путей к корням души · Абу Мухаммад</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var id = href.slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    try{ history.pushState(null,'',href);}catch(_e){}
+  });
+  if (location.hash && location.hash.length > 1) {
+    setTimeout(function(){
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>
