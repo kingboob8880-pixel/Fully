@@ -1,0 +1,840 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<meta name="color-scheme" content="light">
+<title>Чистка</title>
+
+<meta name="generator" content="Китаб аль-Ильм">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --paper-alt: #f5f7f5;
+  --ink: #1b221f;
+  --ink-soft: #4a5751;
+  --rule: #dce1dd;
+  --accent: #2f6b4f;
+  --accent-soft: #eaf2ed;
+  --gold: #9a7b32;
+  --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
+  --title-font: var(--serif);
+  --shadow: 0 1px 2px rgba(20,30,25,.05);
+  --measure: 68ch;
+  --base: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: var(--base);
+  /* Плавная прокрутка только для якорей, без влияния на колесо мыши */
+  scroll-behavior: auto;
+  scroll-padding-top: 88px;
+}
+
+/* Отступ для якорей */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.72;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-break: normal;
+  /* Важно: не блокировать вертикальную прокрутку */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Страница ---- */
+.page {
+  max-width: calc(var(--measure) + 14rem);
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 4.8rem 7.5rem 6.5rem;
+  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  min-height: 100vh;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; width: 100%; }
+
+/* ========== ТИТУЛ ========== */
+.title-page {
+  text-align: center;
+  padding: 1.5rem 0 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--rule);
+  position: relative;
+}
+.title-page::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Басмаля ---- */
+.bismillah-slot { display: flex; width: 100%; direction: ltr; }
+.bismillah {
+  display: block; max-width: 100%;
+  font-family: var(--arabic); direction: rtl;
+  font-size: 1.75em; color: var(--gold);
+  line-height: 2.1; margin: 0;
+  letter-spacing: 0.02em; white-space: pre-wrap;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.bismillah-slot.bism-pos-above-title { margin-bottom: 2.6rem; }
+.bismillah-slot.bism-pos-below-title { margin-top: .5rem; margin-bottom: 1.5rem; }
+.bism-pos-center-page { margin-bottom: 3rem; padding: 1.5rem 0; position: relative; }
+.bism-pos-center-page::after {
+  content: ""; display: block; width: 60px; height: 1px;
+  background: var(--gold); margin: .8rem auto 0; opacity: .45;
+}
+.title-page-bism-center { padding-top: 3rem; }
+.title-page-bism-center .bismillah-slot { margin-top: 1.5rem; margin-bottom: 3.5rem; }
+.title-page-bism-center .title-page-body { text-align: center; }
+.bismillah-slot.bism-align-center { justify-content: center; }
+.bismillah-slot.bism-align-right { justify-content: flex-end; }
+.bismillah-slot.bism-align-left { justify-content: flex-start; }
+.bismillah:not([dir="rtl"]) { font-family: var(--serif); font-style: italic; direction: ltr; letter-spacing: .04em; }
+
+.institution {
+  font-family: var(--sans); font-size: .76em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3rem;
+}
+.book-title {
+  font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+}
+.book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.rule-orn {
+  width: 160px; height: 14px; margin: 2rem auto;
+  background: linear-gradient(var(--gold), var(--gold)) center / 100% 1px no-repeat;
+  position: relative;
+}
+.rule-orn::after {
+  content: "❦"; position: absolute; inset: 0; margin: auto;
+  width: 1.8em; height: 1em; line-height: .85;
+  background: var(--paper); color: var(--gold); font-size: .85rem;
+}
+.book-author { font-size: 1.08em; font-weight: 700; margin: 0 0 .4rem; }
+.book-meta { font-family: var(--sans); font-size: .84em; color: var(--ink-soft); line-height: 1.6; }
+.epigraph { max-width: 38ch; margin: 2.8rem auto 0; font-style: italic; color: var(--ink-soft); font-size: .96em; }
+
+/* ========== ОГЛАВЛЕНИЕ ========== */
+.toc {
+  margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
+  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 1.3rem; font-weight: 600; border: 0; padding: 0;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: .35rem 0; }
+.toc ol ol { padding-left: 1.6rem; margin-top: .15rem; }
+.toc a {
+  color: var(--ink); text-decoration: none;
+  display: flex; gap: .6rem; align-items: baseline;
+  padding: .35rem .1rem; border-radius: 4px;
+}
+.toc a:hover { color: var(--accent); background: rgba(47,107,79,.06); }
+.toc a:active { background: rgba(47,107,79,.1); }
+.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.8em; font-size: .9em; font-weight: 500; }
+.toc .lbl { flex: 1; }
+.toc-l2 a { font-size: .94em; color: var(--ink-soft); }
+.toc-l3 a { font-size: .88em; color: var(--ink-soft); }
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+.chapter > h2 {
+  font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
+  padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
+  color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
+}
+.section > h3 { font-size: 1.25em; font-weight: 700; margin: 2.6rem 0 1rem; }
+.subsection > h4 { font-size: 1.08em; font-weight: 700; margin: 1.9rem 0 .8rem; color: var(--ink-soft); }
+.chapter:first-of-type > h2 { margin-top: 0; }
+section[data-kind="front"] > h2, section[data-kind="back"] > h2 {
+  text-align: center; border-bottom: 0; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 1.3em; font-weight: 700;
+}
+section[data-kind="front"] > h2::after, section[data-kind="back"] > h2::after {
+  content: ""; display: block; width: 72px; height: 1.5px;
+  background: var(--gold); margin: .9rem auto 0; border-radius: 1px;
+}
+
+/* ========== ТЕКСТ ========== */
+p {
+  margin: 0 0 .2rem; text-indent: 1.6em;
+  text-align: justify;
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p + p { margin-top: .6rem; }
+h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
+
+.lead { font-size: 1.07em; color: var(--ink-soft); text-indent: 0; line-height: 1.65; }
+strong { font-weight: 700; }
+em.spaced { font-style: normal; letter-spacing: .14em; }
+a {
+  color: var(--accent); text-underline-offset: .22em; text-decoration-thickness: .6px;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover { color: var(--gold); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
+  background: var(--paper-alt); padding: .12em .4em; border-radius: 3px; border: 1px solid var(--rule);
+  word-break: break-all;
+}
+hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
+.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+
+/* ========== СПИСКИ ========== */
+ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
+li { margin: .4rem 0; padding-left: .2rem; line-height: 1.6; }
+ul li::marker { color: var(--accent); }
+ol li::marker { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ЦИТАТЫ ========== */
+blockquote.quote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.8rem;
+  border-left: 2.5px solid var(--gold); font-style: italic; color: var(--ink-soft);
+}
+blockquote.quote p { text-indent: 0; margin-bottom: .35rem; }
+.source, blockquote.quote footer {
+  display: block; margin-top: .7rem; font-family: var(--sans);
+  font-style: normal; font-size: .78em; color: var(--ink-soft);
+}
+.source::before { content: "— "; }
+
+/* ========== АЯТ ========== */
+.ayah {
+  margin: 2rem 0; padding: 1.8rem 2rem;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+  border-radius: 8px; position: relative; text-align: center;
+}
+.ayah::before, .ayah::after {
+  content: ""; position: absolute; left: 1.6rem; right: 1.6rem; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .45;
+}
+.ayah::before { top: .65rem; } .ayah::after { bottom: .65rem; }
+.ar-block {
+  font-family: var(--arabic); direction: rtl; unicode-bidi: isolate;
+  text-align: center; font-size: 1.6em; line-height: 2.3;
+  color: var(--ink); overflow-wrap: anywhere; word-break: break-word;
+}
+.ayah .ar-block { margin-bottom: .3rem; }
+.ayah-tr { margin-top: 1rem; font-style: italic; font-size: .97em; text-indent: 0; color: var(--ink-soft); }
+.ayah .source { margin-top: .7rem; text-align: center; color: var(--accent); font-weight: 500; font-size: .8em; }
+.ayah .source::before { content: ""; }
+
+/* ========== ХАДИС / ДУА ========== */
+.hadith {
+  margin: 1.9rem 0; padding: 1.3rem 1.6rem 1.2rem;
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 5px; background: var(--paper-alt);
+}
+.hadith .label, .dua .label, .callout .label {
+  display: block; font-family: var(--sans); font-size: .66em;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .65rem; font-weight: 600;
+}
+.hadith p, .dua p, .callout p { text-indent: 0; margin: 0 0 .4rem; }
+.hadith .ar-block { font-size: 1.35em; margin-bottom: .8rem; }
+.dua {
+  margin: 1.9rem 0; padding: 1.5rem 1.8rem;
+  background: var(--paper-alt); border: 1.5px dashed var(--gold);
+  border-radius: 8px; text-align: center;
+}
+.dua .label { color: var(--gold); }
+.dua .ar-block { font-size: 1.5em; margin-bottom: .8rem; }
+.dua p { font-style: italic; color: var(--ink-soft); }
+.callout { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 5px; font-size: .94em; }
+
+/* ========== ИНЛАЙН-АРАБСКИЙ ========== */
+.ar-inline { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; unicode-bidi: isolate; direction: rtl; }
+[dir="rtl"] { text-align: right; }
+p[dir="rtl"] { font-family: var(--arabic); font-size: 1.35em; line-height: 2.2; text-indent: 0; }
+
+/* ========== ТАБЛИЦЫ ========== */
+figure.table { margin: 2.2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft); text-align: center; margin-top: .7rem; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
+th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
+tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+
+/* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
+sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
+.footnotes { margin-top: 4rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule); font-size: .85em; color: var(--ink-soft); }
+.footnotes h2, .bibliography h2 { font-family: var(--sans); font-size: .76em; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 600; }
+.footnote { margin: .5rem 0; text-indent: 0; }
+.footnote .fn-num { color: var(--accent); margin-right: .55em; font-weight: 700; }
+.bibliography ol { list-style: none; counter-reset: bib; padding-left: 0; }
+.bibliography li { counter-increment: bib; padding-left: 2.8rem; position: relative; margin: .7rem 0; font-size: .94em; line-height: 1.55; }
+.bibliography li::before { content: counter(bib) "."; position: absolute; left: 0; top: 0; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ========== ПОДВАЛ ========== */
+.doc-footer {
+  margin-top: 4.5rem; padding-top: 1.4rem; border-top: 1.5px solid var(--rule);
+  font-family: var(--sans); font-size: .72em; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 820px) {
+  .page { padding: 2.2rem 1.4rem 3rem; }
+  .wrap { width: 100%; }
+  .book-title { font-size: 2em; }
+  .toc { padding: 1.3rem; }
+  .toc a { padding: .45rem .1rem; min-height: 44px; }
+  .ayah { padding: 1.2rem 1rem; }
+  .ar-block { font-size: 1.3em; line-height: 2.1; }
+  figure.table { display: block; width: 100%; overflow-x: auto; }
+  table { min-width: 36rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; line-height: 1.66; }
+  .page { padding: 1.6rem 1rem 2.4rem; }
+  .title-page { padding: 1rem 0 2.5rem; }
+  .book-title { font-size: 1.7em; }
+  .chapter > h2 { font-size: 1.4em; margin: 2.6rem 0 1.1rem; }
+  .ar-block { font-size: 1.18em; line-height: 2; }
+  .ayah, .hadith, .dua { padding: 1rem .8rem; }
+  .toc { padding: 1.1rem; }
+  .doc-footer { flex-direction: column; gap: .4rem; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .page { padding: 1.2rem .7rem 2rem; }
+  .book-title { font-size: 1.5em; }
+  .ar-block { font-size: 1.05em; }
+}
+
+/* ========== ПЕЧАТЬ ========== */
+@page { size: A4; margin: 22mm 20mm 22mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.55; overflow: visible; }
+  .page { box-shadow: none; padding: 0; max-width: none; min-height: 0; }
+  .wrap { max-width: none; }
+  .title-page { page-break-after: always; border-bottom: 0; }
+  .title-page::after { display: none; }
+  .toc { page-break-after: always; background: none; border: 0; padding: 0; }
+  .chapter { page-break-before: always; }
+  .chapter:first-of-type { page-break-before: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .doc-footer { display: none; }
+  .ayah, .hadith, .dua { background: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="title-page">
+  <div class="bismillah-slot bism-pos-above-title bism-align-center" style="justify-content:center">
+  <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+</div>
+  
+  <h1 class="book-title">Чистка</h1>
+  
+  <div class="rule-orn" aria-hidden="true"></div>
+  
+  
+  
+  
+  
+</header>
+  <div class="wrap">
+  <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l2">
+      <a href="#avtor-abu-muhammad"><span class="num">0.1.</span><span class="lbl">Автор: Абу Мухаммад</span></a></li>
+<li class="toc-l1">
+      <a href="#pered-nachalom-perevod-terminov"><span class="num">1.</span><span class="lbl">ПЕРЕД НАЧАЛОМ: ПЕРЕВОД ТЕРМИНОВ</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-1-vozvraschenie-zla-tuda-otkuda-ono-bylo-priobreten"><span class="num">2.</span><span class="lbl">ДЕЙСТВИЕ 1. ВОЗВРАЩЕНИЕ ЗЛА ТУДА, ОТКУДА ОНО БЫЛО ПРИОБРЕТЕНО</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-2-annulirovanie-zla-tem-otkuda-ono-bylo-priobreteno"><span class="num">3.</span><span class="lbl">ДЕЙСТВИЕ 2. АННУЛИРОВАНИЕ ЗЛА ТЕМ, ОТКУДА ОНО БЫЛО ПРИОБРЕТЕНО</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-3-annulirovanie-mertvogo-sostoyaniya-tem-otkuda-ono"><span class="num">4.</span><span class="lbl">ДЕЙСТВИЕ 3. АННУЛИРОВАНИЕ МЁРТВОГО СОСТОЯНИЯ ТЕМ, ОТКУДА ОНО БЫЛО ПРИОБРЕТЕНО</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-4-annulirovanie-vneshnego-vozdeystviya"><span class="num">5.</span><span class="lbl">ДЕЙСТВИЕ 4. АННУЛИРОВАНИЕ ВНЕШНЕГО ВОЗДЕЙСТВИЯ</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-5-vozvraschenie-nechisti-i-suschnostey-tuda-otkuda-"><span class="num">6.</span><span class="lbl">ДЕЙСТВИЕ 5. ВОЗВРАЩЕНИЕ НЕЧИСТИ И СУЩНОСТЕЙ ТУДА, ОТКУДА ОНИ ПРИШЛИ</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-6-razvyazyvanie-putey-kotorye-perepletalis-ili-byli"><span class="num">7.</span><span class="lbl">ДЕЙСТВИЕ 6. РАЗВЯЗЫВАНИЕ ПУТЕЙ, КОТОРЫЕ ПЕРЕПЛЕТАЛИСЬ ИЛИ БЫЛИ СВЯЗАНЫ</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-7-razryvanie-mertvyh-boleznennyh-i-prochih-putey"><span class="num">8.</span><span class="lbl">ДЕЙСТВИЕ 7. РАЗРЫВАНИЕ МЁРТВЫХ, БОЛЕЗНЕННЫХ И ПРОЧИХ ПУТЕЙ</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-8-razryvanie-putey-vyvodyaschih-iz-sveta-k-mraku"><span class="num">9.</span><span class="lbl">ДЕЙСТВИЕ 8. РАЗРЫВАНИЕ ПУТЕЙ, ВЫВОДЯЩИХ ИЗ СВЕТА К МРАКУ</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-9-razryvanie-putey-vidimogo-i-nevidimogo-vreda"><span class="num">10.</span><span class="lbl">ДЕЙСТВИЕ 9. РАЗРЫВАНИЕ ПУТЕЙ ВИДИМОГО И НЕВИДИМОГО ВРЕДА</span></a></li>
+<li class="toc-l1">
+      <a href="#deystvie-10-zakrytie-skvernyh-i-temnyh-putey"><span class="num">11.</span><span class="lbl">ДЕЙСТВИЕ 10. ЗАКРЫТИЕ СКВЕРНЫХ И ТЁМНЫХ ПУТЕЙ</span></a></li>
+<li class="toc-l1">
+      <a href="#polnaya-posledovatelnost-primeneniya-desyati-deystviy"><span class="num">12.</span><span class="lbl">ПОЛНАЯ ПОСЛЕДОВАТЕЛЬНОСТЬ ПРИМЕНЕНИЯ ДЕСЯТИ ДЕЙСТВИЙ</span></a></li>
+<li class="toc-l1">
+      <a href="#primechaniya-i-predosterezheniya"><span class="num">13.</span><span class="lbl">ПРИМЕЧАНИЯ И ПРЕДОСТЕРЕЖЕНИЯ</span></a></li></ol></nav>
+  <main>
+<section class="section" data-kind="section" data-level="2">
+<h3 id="avtor-abu-muhammad"><span class="num">0.1.</span>Автор: Абу Мухаммад</h3>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="pered-nachalom-perevod-terminov"><span class="num">1.</span>ПЕРЕД НАЧАЛОМ: ПЕРЕВОД ТЕРМИНОВ</h2>
+<p>Квантовая запутанность — в духовной реальности это запутанные духовные пути, которые колдун создал между собой, жертвой и предметами ритуала. По-арабски:<span class="ar-inline" lang="ar" dir="rtl">السُّبُلُ المُشْتَبِكَة</span>(ас-субуль аль-муштабика) — переплетённые, запутанные пути.</p>
+<p>Чакра — в духовной реальности это места сосредоточения духовных сил в теле человека. По-арабски:<span class="ar-inline" lang="ar" dir="rtl">مَرَاكِزُ القُوَى</span>(маракиз аль-кува) — центры сил, или<span class="ar-inline" lang="ar" dir="rtl">مَرَاكِزُ القُوَّةِ الرُّوحَانِيَّة</span>(маракиз аль-кувва ар-рухания) — центры духовной мощи. В теле их семь основных, и они соответствуют органам и нервным узлам, которые колдун поражает через ритуал.</p>
+<p>Фантом на фотографии — это духовная привязка, которую колдун создаёт между изображением и человеком. По-арабски:<span class="ar-inline" lang="ar" dir="rtl">الرِّبَاطُ الرُّوحَانِيّ</span>(ар-рибат ар-рухани) — духовная связка, привязка. Аннулируется через разрыв этой связки.</p>
+<p>Эгрегор Лжеабсолюта — в шариатской терминологии это система шайтанов и джиннов-слуг колдовства, объединённых одним приказом. По-арабски:<span class="ar-inline" lang="ar" dir="rtl">جُنُودُ السِّحْر وَخُدَّامُ الشَّيَاطِين</span>(джунуд ас-сихр ва худдам аш-шайатин) — солдаты колдовства и слуги шайтанов.</p>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-1-vozvraschenie-zla-tuda-otkuda-ono-bylo-priobreten"><span class="num">2.</span>ДЕЙСТВИЕ 1. ВОЗВРАЩЕНИЕ ЗЛА ТУДА, ОТКУДА ОНО БЫЛО ПРИОБРЕТЕНО</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">رَدُّ الشَّرِّ إِلَى مَصْدَرِهِ</span>(Радд аш-шарр иля масдарихи)</p>
+<p>Суть действия: Всё зло, которое было наслано на тебя колдуном, заказчиком или шайтаном, не растворяется в воздухе. Оно возвращается к тому, кто его послал. К колдуну. К заказчику. К шайтану. К тому источнику, из которого оно вышло. Аллах — аль-Мунтаким (Мстящий), аль-Джаббар (Подчиняющий). Он возвращает зло его автору.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّ كُلَّ شَرٍّ أَصَابَنِي إِلَى مَصْدَرِهِ، رُدَّهُ إِلَى مَنْ أَرْسَلَهُ، رُدَّهُ إِلَى مَنْ عَمِلَهُ، رُدَّهُ إِلَى مَنْ رَضِيَ بِهِ</div>
+  <p>Аллахумма рудда кулля шаррин асабани иля масдарихи, руддаху иля ман арсаляху, руддаху иля ман 'амиляху, руддаху иля ман радия бихи</p>
+<p>О Аллах, верни всякое зло, постигшее меня, к его источнику. Верни его к тому, кто его послал. Верни его к тому, кто его совершил. Верни его к тому, кто им доволен</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — возвращение колдуну:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّ كَيْدَ السَّاحِرِ إِلَى نَحْرِهِ، وَرُدَّ مَكْرَ المَاكِرِ عَلَيْهِ، وَلَا تَدَعْ لَهُ مِنْ شَرِّهِ شَيْئًا إِلَّا رَجَعَ إِلَيْهِ</div>
+  <p>Аллахумма рудда кайд ас-сахир иля нахрихи, ва рудда макр аль-макир 'алейхи, ва ля тада' ляху мин шаррихи шай'ан илля раджа'а илейхи</p>
+<p>О Аллах, верни козни колдуна на его собственную шею, верни хитрость хитреца на него самого, и не оставляй от его зла ничего, чтобы не вернулось к нему</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — возвращение шайтану:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّ كُلَّ شَيْطَانٍ أَرْسَلَهُ السَّاحِرُ إِلَى مَكَانِهِ، وَلَا تُبْقِ مِنْهُ فِي جَسَدِي وَلَا فِي رُوحِي وَلَا فِي بَيْتِي شَيْئًا</div>
+  <p>Аллахумма рудда кулля шайтанин арсаляху ас-сахир иля макянихи, ва ля тубкы минху фи джасади ва ля фи рухи ва ля фи бейти шай'ан</p>
+<p>О Аллах, верни всякого шайтана, которого послал колдун, на его место, и не оставляй от него ничего ни в моём теле, ни в моём духе, ни в моём доме</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">فَانقَلَبُوا بِنِعْمَةٍ مِّنَ اللَّهِ وَفَضْلٍ لَّمْ يَمْسَسْهُمْ سُوءٌ وَاتَّبَعُوا رِضْوَانَ اللَّهِ وَاللَّهُ ذُو فَضْلٍ عَظِيمٍ</div>
+  <figcaption class="ayah-tr">И вернулись они с милостью от Аллаха и щедростью, не коснулось их зло, и последовали они довольству Аллаха. Аллах — Обладатель великой щедрости</figcaption>
+  <div class="source">Источник: Сура «аль-Имран», аят 174</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-2-annulirovanie-zla-tem-otkuda-ono-bylo-priobreteno"><span class="num">3.</span>ДЕЙСТВИЕ 2. АННУЛИРОВАНИЕ ЗЛА ТЕМ, ОТКУДА ОНО БЫЛО ПРИОБРЕТЕНО</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">إِبْطَالُ الشَّرِّ بِمَا جَاءَ مِنْهُ</span>(Ибталь аш-шарр бима джа'а минху)</p>
+<p>Суть действия: Зло пришло через конкретное средство — через ритуал, через предмет, через слово колдуна, через жертвоприношение шайтанам. Это средство должно быть аннулировано. Не просто «ослаблено». Аннулировано. Чтобы оно стало ничем. Пустым. Без силы.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ شَرٍّ جَاءَ مِنْ سِحْرٍ، أَبْطِلْهُ بِمَا جَاءَ مِنْهُ، أَبْطِلْ أَصْلَهُ وَفَرْعَهُ، أَبْطِلْ سِرَّهُ وَعَلَانِيَتَهُ</div>
+  <p>Аллахумма абтыль кулля шаррин джа'а мин сихр, абтыльху бима джа'а минху, абтыль асляху ва фар'аху, абтыль сирраху ва 'аланиййатаху</p>
+<p>О Аллах, аннулируй всякое зло, пришедшее от колдовства. Аннулируй его тем, откуда оно пришло. Аннулируй его корень и его ветвь. Аннулируй его тайное и его явное</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — аннулирование предмета ритуала:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ مَا عُمِلَ بِهِ السِّحْرُ، أَبْطِلْ أَثَرَ السَّحَرَةِ، وَأَبْطِلْ أَثَرَ المَقَابِرِ، وَأَبْطِلْ أَثَرَ مَا دُفِنَ وَمَا رُمِيَ وَمَا عُلِّقَ</div>
+  <p>Аллахумма абтыль кулля ма 'умиля бихи ас-сихр, абтыль асар ас-сахара, ва абтыль асар аль-макабир, ва абтыль асар ма дуфина ва ма румийа ва ма 'улликъа</p>
+<p>О Аллах, аннулируй всё, чем было совершено колдовство. Аннулируй след колдунов, аннулируй след кладбищ, аннулируй след того, что было закопано, брошено и подвешено</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — аннулирование слова колдуна:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ كَلِمَةٍ نَطَقَ بِهَا السَّاحِرُ، وَأَبْطِلْ كُلَّ عَزْمٍ عَقَدَهُ، وَأَبْطِلْ كُلَّ قَسَمٍ أَقْسَمَهُ لِغَيْرِكَ</div>
+  <p>Аллахумма абтыль кулля калиматин натака биха ас-сахир, ва абтыль кулля 'азмин 'акадаху, ва абтыль кулля касамин аксамаху ли-гайрик</p>
+<p>О Аллах, аннулируй всякое слово, произнесённое колдуном, аннулируй всякое решение, которое он закрепил, аннулируй всякую клятву, которую он принёс не Тебе</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">فَوَقَعَ الْحَقُّ وَبَطَلَ مَا كَانُوا يَعْمَلُونَ فَغُلِبُوا هُنَالِكَ وَانقَلَبُوا صَاغِرِينَ</div>
+  <figcaption class="ayah-tr">И утвердилась истина, и оказалось тщетным то, что они совершали. И потерпели они там поражение, и вернулись униженными</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аяты 118-119</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-3-annulirovanie-mertvogo-sostoyaniya-tem-otkuda-ono"><span class="num">4.</span>ДЕЙСТВИЕ 3. АННУЛИРОВАНИЕ МЁРТВОГО СОСТОЯНИЯ ТЕМ, ОТКУДА ОНО БЫЛО ПРИОБРЕТЕНО</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">إِبْطَالُ حَالَةِ المَوْتِ بِمَا جَاءَتْ مِنْهُ</span>(Ибталь халят аль-маут бима джа'ат минху)</p>
+<p>Суть действия: Колдуны часто привязывают жертву к «мёртвому полю» — к кладбищу, к погребённым предметам, к мёртвой земле, к мёртвой воде, к костям. Это создаёт в человеке состояние духовной смерти: застой, холод, пустоту, отсутствие движения и жизни. Это мёртвое состояние аннулируется, и жизнь возвращается.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ حَالَةِ مَوْتٍ دَخَلَتْ عَلَيَّ مِنْ سِحْرٍ، أَبْطِلْهَا بِمَا جَاءَتْ مِنْهُ، أَبْطِلْ أَثَرَ المَقَابِرِ فِي جَسَدِي، وَأَبْطِلْ أَثَرَ المَوْتَى فِي رُوحِي</div>
+  <p>Аллахумма абтыль кулля халят маутин дахалят 'алеййа мин сихр, абтыльха бима джа'ат минху, абтыль асар аль-макабир фи джасади, ва абтыль асар аль-маута фи рухи</p>
+<p>О Аллах, аннулируй всякое состояние смерти, вошедшее в меня от колдовства. Аннулируй его тем, откуда оно пришло. Аннулируй след кладбищ в моём теле и след мёртвых в моём духе</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — аннулирование мёртвой земли и воды:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ مَا مُسَّ مِنْ تُرَابِ المَقَابِرِ، وَكُلَّ مَا مُسَّ مِنْ مَاءِ المَوْتَى، وَكُلَّ مَا رُبِطَ بِمَيِّتٍ، وَكُلَّ مَا دُفِنَ بِاسْمِي</div>
+  <p>Аллахумма абтыль кулля ма мусса мин тураб аль-макабир, ва кулля ма мусса мин ма' аль-маута, ва кулля ма рубыта би-маййит, ва кулля ма дуфина бисми</p>
+<p>О Аллах, аннулируй всякое прикосновение к земле кладбищ, всякое прикосновение к воде мёртвых, всякую привязку к мёртвому, и всё, что было закопано на моё имя</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — возвращение жизни:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَحْيِ مَا أَمَاتَهُ السِّحْرُ فِي جَسَدِي، وَأَحْيِ مَا أَمَاتَهُ السِّحْرُ فِي قَلْبِي، وَأَحْيِ مَا أَمَاتَهُ السِّحْرُ فِي رُوحِي بِنُورِكَ وَقُدْرَتِكَ</div>
+  <p>Аллахумма ахьи ма аматаху ас-сихр фи джасади, ва ахьи ма аматаху ас-сихр фи кальби, ва ахьи ма аматаху ас-сихр фи рухи би-нурик ва кудратик</p>
+<p>О Аллах, оживи то, что умертвило колдовство в моём теле, оживи то, что умертвило колдовство в моём сердце, оживи то, что умертвило колдовство в моём духе — Твоим светом и Твоей мощью</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَاهُ وَجَعَلْنَا لَهُ نُورًا يَمْشِي بِهِ فِي النَّاسِ</div>
+  <figcaption class="ayah-tr">Разве тот, кто был мёртв, и Мы оживили его и сделали для него свет, с которым он ходит среди людей...</figcaption>
+  <div class="source">Источник: Сура «аль-Ан'ам», аят 122</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-4-annulirovanie-vneshnego-vozdeystviya"><span class="num">5.</span>ДЕЙСТВИЕ 4. АННУЛИРОВАНИЕ ВНЕШНЕГО ВОЗДЕЙСТВИЯ</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">إِبْطَالُ التَّأْثِيرِ الخَارِجِيِّ</span>(Ибталь ат-та'сир аль-хариджи)</p>
+<p>Суть действия: Внешнее воздействие — это всё, что пришло извне: от колдуна, от заказчика, от чужого глаза, от чужого слова, от чужой воли. Это не твоё. Это чужое, навязанное тебе. Оно аннулируется и отделяется от тебя. Ты — раб Аллаха, а не раб чужого воздействия.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ تَأْثِيرٍ خَارِجِيٍّ دَخَلَ عَلَيَّ مِنْ غَيْرِ إِذْنِكَ، أَبْطِلْهُ مِنْ جَسَدِي، أَبْطِلْهُ مِنْ قَلْبِي، أَبْطِلْهُ مِنْ رُوحِي، أَبْطِلْهُ مِنْ عَقْلِي</div>
+  <p>Аллахумма абтыль кулля та'сирин хариджиййин дахаля 'алеййа мин гайри изник, абтыльху мин джасади, абтыльху мин кальби, абтыльху мин рухи, абтыльху мин 'акли</p>
+<p>О Аллах, аннулируй всякое внешнее воздействие, вошедшее в меня без Твоего дозволения. Аннулируй его из моего тела, аннулируй его из моего сердца, аннулируй его из моего духа, аннулируй его из моего разума</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — отделение чужого от своего:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْصِلْ بَيْنِي وَبَيْنَ كُلِّ مَا لَيْسَ مِنِّي، افْصِلْ بَيْنِي وَبَيْنَ كُلِّ مَا دَخَلَ عَلَيَّ مِنْ غَيْرِي، وَرُدَّ إِلَى كُلِّ ذِي حَقٍّ حَقَّهُ</div>
+  <p>Аллахуммафсиль байна ва байна кулля ма лайса минни, афсиль байна ва байна кулля ма дахаля 'алеййа мин гайри, ва рудда иля кулли зи хаккин хаккаху</p>
+<p>О Аллах, раздели между мной и всем, что не от меня. Раздели между мной и всем, что вошло в меня от другого. И верни каждому обладателю права его право</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — аннулирование чужой воли:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ إِرَادَةٍ غَيْرِ إِرَادَتِكَ سُلِّطَتْ عَلَيَّ، وَأَبْطِلْ كُلَّ عَزْمٍ غَيْرِ عَزْمِكَ قُيِّدْتُ بِهِ، وَاجْعَلْ إِرَادَتِي تَابِعَةً لِإِرَادَتِكَ</div>
+  <p>Аллахумма абтыль кулля ирадатин гайри ирадатик суллитат 'алеййа, ва абтыль кулля 'азмин гайри 'азмик куййидту бихи, вадж'аль ирадати таби'атан ли-ирадатик</p>
+<p>О Аллах, аннулируй всякую волю помимо Твоей воли, которая была направлена на меня, аннулируй всякое решение помимо Твоего решения, которым я был скован, и сделай мою волю следующей за Твоей волей</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا</div>
+  <figcaption class="ayah-tr">Скажи: «Пришла истина, и исчезла ложь. Поистине, ложь обречена на исчезновение»</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 81</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-5-vozvraschenie-nechisti-i-suschnostey-tuda-otkuda-"><span class="num">6.</span>ДЕЙСТВИЕ 5. ВОЗВРАЩЕНИЕ НЕЧИСТИ И СУЩНОСТЕЙ ТУДА, ОТКУДА ОНИ ПРИШЛИ</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">رَدُّ الأَرْوَاحِ الخَبِيثَةِ إِلَى مَوَاطِنِهَا</span>(Радд аль-арвах аль-хабиса иля маватиниха)</p>
+<p>Суть действия: Джинны, шайтаны, духи-слуги колдовства, подселённые через ритуал, — все они должны вернуться туда, откуда пришли. К своему племени. К своему месту обитания. К тому, кто их послал. Они не имеют права оставаться в теле раба Аллаха.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّ كُلَّ جِنِّيٍّ دَخَلَ جَسَدِي بِسِحْرٍ إِلَى مَوْطِنِهِ، رُدَّهُ إِلَى قَبِيلَتِهِ، رُدَّهُ إِلَى أَرْضِهِ، وَلَا تُبْقِ مِنْهُ فِي جَسَدِي أَثَرًا وَلَا ذِكْرًا</div>
+  <p>Аллахумма рудда кулля джинниййин дахаля джасади би-сихр иля маутинихи, руддаху иля кабилатихи, руддаху иля ардихи, ва ля тубкы минху фи джасади асаран ва ля зикран</p>
+<p>О Аллах, верни всякого джинна, вошедшего в моё тело через колдовство, к его месту обитания. Верни его к его племени. Верни его к его земле. И не оставляй от него в моём теле ни следа, ни памяти</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — возвращение туда, откуда пришёл:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ كُلُّ جِنِّيٍّ جَاءَ مِنْ سَاحِرٍ فَرُدَّهُ إِلَى السَّاحِرِ، وَكُلُّ جِنِّيٍّ جَاءَ مِنْ مَقْبَرَةٍ فَرُدَّهُ إِلَى المَقْبَرَةِ، وَكُلُّ جِنِّيٍّ جَاءَ مِنْ ظُلُمَةٍ فَرُدَّهُ إِلَى الظُّلُمَةِ</div>
+  <p>Аллахумма куллю джинниййин джа'а мин сахирин фа-руддаху иля ас-сахир, ва куллю джинниййин джа'а мин макбаратин фа-руддаху иля аль-макбара, ва куллю джинниййин джа'а мин зулюматин фа-руддаху иля аз-зулюмат</p>
+<p>О Аллах, всякого джинна, пришедшего от колдуна, верни к колдуну. Всякого джинна, пришедшего с кладбища, верни на кладбище. Всякого джинна, пришедшего из мрака, верни во мрак</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — приказ об изгнании:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَخْرِجْ مِنْ جَسَدِي كُلَّ رُوحٍ خَبِيثَةٍ، وَكُلَّ شَيْطَانٍ مَرِيدٍ، وَكُلَّ جِنِّيٍّ عَاتٍ، بِسُلْطَانِكَ وَقُوَّةِ كَلَامِكَ</div>
+  <p>Аллахумма ахридж мин джасади кулля рухин хабисатин, ва кулля шайтанин маридин, ва кулля джинниййин 'атин, би-султаника ва куввати калямик</p>
+<p>О Аллах, изгони из моего тела всякий скверный дух, всякого мятежного шайтана, всякого дерзкого джинна — Твоей властью и силой Твоих слов</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">قَالَ اخْرُجْ مِنْهَا مَذْءُومًا مَّدْحُورًا لَّمَن تَبِعَكَ مِنْهُمْ لَأَمْلَأَنَّ جَهَنَّمَ مِنكُمْ أَجْمَعِينَ</div>
+  <figcaption class="ayah-tr">Сказал Он: «Выйди из неё порицаемым, отвергнутым! Тех из них, кто последует за тобой, Я непременно заполню Геенной — всеми вами вместе»</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аят 18</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-6-razvyazyvanie-putey-kotorye-perepletalis-ili-byli"><span class="num">7.</span>ДЕЙСТВИЕ 6. РАЗВЯЗЫВАНИЕ ПУТЕЙ, КОТОРЫЕ ПЕРЕПЛЕТАЛИСЬ ИЛИ БЫЛИ СВЯЗАНЫ</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">فَكُّ السُّبُلِ المُلْتَبِسَةِ وَالمَعْقُودَة</span>(Факк ас-субуль аль-мультабиса ва-ль-ма'куда)</p>
+<p>Суть действия: Колдун завязывает пути жертвы — переплетает их с путями колдуна, с путями предмета, с путями кладбища, с путями шайтана. Эти узлы нужно развязать. Не просто разорвать — развязать. Чтобы каждый путь вернулся к своему истоку. Путь жертвы — к жертве. Путь колдуна — к колдуну. Путь Аллаха — к Аллаху.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْكُكْ كُلَّ سَبِيلٍ الْتَبَسَ بِسَبِيلِي، وَافْكُكْ كُلَّ سَبِيلٍ عُقِدَ عَلَى سَبِيلِي، وَافْصِلْ بَيْنَ سَبِيلِي وَسَبِيلِ السَّاحِرِ، وَرُدَّ كُلَّ سَبِيلٍ إِلَى أَصْلِهِ</div>
+  <p>Аллахуммафкук кулля сабилин ильтабаса би-сабили, вафкук кулля сабилин 'укыда 'аля сабили, вафсиль байна сабили ва сабиль ас-сахир, ва рудда кулля сабилин иля аслихи</p>
+<p>О Аллах, развяжи всякий путь, который переплёлся с моим путём, развяжи всякий путь, который был завязан на моём пути, раздели между моим путём и путём колдуна, и верни всякий путь к его истоку</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — развязывание узлов колдовства:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْلُلْ كُلَّ عُقْدَةٍ عَقَدَهَا السَّاحِرُ عَلَى سُبُلِي، وَاحْلُلْ كُلَّ رِبَاطٍ رَبَطَهُ بِي، وَاحْلُلْ كُلَّ قَيْدٍ قَيَّدَنِي بِهِ غَيْرُكَ</div>
+  <p>Аллахуммахлуль кулля 'укдатин 'акадаху ас-сахир 'аля субули, вахлуль кулля рибатин рабатаху би, вахлуль кулля кайдин каййадани бихи гайрук</p>
+<p>О Аллах, развяжи всякий узел, который завязал колдун на моих путях, развяжи всякую привязку, которой он привязал меня к себе, развяжи всякую цепь, которой сковал меня кто-либо помимо Тебя</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — развязывание путей в местах силы:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ افْكُكْ كُلَّ سَبِيلٍ مُلْتَبِسٍ فِي مَرَاكِزِ قُوَايَ، فِي رَأْسِي وَصَدْرِي وَبَطْنِي وَظَهْرِي، وَاجْعَلْ كُلَّ مَرْكَزٍ فِي جَسَدِي خَالِصًا لَكَ</div>
+  <p>Аллахуммафкук кулля сабилин мультабисин фи маракызи кувайа, фи ра'си ва садри ва батни ва захри, вадж'аль кулля марказин фи джасади халисан ляк</p>
+<p>О Аллах, развяжи всякий переплетённый путь в центрах моих сил — в моей голове, груди, животе и спине, и сделай каждый центр в моём теле чистым для Тебя</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي</div>
+  <figcaption class="ayah-tr">Господь мой! Раскрой мне грудь, облегчи мне дело моё и развяжи узел с языка моего, чтобы понимали речь мою</figcaption>
+  <div class="source">Источник: Сура «Та Ха», аяты 25-28</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-7-razryvanie-mertvyh-boleznennyh-i-prochih-putey"><span class="num">8.</span>ДЕЙСТВИЕ 7. РАЗРЫВАНИЕ МЁРТВЫХ, БОЛЕЗНЕННЫХ И ПРОЧИХ ПУТЕЙ</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">قَطْعُ السُّبُلِ المَيِّتَةِ وَالمَرِيضَة</span>(Кат' ас-субуль аль-маййита ва-ль-марида)</p>
+<p>Суть действия: В человеке могут быть пути, которые не просто связаны с колдовством, а сами по себе мёртвые, больные, гнилые. Это пути, по которым течёт не жизнь, а смерть. Не свет, а мрак. Не сила, а слабость. Эти пути не развязываются — они отрезаются. Полностью. До основания.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلٍ مَيِّتٍ فِي جَسَدِي، وَاقْطَعْ كُلَّ سَبِيلٍ مَرِيضٍ فِي رُوحِي، وَاقْطَعْ كُلَّ سَبِيلٍ مُظْلِمٍ فِي قَلْبِي، وَلَا تُبْقِ مِنْهَا أَثَرًا</div>
+  <p>Аллахуммакта' кулля сабилин маййитин фи джасади, вакта' кулля сабилин маридин фи рухи, вакта' кулля сабилин музлимун фи кальби, ва ля тубкы минха асаран</p>
+<p>О Аллах, отрежь всякий мёртвый путь в моём теле, отрежь всякий болезненный путь в моём духе, отрежь всякий тёмный путь в моём сердце, и не оставляй от них следа</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — отсечение от кладбища и мёртвого поля:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلٍ يَصِلُنِي بِالمَقَابِرِ، وَاقْطَعْ كُلَّ سَبِيلٍ يَصِلُنِي بِالمَوْتَى، وَاقْطَعْ كُلَّ سَبِيلٍ يَصِلُنِي بِكُلِّ مَا أَمَاتَ السِّحْرُ</div>
+  <p>Аллахуммакта' кулля сабилин йасылюни биль-макабир, вакта' кулля сабилин йасылюни биль-маута, вакта' кулля сабилин йасылюни би-кулли ма амата ас-сихр</p>
+<p>О Аллах, отрежь всякий путь, связывающий меня с кладбищами, отрежь всякий путь, связывающий меня с мёртвыми, отрежь всякий путь, связывающий меня со всем, что умертвило колдовство</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — отсечение болезненных каналов:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلٍ يَنْقُلُ إِلَيَّ المَرَضَ، وَاقْطَعْ كُلَّ سَبِيلٍ يَنْقُلُ إِلَيَّ الأَلَمَ، وَاقْطَعْ كُلَّ سَبِيلٍ يَنْقُلُ إِلَيَّ الحُزْنَ وَالهَمَّ</div>
+  <p>Аллахуммакта' кулля сабилин йанкулю илеййа аль-марад, вакта' кулля сабилин йанкулю илеййа аль-алям, вакта' кулля сабилин йанкулю илеййа аль-хузн ва-ль-хамм</p>
+<p>О Аллах, отрежь всякий путь, переносящий ко мне болезнь, отрежь всякий путь, переносящий ко мне боль, отрежь всякий путь, переносящий ко мне печаль и тревогу</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِذْ تَبَرَّأَ الَّذِينَ اتُّبِعُوا مِنَ الَّذِينَ اتَّبَعُوا وَرَأَوُا الْعَذَابَ وَتَقَطَّعَتْ بِهِمُ الْأَسْبَابُ</div>
+  <figcaption class="ayah-tr">Когда те, за кем следовали, отрекутся от тех, кто следовал за ними, и увидят они наказание, и разорвутся между ними связи</figcaption>
+  <div class="source">Источник: Сура «аль-Бакара», аят 166</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-8-razryvanie-putey-vyvodyaschih-iz-sveta-k-mraku"><span class="num">9.</span>ДЕЙСТВИЕ 8. РАЗРЫВАНИЕ ПУТЕЙ, ВЫВОДЯЩИХ ИЗ СВЕТА К МРАКУ</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">قَطْعُ السُّبُلِ الَّتِي تُخْرِجُ مِنَ النُّورِ إِلَى الظُّلُمَات</span>(Кат' ас-субуль алляти тухриджу мин ан-нур иля аз-зулюмат)</p>
+<p>Суть действия: Есть пути, которые ведут человека от света — к мраку. От веры — к неверию. От покоя — к тревоге. От Аллаха — к шайтану. Колдун создаёт такие пути через ритуалы, через ширк, через обращение к джиннам. Эти пути отрезаются, и человек возвращается к свету.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلٍ يُخْرِجُنِي مِنَ النُّورِ إِلَى الظُّلُمَاتِ، وَاقْطَعْ كُلَّ سَبِيلٍ يُخْرِجُنِي مِنَ الإِيمَانِ إِلَى الكُفْرِ، وَاقْطَعْ كُلَّ سَبِيلٍ يُخْرِجُنِي مِنْ طَاعَتِكَ إِلَى مَعْصِيَتِكَ</div>
+  <p>Аллахуммакта' кулля сабилин йухриджуни мина-н-нури иля аз-зулюмат, вакта' кулля сабилин йухриджуни миналь-имани иля аль-куфр, вакта' кулля сабилин йухриджуни мин та'атик иля ма'сийатик</p>
+<p>О Аллах, отрежь всякий путь, выводящий меня из света во мрак, отрежь всякий путь, выводящий меня из веры в неверие, отрежь всякий путь, выводящий меня из повиновения Тебе в ослушание Тебя</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — возвращение к свету:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّنِي إِلَى نُورِكَ بَعْدَ كُلِّ ظُلُمَةٍ، وَرُدَّنِي إِلَى إِيمَانِكَ بَعْدَ كُلِّ شَكٍّ، وَرُدَّنِي إِلَيْكَ بَعْدَ كُلِّ بُعْدٍ</div>
+  <p>Аллахумма руддани иля нурик ба'да кулли зулюмат, ва руддани иля иманик ба'да кулли шакк, ва руддани илейк ба'да кулли бу'д</p>
+<p>О Аллах, верни меня к Твоему свету после всякого мрака, верни меня к Твоей вере после всякого сомнения, верни меня к Тебе после всякого удаления</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — закрытие пути к шайтану:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلٍ بَيْنِي وَبَيْنَ الشَّيْطَانِ، وَاقْطَعْ كُلَّ سَبِيلٍ بَيْنِي وَبَيْنَ الجِنِّ، وَاقْطَعْ كُلَّ سَبِيلٍ بَيْنِي وَبَيْنَ كُلِّ مَا يُبْعِدُنِي عَنْكَ</div>
+  <p>Аллахуммакта' кулля сабилин байна ва байна аш-шайтан, вакта' кулля сабилин байна ва байна аль-джинн, вакта' кулля сабилин байна ва байна кулли ма йуб'идуни 'анк</p>
+<p>О Аллах, отрежь всякий путь между мной и шайтаном, отрежь всякий путь между мной и джиннами, отрежь всякий путь между мной и всем, что удаляет меня от Тебя</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ وَالَّذِينَ كَفَرُوا أَوْلِيَاؤُهُمُ الطَّاغُوتُ يُخْرِجُونَهُم مِّنَ النُّورِ إِلَى الظُّلُمَاتِ</div>
+  <figcaption class="ayah-tr">Аллах — Покровитель тех, которые уверовали. Он выводит их из мрака к свету. А те, которые не уверовали, их покровители — тагут, который выводит их из света во мрак</figcaption>
+  <div class="source">Источник: Сура «аль-Бакара», аят 257</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-9-razryvanie-putey-vidimogo-i-nevidimogo-vreda"><span class="num">10.</span>ДЕЙСТВИЕ 9. РАЗРЫВАНИЕ ПУТЕЙ ВИДИМОГО И НЕВИДИМОГО ВРЕДА</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">قَطْعُ سُبُلِ الضَّرَرِ الظَّاهِرِ وَالبَاطِن</span>(Кат' субуль ад-дарар аз-захир ва-ль-батын)</p>
+<p>Суть действия: Вред бывает видимый — болезнь, боль, потеря имущества. И бывает невидимый — тревога, страх, путаница в мыслях, холод в сердце, отсутствие бараката. Оба вида вреда имеют пути, по которым они входят. Эти пути отрезаются.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ ظَاهِرٍ فِي جَسَدِي، وَاقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ بَاطِنٍ فِي رُوحِي وَقَلْبِي، وَلَا تُبْقِ سَبِيلًا لِلضَّرَرِ فِي شَيْءٍ مِنِّي</div>
+  <p>Аллахуммакта' кулля сабили дарарин захирин фи джасади, вакта' кулля сабили дарарин батинин фи рухи ва кальби, ва ля тубкя сабилян ли-д-дарар фи шай'ин минни</p>
+<p>О Аллах, отрежь всякий путь видимого вреда в моём теле, отрежь всякий путь невидимого вреда в моём духе и сердце, и не оставляй пути для вреда ни в чём из меня</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — отсечение вреда из конкретного источника:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ جَاءَ مِنْ سَاحِرٍ، وَاقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ جَاءَ مِنْ حَاسِدٍ، وَاقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ جَاءَ مِنْ عَيْنٍ، وَاقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ جَاءَ مِنْ جِنٍّ</div>
+  <p>Аллахуммакта' кулля сабили дарарин джа'а мин сахир, вакта' кулля сабили дарарин джа'а мин хасид, вакта' кулля сабили дарарин джа'а мин 'айн, вакта' кулля сабили дарарин джа'а мин джинн</p>
+<p>О Аллах, отрежь всякий путь вреда, пришедший от колдуна, отрежь всякий путь вреда, пришедший от завистника, отрежь всякий путь вреда, пришедший от сглаза, отрежь всякий путь вреда, пришедший от джинна</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — отсечение вреда от предметов:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سَبِيلِ ضَرَرٍ جَاءَ مِنْ شَيْءٍ مَدْفُونٍ، أَوْ شَيْءٍ مُعَلَّقٍ، أَوْ شَيْءٍ مَرْمِيٍّ، أَوْ شَيْءٍ مَسْحُورٍ</div>
+  <p>Аллахуммакта' кулля сабили дарарин джа'а мин шай'ин мадфун, ау шай'ин му'алляк, ау шай'ин мармийй, ау шай'ин масхур</p>
+<p>О Аллах, отрежь всякий путь вреда, пришедший от чего-то закопанного, или подвешенного, или брошенного, или заколдованного</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</div>
+  <figcaption class="ayah-tr">Скажи: «Прибегаю к Господу рассвета от зла того, что Он создал, от зла мрака, когда он наступает, от зла дующих на узлы, от зла завистника, когда он завидует»</figcaption>
+  <div class="source">Источник: Сура «аль-Фаляк», аяты 1-5</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="deystvie-10-zakrytie-skvernyh-i-temnyh-putey"><span class="num">11.</span>ДЕЙСТВИЕ 10. ЗАКРЫТИЕ СКВЕРНЫХ И ТЁМНЫХ ПУТЕЙ</h2>
+<p>Арабское название:<span class="ar-inline" lang="ar" dir="rtl">غَلْقُ السُّبُلِ المُظْلِمَة وَالمُنْكَرَة</span>(Гальк ас-субуль аль-музлимат ва-ль-мункарат)</p>
+<p>Суть действия: После того как злые пути отрезаны и развязаны, необходимо закрыть те бреши, которые образовались. Иначе шайтан вернётся через ту же дыру. Пути закрываются светом Аллаха. Замком на пути становится «Бисмиллях». Печатью на пути становится Аят аль-Курси.</p>
+<p>Мольба основная:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اغْلِقْ كُلَّ سَبِيلٍ مُظْلِمٍ فِي جَسَدِي، وَاغْلِقْ كُلَّ سَبِيلٍ مُنْكَرٍ فِي رُوحِي، وَاغْلِقْ كُلَّ بَابٍ دَخَلَ مِنْهُ الشَّيْطَانُ، وَلَا تُبْقِ بَابًا مَفْتُوحًا إِلَّا لَكَ</div>
+  <p>Аллахуммагльк кулля сабилин музлимун фи джасади, вагльк кулля сабилин мункарин фи рухи, вагльк кулля бабин дахаля минху аш-шайтан, ва ля тубкя бабан мафтухан илля ляк</p>
+<p>О Аллах, закрой всякий тёмный путь в моём теле, закрой всякий скверный путь в моём духе, закрой всякую дверь, через которую вошёл шайтан, и не оставляй открытой двери, кроме двери к Тебе</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — запечатывание светом:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اخْتِمْ عَلَى كُلِّ سَبِيلٍ قَطَعْتَهُ بِنُورِكَ، وَاخْتِمْ عَلَى كُلِّ بَابٍ أَغْلَقْتَهُ بِكَلَامِكَ، وَاجْعَلْ عَلَى كُلِّ مَدْخَلٍ حَارِسًا مِنْ مَلَائِكَتِكَ</div>
+  <p>Аллахуммахтим 'аля кулли сабилин ката'таху би-нурик, вахтим 'аля кулли бабин агляктаху би-калямик, вадж'аль 'аля кулли мадхалин харисан мин маля'икатик</p>
+<p>О Аллах, запечатай всякий путь, который Ты отрезал, Твоим светом, запечатай всякую дверь, которую Ты закрыл, Твоими словами, и поставь у каждого входа стража из Твоих ангелов</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Мольба дополнительная — установка защиты на места силы:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اجْعَلْ عَلَى مَرَاكِزِ قُوَايَ نُورًا مِنْ نُورِكَ، وَاجْعَلْ عَلَيْهَا حِفْظًا مِنْ حِفْظِكَ، وَاجْعَلْ عَلَيْهَا سِتْرًا مِنْ سِتْرِكَ، فَلَا يَدْخُلُهَا إِلَّا مَا أَذِنْتَ بِهِ</div>
+  <p>Аллахуммадж'аль 'аля маракызи кувайа нуран мин нурик, вадж'аль 'алейха хифзан мин хифзик, вадж'аль 'алейха ситран мин ситрик, фа-ля йадхулюха илля ма азанта бихи</p>
+<p>О Аллах, поставь на центры моих сил свет из Твоего света, поставь на них защиту из Твоей защиты, поставь на них покров из Твоего покрова, и не войдёт в них ничто, кроме того, что Ты дозволил</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Аят поддержки:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ</div>
+  <figcaption class="ayah-tr">Аллах — нет божества, кроме Него, Живого, Вечносущего. Не овладевают Им ни дремота, ни сон. Ему принадлежит то, что на небесах и на земле. Кто заступится перед Ним без Его дозволения?</figcaption>
+  <div class="source">Источник: Сура «аль-Бакара», аят 255 (Аят аль-Курси)</div>
+</figure>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="polnaya-posledovatelnost-primeneniya-desyati-deystviy"><span class="num">12.</span>ПОЛНАЯ ПОСЛЕДОВАТЕЛЬНОСТЬ ПРИМЕНЕНИЯ ДЕСЯТИ ДЕЙСТВИЙ</h2>
+<p>Мои дорогие, эти десять действий не читаются одновременно. Они идут последовательно, как шаги воина на поле боя. Вот порядок:</p>
+<p>Шаг первый: Действие 1 и 2 — возвращение зла и аннулирование его источника. Сначала зло возвращается, затем аннулируется то, чем оно пришло.</p>
+<p>Шаг второй: Действие 3 — аннулирование мёртвого состояния. Если колдовство было кладбищенским, с погребением, с мёртвой землёй.</p>
+<p>Шаг третий: Действие 4 — аннулирование внешнего воздействия. Отделение чужого от своего.</p>
+<p>Шаг четвёртый: Действие 5 — возвращение джиннов и шайтанов. Изгнание сущностей.</p>
+<p>Шаг пятый: Действие 6 и 7 — развязывание и разрывание путей. Сначала развязываются переплетённые пути, затем отрезаются мёртвые и болезненные.</p>
+<p>Шаг шестой: Действие 8 и 9 — разрывание путей, выводящих из света во мрак, и путей видимого и невидимого вреда.</p>
+<p>Шаг седьмой: Действие 10 — закрытие и запечатывание. Финальный шаг. Закрытие всех дверей.</p>
+<p>После всех десяти действий читается Аят аль-Курси семь раз как печать на всём сделанном. Затем суры аль-Ихлас, аль-Фаляк, ан-Нас по три раза. Затем мольба:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ تَمَّ أَمْرُكَ، وَبَطَلَ كَيْدُ مَنْ كَادَ، وَرَجَعَ الشَّرُّ إِلَى أَهْلِهِ، وَبَقِيَ عَبْدُكَ فِي حِفْظِكَ وَأَمَانِكَ</div>
+  <p>Аллахумма тамма амрук, ва батала кайду ман кад, ва раджа'а аш-шарру иля ахлихи, ва бакыйа 'абдука фи хифзик ва аманик</p>
+<p>О Аллах, свершилось Твоё дело, аннулированы козни того, кто козни строил, вернулось зло к его автору, и остался Твой раб в Твоей защите и Твоей безопасности</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="primechaniya-i-predosterezheniya"><span class="num">13.</span>ПРИМЕЧАНИЯ И ПРЕДОСТЕРЕЖЕНИЯ</h2>
+<aside class="callout"><span class="label">Примечание</span><p>Все мольбы в этом документе — прямые обращения к Аллаху. В них нет формул «правом Твоих слов» или «правом Твоих имён». Не потому что такие формулы запретны, а потому что прямое обращение раба к Господу — это самый естественный и самый сильный путь. Ты — раб. Он — Господь. Ты просишь. Он даёт. Без посредников. Без формул. Только сердце и Аллах.</p></aside>
+<aside class="callout"><span class="label">Примечание</span><p>В этих мольбах нет самопрощения. Раб не прощает сам себя. Раб просит прощения у Аллаха. Если есть грех, который стал причиной того, что колдовство коснулось тебя, — это между тобой и Аллахом. Сделай таубу. Попроси прощения. Аллах прощает. Но формула «я прощаю себя» не из Ислама. Она из чужого метода. Мы её не используем.</p></aside>
+<aside class="callout"><span class="label">Примечание</span><p>Если после применения этих мольб ты чувствуешь боль, тошноту, зевоту, холод или жар — это признак того, что пути режутся, узлы развязываются, джинны выходят. Это нормально. Не останавливайся. Продолжай. Если реакция сильная — сделай паузу, выпей воду с рукъёй, затем вернись.</p></aside>
+<aside class="callout"><span class="label">Примечание</span><p>Эти десять действий можно читать как полный сеанс (30-60 минут), а можно по одному действию в день. Если случай тяжёлый — читай всё за один сеанс. Если случай лёгкий — достаточно 3-4 действий, которые соответствуют ситуации.</p></aside>
+<p>Заключение</p>
+<p>Мои дорогие, то, что сделал Абу Мухаммад, — это великая работа. Он взял чужой метод, написанный языком эзотерики, и извлёк из него то, что соответствует Исламу. Он отбросил языческое. Оставил шариатское. Переформулировал.</p>
+<p>Десять действий. Десять шагов. Каждый шаг — мольба к Аллаху. Каждая мольба — прямая. Без посредников. Без чужих слов. Раб и его Господь.</p>
+<p>И помните: колдовство — это ложь. А ложь всегда слаба перед истиной.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ فَإِذَا هُوَ زَاهِقٌ</div>
+  <figcaption class="ayah-tr">Напротив, Мы бросаем истину в ложь, и она разбивает её, и вот она исчезает</figcaption>
+  <div class="source">Источник: Сура «аль-Анбийа», аят 18</div>
+</figure>
+<p>Да защитит Аллах каждого, кто читает эти мольбы. Да вернёт Он всякое зло его автору. Да развяжет Он всякий узел. Да закроет Он всякую тёмную дверь. И да откроет Он дверь Своего света.</p>
+<p>Валлаху а'лям. А Аллах знает лучше.</p>
+</section>
+  </main>
+  
+  <div class="doc-footer">
+    <span>Чистка</span>
+    <span>Подготовил Лекарь Абу Мухаммад</span>
+  </div>
+  </div>
+</div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var id = href.slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    try{ history.pushState(null,'',href);}catch(_e){}
+  });
+  if (location.hash && location.hash.length > 1) {
+    setTimeout(function(){
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>
