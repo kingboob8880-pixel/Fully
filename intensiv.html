@@ -1,28 +1,36 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#faf8f3">
+<meta name="theme-color" content="#e8ece9">
 <meta name="color-scheme" content="light">
-<title>Интенсивный курс лечения Намерением и Кораном</title>
+<title>Интенсивный курс лечения Намерением и Коран: Универсальный протокол десяти действий против десяти видов колдовства</title>
 <meta name="author" content="Абу Мухаммад">
 <meta name="generator" content="Китаб аль-Ильм">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Scheherazade+New:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
 :root {
   --paper: #ffffff;
-  --paper-alt: #f5f7f5;
-  --ink: #1b221f;
-  --ink-soft: #4a5751;
-  --rule: #dce1dd;
-  --accent: #2f6b4f;
-  --accent-soft: #eaf2ed;
-  --gold: #9a7b32;
+  --paper-alt: #f4f7f5;
+  --backdrop: #e8ece9;
+  --ink: #111825;
+  --ink-soft: #4b5866;
+  --rule: #d9e0dc;
+  --accent: #0a5c46;
+  --accent-soft: #e6f1ea;
+  --gold: #8a6d2f;
   --serif: "PT Serif", "Merriweather", Georgia, "Times New Roman", serif;
   --sans: Inter, "Segoe UI", system-ui, sans-serif;
   --arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Lateef", serif;
   --title-font: var(--serif);
+  --title-letter-spacing: -0.01em;
+  --drop-cap-font: var(--serif);
+  --divider-char: ❦;
+  --page-shadow: 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  --page-ring: #d9e0dc;
+  --toc-bg: #f4f7f5;
+  --toc-border: 1px solid #d9e0dc;
   --shadow: 0 1px 2px rgba(20,30,25,.05);
   --measure: 68ch;
   --base: 18px;
@@ -46,7 +54,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper-alt);
+  background: var(--backdrop, var(--paper-alt));
   color: var(--ink);
   font-family: var(--serif);
   line-height: 1.72;
@@ -69,7 +77,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 auto;
   background: var(--paper);
   padding: 4.8rem 7.5rem 6.5rem;
-  box-shadow: 0 0 0 1px var(--rule), 0 2px 8px -4px rgba(0,0,0,.08), 0 24px 60px -40px rgba(0,0,0,.35);
+  box-shadow: 0 0 0 1px var(--page-ring, var(--rule)), var(--page-shadow, 0 24px 60px -40px rgba(0,0,0,.35));
   min-height: 100vh;
 }
 
@@ -128,7 +136,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .book-title {
   font-family: var(--title-font); font-size: 2.5em; line-height: 1.22;
-  font-weight: 700; margin: 0 0 .7rem; letter-spacing: -.01em;
+  font-weight: 700; margin: 0 0 .7rem; letter-spacing: var(--title-letter-spacing, -.01em);
+  text-wrap: balance;
 }
 .book-subtitle { font-size: 1.15em; font-style: italic; color: var(--ink-soft); margin: 0 0 1.8rem; }
 .rule-orn {
@@ -148,7 +157,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ========== ОГЛАВЛЕНИЕ ========== */
 .toc {
   margin: 0 0 3.5rem; padding: 2rem 2.2rem 2.2rem;
-  background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--toc-bg, var(--paper-alt)); border: var(--toc-border, 1px solid var(--rule)); border-radius: 6px;
 }
 .toc h2 {
   font-family: var(--sans); font-size: .78em; letter-spacing: .18em;
@@ -171,10 +180,11 @@ img { max-width: 100%; height: auto; display: block; }
 .toc-l3 a { font-size: .88em; color: var(--ink-soft); }
 
 /* ========== ЗАГОЛОВКИ ========== */
-h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; }
+h1, h2, h3, h4 { font-family: var(--title-font); line-height: 1.32; text-wrap: balance; }
 .chapter > h2 {
   font-size: 1.65em; font-weight: 700; margin: 3.6rem 0 1.5rem;
   padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+  letter-spacing: var(--title-letter-spacing, normal);
 }
 .chapter > h2 .num, .section > h3 .num, .subsection > h4 .num {
   color: var(--accent); font-weight: 400; margin-right: .55em; font-variant-numeric: tabular-nums;
@@ -196,6 +206,7 @@ p {
   margin: 0 0 .2rem; text-indent: 1.6em;
   
   hyphens: auto; -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 p + p { margin-top: .6rem; }
 h2 + p, h3 + p, h4 + p, blockquote + p, .toc + p, figure + p, ul + p, ol + p, table + p, .callout + p, .ayah + p, .hadith + p, .dua + p { text-indent: 0; }
@@ -214,7 +225,7 @@ code {
   word-break: break-all;
 }
 hr, .divider { border: 0; text-align: center; margin: 2.6rem 0; color: var(--gold); }
-.divider::before { content: "❦   ❦   ❦"; letter-spacing: .8em; font-size: .65em; opacity: .75; }
+.divider::before { content: var(--divider-char, "❦"); letter-spacing: .8em; font-size: .65em; opacity: .75; }
 
 /* ========== СПИСКИ ========== */
 ul, ol { margin: 1rem 0 1.2rem; padding-left: 1.7rem; }
@@ -289,7 +300,7 @@ figcaption { font-family: var(--sans); font-size: .78em; color: var(--ink-soft);
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92em; font-family: var(--sans); }
 th, td { border: 1px solid var(--rule); padding: .6rem .8rem; text-align: left; vertical-align: top; }
 thead th { background: var(--paper-alt); font-weight: 600; color: var(--ink); font-size: .82em; letter-spacing: .04em; text-transform: uppercase; }
-tbody tr:nth-child(even) td { background: rgba(0,0,0,.02); }
+tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--ink) 4%, transparent); }
 
 /* ========== СНОСКИ / БИБЛИОГРАФИЯ ========== */
 sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; padding: 0 .1em; font-weight: 600; }
@@ -352,6 +363,7 @@ sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; pa
   .chapter:first-of-type { page-break-before: avoid; }
   h2, h3, h4 { break-after: avoid; }
   p, blockquote, .ayah, .hadith, .dua, table, figure { break-inside: avoid; }
+  p { orphans: 3; widows: 3; }
   a { color: inherit; text-decoration: none; }
   .doc-footer { display: none; }
   .ayah, .hadith, .dua { background: none; }
@@ -366,7 +378,7 @@ sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; pa
   <div class="bismillah" lang="ar" dir="rtl" style="font-size:1.750em;text-align:center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 </div>
   
-  <h1 class="book-title">Интенсивный курс лечения Намерением и Кораном</h1>
+  <h1 class="book-title">Интенсивный курс лечения Намерением и Коран: Универсальный протокол десяти действий против десяти видов колдовства</h1>
   
   <div class="rule-orn" aria-hidden="true"></div>
   <p class="book-author">Абу Мухаммад</p>
@@ -377,194 +389,413 @@ sup.fn-ref a { text-decoration: none; color: var(--accent); font-size: .82em; pa
 </header>
   <div class="wrap">
   <nav class="toc" aria-label="Оглавление"><h2>Оглавление</h2><ol><li class="toc-l1">
-      <a href="#vvedenie"><span class="num">1.</span><span class="lbl">Введение</span></a></li>
+      <a href="#vvedenie"><span class="num"></span><span class="lbl">Введение</span></a></li>
 <li class="toc-l1">
-      <a href="#glava-1-modul-1-protiv-sihra-koldovstva"><span class="num"></span><span class="lbl">Глава 1. Модуль 1. Против сихра (колдовства)</span></a><ol><li class="toc-l2">
-      <a href="#formulirovka-namereniya"><span class="num"></span><span class="lbl">1.1. Формулировка намерения</span></a></li>
-<li class="toc-l2">
-      <a href="#zaryazhenie-namereniya"><span class="num"></span><span class="lbl">1.2. Заряжение намерения</span></a></li>
-<li class="toc-l2">
-      <a href="#chtenie-ayata-o-razrushenii-sihra"><span class="num"></span><span class="lbl">1.3. Чтение аята о разрушении сихра</span></a></li>
-<li class="toc-l2">
-      <a href="#chtenie-na-ladoni-i-protiranie-tela"><span class="num"></span><span class="lbl">1.4. Чтение на ладони и протирание тела</span></a></li>
-<li class="toc-l2">
-      <a href="#zakrytie-seansa"><span class="num"></span><span class="lbl">1.5. Закрытие сеанса</span></a></li></ol></li>
+      <a href="#proiznesi-dua-allahu-vsluh-ili-v-serdce-osoznavaya-kazhdoe-s"><span class="num"></span><span class="lbl">1. Произнеси дуа Аллаху вслух или в сердце. Осознавая каждое слово.</span></a></li>
 <li class="toc-l1">
-      <a href="#glava-2-modul-2-protiv-sglaza-i-zavisti"><span class="num"></span><span class="lbl">Глава 2. Модуль 2. Против сглаза и зависти</span></a><ol><li class="toc-l2">
-      <a href="#formulirovka-namereniya-2"><span class="num"></span><span class="lbl">2.1. Формулировка намерения</span></a></li>
-<li class="toc-l2">
-      <a href="#zaryazhenie-namereniya-2"><span class="num"></span><span class="lbl">2.2. Заряжение намерения</span></a></li>
-<li class="toc-l2">
-      <a href="#chtenie-ayata-o-sglaze"><span class="num"></span><span class="lbl">2.3. Чтение аята о сглазе</span></a></li>
-<li class="toc-l2">
-      <a href="#chtenie-na-ladoni-i-protiranie-tela-2"><span class="num"></span><span class="lbl">2.4. Чтение на ладони и протирание тела</span></a></li>
-<li class="toc-l2">
-      <a href="#zakrytie-seansa-2"><span class="num"></span><span class="lbl">2.5. Закрытие сеанса</span></a></li></ol></li>
+      <a href="#sformuliruy-namerenie-v-serdce-zaryadi-ego-7-raz-dlya-tyazhe"><span class="num"></span><span class="lbl">2. Сформулируй намерение в сердце. Заряди его 7 раз (для тяжёлых случаев — 40 раз).</span></a></li>
 <li class="toc-l1">
-      <a href="#glava-3-modul-3-protiv-dzhinnov"><span class="num"></span><span class="lbl">Глава 3. Модуль 3. Против джиннов</span></a><ol><li class="toc-l2">
-      <a href="#formulirovka-namereniya-3"><span class="num"></span><span class="lbl">3.1. Формулировка намерения</span></a></li>
-<li class="toc-l2">
-      <a href="#zaryazhenie-namereniya-3"><span class="num"></span><span class="lbl">3.2. Заряжение намерения</span></a></li>
-<li class="toc-l2">
-      <a href="#chtenie-ayata-ob-izgnanii"><span class="num"></span><span class="lbl">3.3. Чтение аята об изгнании</span></a></li>
-<li class="toc-l2">
-      <a href="#chtenie-na-ladoni-i-protiranie-tela-3"><span class="num"></span><span class="lbl">3.4. Чтение на ладони и протирание тела</span></a></li>
-<li class="toc-l2">
-      <a href="#zakrytie-seansa-3"><span class="num"></span><span class="lbl">3.5. Закрытие сеанса</span></a></li></ol></li>
+      <a href="#prochitay-ayat-v-sootvetstvii-s-namereniem-odin-raz-vsluh-tr"><span class="num"></span><span class="lbl">3. Прочитай аят в соответствии с намерением. Один раз вслух, три раза в сердце.</span></a></li>
 <li class="toc-l1">
-      <a href="#glava-4-svodnaya-tablica-kursa"><span class="num"></span><span class="lbl">Глава 4. Сводная таблица курса</span></a></li>
-<li class="toc-l1">
-      <a href="#glava-5-pravila-kursa"><span class="num"></span><span class="lbl">Глава 5. Правила курса</span></a></li>
-<li class="toc-l1">
-      <a href="#zaklyuchenie"><span class="num">7.</span><span class="lbl">Заключение</span></a></li></ol></nav>
+      <a href="#zaklyuchenie"><span class="num"></span><span class="lbl">Заключение</span></a></li></ol></nav>
   <main>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="vvedenie"><span class="num">1.</span>Введение</h2>
-<p>Мои дорогие, в этом нашем интенсивном курсе мы будем применять Намерение и чтение Корана. Мы будем лечиться только Кораном.</p>
-<p>Процесс таков: от вас требуется сделать намерение, повторить намерение, и только потом прочитать Коран.</p>
-<p>Намерение нужно заряжать путём повторения и прочтения Корана на свои ладони, пока намерение в сердце не иссякнет. Когда намерение в сердце живое и плотное — вы читаете на ладони, а затем протираете тело в том месте, где находится поражение.</p>
-<p>Если вы сделали всё правильно — колдовство будет аннулировано. Сглаз будет разрушен. Джинн будет изгнан.</p>
-<p>В этом курсе три модуля. Каждый модуль — против одного вида поражения. Метод один и тот же, меняется только намерение и аят.</p>
-</section>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="glava-1-modul-1-protiv-sihra-koldovstva">Глава 1. Модуль 1. Против сихра (колдовства)</h2>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="formulirovka-namereniya">1.1. Формулировка намерения</h3>
-<p>Закройте глаза. Сосредоточьтесь на сердце. Сформулируйте намерение:</p>
-<p>«Ради Аллаха, чтобы Аллах Кораном уничтожил сихр»</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="zaryazhenie-namereniya">1.2. Заряжение намерения</h3>
-<p>Повторяйте в сердце фрагмент намерения — 7 раз:</p>
-<p>«Чтобы Аллах Кораном уничтожил сихр»</p>
-<p>Повторяйте медленно, осознавая каждое слово. Не двигайте губами. Произносите внутри сердца. С каждым повторением чувствуйте, как намерение становится плотнее, теплее, тяжелее в груди.</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="chtenie-ayata-o-razrushenii-sihra">1.3. Чтение аята о разрушении сихра</h3>
-<p>Когда намерение зарядилось — откройте уста и прочитайте аят:</p>
+<section class="chapter front-matter" data-kind="front" data-level="1">
+<h2 id="vvedenie">Введение</h2>
+<p>Мои дорогие, этот протокол — вершина всего, что было собрано в предыдущих книгах. Здесь соединены: метод Волевого акта (удержание намерения в сердце), метод Заряда-Выброса (Аркийка), метод Прямого пути заклинания верой (отнесение действия к Аллаху через Таухид) и десять действий для полного избавления от чёрной магии.</p>
+<p>Протокол состоит из десяти последовательных действий. Каждое действие содержит четыре блока: мольба Аллаху, намерение в сердце с аятом, заклинание от недуга. Порядок строго соблюдён. Ничего не пропускается. Ничего не укорачивается.</p>
+<p>Протокол универсален. Он применяется против любого вида колдовства, сглаза, одержимости и внешнего воздействия. Ниже дана таблица адаптации для десяти конкретных случаев.</p>
+<p>Перед началом протокола</p>
+<p>Шаг 1: Вуду.</p>
+<p>Шаг 2: Прибежище три раза:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+  <p>А'узу билляхи минаш-шайтанир-раджим</p>
+<p>Прибегаю к Аллаху от изгнанного шайтана</p>
+  <div class="source">Источник: Сура «ан-Нахль», аят 98</div>
+</aside>
+<p>Шаг 3: Намерение на весь протокол:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">نَوَيْتُ بِاسْمِ اللَّهِ أَنْ أُطَبِّقَ هَذَا الْبُرُوتُوكُولَ عَلَى [اسم المريض] لِتَحْرِيرِهِ مِنْ كُلِّ سِحْرٍ وَجِنٍّ وَعَيْنٍ بِإِذْنِ اللَّهِ</div>
+  <p>Навайтю бисмилляхи ан утыббика хазаль-брутукуля 'аля [имя пациента] ли-тахририхи мин кулли сихрин ва джиннин ва 'айнин би-изниллях</p>
+<p>Намереваюсь именем Аллаха применить этот протокол на [имя пациента] для его освобождения от всякого колдовства, джиннов и сглаза с дозволения Аллаха</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Заряди намерение 40 раз в сердце. Затем начинай.</p>
+<p>Действие 1. Возвращение зла туда, откуда оно было приобретено</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّ كُلَّ شَرٍّ مِنَ السِّحْرِ وَالْعَيْنِ وَالْحَسَدِ وَالْمَسِّ إِلَى حَيْثُ جَاءَ مِنْهُ، وَلَا تُبْقِ مِنْهُ شَيْئًا فِي جَسَدِي</div>
+  <p>Аллахумма, рудда кулля шаррин мина-с-сихри ва-ль-'айни ва-ль-хасади ва-ль-масси иля хайсу джа'а минху, ва ля тубки минху шай'ан фи джасади</p>
+<p>О Аллах, верни всякое зло из колдовства, сглаза, зависти и прикосновения туда, откуда оно пришло, и не оставляй от него ничего в моём теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَرُدَّ اللَّهُ كُلَّ شَرٍّ مِنَ السِّحْرِ وَالْعَيْنِ وَالْحَسَدِ وَالْمَسِّ إِلَى حَيْثُ جَاءَ مِنْهُ</div>
+  <p>Йарудда-Ллаху кулля шаррин мина-с-сихри ва-ль-'айни ва-ль-хасади ва-ль-масси иля хайсу джа'а минху</p>
+<p>Чтобы Аллах вернул всякое зло из колдовства, сглаза, зависти и прикосновения туда, откуда оно пришло</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
 <figure class="ayah">
-  <div class="ar-block" lang="ar" dir="rtl">وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنْ أَلْقِ عَصَاكَ ۖ فَإِذَا هِيَ تَلْقَفُ مَا يَأْفِكُونَ<br>فَوَقَعَ الْحَقُّ وَبَطَلَ مَا كَانُوا يَعْمَلُونَ<br>فَغُلِبُوا هُنَالِكَ وَانقَلَبُوا صَاغِرِينَ</div>
-  <figcaption class="ayah-tr">И внушили Мы Мусе: «Брось свой посох!» — и вот он поглощает то, что они измышляют. И утвердилась истина, и оказалось тщетным то, что они совершали. И потерпели они там поражение, и вернулись униженными.</figcaption>
-  <div class="source">Источник: Сура «аль-А'раф», аяты 117-119</div>
+  <div class="ar-block" lang="ar" dir="rtl">وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ۚ وَكَفَى اللَّهُ الْمُؤْمِنِينَ الْقِتَالَ ۚ وَكَانَ اللَّهُ قَوِيًّا عَزِيزًا</div>
+  <figcaption class="ayah-tr">Ва радда-Ллаху-ллязина кафару би-гайзихим лям йаналу хайран. Ва кафа-Ллаху-ль-му'минина-ль-кыталь. Ва кана-Ллаху кавиййан 'азиза<br>И отвратил Аллах неверующих с их яростью — они не достигли блага. И избавил Аллах верующих от сражения. И был Аллах Сильным, Могущественным</figcaption>
+  <div class="source">Источник: Сура «аль-Ахзаб», аят 25</div>
 </figure>
-<p>Читайте этот аят 7 раз. Медленно. С тем же намерением в сердце: «Чтобы Аллах Кораном уничтожил сихр».</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="chtenie-na-ladoni-i-protiranie-tela">1.4. Чтение на ладони и протирание тела</h3>
-<p>После прочтения аята 7 раз — поднесите ладони ко рту. Прочитайте на них тот же аят ещё 3 раза. Дуньте на ладони лёгким дуновением.</p>
-<p>Затем протрите ладонями те места тела, где находится колдовство:</p>
-<ul><li>Живот — если колдовство съеденное или выпитое</li><li>Грудь — если колдовство на сердце или на разлуку</li><li>Голову — если колдовство на разум или на память</li><li>Матку или область ниже пупка — если колдовство на бесплодие или на разлуку между супругами</li><li>Ноги — если колдовство рассыпанное</li></ul>
-<p>Протирайте с внутренним убеждением: «Аллах уничтожает сихр этим Кораном».</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="zakrytie-seansa">1.5. Закрытие сеанса</h3>
-<p>После протирания — произнесите в сердце:</p>
-<p>«Ради Аллаха, чтобы Аллах Кораном уничтожил сихр — Аллах уничтожил сихр»</p>
-<p>Почувствуйте, как намерение завершено. Как печать на письме. Дело сделано.</p>
-</section>
-</section>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="glava-2-modul-2-protiv-sglaza-i-zavisti">Глава 2. Модуль 2. Против сглаза и зависти</h2>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="formulirovka-namereniya-2">2.1. Формулировка намерения</h3>
-<p>Закройте глаза. Сосредоточьтесь на сердце. Сформулируйте намерение:</p>
-<p>«Ради Аллаха, чтобы Аллах Кораном уничтожил сглазы и зависти»</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="zaryazhenie-namereniya-2">2.2. Заряжение намерения</h3>
-<p>Повторяйте в сердце фрагмент намерения — 7 раз:</p>
-<p>«Чтобы Аллах Кораном уничтожил сглазы и зависти»</p>
-<p>Произносите внутри сердца. Без движения губ. С каждым повторением чувствуйте, как намерение наполняется силой.</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="chtenie-ayata-o-sglaze">2.3. Чтение аята о сглазе</h3>
-<p>Когда намерение зарядилось — откройте уста и прочитайте аят:</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي رَدَّ كُلِّ شَرٍّ إِلَى حَيْثُ جَاءَ مِنْهُ، وَلَا يَبْقَى مِنْهُ أَثَرٌ فِي هَذَا الْجَسَدِ</div>
+  <p>Бисмилляхи, арки радда кулли шаррин иля хайсу джа'а минху, ва ля йабка минху асарун фи хазаль-джасад</p>
+<p>С именем Аллаха, я заклинаю возвращение всякого зла туда, откуда оно пришло, и чтобы не осталось от него следа в этом теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 2. Аннулирование зла оттуда, откуда оно было приобретено</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ شَرٍّ مِنْ حَيْثُ اكْتُسِبَ، وَاقْطَعْ كُلَّ مَصْدَرٍ أَتَى مِنْهُ السِّحْرُ وَالْعَيْنُ وَالْمَسُّ</div>
+  <p>Аллахумма, абтыль кулля шаррин мин хайсу-к-тусиб, вакта' кулля масдарин ата минху-с-сихру ва-ль-'айну ва-ль-масс</p>
+<p>О Аллах, аннулируй всякое зло оттуда, откуда оно было приобретено, и отсекни всякий источник, из которого пришли колдовство, сглаз и прикосновение</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُبْطِلَ اللَّهُ كُلَّ شَرٍّ مِنْ حَيْثُ اكْتُسِبَ وَيَقْطَعَ كُلَّ مَصْدَرٍ أَتَى مِنْهُ</div>
+  <p>Йубтыля-Ллаху кулля шаррин мин хайсу-к-тусиб ва йакта'а кулля масдарин ата минху</p>
+<p>Чтобы Аллах аннулировал всякое зло оттуда, откуда оно было приобретено, и отсёк всякий источник, из которого оно пришло</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
 <figure class="ayah">
-  <div class="ar-block" lang="ar" dir="rtl">وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ</div>
-  <figcaption class="ayah-tr">И едва ли не повергают тебя те, которые не уверовали, своими взорами, когда они слышат поминание, и говорят: «Поистине, он — одержимый»</figcaption>
-  <div class="source">Источник: Сура «аль-Калям», аят 51</div>
+  <div class="ar-block" lang="ar" dir="rtl">فَوَقَعَ الْحَقُّ وَبَطَلَ مَا كَانُوا يَعْمَلُونَ فَغُلِبُوا هُنَالِكَ وَانقَلَبُوا صَاغِرِينَ</div>
+  <figcaption class="ayah-tr">Фа вака'а-ль-хакку ва батала ма кану йа'малюн. Фа галибу хуналика ва-нкалябу сагырин<br>И утвердилась истина, и оказалось тщетным то, что они совершали. И потерпели они там поражение, и вернулись униженными</figcaption>
+  <div class="source">Источник: Сура «аль-А'раф», аяты 118-119</div>
 </figure>
-<p>Читайте этот аят 7 раз. Медленно. С намерением в сердце: «Чтобы Аллах Кораном уничтожил сглазы и зависти».</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="chtenie-na-ladoni-i-protiranie-tela-2">2.4. Чтение на ладони и протирание тела</h3>
-<p>Поднесите ладони ко рту. Прочитайте на них тот же аят ещё 3 раза. Дуньте на ладони.</p>
-<p>Протрите ладонями те места тела, где находится сглаз и зависть:</p>
-<ul><li>Грудь — если сглаз на сердце, на стеснение, на печаль</li><li>Плечи — если сглаз накопленный, если тяжесть в плечах</li><li>Голову — если сглаз на память, на разум, на красоту</li><li>Глаза — если сглаз поразил зрение</li><li>Всё тело — если сглаз общий, если чувствуете слабость во всём теле</li></ul>
-<p>Протирайте с внутренним убеждением: «Аллах уничтожает сглаз и зависть этим Кораном».</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="zakrytie-seansa-2">2.5. Закрытие сеанса</h3>
-<p>Произнесите в сердце:</p>
-<p>«Ради Аллаха, чтобы Аллах Кораном уничтожил сглазы и зависти — Аллах уничтожил сглазы и зависти»</p>
-<p>Намерение завершено. Печать поставлена.</p>
-</section>
-</section>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="glava-3-modul-3-protiv-dzhinnov">Глава 3. Модуль 3. Против джиннов</h2>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="formulirovka-namereniya-3">3.1. Формулировка намерения</h3>
-<p>Закройте глаза. Сосредоточьтесь на сердце. Сформулируйте намерение:</p>
-<p>«Ради Аллаха, чтобы Аллах Кораном изгнал джиннов»</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="zaryazhenie-namereniya-3">3.2. Заряжение намерения</h3>
-<p>Повторяйте в сердце фрагмент намерения — 7 раз:</p>
-<p>«Чтобы Аллах Кораном изгнал джиннов»</p>
-<p>Произносите внутри сердца. С каждым повторением чувствуйте, как намерение становится твёрдым, как приказ. Джинн — раб Аллаха. Он обязан подчиниться.</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="chtenie-ayata-ob-izgnanii">3.3. Чтение аята об изгнании</h3>
-<p>Когда намерение зарядилось — откройте уста и прочитайте аят:</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي إِبْطَالَ كُلِّ شَرٍّ مِنْ حَيْثُ اكْتُسِبَ، وَبُطْلَانَ كُلِّ مَصْدَرٍ أَتَى مِنْهُ السِّحْرُ وَالْعَيْنُ وَالْمَسُّ</div>
+  <p>Бисмилляхи, арки ибтыля кулли шаррин мин хайсу-к-тусиб, ва бузляна кулли масдарин ата минху-с-сихру ва-ль-'айну ва-ль-масс</p>
+<p>С именем Аллаха, я заклинаю аннулирование всякого зла оттуда, откуда оно было приобретено, и тщетность всякого источника, из которого пришли колдовство, сглаз и прикосновение</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 3. Аннулирование мёртвого состояния оттуда, откуда оно было приобретено</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ حَالَةٍ مَيِّتَةٍ فِي رُوحِي وَقَلْبِي وَجَسَدِي مِنْ حَيْثُ اكْتُسِبَتْ، وَأَحْيِنِي حَيَاةً طَيِّبَةً</div>
+  <p>Аллахумма, абтыль кулля халятин маййитатин фи рухи ва кальби ва джасади мин хайсу-к-тусибат, ва ахйини хайатан таййибатан</p>
+<p>О Аллах, аннулируй всякое мёртвое состояние в моём духе, сердце и теле оттуда, откуда оно было приобретено, и оживи меня жизнью благой</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُبْطِلَ اللَّهُ كُلَّ حَالَةٍ مَيِّتَةٍ مِنِّي مِنْ حَيْثُ اكْتُسِبَتْ وَيُحْيِيَنِي حَيَاةً طَيِّبَةً</div>
+  <p>Йубтыля-Ллаху кулля халятин маййитатин минни мин хайсу-к-тусибат ва йухйийани хайатан таййибатан</p>
+<p>Чтобы Аллах аннулировал всякое моё мёртвое состояние оттуда, откуда оно было приобретено, и оживил меня жизнью благой</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَاهُ وَجَعَلْنَا لَهُ نُورًا يَمْشِي بِهِ فِي النَّاسِ كَمَن مَّثَلُهُ فِي الظُّلُمَاتِ لَيْسَ بِخَارِجٍ مِّنْهَا</span></p></blockquote>
+<p>А ва ман кана маййтан фа ахьяйнаху ва джа'альна ляху нуран йамши бихи фи-н-нас ка ман масалюху фи-з-зулюмати лайса би хариджин минха Разве тот, кто был мёртв, и Мы оживили его и дали ему свет, с которым он ходит среди людей, подобен тому, кто находится во мраках и не может выйти из них? Источник: Сура «аль-Ан'ам», аят 122</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي إِبْطَالَ كُلِّ حَالَةٍ مَيِّتَةٍ فِي رُوحِي وَقَلْبِي وَجَسَدِي مِنْ حَيْثُ اكْتُسِبَتْ، وَإِحْيَاءَ كُلِّ مَا مَاتَ فِيَّ بِنُورِ الْقُرْآنِ</div>
+  <p>Бисмилляхи, арки ибтыля кулли халятин маййитатин фи рухи ва кальби ва джасади мин хайсу-к-тусибат, ва ихйа'а кулли ма мата фиййа би нури-ль-Кур'ан</p>
+<p>С именем Аллаха, я заклинаю аннулирование всякого мёртвого состояния в моём духе, сердце и теле оттуда, откуда оно было приобретено, и оживление всего, что умерло во мне, светом Корана</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 4. Аннулирование внешнего воздействия</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَبْطِلْ كُلَّ أَذًى خَارِجِيٍّ مَسَّنِي مِنْ سِحْرٍ أَوْ عَيْنٍ أَوْ حَسَدٍ أَوْ مَسٍّ أَوْ دُعَاءِ سُوءٍ، وَلَا تُبْقِ مِنْهُ أَثَرًا</div>
+  <p>Аллахумма, абтыль кулля азан хариджийин массани мин сихрин ау 'айнин ау хасадин ау массин ау дуа'и су'ин, ва ля тубки минху асаран</p>
+<p>О Аллах, аннулируй всякое внешнее зло, коснувшееся меня из колдовства, сглаза, зависти, прикосновения или дурного проклятия, и не оставляй от него следа</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُبْطِلَ اللَّهُ كُلَّ أَذًى خَارِجِيٍّ مَسَّنِي وَلَا يُبْقِيَ مِنْهُ أَثَرًا</div>
+  <p>Йубтыля-Ллаху кулля азан хариджийин массани ва ля йубкийа минху асаран</p>
+<p>Чтобы Аллах аннулировал всякое внешнее зло, коснувшееся меня, и не оставил от него следа</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
 <figure class="ayah">
-  <div class="ar-block" lang="ar" dir="rtl">قَالَ اخْرُجْ مِنْهَا مَذْءُومًا مَّدْحُورًا ۖ لَّمَن تَبِعَكَ مِنْهُمْ لَأَمْلَأَنَّ جَهَنَّمَ مِنكُمْ أَجْمَعِينَ</div>
-  <figcaption class="ayah-tr">Сказал Он: «Выйди из неё порицаемым, изгнанным! Того из них, кто последует за тобой, Я непременно заполню Геенну вами всеми»</figcaption>
-  <div class="source">Источник: Сура «аль-А'раф», аят 18</div>
+  <div class="ar-block" lang="ar" dir="rtl">وَإِن يَمْسَسْكَ اللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُ إِلَّا هُوَ ۖ وَإِن يَمْسَسْكَ بِخَيْرٍ فَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</div>
+  <figcaption class="ayah-tr">Ва ин йамсаска-Ллаху би дуррин фа ля кашифа ляху илля хув. Ва ин йамсаска би хайрин фа хува 'аля кулли шай'ин кадир<br>И если коснётся тебя Аллах бедой, то не снимет её никто, кроме Него. И если коснётся тебя благом, то Он над всякой вещью мощен</figcaption>
+  <div class="source">Источник: Сура «аль-Ан'ам», аят 17</div>
 </figure>
-<p>Читайте этот аят 7 раз. Не мягко. С внутренней твёрдостью. Это приказ. Джинн должен услышать, что ему приказывают именем Аллаха.</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="chtenie-na-ladoni-i-protiranie-tela-3">3.4. Чтение на ладони и протирание тела</h3>
-<p>Поднесите ладони ко рту. Прочитайте на них тот же аят ещё 3 раза. Дуньте на ладони.</p>
-<p>Протрите ладонями те места тела, где находится джинн:</p>
-<ul><li>Затылок — если джинн сидит на затылке как наездник</li><li>Грудь — если джинн давит на сердце, вызывает страхи и кошмары</li><li>Живот — если джинн в животе, вызывает вздутие и кормит во сне</li><li>Матку — если джинн-любовник</li><li>Голову — если джинн вызывает головные боли и забывчивость</li></ul>
-<p>Протирайте с внутренним приказом: «Выйди именем Аллаха!»</p>
-</section>
-<section class="section" data-kind="section" data-level="2">
-<h3 id="zakrytie-seansa-3">3.5. Закрытие сеанса</h3>
-<p>Произнесите в сердце:</p>
-<p>«Ради Аллаха, чтобы Аллах Кораном изгнал джиннов — Аллах изгнал джиннов»</p>
-<p>Намерение завершено. Джинн изгнан. Место очищено.</p>
-</section>
-</section>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="glava-4-svodnaya-tablica-kursa">Глава 4. Сводная таблица курса</h2>
-<figure class="table"><table><thead><tr><th>Модуль</th><th>Намерение</th><th>Фрагмент для повторения</th><th>Аят</th></tr></thead><tbody><tr><td>Против сихра</td><td>Ради Аллаха, чтобы Аллах Кораном уничтожил сихр</td><td>Чтобы Аллах Кораном уничтожил сихр</td><td>Сура аль-А'раф, 117-119</td></tr><tr><td>Против сглаза</td><td>Ради Аллаха, чтобы Аллах Кораном уничтожил сглазы и зависти</td><td>Чтобы Аллах Кораном уничтожил сглазы и зависти</td><td>Сура аль-Калям, 51</td></tr><tr><td>Против джиннов</td><td>Ради Аллаха, чтобы Аллах Кораном изгнал джиннов</td><td>Чтобы Аллах Кораном изгнал джиннов</td><td>Сура аль-А'раф, 18</td></tr></tbody></table></figure>
-</section>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="glava-5-pravila-kursa">Глава 5. Правила курса</h2>
-<p>1. Никогда не читайте аят без намерения. Сначала намерение. Потом заряжение. Потом чтение. Это порядок. Если нарушить порядок — слова останутся звуком. 2. Намерение должно жить в сердце всё время чтения. Если чувствуете, что намерение угасло — остановитесь. Верните его. Повторите фрагмент 7 раз. Только потом продолжайте. 3. Протирайте тело ладонями после чтения. Ладони — это проводник. Через них сила аята входит в тело. Не просто касайтесь — протирайте с убеждением. 4. Если не знаете точно, где находится поражение — протирайте всё тело сверху вниз. От головы к ногам. Аят найдёт своё место.</p>
-<ol><li>Делайте этот курс ежедневно. Минимум один сеанс в день. Лучше два — утром и вечером.</li><li>Пейте воду, на которую прочитан тот же аят с тем же намерением. Вода усиливает эффект протирания.</li><li>Не рассказывайте о курсе посторонним. Намерение любит тишину. Чем больше людей знают — тем больше глаз сглаза.</li></ol>
-</section>
-<section class="chapter" data-kind="chapter" data-level="1">
-<h2 id="zaklyuchenie"><span class="num">7.</span>Заключение</h2>
-<p>Мои дорогие, этот курс прост. В нём нет сложных ритуалов. Нет длинных списков аятов. Нет запутанных правил.</p>
-<p>В нём три вещи: Намерение. Коран. Ладони.</p>
-<p>Намерение создаёт силу. Коран несёт исцеление. Ладони доставляют его в тело.</p>
-<p>Аллах сказал:</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي إِبْطَالَ كُلِّ أَذًى خَارِجِيٍّ مَسَّنِي مِنْ سِحْرٍ أَوْ عَيْنٍ أَوْ حَسَدٍ أَوْ مَسٍّ أَوْ دُعَاءِ سُوءٍ</div>
+  <p>Бисмилляхи, арки ибтыля кулли азан хариджийин массани мин сихрин ау 'айнин ау хасадин ау массин ау дуа'и су'ин</p>
+<p>С именем Аллаха, я заклинаю аннулирование всякого внешнего зла, коснувшегося меня из колдовства, сглаза, зависти, прикосновения или дурного проклятия</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 5. Возвращение нечисти и сущностей туда, откуда они пришли</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ رُدَّ كُلَّ شَيْطَانٍ وَجِنٍّ وَمَسٍّ إِلَى حَيْثُ جَاءَ مِنْهُ أَوْ إِلَى مَسْكَنِهِ الَّذِي يَسْكُنُهُ، وَلَا تُبْقِ مِنْهُمْ أَحَدًا فِي جَسَدِي</div>
+  <p>Аллахумма, рудда кулля шайтанин ва джиннин ва массин иля хайсу джа'а минху ау иля маскакихил-лязи йаскунуху, ва ля тубки минхум ахадан фи джасади</p>
+<p>О Аллах, верни всякого шайтана, джинна и прикосновение туда, откуда он пришёл, или в его обитель, в которой он обитает, и не оставляй от них никого в моём теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَرُدَّ اللَّهُ كُلَّ شَيْطَانٍ وَجِنٍّ وَمَسٍّ إِلَى حَيْثُ جَاءَ مِنْهُ أَوْ إِلَى مَسْكَنِهِ</div>
+  <p>Йарудда-Ллаху кулля шайтанин ва джиннин ва массин иля хайсу джа'а минху ау иля маскаких</p>
+<p>Чтобы Аллах вернул всякого шайтана, джинна и прикосновение туда, откуда он пришёл, или в его обитель</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">قَالَ اخْرُجْ مِنْهَا مَذْءُومًا مَّدْحُورًا ۖ لَّمَن تَبِعَكَ مِنْهُمْ لَأَمْلَأَنَّ جَهَنَّمَ مِنكُمْ أَجْمَعِينَ</span></p></blockquote>
+<p>Каля хрудж минха маз'уман мадхура. Ля ман таби'ака минхум ля амля'анна джаханнама минкум аджма'ин Сказал Он: «Выйди из неё порицаемым, изгнанным! Тех из них, кто последует за тобой, Я непременно заполню Геенной — всеми вами вместе» Источник: Сура «аль-А'раф», аят 18</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي رَدَّ كُلِّ شَيْطَانٍ وَجِنٍّ وَمَسٍّ إِلَى حَيْثُ جَاءَ مِنْهُ أَوْ إِلَى مَسْكَنِهِ الَّذِي يَسْكُنُهُ، وَلَا يَبْقَى مِنْهُمْ أَحَدٌ فِي هَذَا الْجَسَدِ</div>
+  <p>Бисмилляхи, арки радда кулли шайтанин ва джиннин ва массин иля хайсу джа'а минху ау иля маскакихил-лязи йаскунуху, ва ля йабка минхум ахадун фи хазаль-джасад</p>
+<p>С именем Аллаха, я заклинаю возвращение всякого шайтана, джинна и прикосновения туда, откуда он пришёл, или в его обитель, в которой он обитает, и чтобы не осталось от них никого в этом теле</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 6. Развязывание путей, которые переплелись, запутались или были связаны</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ احْلُلْ كُلَّ سُبُلٍ مُلْتَبِسَةٍ أَوْ مُشْتَبِكَةٍ أَوْ مَعْقُودَةٍ رُبِطَتْ بِسُبُلِي بِسِحْرٍ أَوْ عَيْنٍ أَوْ مَسٍّ</div>
+  <p>Аллахумма, ухлуль кулля субулин мультабисатин ау муштабикинатин ау ма'кудатин рубытат би субули би сихрин ау 'айнин ау массин</p>
+<p>О Аллах, развяжи все пути запутанные, переплетённые или связанные, которые были привязаны к моим путям колдовством, сглазом или прикосновением</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَحُلَّ اللَّهُ كُلَّ سُبُلٍ مُلْتَبِسَةٍ أَوْ مُشْتَبِكَةٍ أَوْ مَعْقُودَةٍ رُبِطَتْ بِسُبُلِي</div>
+  <p>Йахулля-Ллаху кулля субулин мультабисатин ау муштабикинатин ау ма'кудатин рубытат би субули</p>
+<p>Чтобы Аллах развязал все пути запутанные, переплетённые или связанные, которые были привязаны к моим путям</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
 <figure class="ayah">
-  <div class="ar-block" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ</div>
-  <figcaption class="ayah-tr">И Мы ниспосылаем из Корана то, что является исцелением и милостью для верующих</figcaption>
-  <div class="source">Источник: Сура «аль-Исра», аят 82</div>
+  <div class="ar-block" lang="ar" dir="rtl">رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي</div>
+  <figcaption class="ayah-tr">Рабби-шрах ли садри ва йассир ли амри ва-хлуль 'укдатан мин лисани йафкаху каули<br>Господь мой! Раскрой мне грудь мою, облегчи мне дело моё и развяжи узел с языка моего, чтобы понимали речь мою</figcaption>
+  <div class="source">Источник: Сура «Та Ха», аяты 25-28</div>
 </figure>
-<p>Коран — это исцеление. Но исцеление приходит к тому, кто берёт его с намерением. Без намерения — книга остаётся закрытой. С намерением — каждая страница становится лекарством.</p>
-<p>Делайте намерение. Читайте Коран. Протирайте тело. И Аллах исцелит.</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي حَلَّ كُلِّ سُبُلٍ مُلْتَبِسَةٍ أَوْ مُشْتَبِكَةٍ أَوْ مَعْقُودَةٍ رُبِطَتْ بِسُبُلِي، وَفَكَّ كُلِّ عُقْدَةٍ وَكُلِّ قَيْدٍ وَكُلِّ رَبْطٍ</div>
+  <p>Бисмилляхи, арки халля кулли субулин мультабисатин ау муштабикинатин ау ма'кудатин рубытат би субули, ва факка кулли 'укдатин ва кулли кайдин ва кулли рабтын</p>
+<p>С именем Аллаха, я заклинаю развязывание всех путей запутанных, переплетённых или связанных, которые были привязаны к моим путям, и освобождение от всякого узла, всякой цепи и всякой привязки</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 7. Разрывание мёртвых, болезненных и прочих путей</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سُبُلٍ مَيِّتَةٍ وَكُلَّ سُبُلٍ مَرِيضَةٍ وَكُلَّ سُبُلِ أَذًى وَكُلَّ سُبُلِ ضَرَرٍ اتَّصَلَتْ بِي مِنْ سِحْرٍ أَوْ عَيْنٍ أَوْ مَسٍّ</div>
+  <p>Аллахумма, икта' кулля субулин маййитатин ва кулля субулин маридатин ва кулля субули азан ва кулля субули дарарин иттасалат би мин сихрин ау 'айнин ау массин</p>
+<p>О Аллах, разорви все пути мёртвые, все пути болезненные, все пути зла и все пути вреда, соединившиеся со мной из колдовства, сглаза или прикосновения</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَقْطَعَ اللَّهُ كُلَّ سُبُلٍ مَيِّتَةٍ وَمَرِيضَةٍ وَسُبُلِ أَذًى وَضَرَرٍ اتَّصَلَتْ بِي</div>
+  <p>Йакта'а-Ллаху кулля субулин маййитатин ва маридатин ва субули азан ва дарарин иттасалат би</p>
+<p>Чтобы Аллах разорвал все пути мёртвые, болезненные и пути зла и вреда, соединившиеся со мной</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">إِذْ تَبَرَّأَ الَّذِينَ اتُّبِعُوا مِنَ الَّذِينَ اتَّبَعُوا وَرَأَوُا الْعَذَابَ وَتَقَطَّعَتْ بِهِمُ الْأَسْبَابُ</span></p></blockquote>
+<p>Из табарра'а-ллязина-т-туби'у мина-ллязина-ттаба'у ва ра'аву-ль-'азаба ва такатта'ат бихиму-ль-асбаб Когда те, за кем следовали, отрекутся от тех, кто следовал за ними, и увидят они наказание, и разорвутся между ними связи Источник: Сура «аль-Бакара», аят 166</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي قَطْعَ كُلِّ سُبُلٍ مَيِّتَةٍ وَمَرِيضَةٍ وَسُبُلِ أَذًى وَضَرَرٍ اتَّصَلَتْ بِي، وَتَقْطِيعَ كُلِّ سَبَبٍ وَكُلِّ حَبْلٍ وَكُلِّ رِبَاطٍ</div>
+  <p>Бисмилляхи, арки кат'а кулли субулин маййитатин ва маридатин ва субули азан ва дарарин иттасалат би, ва такты'а кулля сабабин ва кулля хаблин ва кулли рибатын</p>
+<p>С именем Аллаха, я заклинаю разрывание всех путей мёртвых, болезненных и путей зла и вреда, соединившихся со мной, и разрезание всякой связи, всякой нити и всякой привязки</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 8. Разрывание путей, которые выводят из света к мраку</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سُبُلٍ تُخْرِجُنِي مِنَ النُّورِ إِلَى الظُّلُمَاتِ، وَمِنَ الْإِيمَانِ إِلَى الْكُفْرِ، وَمِنَ الْهُدَى إِلَى الضَّلَالِ، وَمِنَ الطُّمَأْنِينَةِ إِلَى الْخَوْفِ</div>
+  <p>Аллахумма, икта' кулля субулин тухриджуни мина-н-нури иля-з-зулюмат, ва мина-ль-имани иля-ль-куфри, ва мина-ль-худа иля-д-даляль, ва мина-т-тума'нинати иля-ль-хауф</p>
+<p>О Аллах, разорви все пути, выводящие меня из света к мракам, из веры к неверию, из прямого руководства к заблуждению, из спокойствия к страху</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَقْطَعَ اللَّهُ كُلَّ سُبُلٍ تُخْرِجُنِي مِنَ النُّورِ إِلَى الظُّلُمَاتِ وَمِنَ الْهُدَى إِلَى الضَّلَالِ</div>
+  <p>Йакта'а-Ллаху кулля субулин тухриджуни мина-н-нури иля-з-зулюмат ва мина-ль-худа иля-д-даляль</p>
+<p>Чтобы Аллах разорвал все пути, выводящие меня из света к мракам и из прямого руководства к заблуждению</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ ۖ وَالَّذِينَ كَفَرُوا أَوْلِيَاؤُهُمُ الطَّاغُوتُ يُخْرِجُونَهُم مِّنَ النُّورِ إِلَى الظُّلُمَاتِ</span></p></blockquote>
+<p>Аллаху валиййу-ллязина аману йухриджухум мина-з-зулюмати иля-н-нур. Ва-ллязина кафару аулийа'ухуму-т-тагут йухриджунахум мина-н-нури иля-з-зулюмат Аллах — Покровитель уверовавших. Он выводит их из мраков к свету. А те, которые не уверовали, их покровители — тагут. Они выводят их из света к мракам Источник: Сура «аль-Бакара», аят 257</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي قَطْعَ كُلِّ سُبُلٍ تُخْرِجُنِي مِنَ النُّورِ إِلَى الظُّلُمَاتِ وَمِنَ الْإِيمَانِ إِلَى الْكُفْرِ وَمِنَ الْهُدَى إِلَى الضَّلَالِ وَمِنَ الطُّمَأْنِينَةِ إِلَى الْخَوْفِ</div>
+  <p>Бисмилляхи, арки кат'а кулли субулин тухриджуни мина-н-нури иля-з-зулюмат ва мина-ль-имани иля-ль-куфри ва мина-ль-худа иля-д-даляль ва мина-т-тума'нинати иля-ль-хауф</p>
+<p>С именем Аллаха, я заклинаю разрывание всех путей, выводящих меня из света к мракам, из веры к неверию, из прямого руководства к заблуждению, из спокойствия к страху</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 9. Разрывание видимых и невидимых путей вреда</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اقْطَعْ كُلَّ سُبُلِ ضَرَرٍ ظَاهِرَةٍ وَبَاطِنَةٍ مِنْ حَيْثُ تَخْرُجُ وَمِنْ حَيْثُ تَصِلُ إِلَيَّ، وَلَا تُبْقِ لَهَا سُلْطَانًا عَلَيَّ</div>
+  <p>Аллахумма, икта' кулля субули дарарин захиратин ва батинатин мин хайсу тухруджу ва мин хайсу тасылу иляййа, ва ля тубки ляха султанан 'аляййа</p>
+<p>О Аллах, разорви все пути видимого и невидимого вреда оттуда, откуда они исходят, и оттуда, откуда они доходят до меня, и не оставляй им власти надо мной</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يَقْطَعَ اللَّهُ كُلَّ سُبُلِ ضَرَرٍ ظَاهِرَةٍ وَبَاطِنَةٍ مِنْ حَيْثُ تَخْرُجُ وَمِنْ حَيْثُ تَصِلُ إِلَيَّ</div>
+  <p>Йакта'а-Ллаху кулля субули дарарин захиратин ва батинатин мин хайсу тухруджу ва мин хайсу тасылу иляййа</p>
+<p>Чтобы Аллах разорвал все пути видимого и невидимого вреда оттуда, откуда они исходят, и оттуда, откуда они доходят до меня</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">إِنَّ عِبَادِي لَيْسَ لَكَ عَلَيْهِمْ سُلْطَانٌ إِلَّا مَنِ اتَّبَعَكَ مِنَ الْغَاوِينَ</div>
+  <figcaption class="ayah-tr">Инна 'ибади лайса ляка 'аляйхим султанун илля мани-ттаба'ака мина-ль-гавин<br>Поистине, над Моими рабами нет у тебя власти, кроме тех, кто последовал за тобой из заблудших</figcaption>
+  <div class="source">Источник: Сура «аль-Хиджр», аят 42</div>
+</figure>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي قَطْعَ كُلِّ سُبُلِ ضَرَرٍ ظَاهِرَةٍ وَبَاطِنَةٍ مِنْ حَيْثُ تَخْرُجُ وَمِنْ حَيْثُ تَصِلُ إِلَيَّ، وَإِبْطَالَ كُلِّ سُلْطَانٍ لِشَيْطَانٍ أَوْ جِنٍّ عَلَيَّ</div>
+  <p>Бисмилляхи, арки кат'а кулли субули дарарин захиратин ва батинатин мин хайсу тухруджу ва мин хайсу тасылу иляййа, ва ибтыля кулли султанин ли шайтанин ау джиннин 'аляййа</p>
+<p>С именем Аллаха, я заклинаю разрывание всех путей видимого и невидимого вреда оттуда, откуда они исходят, и оттуда, откуда они доходят до меня, и аннулирование всякой власти шайтана или джинна надо мной</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Действие 10. Закрытие скверных и тёмных путей</p>
+<p>Блок 1. Дуа Аллаху:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ أَغْلِقْ كُلَّ سُبُلٍ خَبِيثَةٍ وَظُلْمَانِيَّةٍ فُتِحَتْ عَلَيَّ بِسِحْرٍ أَوْ عَيْنٍ أَوْ مَسٍّ، وَلَا تَفْتَحْهَا عَلَيَّ أَبَدًا مَا حَيِيتُ</div>
+  <p>Аллахумма, аглик кулля субулин хабисатин ва зульманиййатин футыхат 'аляййа би сихрин ау 'айнин ау массин, ва ля тафтахха 'аляййа абада ма хайиту</p>
+<p>О Аллах, закрой все пути скверные и тёмные, которые были открыты надо мной колдовством, сглазом или прикосновением, и не открывай их надо мной никогда, пока я жив</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Блок 2. Намерение (в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">يُغْلِقَ اللَّهُ كُلَّ سُبُلٍ خَبِيثَةٍ وَظُلْمَانِيَّةٍ فُتِحَتْ عَلَيَّ وَلَا يَفْتَحَهَا عَلَيَّ أَبَدًا</div>
+  <p>Йуглика-Ллаху кулля субулин хабисатин ва зульманиййатин футыхат 'аляййа ва ля йафтахха 'аляййа абада</p>
+<p>Чтобы Аллах закрыл все пути скверные и тёмные, которые были открыты надо мной, и не открывал их надо мной никогда</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Аят в соответствии с намерением:</p>
+<p>[аяت]</p>
+<blockquote class="quote"><p><span class="ar-inline" lang="ar" dir="rtl">وَأَنَّ هَٰذَا صِرَاطِي مُسْتَقِيمًا فَاتَّبِعُوهُ ۖ وَلَا تَتَّبِعُوا السُّبُلَ فَتَفَرَّقَ بِكُمْ عَن سَبِيلِهِ</span></p></blockquote>
+<p>Ва анна хаза сыраты мустакыфан фа-ттаби'ух. Ва ля таттаби'у-с-субуля фа тафаррака бикум 'ан сабилих И поистине, это — Мой прямой путь. Следуйте по нему и не следуйте другими путями, ибо они разобщат вас от Его пути Источник: Сура «аль-Ан'ам», аят 153</p>
+<p>Блок 3. Заклинание от недуга:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِي غَلْقَ كُلِّ سُبُلٍ خَبِيثَةٍ وَظُلْمَانِيَّةٍ فُتِحَتْ عَلَيَّ، وَحِمَايَةَ جَمِيعِ سُبُلِي مِنَ الشَّيَاطِينِ وَالْجِنِّ وَالسَّحَرَةِ أَبَدًا مَا حَيِيتُ</div>
+  <p>Бисмилляхи, арки галька кулли субулин хабисатин ва зульманиййатин футыхат 'аляййа, ва химайата джами'и субули мина-ш-шайатыни ва-ль-джинни ва-с-сахарати абада ма хайиту</p>
+<p>С именем Аллаха, я заклинаю закрытие всех путей скверных и тёмных, которые были открыты надо мной, и защиту всех моих путей от шайтанов, джиннов и колдунов навсегда, пока я жив</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Таблица адаптации протокола для десяти случаев</p>
+<p>Ниже даны десять конкретных случаев колдовства и внешнего воздействия. Для каждого случая указывается, какое намерение подставляется в каждое из десяти действий.</p>
+<p>Случай 1. Сихр через предметы (фотография, свечи, иглы, нити)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни зло от фотографии, свечей, игл и нитей туда, откуда они были направлены</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через отождествление с фотографией</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй омертвение энергии, вызванное проколами иглами и привязкой нитями</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие через фотографию, свечи и иглы</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни джиннов-слуг, привязанных к фото и свечам, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи нити и узлы, привязанные к фотографии и свечам</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути от свечей и игл к моему телу</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие мою жизненную силу к свечам колдуна</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (фото, свечи) и невидимые (духовные нити) пути вреда</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал с фотографией и свечами</td></tr></tbody></table></figure>
+<p>Случай 2. Сихр на смерть (кукла Вуду, свеча за упокой, погребение)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни порчу на смерть от куклы Вуду и свечи за упокой туда, откуда она была направлена</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через погребение куклы и свечу за упокой</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй состояние угасания и умирания, вызванное порчей на смерть</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие куклы Вуду и свечи за упокой на моё тело</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни джиннов, приставленных к кукле Вуду и могиле, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы отождествления куклы с моим телом</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути от могилы и погребённой куклы к моему телу</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие мою жизнь к смерти и мраку</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (кукла, свеча) и невидимые (духовные привязки) пути порчи на смерть</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал порчи на смерть</td></tr></tbody></table></figure>
+<p>Случай 3. Сихр на здоровье (крадник красоты, блокировка дыхания)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни украденное здоровье и красоту туда, откуда они были изъяты</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через крадник и блокировку</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй омертвение тела, угасание и удушье</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие через фотографию, рыбью кость и воск</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни джиннов, приставленных для кражи здоровья, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи пути, через которые здоровье и красота утекают к колдуну</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути, блокирующие дыхание и жизненную силу</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие моё здоровье и красоту к колдуну</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (кость, воск, фото) и невидимые пути кражи здоровья</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал кражи здоровья</td></tr></tbody></table></figure>
+<p>Случай 4. Сихр на разум и память (волосы, мозги курицы, мёртвая вода)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни порчу на память от волос, мозгов курицы и мёртвой воды туда, откуда она была направлена</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через смешение волос с мозгами и закапывание</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй омертвение разума, засыхание памяти и угасание мысли</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие волос, мозгов курицы, смолы и мёртвой воды на мой разум</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни духов воды и земли, приставленных к ритуалу, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы, связывающие мои волосы с мозгами курицы и мёртвой водой</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути от засохшего дерева и мёртвой воды к моему разуму</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие мой разум и память к забвению и мраку</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (волосы, смола, дерево) и невидимые пути порчи на память</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал порчи на память</td></tr></tbody></table></figure>
+<p>Случай 5. Сихр на семью и разлуку (соль на свадьбу, порча на разлуку)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни порчу на разлуку от соли и свадебного ритуала туда, откуда она была направлена</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через обсыпание солью и заговор</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй омертвение любви, привязанности и семейного тепла</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие соли, заговора и пятака на семью</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни «соляных бесов» и джиннов разлуки в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы, связывающие супругов через соль и заговор</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути от соли к телам супругов</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие семью от любви и света к разлуке и мраку</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (соль, место свадьбы) и невидимые пути разлуки</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал порчи на семью</td></tr></tbody></table></figure>
+<p>Случай 6. Сихр на страх и кошмары (зеркало, воск, фото лицом к зеркалу)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни порчу на кошмары от зеркала и воска туда, откуда она была направлена</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через прикладывание фото к зеркалу</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй состояние страха, ужаса и ночных кошмаров</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие зеркала, воска и заговора на мою душу</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни шайтанов кошмаров и страха, привязанных к зеркалу, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы привязки моего фото к зеркалу воском</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути от зеркала к моей душе во время сна</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие мою душу во сне к чертям и мраку</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (зеркало, воск, фото) и невидимые пути кошмаров</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал порчи на кошмары</td></tr></tbody></table></figure>
+<p>Случай 7. Сихр на остановку (вакф аль-халь, блокировка дел)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни порчу на остановку туда, откуда она была направлена</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через ритуал остановки</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй состояние застоя, блокировки и невозможности двигаться</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие замков, узлов и заговоров остановки</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни джиннов-запирателей, блокирующих пути, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы и замки, блокирующие мои пути и дела</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути, блокирующие работу, учёбу и дела</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие меня от успеха и движения к застою</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые и невидимые пути остановки и блокировки</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через ритуал остановки</td></tr></tbody></table></figure>
+<p>Случай 8. Сихр съеденный или выпитый (аль-ма'куль, аль-машруб)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни съеденное или выпитое колдовство туда, откуда оно было направлено</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через еду или питьё</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй омертвение желудка, кишечника и тела от яда колдовства</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие съеденного или выпитого колдовства на тело</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни джиннов, сидящих в желудке и кишечнике, в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы колдовства в желудке и кишечнике</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути от съеденного колдовства к органам тела</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие здоровье тела к болезни через съеденный сихр</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (еда, питьё) и невидимые пути съеденного колдовства</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, открытые через съеденное или выпитое колдовство</td></tr></tbody></table></figure>
+<p>Случай 9. Масс (одержимость джиннами, прикосновение)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни джинна-одержителя туда, откуда он пришёл</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй зло, приобретённое через одержимость</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй омертвение тела от присутствия джинна</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй воздействие джинна на тело, разум и поведение</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни джинна и его помощников в их обитель и время</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи узлы привязки джинна к телу и органам</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви мёртвые пути, через которые джинн питается телом</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви пути, уводящие меня от поклонения и света к греху и мраку</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви видимые (симптомы) и невидимые (духовные привязки) пути одержимости</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой все пути, через которые джинн вошёл и может вернуться</td></tr></tbody></table></figure>
+<p>Случай 10. Комбинированный сихр (несколько видов одновременно)</p>
+<figure class="table"><table><thead><tr><th>Действие</th><th>Адаптация намерения</th></tr></thead><tbody><tr><td>1. Возвращение зла</td><td>Верни ВСЁ зло всех видов колдовства туда, откуда оно было направлено</td></tr><tr><td>2. Аннулирование зла</td><td>Аннулируй ВСЁ зло, приобретённое через ВСЕ ритуалы одновременно</td></tr><tr><td>3. Аннулирование мёртвого состояния</td><td>Аннулируй ВСЕ мёртвые состояния от ВСЕХ видов колдовства</td></tr><tr><td>4. Аннулирование внешнего воздействия</td><td>Аннулируй ВСЕ внешние воздействия от ВСЕХ колдунов и ритуалов</td></tr><tr><td>5. Возвращение сущностей</td><td>Верни ВСЕХ джиннов и шайтанов всех видов колдовства в их обитель</td></tr><tr><td>6. Развязывание путей</td><td>Развяжи ВСЕ узлы и ВСЕ переплетения от ВСЕХ видов колдовства</td></tr><tr><td>7. Разрывание мёртвых путей</td><td>Разорви ВСЕ мёртвые, болезненные и вредные пути от ВСЕХ видов колдовства</td></tr><tr><td>8. Разрывание путей из света к мраку</td><td>Разорви ВСЕ пути, уводящие из света к мраку, от ВСЕХ видов колдовства</td></tr><tr><td>9. Разрывание путей вреда</td><td>Разорви ВСЕ видимые и невидимые пути вреда от ВСЕХ видов колдовства</td></tr><tr><td>10. Закрытие скверных путей</td><td>Закрой ВСЕ скверные и тёмные пути, открытые ВСЕМИ видами колдовства</td></tr></tbody></table></figure>
+<p>Порядок применения протокола</p>
+<p>Протокол читается строго по порядку: от действия 1 к действию 10. Ничего не пропускается. Ничего не переставляется.</p>
+<p>Для каждого действия:</p>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="proiznesi-dua-allahu-vsluh-ili-v-serdce-osoznavaya-kazhdoe-s">1. Произнеси дуа Аллаху вслух или в сердце. Осознавая каждое слово.</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="sformuliruy-namerenie-v-serdce-zaryadi-ego-7-raz-dlya-tyazhe">2. Сформулируй намерение в сердце. Заряди его 7 раз (для тяжёлых случаев — 40 раз).</h2>
+</section>
+<section class="chapter" data-kind="chapter" data-level="1">
+<h2 id="prochitay-ayat-v-sootvetstvii-s-namereniem-odin-raz-vsluh-tr">3. Прочитай аят в соответствии с намерением. Один раз вслух, три раза в сердце.</h2>
+<p>4. Произнеси заклинание вслух. Направленным голосом. С внутренней твёрдостью. Как приказ. Как удар меча.</p>
+<p>Между действиями — пауза 10-15 секунд. Не торопись. Дай каждому действию войти.</p>
+<p>После завершения всех десяти действий:</p>
+<p>Закрывающая печать (20-30 раз в сердце):</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">بِسْمِ اللَّهِ أَرْقِينِي، اللَّهُ يَشْفِينِي، اللَّهُ يَحْفَظُنِي مِنْ كُلِّ سُوءٍ</div>
+  <p>Бисмилляхи аркыний, Аллаху яшфиний, Аллаху йахфазуний мин кулли су'</p>
+<p>С именем Аллаха заклинаю себя, Аллах исцеляет меня, Аллах защищает меня от всякого зла</p>
+  <div class="source">Источник: Метод Абу Мухаммада</div>
+</aside>
+<p>Затем:</p>
+<aside class="dua">
+  <span class="label">Дуа</span>
+  <div class="ar-block" lang="ar" dir="rtl">اللَّهُمَّ اغْلِقْ مَا فَتَحْتَ وَاحْفَظْنِي مِمَّا خَرَجَ وَرُدَّ عَلَيَّ نُورِي وَلَا تَدَعْ فِيَّ ثُغْرَةً</div>
+  <p>Аллахуммаглькы ма фатахта, вахфазни мимма хараджа, ва рудда 'аляййа нури, ва ля тада' фиййа сугратан</p>
+<p>О Аллах, закрой то, что Ты открыл, и сохрани меня от того, что вышло, и верни мне мой свет, и не оставляй во мне бреши</p>
+  <div class="source">Источник: Мольба Абу Мухаммада</div>
+</aside>
+<p>Протри тело ладонями с чтением трёх кулюбу. Выпей воду с рукъёй.</p>
+<p>Таблица времени применения</p>
+<figure class="table"><table><thead><tr><th>Ситуация</th><th>Время</th><th>Частота</th></tr></thead><tbody><tr><td>Лёгкий случай (сглаз, один вид сихра)</td><td>20-30 минут</td><td>1 раз в день, 3-7 дней</td></tr><tr><td>Средний случай (два-три вида сихра)</td><td>40-50 минут</td><td>1 раз в день, 7-14 дней</td></tr><tr><td>Тяжёлый случай (комбинированный сихр, одержимость)</td><td>60-90 минут</td><td>1 раз в день, 14-30 дней</td></tr><tr><td>Профилактика</td><td>15-20 минут</td><td>1 раз в неделю</td></tr></tbody></table></figure>
+</section>
+<section class="chapter back-matter" data-kind="back" data-level="1">
+<h2 id="zaklyuchenie">Заключение</h2>
+<p>Мои дорогие, этот протокол — не набор слов. Это живое оружие. Каждое действие — удар меча по конкретной цепи. Десять действий — десять ударов. И после десяти ударов не остаётся ни одной цепи, ни одного узла, ни одного пути, через который колдовство может держать человека.</p>
+<p>Но помните: сила не в словах. Сила — в намерении за словами. Сила — в вере в Того, Кого вы просите. Сила — в Таухиде, который горит в сердце.</p>
+<figure class="ayah">
+  <div class="ar-block" lang="ar" dir="rtl">وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ۖ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا</div>
+  <figcaption class="ayah-tr">Ва куль джа'а-ль-хакку ва захара-ль-батыль. Инна-ль-батыля кана захука<br>Скажи: «Явилась истина, и сгинула ложь. Поистине, ложь обречена на гибель»</figcaption>
+  <div class="source">Источник: Сура «аль-Исра», аят 81</div>
+</figure>
+<p>Применяйте этот протокол. Тренируйтесь. Записывайте результаты. Сверяйте с практикой. И Аллах исцелит. ИншаАллах.</p>
 <p>Валлаху а'лям. А Аллах знает лучше.</p>
 </section>
   </main>
   
   <div class="doc-footer">
-    <span>Интенсивный курс лечения Намерением и Кораном · Абу Мухаммад</span>
+    <span>Интенсивный курс лечения Намерением и Коран: Универсальный протокол десяти действий против десяти видов колдовства · Абу Мухаммад</span>
     <span>Подготовил Лекарь Абу Мухаммад</span>
   </div>
   </div>
