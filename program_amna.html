@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Программа лечения · Амина, 15 лет — Лекарь Абу Мухаммад</title>
+<style>
+  *{box-sizing:border-box} html{scrollbar-color:rgba(201,169,97,.8) rgba(10,31,26,.45);scrollbar-width:thin}
+  body{margin:0;font-family:'Times New Roman',Georgia,serif;color:#f5efe0;min-height:100vh;
+    background:linear-gradient(180deg,#0a1f1a 0%,#143028 50%,#0a1f1a 100%)}
+  ::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:rgba(10,31,26,.45)}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(135deg,#c9a961,#9f7f3f);border-radius:8px}
+  .doc-wrap{max-width:560px;margin:0 auto;padding:26px 16px 44px}
+  .doc-header{text-align:center;padding:28px 16px;background:rgba(255,255,255,.04);
+    border:1px solid rgba(201,169,97,.2);border-radius:24px;margin-bottom:22px}
+  .dh-orn{font-size:26px;color:#c9a961;letter-spacing:8px}
+  .dh-brand{font-size:24px;color:#e6c887;margin-top:6px;letter-spacing:.5px}
+  .dh-kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#c9a961;margin-top:6px}
+  .badge{display:inline-block;margin-top:14px;padding:6px 14px;background:rgba(201,169,97,.15);
+    border:1px solid #c9a961;border-radius:20px;font-size:12px;color:#e6c887;letter-spacing:1px}
+  .salam{margin-top:14px;font-size:15px;color:#c9a961}
+  .intro{margin-top:12px;font-size:15px;line-height:1.7;text-align:left}
+  .ayah{margin-top:12px;font-style:italic;color:rgba(245,239,224,.82);border-left:2px solid #c9a961;padding-left:12px;text-align:left}
+  .section{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,97,.2);border-radius:20px;padding:20px 18px;margin-bottom:18px}
+  .section-title{display:flex;align-items:center;gap:10px;font-size:18px;color:#e6c887;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(201,169,97,.2)}
+  .crit{border-left:3px solid #c9a961;background:rgba(10,31,26,.5);border-radius:12px;padding:12px 14px;margin:0 0 12px}
+  .crit-head{display:flex;align-items:center;gap:10px}
+  .crit-num{width:28px;height:28px;flex-shrink:0;background:#c9a961;color:#0a1f1a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .crit-title{font-weight:600;color:#e6c887}
+  .crit p{margin:8px 0 0;font-size:14px;line-height:1.65}
+  .farb{font-family:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;font-size:20px;line-height:2;color:#c9a961;text-align:center;margin:10px 0;unicode-bidi:isolate}
+  .farb-block{font-family:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;font-size:22px;line-height:2.2;color:#e6c887;text-align:right;direction:rtl;margin:12px 0;padding:14px 16px;background:rgba(10,31,26,.6);border:1px solid rgba(201,169,97,.35);border-radius:14px;unicode-bidi:isolate}
+  .transcript{font-size:14px;line-height:1.7;color:rgba(245,239,224,.9);margin:8px 0 0;padding:0 4px}
+  .transcript b{color:#c9a961}
+  .fnote{display:inline-block;margin-top:10px;font-size:12px;color:#0a1f1a;background:linear-gradient(135deg,#c9a961,#e6c887);border-radius:8px;padding:2px 10px;letter-spacing:.5px}
+  .offer-list{list-style:none;margin:6px 0 0;padding:0}
+  .offer-list li{padding:8px 0 8px 26px;position:relative;font-size:14px;border-bottom:1px dashed rgba(201,169,97,.15)}
+  .offer-list li:last-child{border-bottom:none}.offer-list li::before{content:'✦';position:absolute;left:0;color:#c9a961}
+  .note{font-size:12.5px;color:rgba(245,239,224,.72);margin-top:14px;font-style:italic;text-align:center;line-height:1.6}
+  .sign{text-align:center;margin-top:12px;color:#e6c887;font-weight:600}
+  .sign small{display:block;margin-top:4px;color:rgba(245,239,224,.6);font-weight:400;letter-spacing:1px}
+  .safety{background:rgba(201,169,97,.1);border:1px solid rgba(201,169,97,.45);border-radius:14px;padding:12px 14px;margin-top:14px;font-size:13.5px;line-height:1.6;color:#f5efe0}
+  .safety strong{color:#e6c887}
+  .day-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+  .day-row{display:flex;gap:12px;align-items:flex-start;background:rgba(10,31,26,.5);border:1px solid rgba(201,169,97,.2);border-radius:12px;padding:10px 12px}
+  .day-tag{flex-shrink:0;font-size:12px;font-weight:700;color:#0a1f1a;background:linear-gradient(135deg,#c9a961,#e6c887);border-radius:8px;padding:3px 10px;letter-spacing:.5px;white-space:nowrap}
+  .day-text{font-size:13.5px;line-height:1.6}
+  .highlight{background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.4);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.65}
+  .highlight b{color:#e6c887}
+  .count{display:inline-block;font-size:13px;color:#0a1f1a;background:linear-gradient(135deg,#c9a961,#e6c887);border-radius:20px;padding:3px 14px;font-weight:700;letter-spacing:.5px;margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="doc-wrap">
+
+  <header class="doc-header">
+    <div class="dh-orn">۞ ❋ ۞</div>
+    <div class="dh-brand">Лекарь Абу Мухаммад</div>
+    <div class="dh-kicker">Шариатская рукъя · Программа лечения</div>
+    <div class="badge">Программа · Амина, 15 лет</div>
+    <div class="salam">السلام عليكم ورحمة الله وبركاته</div>
+    <div class="intro">Амина, мир тебе и милость Аллаха. Ты выбрала идти до конца — и это уже сила. Ниже твоя программа: два дуа, которые ты будешь читать по 10 раз каждое, слушая аудио Корана, которое я тебе отправил. Всё просто и по шагам, без лишнего. Работаем спокойно, не торопясь, с дозволения Аллаха.</div>
+    <div class="ayah">«Мы ниспосылаем в Коране то, что является исцелением и милостью для верующих» (аль-Исра, 17:82)</div>
+  </header>
+
+  <section class="section">
+    <div class="section-title">🕋 Как читать</div>
+    <ul class="offer-list">
+      <li>Включи аудио Корана, которое я тебе отправил. Слушай его во время чтения — это поддерживает поток и не даёт васваса отвлечь.</li>
+      <li>Сядь спокойно, лучше на чистом месте, лицом к кибле, если можешь. Если не можешь — как удобно, без принуждения.</li>
+      <li>Перед началом скажи: <b>«А'узу билляхи мин аш-шайтани-р-раджим»</b>, затем <b>«Бисмилляхи-р-Рахмани-р-Рахим»</b>.</li>
+      <li>Читай <b>каждое дуа по 10 раз</b> подряд, не спеша, вслух или шёпотом, понимая смысл того, что просишь.</li>
+      <li>Читай на себя, на своё тело. После чтения подуй на грудь и на ладони, проведи по лицу и груди.</li>
+      <li>Если во время чтения поднимается тревога, тряска, плач — не останавливайся. Это выходит. Продолжай спокойно, не пугайся.</li>
+      <li>После завершения скажи: <b>«Аль-хамду лилляхи Рабби-ль-'алямин»</b>.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-title">📖 Дуа №1 — Открытие путей Корана от сглаза и зависти</div>
+    <div class="count">Читать 10 раз · с аудио Корана</div>
+    <div class="farb-block">اللَّهُمَّ افْتَحْ كُلَّ سُبُلِ الْقُرْآنِ إِلَى جَسَدِي مِنْ عَيْنِ النَّاسِ وَحَسَدِ النَّاسِ</div>
+    <div class="transcript">
+      <b>Транскрипция:</b> Аллахумма, ифтах кулля субули-ль-Кур'ани иля джасади мин 'айни-н-наси ва хасади-н-нас.<br><br>
+      <b>Перевод:</b> О Аллах, открой все пути Корана к моему телу от сглаза людей и зависти людей.
+    </div>
+    <div class="fnote">Читать 10 раз</div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">📖 Дуа №2 — Открытие путей Корана к исцелению тела и души</div>
+    <div class="count">Читать 10 раз · с аудио Корана</div>
+    <div class="farb-block">اللَّهُمَّ افْتَحْ كُلَّ سُبُلِ الْقُرْآنِ إِلَى شِفَاءِ جَسَدِي وَنَفْسِي</div>
+    <div class="transcript">
+      <b>Транскрипция:</b> Аллахумма, ифтах кулля субули-ль-Кур'ани иля шифа'и джасади ва нафси.<br><br>
+      <b>Перевод:</b> О Аллах, открой все пути Корана к исцелению моего тела и моей души.
+    </div>
+    <div class="fnote">Читать 10 раз</div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">📅 Программа по дням</div>
+    <div class="day-grid">
+      <div class="day-row"><span class="day-tag">День 1</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Всё с включённым аудио Корана. Веди себя спокойно, наблюдай, что чувствуешь в теле.</span></div>
+      <div class="day-row"><span class="day-tag">День 2</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Отметь, что изменилось: тревога, сны, боль в животе, тяжесть в голове.</span></div>
+      <div class="day-row"><span class="day-tag">День 3</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Если поднимается плач или страх — не останавливайся, это выходит.</span></div>
+      <div class="day-row"><span class="day-tag">День 4</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Записывай сны, особенно если снова про войну. Это важно для меня.</span></div>
+      <div class="day-row"><span class="day-tag">День 5</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Следи за состоянием: уныние, надежда, сон, силы.</span></div>
+      <div class="day-row"><span class="day-tag">День 6</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Отмечай, что уходит первым, а что держится — это покажет глубину слоя.</span></div>
+      <div class="day-row"><span class="day-tag">День 7</span><span class="day-text">Дуа №1 — 10 раз, затем Дуа №2 — 10 раз. Расскажи мне результат — по нему скорректируем дальше.</span></div>
+    </div>
+    <div class="note">Каждый день — с включённым аудио Корана, которое я тебе отправил. Читай в одно и то же время, если получается.</div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">🛡 Финальная защита и завершение</div>
+    <ul class="offer-list">
+      <li>После каждого сеанса читай <b>«Аль-Фаляк»</b>, <b>«Ан-Нас»</b> и <b>«Аль-Ихлас»</b> — по 3 раза каждую, сдувая на ладони и проводя по телу.</li>
+      <li>Утром и вечером говори: <b>«А'узу бикалимати-Лляхи-т-таммати мин шарри ма халяк»</b> — «Прибегаю к совершенным словам Аллаха от зла того, что Он создал».</li>
+      <li>Не читай над собой ничего, кроме Корана и этих дуа. Никаких амулетов, оберегов, посторонних «энергий» — это запрещено.</li>
+      <li>Не оставляй молитвы. Вера — твой щит, а не причина болезни. Держись её крепко.</li>
+      <li>После окончания курса читай <b>«Аят аль-Курси»</b> перед сном — один раз, с намерением защиты.</li>
+      <li>Завершающая мольба после курса: <b>«Аль-хамду лилляхи-Ллязи би-ни'матихи татимму-с-салихат»</b> — «Хвала Аллаху, по милости Которого завершаются благие дела».</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-title">🤲 Важно рядом с лечением</div>
+    <div class="safety">
+      <strong>Амина, и главное.</strong> Рак ведёт врач, и это нельзя бросать. Если появятся острые симптомы — давящая боль в груди, нарушение речи, зрения, движения, потеря сознания, высокая температура, судороги — это неотложно, и рукъя здесь не первая. И ещё, по-человечески: если когда-нибудь станет так, что не хочется просыпаться или покажется, что дальше незачем — скажи близким, скажи врачу. Это не стыдно, это забота о себе.
+    </div>
+  </section>
+
+  <footer class="section" style="text-align:center">
+    <div class="farb">اللهم اشفِ و أنت الشافي</div>
+    <div style="font-size:14px;color:rgba(245,239,224,.85)">«О Аллах, исцели, ведь лишь Ты — Исцеляющий»</div>
+    <div class="intro" style="text-align:center">Амина, ты не одна. Каждый день, когда ты читаешь эти дуа, ты делаешь шаг. Не смотри на весь путь сразу — смотри на сегодняшний день. С дозволения Аллаха, шаг за шагом.</div>
+    <div class="sign">Лекарь Абу Мухаммад<small>Шариатская рукъя · Таухид · Сунна</small></div>
+  </footer>
+
+</div>
+</body>
+</html>
