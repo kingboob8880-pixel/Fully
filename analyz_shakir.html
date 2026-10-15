@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Анализ состояния · брат, по твоему рассказу — Лекарь Абу Мухаммад</title>
+<style>
+  *{box-sizing:border-box} html{scrollbar-color:rgba(201,169,97,.8) rgba(10,31,26,.45);scrollbar-width:thin}
+  body{margin:0;font-family:'Times New Roman',Georgia,serif;color:#f5efe0;min-height:100vh;
+    background:linear-gradient(180deg,#0a1f1a 0%,#143028 50%,#0a1f1a 100%)}
+  ::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:rgba(10,31,26,.45)}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(135deg,#c9a961,#9f7f3f);border-radius:8px}
+  .doc-wrap{max-width:560px;margin:0 auto;padding:26px 16px 44px}
+  .doc-header{text-align:center;padding:28px 16px;background:rgba(255,255,255,.04);
+    border:1px solid rgba(201,169,97,.2);border-radius:24px;margin-bottom:22px}
+  .dh-orn{font-size:26px;color:#c9a961;letter-spacing:8px}
+  .dh-brand{font-size:24px;color:#e6c887;margin-top:6px;letter-spacing:.5px}
+  .dh-kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#c9a961;margin-top:6px}
+  .badge{display:inline-block;margin-top:14px;padding:6px 14px;background:rgba(201,169,97,.15);
+    border:1px solid #c9a961;border-radius:20px;font-size:12px;color:#e6c887;letter-spacing:1px}
+  .salam{margin-top:14px;font-size:15px;color:#c9a961}
+  .intro{margin-top:12px;font-size:15px;line-height:1.7;text-align:left}
+  .ayah{margin-top:12px;font-style:italic;color:rgba(245,239,224,.82);border-left:2px solid #c9a961;padding-left:12px;text-align:left}
+  .section{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,97,.2);border-radius:20px;padding:20px 18px;margin-bottom:18px}
+  .section-title{display:flex;align-items:center;gap:10px;font-size:18px;color:#e6c887;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(201,169,97,.2)}
+  .crit{border-left:3px solid #c9a961;background:rgba(10,31,26,.5);border-radius:12px;padding:12px 14px;margin:0 0 12px}
+  .crit-head{display:flex;align-items:center;gap:10px}
+  .crit-num{width:28px;height:28px;flex-shrink:0;background:#c9a961;color:#0a1f1a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .crit-title{font-weight:600;color:#e6c887}
+  .crit p{margin:8px 0 0;font-size:14px;line-height:1.65}
+  .farb{font-family:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;font-size:20px;line-height:2;color:#c9a961;text-align:center;margin:10px 0;unicode-bidi:isolate}
+  .fnote{display:inline-block;margin-top:10px;font-size:12px;color:#0a1f1a;background:linear-gradient(135deg,#c9a961,#e6c887);border-radius:8px;padding:2px 10px;letter-spacing:.5px}
+  .offer-list{list-style:none;margin:6px 0 0;padding:0}
+  .offer-list li{padding:8px 0 8px 26px;position:relative;font-size:14px;border-bottom:1px dashed rgba(201,169,97,.15)}
+  .offer-list li:last-child{border-bottom:none}.offer-list li::before{content:'✦';position:absolute;left:0;color:#c9a961}
+  .cards{display:flex;gap:16px;flex-wrap:wrap;align-items:stretch;margin-top:20px;padding-top:10px}
+  .pcard{flex:1 1 240px;position:relative;background:rgba(10,31,26,.55);border:1px solid rgba(201,169,97,.35);border-radius:18px;padding:18px 16px}
+  .pcard.full{background:linear-gradient(160deg,rgba(201,169,97,.16),rgba(10,31,26,.6));border:2px solid #c9a961;box-shadow:0 10px 34px rgba(201,169,97,.22);transform:translateY(-6px)}
+  .pcard .ribbon{position:absolute;top:-12px;right:14px;background:linear-gradient(120deg,#c9a961,#fff3d6,#c9a961);color:#0a1f1a;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+  .pcard .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c9a961}
+  .pcard .ptitle{font-size:16px;color:#e6c887;margin-top:6px;font-weight:600}
+  .pcard .price{font-size:30px;color:#fff3d6;margin:10px 0 2px}
+  .pcard.full .price{text-shadow:0 0 18px rgba(201,169,97,.5)}
+  .pcard .pdesc{font-size:12.5px;color:rgba(245,239,224,.78);line-height:1.5;margin:6px 0 4px}
+  .btn{display:inline-block;margin-top:14px;width:100%;text-align:center;text-decoration:none;
+    background:linear-gradient(120deg,#c9a961,#e6c887,#c9a961);color:#0a1f1a;font-weight:700;padding:11px 16px;border-radius:14px;font-size:15px}
+  .note{font-size:12.5px;color:rgba(245,239,224,.72);margin-top:14px;font-style:italic;text-align:center;line-height:1.6}
+  .sign{text-align:center;margin-top:12px;color:#e6c887;font-weight:600}
+  .sign small{display:block;margin-top:4px;color:rgba(245,239,224,.6);font-weight:400;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="doc-wrap">
+
+  <header class="doc-header">
+    <div class="dh-orn">۞ ❋ ۞</div>
+    <div class="dh-brand">Лекарь Абу Мухаммад</div>
+    <div class="dh-kicker">Шариатская рукъя · Духовное исцеление</div>
+    <div class="badge">Анализ · брат, по твоему рассказу</div>
+    <div class="salam">السلام عليكم ورحمة الله وبركاته</div>
+    <div class="intro">Брат мой, мир тебе и милость Аллаха. Ты написал всё как есть, без прикрас — и это дорогого стоит. Двадцать лет тяжести, попытки, надежда, снова откат, и при этом ты не сдался, дошёл до разбора. Скажу сразу: то, что тебе легче от Корана и намаза, — это очень важный признак, и он говорит о тебе лучше, чем любой диагноз. Значит, корень не в вере, и дверь открыта. Разберём по порядку, а в конце скажу цену работы.</div>
+    <div class="ayah">«...который наущает в груди людей» (ан-Нас, 114:5)</div>
+  </header>
+
+  <section class="section">
+    <div class="section-title">🔍 Глубокий анализ состояния</div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">1</div><div class="crit-title">Тяжесть в плечах, в голове, онемение рук, уколы</div></div>
+      <p>Ты описываешь тяжёлую голову, давящие плечи, онемение в руках и то, что внутри «колет». Это не размытая усталость — это конкретные точки, где стоит давление. Именно так ведёт себя сихр с телесной привязкой: он не размазан по всему телу, а сидит в определённых местах и держит их. Опора прямая: Аллах сказал про колдовство: «...и посредством чего разлучают мужа с женой» (аль-Бакара, 2:102), а Пророку ﷺ читали «аль-Фаляк» и «ан-Нас» как раз от такого — «от зла дующих на узлы» (аль-Фаляк, 113:4). Тело в этих местах как будто завязано, и с этим работает отдельная линия.</p>
+      <span class="fnote">Сихр мактуб · телесная привязка</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">2</div><div class="crit-title">Шевеление и уколы внутри, «сихр в животе, и он не вышел»</div></div>
+      <p>Вот это — самое говорящее в твоём рассказе. Ты сам чувствуешь, что внутри что-то есть: шевелится, колет, и после лечения осталось на месте. Ощущение «чужого внутри» — не воображение. Это маркер пищевого воздействия: то, что было дано с едой или питьём и вошло внутрь. Именно из-за этого вода, масло, соль и ванны давали облегчение — они чистили снаружи и поверху, но до того, что внутри, не доставали. Отсюда и то, что «полного излечения не было». Не потому, что средства плохие. Потому что слой другой.</p>
+      <span class="fnote">Сихр машруб · пищевое воздействие</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">3</div><div class="crit-title">Дела не идут, деньги не приходят, вечная усталость</div></div>
+      <p>Ты пишешь: сложно делаются дела, плохо думается, из-за этого нет заработка, планы и работа стоят или идут медленно, а внутри — постоянная усталость. Это не лень и не возраст. Это садд — глухая преграда, поставленная на движение вперёд: на мысль, на дело, на ризк. В Коране сказано прямо: «...и Мы накладываем на их сердца покрывала, чтобы они не понимали его, и в их уши — глухоту» (аль-Исра, 17:46). Преграда бьёт не только по знанию — она тормозит весь путь человека. И то, что ты сам замечаешь: «как будто забрали ризк и дело» — это и есть её работа.</p>
+      <span class="fnote">Садд · закрытие путей</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">4</div><div class="crit-title">Ночные погони, сны про убийство, нет отдыха</div></div>
+      <p>Ты спишь и не отдыхаешь — «как будто работал всю ночь». Во сне за тобой гонятся, раньше снилось, что ты кого-то убил и ищут убийцу. Это не просто плохие сны. Это ночные атаки: сон становится полем, где человека гоняют, путают, изматывают. Так работают, когда хотят забрать у человека силы и ясность. Здесь я честен: ты сам предположил, что «джин запутывает», — но по одному сну диагноз не ставится. Пока держу это как отдельную линию ночных атак; если при разборе на живом контакте откроется присутствие — это станет отдельной работой. Опора: «...и от зла мрака, когда он покрывает» (аль-Фаляк, 113:3).</p>
+      <span class="fnote">Ночные атаки · подлежит подтверждению</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">5</div><div class="crit-title">Пустые мысли, «много всякого в голове»</div></div>
+      <p>Ты сказал мягко, но это тоже линия: «много всякого в голове», часто думаешь пустые мысли. Это васваса — наущение, которое подкидывает мысли не твои, тянет тебя крутить одно и то же, мешает собраться и молиться. Аллах назвал это прямо: «...который наущает в груди людей» (ан-Нас, 114:5). Васваса — не ты и не твой характер. Это то, что подкидывается извне, и с этим работают отдельно.</p>
+      <span class="fnote">Васваса</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">6</div><div class="crit-title">Становилось легче — потом опять хуже, «как будто с начала»</div></div>
+      <p>Это очень важная деталь, и она объясняет многое. Ты прошёл лечение, стало реально легче, а потом самочувствие снова ухудшилось, будто надо начинать всё заново. Такое не бывает «просто так». Так ведёт себя накопленный сихр: слоёв несколько, снимаешь верхний — становится легче, а нижний остаётся и со временем поднимается снова. Плюс это ещё и духовная рана: после улучшения идёт резкий откат, потому что ты дошёл до того места, которое держится крепче всего. Это не значит, что лечение не работало. Это значит, что его не довели до корня.</p>
+      <span class="fnote">Накопление слоёв · духовная рана</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">7</div><div class="crit-title">Подозрение на двоюродную сестру</div></div>
+      <p>Ты назвал подозрение и тут же сам сказал важное: «боюсь так думать о людях». Я тоже не буду это подтверждать. По духовной модели я не называю виновным отсутствующего человека и не строю диагноз на догадке — это не моё право и не твоя польза. Замечу только одно: то, что ты описал — во время общения нормально, а после — хуже, — это может говорить о контакте с источником, но не доказывает, кто именно. Источник не подтверждён, держу как открытую гипотезу. Если важно — это отдельная работа о защите, а не о выяснении «кто».</p>
+      <span class="fnote">Гипотеза · источник не назван</span>
+    </div>
+
+    <div class="crit">
+      <div class="crit-head"><div class="crit-num">8</div><div class="crit-title">Боль справа под ребром, врачи ничего не ставят</div></div>
+      <p>Ты говоришь про боль справа под ребром, возможно желчный, но врачи ничего не находят. Здесь скажу прямо, брат: эту сторону я не свожу к рукъе и не отменяю врача. Рукъя идёт рядом, а не вместо. Боль под ребром, уколы, сжатость в груди — нужно продолжать обследование, желательно у гастроэнтеролога: УЗИ, желчный, печень, желудок. Если что-то из этого окажется телесным — рукъя не мешает, но и не заменяет. Это не «или-или».</p>
+      <span class="fnote">Сопутствующее телесное · нужен врач</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">✨ Светлая сторона</div>
+    <ul class="offer-list">
+      <li>Коран и намаз дают тебе облегчение, и ты сам это заметил. Это самый сильный признак: сердце живое, дверь открыта, вера не забрана.</li>
+      <li>То, что при долгом чтении тебя тянет в сон — не слабость, а отклик тела на аят; так часто бывает на поражённых местах.</li>
+      <li>Ты старался много лет: местные чтецы, удалённое лечение, вода, масло, ванны. Ты знаешь, как это делается, — и это значит, что есть на что опереться.</li>
+      <li>Ты честен: не обвиняешь людей слепо, сомневаешься, ищешь точность. Это спасает от ошибок.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-title">⚠ Полный диагноз</div>
+    <p style="margin:0;font-size:14px;line-height:1.65">Картина складывается из нескольких линий, и они связаны. Корневая — сихр, уложенный слоями: телесная привязка (тяжесть в плечах, голове, онемение, уколы) и пищевое воздействие (то, что внутри: шевеление, уколы, «не вышло»). Поверх этого — садд, закрытие путей: дела, ризк, мысль, работа стоят, а внутри вечная усталость. И рядом — ночные атаки (погони, сны про убийство, сон без отдыха) и васваса (пустые мысли, «много всякого в голове»). Отдельная зацепка — то, что тебе уже становилось легче и снова накатывало: это подтверждает, что слоёв больше одного.</p>
+    <p style="margin:10px 0 0;font-size:14px;line-height:1.65">Степень тяжести — <strong>тяжёлая, ближе к верхней границе</strong>. Причины: несколько самостоятельных линий, накопленные слои сихра, откат после улучшения, длительность около двадцати лет и несколько пройденных курсов без доведения до корня. При этом случай рабочий: вера не забрана, Коран и намаз помогают, тело откликается. Это очень хороший знак для работы.</p>
+    <p style="margin:10px 0 0;font-size:14px;line-height:1.65"><strong>Прямо и без прикрас:</strong> подозрение на двоюродную сестру и на «джинна» я оставляю открытыми. Никого не называю виновным и не подтверждаю присутствие, пока не увижу сам. Боль под ребром — обязательно продолжай обследовать у врача: рукъя рядом, а не вместо.</p>
+    <div class="crit-title" style="margin-top:14px">Из чего сложилась стоимость полного курса:</div>
+    <ul class="offer-list">
+      <li>Пять самостоятельных линий — тело, живот, закрытые пути, ночь, васваса — каждая ведётся отдельно и в свой черёд.</li>
+      <li>Слои сихра накопились: тебе уже становилось легче, и снова накатывало. Такое снимается по слоям, а не за один раз.</li>
+      <li>Длительность: около двадцати лет, из них состояние «на стопе» — годами.</li>
+      <li>Прошлые курсы: местные чтецы, удалённое лечение, свои средства — работа возвращалась, значит, корень остался.</li>
+      <li>Отдельные направления сверх базового: пищевая линия, открытие путей, ночная работа — каждое требует своего времени.</li>
+      <li>Соматика: боль под ребром требует аккуратного ведения рядом с врачом.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-title">💎 Предложение лечения</div>
+    <ul class="offer-list">
+      <li>Полная духовная диагностика и подтверждение каждой линии на живом контакте.</li>
+      <li>Работа с телесной привязкой: тяжесть в плечах, голове, онемение, уколы.</li>
+      <li>Работа с пищевым слоем: то, что внутри и «не вышло» — доведение до корня.</li>
+      <li>Снятие садда: открытие путей в делах, ризке, мысли, работе.</li>
+      <li>Ночная работа: сны, погони, возвращение отдыха.</li>
+      <li>Васваса: пустые мысли и то, что мешает собраться.</li>
+      <li>Защита на завершении и связь со мной между сеансами.</li>
+    </ul>
+    <div class="cards">
+      <div class="pcard">
+        <div class="tag">Базовый</div><div class="ptitle">Одноразовое лечение</div>
+        <div class="price">3 000 ₽</div>
+        <div class="pdesc">Один разовый сеанс рукъи: полная духовная диагностика, снятие первичной преграды, базовые рекомендации, дуа за тебя.</div>
+        <ul class="offer-list"><li>Полная духовная диагностика</li><li>Один сеанс рукъи</li><li>Снятие первичной преграды</li><li>Базовые рекомендации</li></ul>
+        <a class="btn" href="https://t.me/Ruqoq">✉ Связаться с лекарем</a>
+      </div>
+      <div class="pcard full">
+        <div class="ribbon">★ Рекомендую</div>
+        <div class="tag">Полный курс</div><div class="ptitle">Полное лечение</div>
+        <div class="price">26 000 ₽</div>
+        <div class="pdesc">Твой случай — не одна линия, а несколько, и они лежат слоями. Разовый сеанс снимет верхний слой — и, как уже было, станет легче, а потом вернётся. Полный курс доводит каждую линию до корня, по порядку, со снятием слоёв и с защитой на завершении.</div>
+        <ul class="offer-list"><li>Ведение случая полностью</li><li>Телесная привязка: плечи, голова, руки</li><li>Пищевой слой — то, что внутри</li><li>Открытие путей: дела, ризк, мысль</li><li>Ночные атаки и возвращение отдыха</li><li>Васваса</li><li>Защита и завершение курса</li><li>Связь со мной между сеансами</li></ul>
+        <a class="btn" href="https://t.me/Ruqoq">✉ Связаться с лекарем</a>
+      </div>
+    </div>
+    <div class="note">В твоём случае я советую полное лечение: линии связаны, слоёв больше одного, и брать их по одной — значит снова получить откат. Стоимость — работа и сопровождение лекаря, исцеление только от Аллаха.</div>
+  </section>
+
+  <footer class="section" style="text-align:center">
+    <div class="farb">اللهم اشفِ و أنت الشافي</div>
+    <div style="font-size:14px;color:rgba(245,239,224,.85)">«О Аллах, исцели, ведь лишь Ты — Исцеляющий»</div>
+    <div class="intro" style="text-align:center">Брат мой, ты держишься двадцать лет и не сломался — и Коран тебе даёт облегчение. Значит, корень можно достать, с дозволения Аллаха. Не неси это дальше один.</div>
+    <div class="sign">Лекарь Абу Мухаммад<small>Шариатская рукъя · Таухид · Сунна</small></div>
+  </footer>
+
+</div>
+</body>
+</html>
