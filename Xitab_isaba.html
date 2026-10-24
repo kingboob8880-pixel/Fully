@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Абу Мухаммад">
+<meta name="description" content="«Хитаб Исаба» — руководство Абу Мухаммада, лекаря: диагностика душевных и духовных недугов, девять ступеней, адресное чтение, защита и проверка результата.">
 <title>Хитаб Исаба — руководство Абу Мухаммада | خطاب الإصابة</title>
 <style>
 :root{
@@ -1108,6 +1110,16 @@ body.printing .acc-body{display:block!important; visibility:visible!important; h
   .pt-dots{flex:1; border-bottom:.4pt dotted #999; margin:0 1.5mm 1.1mm}
   .pt-pg{width:9mm; text-align:right; font-variant-numeric:tabular-nums}
   .pt-note{font:7pt/1.4 "Segoe UI",sans-serif; color:#555; margin:4mm 0 0}
+}
+</style>
+<style id="pdf-blankfix">
+/* Пустые страницы в PDF: аккордеоны стартовали с opacity:0 из-за анимации входа,
+   а принудительный перенос части на новую страницу оставлял полстраницы пустыми. */
+@media print{
+  .acc-body{animation:none!important; opacity:1!important; transform:none!important}
+  section[id^="p"]{break-before:auto!important}
+  .part{break-inside:avoid!important; break-after:avoid!important; margin-top:18pt!important; padding-top:10pt!important; border-top:1.2pt solid #000!important}
+  .part h2{break-after:avoid!important}
 }
 </style>
 </head>
@@ -4071,6 +4083,7 @@ body.printing .acc-body{display:block!important; visibility:visible!important; h
         </div>
 
         <footer>
+          <p><strong>Автор: Абу Мухаммад</strong> — лекарь, метод «Хитаб Исаба». Все разделы, формулы, разборы случаев и выводы в этом руководстве изложены от его имени и по его практике.</p>
           <p><strong>Хитаб Исаба. Моё руководство.</strong> Я собрал его по своим постам в каналах «Лекарь — Абу Мухаммад» и «Лечение от джиннов», по своим урокам из папки «Речь с болезнью» и по своему опубликованному руководству. Девять ступеней и тринадцать шагов я привожу по своим урокам; точная формулировка девяти ступеней в моих постах не публиковалась.</p>
           <p>В духовных недугах это мой рабочий инструмент, а не «замена врачу»: сглаз, сихр и присутствие лечим мы, по воле Аллаха. Тело сохраняется тем, что Аллах положил для тела. Это руководство не заменяет живого обучения у лекаря; ответственность за применение — на практикующем.</p>
           <p>Исходный конспект: <a href="Метод_Хитаб_Исаба.md">Метод_Хитаб_Исаба.md</a> · PDF: <a href="Хитаб_Исаба_учебник.pdf" download>скачать</a> · Версия руководства 2.6 · Оформление рассчитано на печать и офлайн-работу.</p>
