@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анализ состояния · Мухаммад · Лекарь Абу Мухаммад</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  
+  :root {
+    --primary: #0d4f3c;
+    --primary-light: #1a7a5c;
+    --gold: #c9a961;
+    --gold-light: #e6c887;
+    --dark: #0a1f1a;
+    --cream: #f5efe0;
+    --red: #b94a4a;
+    --warning: #d4942a;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #0a1f1a 0%, #143028 50%, #0a1f1a 100%);
+    color: var(--cream);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+
+  .bg-pattern {
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(26, 122, 92, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px 16px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 30px 16px;
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.6), rgba(26, 122, 92, 0.4));
+    border-radius: 24px;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    backdrop-filter: blur(10px);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '﷽';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    margin: 18px 0 10px;
+    letter-spacing: 8px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .header .subtitle {
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.75);
+    font-weight: 300;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: rgba(201, 169, 97, 0.15);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+  }
+
+  /* Section */
+  .section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 20px;
+    padding: 22px 18px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+  }
+
+  .section-title .icon {
+    font-size: 22px;
+  }
+
+  .greeting {
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .arabic {
+    font-size: 20px;
+    color: var(--gold);
+    text-align: center;
+    margin: 14px 0;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    letter-spacing: 1px;
+  }
+
+  /* Symptom cards */
+  .symptom {
+    background: rgba(10, 31, 26, 0.5);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .symptom:last-child { margin-bottom: 0; }
+
+  .symptom-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .symptom-num {
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .symptom-title {
+    font-weight: 600;
+    color: var(--gold-light);
+    font-size: 15px;
+  }
+
+  .symptom-body {
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.88);
+    line-height: 1.7;
+    padding-left: 38px;
+  }
+
+  .symptom-body strong {
+    color: var(--gold-light);
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 10px;
+    background: rgba(185, 74, 74, 0.2);
+    border: 1px solid rgba(185, 74, 74, 0.4);
+    color: #e88a8a;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .tag.warn {
+    background: rgba(212, 148, 42, 0.2);
+    border-color: rgba(212, 148, 42, 0.4);
+    color: #e6b56a;
+  }
+
+  .tag.danger {
+    background: rgba(185, 74, 74, 0.25);
+    border-color: rgba(185, 74, 74, 0.5);
+    color: #f09898;
+  }
+
+  /* Diagnosis */
+  .diagnosis {
+    background: linear-gradient(135deg, rgba(185, 74, 74, 0.12), rgba(13, 79, 60, 0.15));
+    border: 1px solid rgba(185, 74, 74, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 8px;
+  }
+
+  .diagnosis h3 {
+    color: #e88a8a;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .diagnosis p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245, 239, 224, 0.9);
+  }
+
+  /* Offer */
+  .offer-intro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+
+  .offer-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .offer-list li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    font-size: 14px;
+    color: rgba(245, 239, 224, 0.9);
+    border-bottom: 1px dashed rgba(201, 169, 97, 0.15);
+  }
+
+  .offer-list li:last-child { border-bottom: none; }
+
+  .offer-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 16px;
+  }
+
+  /* Price blocks */
+  .price-card {
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.8), rgba(10, 31, 26, 0.9));
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 24px;
+    padding: 24px 20px;
+    margin-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-card.featured {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(13, 79, 60, 0.6));
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 10px 40px rgba(201, 169, 97, 0.15);
+  }
+
+  .price-card.featured::before {
+    content: 'РЕКОМЕНДУЕТСЯ';
+    position: absolute;
+    top: 14px;
+    right: -30px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 4px 40px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: rotate(45deg);
+  }
+
+  .price-label {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .price-title {
+    font-size: 20px;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .price-amount span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  .price-desc {
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.7);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .price-features li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    font-size: 13.5px;
+    color: rgba(245, 239, 224, 0.88);
+  }
+
+  .price-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+  }
+
+  .btn:hover, .btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.45);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold-light);
+    border: 1.5px solid var(--gold);
+    box-shadow: none;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(201, 169, 97, 0.1);
+  }
+
+  .btn-icon {
+    margin-right: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 16px 10px;
+    font-size: 13px;
+    color: rgba(245, 239, 224, 0.6);
+    line-height: 1.8;
+  }
+
+  .footer .arabic-small {
+    color: var(--gold);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 18px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section { animation: fadeIn 0.6s ease-out; }
+
+  /* additions for analyz letters */
+  .quote { border-left:3px solid var(--gold); background:rgba(201,169,97,0.08); padding:12px 16px; border-radius:10px; margin:12px 0; font-size:14.5px; color:var(--cream); line-height:1.7; }
+  .body-list { margin:10px 0 12px 2px; padding-left:20px; }
+  .body-list li { font-size:14px; color:rgba(245,239,224,0.9); line-height:1.7; margin-bottom:8px; }
+  .body-list li::marker { color: var(--gold); }
+  .section.safety { border:1px solid rgba(185,74,74,0.5); background:linear-gradient(135deg, rgba(185,74,74,0.12), rgba(13,79,60,0.12)); }
+  .section.safety .section-title { color:#f0b6b6; border-bottom-color:rgba(185,74,74,0.3); }
+  a.inline { color: var(--gold-light); text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="bg-pattern"></div>
+
+<div class="container">
+
+  <div class="header">
+    <div class="header-ornament">۞ ❋ ۞</div>
+    <h1>Лекарь Абу Мухаммад</h1>
+    <div class="subtitle">Шариатская Рукъя · Духовное исцеление</div>
+    <div class="badge">ЛИЧНЫЙ АНАЛИЗ СОСТОЯНИЯ</div>
+  </div>
+
+  <div class="section">
+    <div class="arabic">السلام عليكم ورحمة الله وبركاته</div>
+<p class="greeting">Ассаляму алейкум ва рахматуллахи ва баракатух, брат мой Мухаммад!</p>
+<p class="greeting">Я, Абу Мухаммад, прочитал твои сообщения — и ночные тоже. Первое, что хочу тебе сказать: <strong>я тебя услышал, я рядом и никуда не исчезаю.</strong> То, что ты написал, — не слабость. Это крик человека, который пять лет нёс это почти один и всё-таки не сдался: ты держал намаз, читал, искал лечения. Это твоя сила, а не позор.</p>
+    <p class="greeting" style="font-style:italic;color:rgba(245,239,224,0.7);">Аллах Всевышний говорит: «Воистину, за трудностью наступает облегчение» (сура «Аш-Шарх», 94:6).</p>
+  </div>
+
+  <div class="section safety">
+    <div class="section-title"><span class="icon">🛡️</span><span>1. Сейчас самое важное — не рукъя, а ты сам</span></div>
+<p class="greeting">Брат, твоя жизнь важнее любой программы. Ты писал: «не вижу выхода кроме смерти», «умереть осталось», просил дуа, чтобы скорее умереть. Я не пройду мимо этих слов. Прошу тебя <strong>прямо сейчас</strong>:</p>
+<ol class="body-list"><li><strong>Не оставайся один.</strong> Есть ли рядом человек, которому ты доверяешь — родной, близкий? Позови его, будь с ним. Напиши мне, кто сейчас рядом.</li><li><strong>Сегодня же покажись врачу-психиатру или психотерапевту.</strong> Это моё назначение как лекаря — так же, как я назначаю обследование при боли в груди. Это не «слабость веры», это лечение.</li><li><strong>Если станет совсем невыносимо — сразу 112 или 103.</strong> Это не стыдно — это спасение жизни, которую Аллах тебе доверил.</li></ol>
+<p class="greeting">Пока острое состояние не снято, <strong>прицельный курс я тебе не выдаю</strong> — это правило безопасности, а не отказ от тебя. Твой полный разбор и программа уже готовы: как только станет легче, мы продолжим.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">💭</span><span>2. Про мысль «Бога нет» — услышь это особенно внимательно</span></div>
+<p class="greeting">Брат, эта мысль — <strong>не твоя и не твоё убеждение.</strong> Ты её отвергаешь, ты от неё мучаешься, ты ищешь лечения, чтобы вернуть веру, — значит, <strong>твоё сердце против неё.</strong> Это называется <strong>васвас</strong> (навязчивое наущение), а не куфр и не «ты стал атеистом».</p>
+<p class="greeting">Помни: сподвижники Пророка (ﷺ) приходили к нему и говорили, что в груди у них появляются мысли, которые они боятся произнести, и что им легче сгореть, чем сказать их вслух. И Пророк (ﷺ) ответил, что <strong>это и есть чистая, явная вера</strong> — потому что сама боль и отвращение к такой мысли доказывают, что вера в сердце жива. И он (ﷺ) сказал, что Аллах простил его общине то, что приходит на ум, пока человек не совершит это и не скажет вслух.</p>
+<p class="greeting">Значит: <strong>эта навязчивая мысль тебе в грех не вменяется.</strong> Ты не в ответе за то, что она приходит, — ты в ответе только за то, что продолжаешь держать намаз и искать лечения. И ты это делаешь. Твоя шахада, произнесённая «ели-ели», — это не поражение, а <strong>волевой акт против васваса</strong>, твоя победа.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">🤍</span><span>3. Твоя вера не разрушена — она перекрыта</span></div>
+<p class="greeting">Самое важное, что я понял из твоего рассказа: <strong>восприятие веры у тебя не сломано — оно перекрыто.</strong> Доказательство — те редкие секунды полной ясности, которые у тебя бывают. Если бы вера была разрушена, этих секунд не было бы вовсе. Значит, твоя вера на месте — она под завалом тревоги, спазма и старой раны.</p>
+<p class="greeting">Поэтому лечить нужно <strong>не «вставлять веру обратно»</strong>, а <strong>снять то, что давит сверху</strong>: тревогу, телесный спазм (грудь/диафрагма), рану от того испуга и заморозку состояния. Как только завал разберут — то, что под ним, само поднимется. В этом и есть надежда.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">🔍</span><span>4. Что с тобой происходит (коротко и честно)</span></div>
+<p class="greeting">Твоё состояние не однослойное. Если назвать его части по-простому:</p>
+<ul class="body-list"><li><strong>Васвас</strong> — навязчивая мысль «Бога нет» с сохранной критикой. Это душевный недуг, он лечится рукъей.</li><li><strong>Внутренняя рана</strong> — тот испуг в ванной (зеркало, нагота, боль в висках, жар в груди), после которого всё и началось. Оттуда — боль при выдохе, жар в груди, спазм диафрагмы.</li><li><strong>Уныние и тревога</strong> — пять лет без облегчения; «не вижу выхода», отчаяние.</li><li><strong>«Заклинило»</strong> — отклик на чтение есть (пульсации), а движения нет: состояние как будто заморожено.</li><li><strong>Закрытые пути</strong> — не складывается брак, деньги, ушла сладость поклонения.</li></ul>
+<p class="greeting"><strong>Одержимости (джинна) у тебя нет.</strong> Нет голосов, чужих команд, ночных параличей, звериных снов, отвращения к зикру. Ты сам сомневаешься в «джинне» — и правильно делаешь: критика у тебя сохранна, а это признак васваса, а не масса. Чужие слова о «джинне-девушке» и «ифрите» — не диагностика, я на них не опираюсь.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">⏳</span><span>5. Почему пять лет и 35+ лекарей не дали результата</span></div>
+<p class="greeting">Не потому, что ты «безнадёжен». А потому, что <strong>никто не работал по месту, по слоям и по качеству чтения</strong>: кто бил «джинном», которого у тебя нет, кто называл твои признаки «детским садиком», кто давал «усиленные» курсы, после которых ты срывался и истощался. Реакция у всех была одна — «пара пульсаций», и никакого движения.</p>
+<p class="greeting">Мы пойдём по-другому: <strong>щадящий ритм</strong> (один сеанс в сутки, база ×5), <strong>прицельно</strong> по местам (разум, грудь/диафрагма, голова), <strong>по слоям</strong> — и без перегрузов. Лечит только Аллах; наша часть — честно прийти к Нему и снять то, что держит тебя изнутри.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">🏥</span><span>6. Медицинская линия (моё назначение как врача)</span></div>
+<p class="greeting">Два фронта ведёт один лекарь — духовный и медицинский, и рукъя <strong>не отменяет</strong> врача:</p>
+<ul class="body-list"><li><strong>Психиатр/психотерапевт (главное):</strong> депрессивный фон, суицидальные мысли, навязчивый васвас с сохранной критикой, испуг в начале. Медикаментозная поддержка — по назначению врача — <strong>не отменяется рукъей</strong>: Аллах дал нам и лекарство, и Коран, берём обе причины. Навязчивые проверки и переспрашивания не «подкармливаем», норму повторений держим фиксированной.</li><li><strong>Сердце и дыхание:</strong> ЭКГ и осмотр терапевта — боль и жар в груди при дыхании нельзя объяснять «только духовным», терять время опасно. УЗИ брюшной полости/ФГДС — боль справа под рёбрами при выдохе.</li><li><strong>Невролог:</strong> боль в висках, «мурашки», контроль давления.</li><li><strong>Режим:</strong> сон не меньше 7 часов, регулярная еда, тёплый душ, дыхание с длинным выдохом (4-7-8 — ты уже делаешь, продолжай).</li></ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">📖</span><span>7. Что читать сейчас (пока острое не снято)</span></div>
+<p class="greeting">Сейчас читай только это, спокойно, утром и вечером, полными блоками — без прицельного курса:</p>
+<ul class="body-list"><li><strong>аль-Фатиха</strong></li><li><strong>Аят аль-Курси</strong></li><li><strong>«Хасбуна-Ллаху ва ни'ма-ль-Вакиль»</strong> — «Достаточно нам Аллаха, и Он — прекрасный Покровитель».</li></ul>
+<p class="greeting">Как только острое уйдёт — несколько дней без мыслей о смерти, подключён врач, рядом близкие, — мы продолжим: твой полный разбор и программа уже готовы.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">💰</span><span>8. Про деньги</span></div>
+<p class="greeting">Не переживай об оплате сейчас — <strong>это последнее, о чём тебе думать.</strong> Решим по честности, лично. Сначала — твоя жизнь и безопасность.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="icon">🤲</span><span>Моё дуа за тебя</span></div>
+<p class="greeting">Брат мой, ты не «проклятое животное» и не «безнадёжный». Ты — человек, которого Аллах не оставил: Он привёл тебя сюда, Он слышит тебя и видит твою боль. Пусть Аллах снимет с тебя тяжесть, вернёт вкус веры и спокойствие, облегчит твоё дело, даст здоровье, работу, семью и удел — и сделает твоё исцеление близким. Я рядом.</p>
+<p class="greeting">Напиши мне, как ты, — сегодня же: <a class="inline" href="https://t.me/Ruqoq">https://t.me/Ruqoq</a></p>
+<p class="greeting">С дуа за тебя,</p>
+<p class="greeting"><strong>Лекарь Абу Мухаммад</strong></p>
+  </div>
+
+  <a href="https://t.me/Ruqoq" class="btn" style="margin-top:4px;"><span class="btn-icon">✉</span>Написать лекарю</a>
+
+  <div class="footer">
+    <span class="arabic-small">اللهم اشفِ و أنت الشافي</span>
+    «О Аллах, исцели, ведь лишь Ты — Исцеляющий»
+    <br><br>
+    <span style="font-size:12px;">Шариатская Рукъя · Таухид · Сунна</span>
+  </div>
+
+</div>
+</body>
+</html>
