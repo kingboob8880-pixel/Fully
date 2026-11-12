@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Абу Мухаммад">
+<meta name="description" content="«Упование на Аллаха и намерение» — статья Абу Мухаммада, лекаря, по методу «Хитаб Исаба» на основе хадиса «Иннамá аль-а'мáлю би-н-ниййат»: аннулирует Аллах, а мы лишь направляем чтение и ждём Его ответа.">
+<title>Упование на Аллаха и намерение · Абу Мухаммад | النية والتوكل</title>
+<style>
+:root{
+  --bg:#f4efe3; --panel:#fffdf8; --panel-2:#f8f2e5;
+  --ink:#1c211c; --muted:#696e64; --line:#e2d7c2; --line-2:#cbbda0;
+  --green:#0e4a2f; --green-2:#14653f; --green-3:#e8f0e7;
+  --gold:#a67c3d; --gold-2:#c8a76a; --gold-3:#f5ebd8;
+  --red:#8a2f2a; --red-2:#f8eae7;
+  --teal:#155a5d; --teal-2:#e5f0ef;
+  --shadow:0 1px 1px rgba(28,33,28,.04),0 14px 30px -22px rgba(28,33,28,.45);
+  --serif:"Cambria","Charter","Georgia","Palatino Linotype","Times New Roman",serif;
+  --sans:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --arabic:"Amiri","Scheherazade New","Arabic Typesetting","Traditional Arabic","Segoe UI",serif;
+  --w:76ch;
+}
+html[data-theme="dark"]{
+  --bg:#0d110d; --panel:#161b15; --panel-2:#1b2119;
+  --ink:#eae4d5; --muted:#a7aa9c; --line:#2c3327; --line-2:#3d4636;
+  --green:#8fc9a5; --green-2:#72ba90; --green-3:#18261d;
+  --gold:#d1ab6d; --gold-2:#b8934f; --gold-3:#251f13;
+  --red:#e0908a; --red-2:#2a1a19;
+  --teal:#8fc8cc; --teal-2:#122426;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 16px 34px -24px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:18px;scroll-padding-top:82px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--serif);font-size:1rem;line-height:1.72;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;
+  background-image:
+    radial-gradient(1200px 600px at 15% 0%,rgba(166,124,61,.06),transparent 60%),
+    radial-gradient(900px 500px at 100% 10%,rgba(14,74,47,.05),transparent 55%),
+    repeating-linear-gradient(0deg,rgba(28,33,28,.014) 0 1px,transparent 1px 3px);
+}
+img,svg{max-width:100%}
+a{color:var(--green-2);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--green-2) 35%,transparent)}
+a:hover{border-bottom-color:var(--green-2)}
+::selection{background:var(--gold-3);color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* top bar */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--gold),var(--green-2))}
+.topbar{
+  position:sticky;top:0;z-index:50;height:64px;display:flex;align-items:center;gap:10px;
+  padding:0 20px;background:color-mix(in srgb,var(--panel) 88%,transparent);
+  backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:baseline;gap:10px;font-size:1.02rem;white-space:nowrap}
+.brand .ar{font-family:var(--arabic);font-size:1.4rem;color:var(--gold);line-height:1;direction:rtl}
+.brand b{font-weight:600}
+.brand small{font-family:var(--sans);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.topbar .spacer{flex:1}
+.iconbtn{
+  font-family:var(--sans);font-size:.86rem;padding:7px 11px;border-radius:9px;
+  border:1px solid var(--line-2);background:transparent;color:var(--ink);
+  cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1;
+  transition:background .16s ease,border-color .16s ease,color .16s ease;
+}
+.iconbtn:hover{background:var(--panel-2);border-color:var(--gold)}
+#menuBtn{display:none}
+.fontctl{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:9px;overflow:hidden}
+.fontctl .iconbtn{border:0;border-radius:0;padding:7px 9px;font-variant-numeric:tabular-nums}
+.fontctl .iconbtn + .iconbtn{border-left:1px solid var(--line)}
+.fontctl .iconbtn:hover{background:var(--gold-3)}
+
+/* layout */
+.layout{display:grid;grid-template-columns:290px minmax(0,1fr);max-width:1400px;margin:0 auto}
+.sidebar{
+  position:sticky;top:64px;height:calc(100vh - 64px);overflow:auto;padding:22px 16px 40px 22px;
+  border-right:1px solid var(--line);
+  background:linear-gradient(180deg,var(--panel),var(--panel-2));
+  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
+}
+.sidebar h4{font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 10px 8px}
+.sidebar nav a{
+  display:flex;gap:9px;align-items:baseline;padding:6px 9px;border-radius:7px;border:0;
+  font-family:var(--sans);font-size:.85rem;line-height:1.35;color:color-mix(in srgb,var(--ink) 92%,var(--muted));
+}
+.sidebar nav a span.n{font-size:.66rem;color:var(--gold);min-width:1.9em;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.sidebar nav a:hover{background:color-mix(in srgb,var(--gold-3) 55%,transparent)}
+.sidebar nav a.active{background:var(--green-3);color:var(--green-2);font-weight:600;box-shadow:inset 3px 0 0 var(--gold)}
+.sidebar .sep{height:1px;background:linear-gradient(90deg,transparent,var(--line-2),transparent);margin:13px 8px}
+.sidebar .meta{font-family:var(--sans);font-size:.72rem;color:var(--muted);line-height:1.55;padding:0 8px}
+.mylead{margin:0 8px 14px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel);font-family:var(--sans);font-size:.72rem;color:var(--muted)}
+.mylead .row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px}
+.mylead b{font-size:.82rem;color:var(--green-2);font-variant-numeric:tabular-nums}
+.mylead .bar{height:5px;border-radius:999px;background:var(--line);overflow:hidden}
+.mylead .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--green-2));transition:width .3s}
+main{padding:0 42px 90px;min-width:0}
+.wrap{max-width:var(--w);margin:0 auto}
+.backdrop{display:none}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;margin:0 -42px 46px;padding:60px 42px 52px;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(201,164,105,.22),transparent 46%),
+    linear-gradient(155deg,#0b3523,#0e4a2f 56%,#123f2a);
+  color:#f4efe3;
+}
+.hero::before{
+  content:"";position:absolute;right:-150px;top:-170px;width:520px;height:520px;border-radius:50%;
+  background:
+    repeating-conic-gradient(from 0deg,rgba(201,164,105,.15) 0deg 2deg,transparent 2deg 15deg),
+    radial-gradient(circle,transparent 52%,rgba(201,164,105,.18) 53%,transparent 54%),
+    radial-gradient(circle,transparent 68%,rgba(201,164,105,.12) 69%,transparent 70%);
+  opacity:.9;
+}
+.hero::after{
+  content:"";position:absolute;left:-130px;bottom:-190px;width:420px;height:420px;border-radius:50%;
+  background:repeating-conic-gradient(from 12deg,rgba(255,255,255,.05) 0deg 1deg,transparent 1deg 12deg);
+}
+.hero > *{position:relative;z-index:1}
+.hero .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#d9c49a;margin:0 0 16px}
+.hero h1{font-size:clamp(1.95rem,4.4vw,3.2rem);line-height:1.12;letter-spacing:-.01em;margin:0 0 8px;font-weight:600;max-width:26ch}
+.hero .arbig{font-family:var(--arabic);direction:rtl;font-size:clamp(1.9rem,3.8vw,2.9rem);color:#e2c893;margin:0 0 20px;line-height:1.5}
+.hero-author{font-family:var(--sans);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#d9c49a;margin:-4px 0 18px}
+.hero p.lead{font-size:1.1rem;line-height:1.62;color:#e6dfcf;max-width:62ch;margin:0 0 26px}
+.badges{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+.badge{font-family:var(--sans);font-size:.77rem;letter-spacing:.03em;padding:7px 13px;border-radius:999px;border:1px solid rgba(226,200,147,.45);color:#f0e6d2;background:rgba(255,255,255,.05)}
+.hero .hint{font-family:var(--sans);font-size:.8rem;color:#c9c0ac}
+.hero .hint kbd{font-family:var(--sans);font-size:.74rem;border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:1px 5px}
+
+/* sections */
+section{scroll-margin-top:86px}
+.part{margin:60px 0 24px;padding-top:18px;border-top:1px solid var(--line-2)}
+.part .kicker{font-family:var(--sans);font-size:.71rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.part h2{font-size:clamp(1.45rem,2.3vw,1.95rem);margin:0;line-height:1.2;letter-spacing:-.01em}
+.chapter{margin:0 0 38px}
+h3{font-size:1.35rem;line-height:1.26;margin:34px 0 12px;letter-spacing:-.005em}
+h3 .num{font-family:var(--sans);font-size:.71rem;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:4px;font-weight:600}
+h4{font-family:var(--sans);font-size:.95rem;margin:22px 0 8px;letter-spacing:.005em}
+h4[id]{scroll-margin-top:90px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 16px;padding-left:1.28em}
+li{margin:0 0 6px}
+li::marker{color:var(--gold)}
+strong{font-weight:600}
+em{font-style:italic}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.small{font-family:var(--sans);font-size:.83rem;color:var(--muted);line-height:1.55}
+.center{text-align:center}
+
+/* callouts */
+.box{border:1px solid var(--line);border-left:3px solid var(--gold);background:var(--panel);padding:17px 19px;border-radius:11px;margin:18px 0;box-shadow:var(--shadow)}
+.box .tag{font-family:var(--sans);font-size:.67rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:6px}
+.box p:last-child,.box ul:last-child,.box ol:last-child{margin-bottom:0}
+.box.source{background:var(--gold-3);border-left-color:var(--gold)}
+.box.imp{background:var(--red-2);border-left-color:var(--red)}
+.box.imp .tag{color:var(--red)}
+.box.tip{background:var(--green-3);border-left-color:var(--green-2)}
+.box.tip .tag{color:var(--green-2)}
+.box.drill{background:var(--teal-2);border-left-color:var(--teal)}
+.box.drill .tag{color:var(--teal)}
+.box.note{background:var(--panel-2);border-left-color:var(--line-2)}
+.box.note .tag{color:var(--muted)}
+
+/* arabic / formulas */
+.ar{font-family:var(--arabic);direction:rtl;unicode-bidi:isolate;text-align:right;line-height:2;font-size:1.55em;color:var(--ink);margin:6px 0 8px}
+.formula{border:1px solid var(--line-2);border-radius:12px;background:var(--panel);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow);position:relative}
+.formula::before{content:"۞";position:absolute;top:10px;left:14px;color:var(--gold-2);opacity:.5;font-size:.9rem}
+.formula .ar{margin-top:2px}
+.translit{font-family:var(--sans);font-size:.84rem;color:var(--muted);font-style:italic;margin:0 0 8px}
+.trans{font-size:1rem;margin:0}
+.formula .why{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px dashed var(--line-2)}
+
+/* hadith block */
+.hadith{border:1px solid var(--gold-2);border-radius:14px;background:linear-gradient(180deg,var(--gold-3),var(--panel));padding:24px 26px;margin:22px 0;box-shadow:var(--shadow);position:relative}
+.hadith::after{content:"✦";position:absolute;right:18px;bottom:14px;color:var(--gold-2);opacity:.55;font-size:1rem}
+.hadith .lbl{font-family:var(--sans);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin:16px 0 4px}
+.hadith .lbl:first-of-type{margin-top:0}
+.hadith .arq{font-family:var(--arabic);direction:rtl;unicode-bidi:isolate;text-align:right;font-size:1.65em;line-height:2.05;color:var(--ink);margin:0}
+.hadith .tr{font-size:1rem;margin:0}
+.hadith .ref{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin:16px 0 0;padding-top:12px;border-top:1px dashed var(--line-2)}
+
+/* comparison */
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.vs .col{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:var(--panel);box-shadow:var(--shadow)}
+.vs .col.good{border-left:3px solid var(--green-2);background:var(--green-3)}
+.vs .col.bad{border-left:3px solid var(--red);background:var(--red-2)}
+.vs .col h4{margin:0 0 8px;font-size:.92rem}
+.vs .col ul{margin:0;padding-left:1.1em;font-size:.91rem}
+.vs .col li{margin-bottom:5px}
+.vs .k{font-family:var(--sans);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:6px;font-weight:600}
+.vs .good .k{color:var(--green-2)}
+.vs .bad .k{color:var(--red)}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:520px}
+caption{caption-side:top;text-align:left;font-family:var(--sans);font-size:.8rem;color:var(--muted);padding:10px 14px 0}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--panel-2);font-family:var(--sans);font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:color-mix(in srgb,var(--panel-2) 70%,transparent)}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--gold);font-family:var(--sans);font-size:.85rem}
+td b{font-weight:600}
+
+/* cards */
+.grid{display:grid;gap:13px;margin:18px 0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:16px 18px;box-shadow:var(--shadow)}
+.card h4{margin:0 0 6px;font-size:.95rem}
+.card p{font-size:.92rem;margin:0;color:color-mix(in srgb,var(--ink) 86%,var(--muted))}
+.card .k{font-family:var(--sans);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px}
+
+/* numbered steps */
+.steps{counter-reset:st;list-style:none;padding:0;margin:18px 0}
+.steps li{position:relative;padding:13px 16px 13px 54px;border:1px solid var(--line);border-radius:11px;background:var(--panel);margin-bottom:10px;box-shadow:var(--shadow);font-size:.96rem}
+.steps li::before{counter-increment:st;content:counter(st);position:absolute;left:14px;top:13px;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--gold);border:1px solid var(--gold-2);background:var(--panel-2)}
+.steps li b{display:block;margin-bottom:2px}
+.steps .say{font-family:var(--sans);font-size:.85rem;color:var(--teal);margin-top:6px;display:block}
+
+/* ladder */
+.ladder{margin:22px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow)}
+.lvl{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);position:relative}
+.lvl:last-child{border-bottom:0}
+.lvl::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--line)}
+.lvl[data-state="done"]::before{background:linear-gradient(180deg,var(--gold),var(--green-2))}
+.lvl .medal{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-weight:600;border:1px solid var(--gold-2);color:var(--gold);background:var(--panel-2)}
+.lvl[data-state="done"] .medal{background:var(--green-3);border-color:var(--green-2);color:var(--green-2)}
+.lvl .lname{font-weight:600;font-size:1rem;line-height:1.3}
+.lvl .lar{font-family:var(--arabic);color:var(--gold);font-size:.95rem;margin-left:8px;direction:rtl}
+.lvl .lsub{font-family:var(--sans);font-size:.77rem;color:var(--muted);margin-top:1px}
+.lvl .laxis{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px;margin-top:7px;font-size:.87rem}
+.lvl .laxis i{font-style:normal;font-family:var(--sans);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1px}
+.lvl .laxis span{color:color-mix(in srgb,var(--ink) 88%,var(--muted))}
+.tick{font-family:var(--sans);font-size:.73rem;border:1px solid var(--line-2);background:transparent;color:var(--muted);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap;min-height:34px}
+.tick:hover{border-color:var(--gold);color:var(--ink)}
+.tick[aria-pressed="true"]{background:var(--green-3);border-color:var(--green-2);color:var(--green-2);font-weight:600}
+
+/* checklist */
+.check{list-style:none;padding:0;margin:14px 0}
+.check li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.check li:last-child{border-bottom:0}
+.check input{margin-top:5px;width:17px;height:17px;accent-color:var(--green-2);flex:0 0 auto}
+.check label{cursor:pointer}
+.check input:checked + label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line-2)}
+.counter{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:10px}
+.counter .bar{flex:1;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.counter .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--green-2));transition:width .25s}
+
+/* quiz */
+.quiz{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:20px 22px;box-shadow:var(--shadow);margin:18px 0}
+.q{padding:12px 0;border-bottom:1px dashed var(--line)}
+.q:last-of-type{border-bottom:0}
+.q p{margin:0 0 8px;font-size:.96rem}
+.q .qn{font-family:var(--sans);font-size:.72rem;color:var(--gold);margin-right:6px;font-variant-numeric:tabular-nums}
+.opts{display:flex;gap:7px;flex-wrap:wrap}
+.opts label{font-family:var(--sans);font-size:.79rem;border:1px solid var(--line-2);border-radius:999px;padding:5px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;min-height:34px;color:var(--muted)}
+.opts input{accent-color:var(--green-2);margin:0}
+.opts label:hover{border-color:var(--gold)}
+.opts label:has(input:checked){background:var(--green-3);border-color:var(--green-2);color:var(--green-2);font-weight:600}
+.result{margin-top:16px;padding:16px 18px;border-radius:12px;background:var(--gold-3);border:1px solid var(--line-2)}
+.result .big{font-size:1.35rem;font-weight:600;margin:0 0 4px}
+.result p{margin:0 0 6px;font-size:.94rem}
+.result .next{font-family:var(--sans);font-size:.84rem;color:var(--muted)}
+.quizbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+
+/* misc */
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 16px}
+.chip{font-family:var(--sans);font-size:.75rem;border:1px solid var(--line-2);background:var(--panel);color:var(--muted);border-radius:999px;padding:5px 11px}
+.chip b{color:var(--ink);font-weight:600}
+.timeline{list-style:none;padding:0;margin:18px 0;position:relative}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:1px;background:var(--line-2)}
+.timeline li{position:relative;padding:0 0 16px 34px;margin:0}
+.timeline li::before{content:"";position:absolute;left:4px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--panel);border:2px solid var(--gold)}
+.timeline .t{font-family:var(--sans);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.timeline .t .art{font-family:var(--arabic);font-size:1.02rem;letter-spacing:0;text-transform:none;direction:rtl;unicode-bidi:isolate;line-height:1;color:var(--gold)}
+.timeline b{display:block;margin:2px 0 3px}
+.timeline p{margin:0;font-size:.92rem;color:color-mix(in srgb,var(--ink) 86%,var(--muted))}
+.orn{display:flex;align-items:center;gap:14px;color:var(--gold);justify-content:center;margin:26px 0;font-size:.8rem}
+.orn::before,.orn::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--line-2))}
+.orn::after{background:linear-gradient(90deg,var(--line-2),transparent)}
+blockquote{margin:18px 0;padding:4px 0 4px 18px;border-left:2px solid var(--gold-2);color:color-mix(in srgb,var(--ink) 84%,var(--muted));font-size:1.02rem}
+blockquote cite{display:block;font-family:var(--sans);font-size:.76rem;color:var(--muted);font-style:normal;margin-top:6px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 10px;font-family:var(--sans);font-size:.79rem;color:var(--muted);line-height:1.6}
+.totop{position:fixed;right:18px;bottom:18px;z-index:40;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);background:var(--panel);color:var(--ink);cursor:pointer;display:none;place-items:center;box-shadow:var(--shadow);font-size:1rem}
+.totop.show{display:grid}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(10px);filter:blur(8px);transition:opacity .6s ease,transform .6s ease,filter .6s ease}
+.rv.in{opacity:1;transform:none;filter:none}
+h2::after{content:"";display:block;height:2px;width:0;margin-top:10px;background:linear-gradient(90deg,var(--gold),transparent);transition:width .8s ease .12s}
+h2.in::after{width:96px}
+
+/* responsive */
+@media (max-width:1080px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:fixed;inset:64px auto 0 0;width:292px;max-width:86vw;z-index:45;transform:translateX(-104%);transition:transform .22s ease;box-shadow:var(--shadow)}
+  .sidebar.open{transform:none}
+  .backdrop{display:none;position:fixed;inset:64px 0 0;z-index:44;background:rgba(10,16,11,.28);backdrop-filter:blur(2px)}
+  .backdrop.show{display:block}
+  #menuBtn{display:inline-flex}
+  main{padding:0 22px 80px}
+  .hero{margin:0 -22px 34px;padding:46px 22px 42px}
+  .grid.two,.grid.three,.vs{grid-template-columns:1fr}
+  .lvl .laxis{grid-template-columns:1fr;gap:4px}
+}
+@media (max-width:760px){
+  .brand b{display:none}
+  .fontctl{display:none}
+  .topbar{gap:6px;padding:0 12px}
+  .iconbtn .lbl{display:none}
+  .hadith{padding:18px 16px}
+}
+@media (max-width:520px){
+  .brand small{display:none}
+  .hero h1{font-size:1.85rem}
+  .hero p.lead{font-size:1rem}
+  .lvl{grid-template-columns:44px minmax(0,1fr);gap:10px}
+  .lvl .tick{grid-column:2;justify-self:start}
+  table{font-size:.9rem}
+  .steps li{padding-left:48px}
+}
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  html{font-size:11pt}
+  body{background:#fff;color:#000;line-height:1.5}
+  body::after,.progress,.topbar,.sidebar,.totop,.backdrop,.no-print{display:none!important}
+  .layout{display:block;max-width:none}
+  main{padding:0}
+  .hero{margin:0 0 18pt;padding:0 0 12pt;background:none;color:#000;border-bottom:2pt solid #000}
+  .hero::before,.hero::after{display:none}
+  .hero .eyebrow,.hero .hint,.badges{display:none}
+  .hero h1{font-size:24pt;color:#000}
+  .hero .arbig{color:#000;font-size:20pt}
+  .hero-author{color:#000!important}
+  .hero p.lead{color:#000}
+  .box,.formula,.card,.hadith,.result,.steps li{box-shadow:none;break-inside:avoid;background:#fff!important;border-color:#999}
+  .ladder,.quiz,.vs{break-inside:auto}
+  .tick{display:none!important}
+  .part{margin:22pt 0 10pt;padding-top:10pt}
+  .grid.two,.grid.three,.vs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8pt}
+  .rv{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  h2::after{display:none}
+  a{color:#000;border:0}
+  thead{display:table-header-group}
+  tr,li,.box,.formula,.hadith{break-inside:avoid}
+  h3,h4{break-after:avoid}
+  section{scroll-margin:0}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="topbar">
+  <button class="iconbtn" id="menuBtn" aria-label="Оглавление">☰<span class="lbl"> Оглавление</span></button>
+  <div class="brand"><span class="ar">توكل</span><b>Упование и намерение</b><small>Хитаб Исаба</small></div>
+  <div class="spacer"></div>
+  <div class="fontctl" aria-label="Размер текста">
+    <button class="iconbtn" id="fontMinus" aria-label="Меньше текст">−</button>
+    <button class="iconbtn" id="fontPlus" aria-label="Больше текст">+</button>
+  </div>
+  <button class="iconbtn" id="focusBtn" title="Скрыть оглавление (F)">◐<span class="lbl"> Фокус</span></button>
+  <button class="iconbtn" id="themeBtn" title="Сменить тему (T)">◑<span class="lbl"> Тема</span></button>
+</header>
+
+<div class="backdrop" id="backdrop"></div>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="mylead">
+      <div class="row"><span>Мой вход с упованием</span><b id="scoreTxt">0 / 7</b></div>
+      <div class="bar"><i id="scoreBar"></i></div>
+    </div>
+    <h4>Основа</h4>
+    <nav>
+      <a href="#hadith"><span class="n">01</span> Хадис о намерениях</a>
+      <a href="#locks"><span class="n">02</span> Три замка хадиса</a>
+      <a href="#address"><span class="n">03</span> Адресат намерения</a>
+      <a href="#niyya"><span class="n">04</span> Намерение с правильным субъектом</a>
+      <a href="#answer"><span class="n">05</span> «Каждому — то, что он намеревался»</a>
+    </nav>
+    <div class="sep"></div>
+    <h4>Действующее лицо</h4>
+    <nav>
+      <a href="#roles"><span class="n">06</span> Кто что делает</a>
+      <a href="#sunna"><span class="n">07</span> Формула Сунны</a>
+      <a href="#method"><span class="n">08</span> Метод не меняет Действующего</a>
+      <a href="#idol"><span class="n">09</span> Идол методики</a>
+    </nav>
+    <div class="sep"></div>
+    <h4>Упование</h4>
+    <nav>
+      <a href="#tawakkul"><span class="n">10</span> Что такое таваккуль</a>
+      <a href="#not"><span class="n">11</span> Чем он не является</a>
+      <a href="#three"><span class="n">12</span> Азм · таваккуль · тасвим</a>
+      <a href="#mechanism"><span class="n">13</span> Механизм упования</a>
+      <a href="#waiting"><span class="n">14</span> Ждать ответа Аллаха</a>
+      <a href="#silence"><span class="n">15</span> Если ответ задерживается</a>
+    </nav>
+    <div class="sep"></div>
+    <h4>Практика</h4>
+    <nav>
+      <a href="#entry"><span class="n">16</span> Вход с упованием: 7 шагов</a>
+      <a href="#during"><span class="n">17</span> Во время чтения</a>
+      <a href="#after"><span class="n">18</span> После чтения</a>
+      <a href="#formulas"><span class="n">19</span> Формулы</a>
+    </nav>
+    <div class="sep"></div>
+    <h4>Проверка</h4>
+    <nav>
+      <a href="#breakers"><span class="n">20</span> Разрушители упования</a>
+      <a href="#quiz"><span class="n">21</span> Самопроверка</a>
+      <a href="#limits"><span class="n">22</span> Границы</a>
+      <a href="#sources"><span class="n">A</span> Источники</a>
+    </nav>
+    <div class="sep"></div>
+    <p class="meta">Автор: Абу Мухаммад, лекарь.<br>Аннулирует Аллах, а не мы.<br>Мы лишь направляем чтение и ждём ответа от Него.<br>Клавиши: <em>T</em> тема · <em>F</em> фокус · <em>+ −</em> текст.</p>
+  </aside>
+
+  <main>
+    <div class="hero">
+      <p class="eyebrow">Хитаб Исаба · основа намерения</p>
+      <h1>Упование на Аллаха и намерение, которое ждёт ответа</h1>
+      <p class="hero-author">Абу Мухаммад · лекарь</p>
+      <p class="arbig">النية والتوكل على الله</p>
+      <p class="lead">Намерение «чтобы Аллах аннулировал колдовство» — не красивое вступление к заклинанию. Это условие ответа: аннулирует Аллах — согласно нашему намерению, а не мы сами. Даже когда чтение идёт по методу «Хитаб Исаба», действующее лицо остаётся Аллахом, а мы лишь направляем. Значит, уповать нужно на Него и ждать именно Его ответа.</p>
+      <div class="badges">
+        <span class="badge">Хадис «Иннамá аль-а'мáлю би-н-ниййат»</span>
+        <span class="badge">Действующее лицо — Аллах</span>
+        <span class="badge">Таваккуль: азм → упование → передача</span>
+        <span class="badge">Ждать ответа, а не выносить приговор</span>
+      </div>
+      <p class="hint">Клавиши: <kbd>T</kbd> тема · <kbd>F</kbd> фокус · <kbd>+</kbd> <kbd>−</kbd> размер текста</p>
+    </div>
+
+    <div class="wrap">
+
+      <section id="hadith">
+        <div class="part"><p class="kicker">Часть I · основа</p><h2>Хадис о намерениях</h2></div>
+
+        <p>Это первое слово, с которого я начинаю любой курс рукъи, и не из вежливости. Весь метод стоит на одном разделении: <strong>читает человек — аннулирует Аллах</strong>. Хадис, который привожу ниже, — не про «мотивацию» и не про настрой перед делом. Он про то, кому адресовано действие и от кого ты его ждёшь.</p>
+
+        <div class="hadith">
+          <span class="lbl">Текст хадиса</span>
+          <p class="arq">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللهِ وَرَسُولِهِ فَهِجْرَتُهُ إِلَى اللهِ وَرَسُولِهِ، وَمَنْ كَانَتْ هِجْرَتُهُ إِلَى دُنْيَا يُصِيبُهَا أَوْ إِلَى امْرَأَةٍ يَنْكِحُهَا فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ</p>
+          <span class="lbl">Транскрипция</span>
+          <p class="translit">Иннама-ль-а'малю би-н-нийят, ва иннама ли-кулли-мриин ма нава. Фаман канат хиджратуху иля-Ллахи ва расулихи фа хиджратуху иля-Ллахи ва расулих. Ва ман канат хиджратуху иля дунья йусибуха ау иля-мраатин йанкихуха фа хиджратуху иля ма хаджара иляйх.</p>
+          <span class="lbl">Перевод</span>
+          <p class="tr">«Поистине, дела оцениваются по намерениям, и каждому человеку достанется то, что он намеревался обрести. Кто совершил переселение (хиджру) ради Аллаха и Его Посланника, тот переселился ради Аллаха и Его Посланника. А кто переселился ради мирских благ, которых он желает достичь, или ради женщины, на которой он хочет жениться, тот переселился ради того, к чему он стремился».</p>
+          <p class="ref">Передаёт от Умара ибн аль-Хаттаба (да будет доволен им Аллах). Аль-Бухари 1, Муслим 1907. Этим хадисом аль-Бухари открывает свой «Сахих»; у комментаторов передано, что поводом к нему послужило дело человека, который переселился ради женщины.</p>
+        </div>
+
+        <div class="box source"><span class="tag">Вес хадиса у учёных</span>
+          <p>аш-Шафи'и говорил, что этот хадис — <strong>треть знания</strong>; Абу Имран аль-Факихи называл его четвёртой частью знания. Ахмад ибн Ханбаль считал «Иннамá аль-а'мáлю би-н-ниййат» одним из трёх хадисов, на которых стоит основа религии. Причина простая: без намерения любое дело — внешняя форма. Рукъя в этом не исключение, а самый наглядный случай.</p>
+        </div>
+
+        <h4>Одна важная поправка</h4>
+        <p>Слова «дела оцениваются по намерениям» чаще читают как «важна мотивация». В арабском частица <em>иннамá</em> не оценивает — она <strong>ограничивает</strong>: у дела нет ничего, кроме его намерения. Не «намерение добавляет делу ценности», а «без намерения в деле нет того, ради чего оно вообще делается». Для заклинателя разница принципиальна: можно прочитать идеально, по всем девяти ступеням, и не получить ничего, потому что в деле не было адресата.</p>
+
+        <div class="box tip"><span class="tag">Три строки, которые я говорю себе до чтения</span>
+          <ul>
+            <li><strong>Аннулирует Аллах.</strong> Я не разбираю колдовство — я прошу Аллаха его разобрать и называю, где именно.</li>
+            <li><strong>Я — направление, не источник.</strong> «Лá хауля ва лá куатта илля билляях»: ни сдвинуть, ни удержать своя сила не может.</li>
+            <li><strong>Ответа я жду от Аллаха.</strong> Не от своих минут, не от числа повторов, не от своего состояния. «Хасбуна-Ллаху ва ни'ма-ль-Вакиль».</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="locks">
+        <div class="part"><p class="kicker">Часть I · разбор</p><h2>Три замка хадиса</h2></div>
+
+        <p>Хадис состоит из трёх скреп, и каждая открывает что-то своё в практике рукъи.</p>
+
+        <div class="grid three">
+          <div class="card"><span class="k">Замок 1</span><h4>Иннамá — ограничение</h4><p>«У дела нет ничего, кроме его намерения». Слово, произнесённое без адреса, — это звук, а не действие. Рукъя без намерения не становится слабее: её просто нет.</p></div>
+          <div class="card"><span class="k">Замок 2</span><h4>«Каждому — то, что он намеревался»</h4><p>Это не утешение, а механизм: результат приходит по адресу твоего намерения. Куда смотрит надежда — оттуда и жди ответа.</p></div>
+          <div class="card"><span class="k">Замок 3</span><h4>Пример хиджры</h4><p>Два человека делают физически одно и то же: собирают вещи и идут. Одно и то же движение — и две разные реальности. Так и две одинаковые рукъи могут быть обращением к Аллаху и работой на свой результат.</p></div>
+        </div>
+
+        <h4>Что это значит на чтении</h4>
+        <p>Возьмём самое частое смещение. Формулировка «я аннулирую этот сихр» и формулировка «прошу Аллаха аннулировать этот сихр» — одинаковы по содержанию и противоположны по адресу. Первая делает тебя действующим лицом, а Аллаха — наблюдателем, который «если пожелает» подтвердит твою работу. Вторая оставляет действующим лицом Аллаха, а тебе отдаёт то, что тебе и положено: направление, голос, внимание и терпение.</p>
+
+        <blockquote>Намерение не меняет того, кто сильнее. Оно решает, <strong>к кому ты обращаешься</strong> — и, значит, от кого дождёшься.<cite>— рабочая формулировка из моей практики</cite></blockquote>
+
+        <div class="box imp"><span class="tag">Почему это не «слова»</span>
+          <p>Пока намерение стоит на Аллахе, Аллах отвечает — по Своей милости, а не по нашей логике. Как только намерение переезжает на меня, на методику, на воду, на число повторов — отвечать становится <em>некому</em>. Остаётся моя сила, а против колдовства это ноль. Поэтому смещённое намерение не «уменьшает эффект». Оно выключает причину.</p>
+        </div>
+
+        <h4 id="locks-two">Хиджра как зеркало рукъи</h4>
+        <p>Переселение — ради Аллаха или ради женщины: дело то же, награда разная. У нас ровно те же два варианта в каждой точке практики:</p>
+
+        <div class="tablewrap"><table>
+          <caption>Одно и то же действие — два разных адресата</caption>
+          <thead><tr><th>Действие</th><th>Адрес — Аллах</th><th>Адрес — я / мирское</th></tr></thead>
+          <tbody>
+            <tr><td>Читаю над больным</td><td>Прошу Аллаха исцелить; я — причина</td><td>Показываю свою силу, закрепляю зависимость человека от меня</td></tr>
+            <tr><td>Называю зону и вид</td><td>Точность как уважение к аманату, чтобы адрес дошёл</td><td>Точность как «магия»: вера, что слово само по себе бьёт</td></tr>
+            <tr><td>Держу 3 / 7 / 21 повтор</td><td>Усердие в причине, ответ отдаю Аллаху</td><td>Упование на число: «отчитал — значит должно сработать»</td></tr>
+            <tr><td>Беру плату / веду курс</td><td>Средство на путь; результат не продаю</td><td>Торг с Аллахом: «я сделал — теперь Твоя очередь»</td></tr>
+            <tr><td>Отмечаю облегчение</td><td>Хвала Аллаху: «Это — от Аллаха»</td><td>Хвала себе: «Я смог», и следующий случай уже страшен</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="address">
+        <div class="part"><p class="kicker">Часть I · намерение</p><h2>Адресат намерения</h2></div>
+
+        <p>Намерение в хадисе — это не «сильное желание» и не «настрой». Это <strong>направление</strong>. У него есть адресат, и от адреса зависит, у кого ты ждёшь ответа. Отсюда и вся конструкция:</p>
+
+        <div class="ladder">
+          <div class="lvl">
+            <div class="medal">1</div>
+            <div>
+              <div class="lname">Кого ты просишь <span class="lar">مِن</span></div>
+              <div class="lsub">действующее лицо</div>
+              <div class="laxis">
+                <div><i>Правильно</i><span>«Аллах, аннулируй этот сихр» — прошу Того, Кто сильнее колдовства</span></div>
+                <div><i>Смещение</i><span>«я разберу», «мне надо закрыть» — Аллах превращается в подтверждение моей работы</span></div>
+              </div>
+            </div>
+            <span class="tick">ядро</span>
+          </div>
+          <div class="lvl">
+            <div class="medal">2</div>
+            <div>
+              <div class="lname">Чего ты ждёшь <span class="lar">مَا</span></div>
+              <div class="lsub">содержание ответа</div>
+              <div class="laxis">
+                <div><i>Правильно</i><span>аннулирования, исцеления, возвращения силы к Аллаху</span></div>
+                <div><i>Смещение</i><span>ощущения, подтверждения себе, «чтобы я почувствовал, что я не зря читаю»</span></div>
+              </div>
+            </div>
+            <span class="tick">ожидание</span>
+          </div>
+          <div class="lvl">
+            <div class="medal">3</div>
+            <div>
+              <div class="lname">Ради чего ты это делаешь <span class="lar">لِ</span></div>
+              <div class="lsub">цель</div>
+              <div class="laxis">
+                <div><i>Правильно</i><span>довольство Аллаха и облегчение человека</span></div>
+                <div><i>Смещение</i><span>репутация, деньги, «показать силу», страх остаться без контроля</span></div>
+              </div>
+            </div>
+            <span class="tick">ихляс</span>
+          </div>
+        </div>
+
+        <p>Первый пункт — самый дешёвый в словах и самый дорогой в практике. Легко сказать «исцеляет Аллах» в начале сеанса и начать уповать на свою интонацию к его середине. Проверка одна: <strong>куда смотрит твоя надежда в ту секунду, когда ты ждёшь результата</strong>. Не что ты сказал три минуты назад, а на что ты сейчас смотришь.</p>
+
+        <div class="box note"><span class="tag">Термин</span>
+          <p><strong>Таваккуль</strong> (التوكل) — упование, сердечная опора на Аллаха при том, что рука берёт причины. <strong>Нийя</strong> (النية) — намерение, адрес действия. <strong>Якын</strong> (اليقين) — убеждённость без «а вдруг». В моём методе это три разные вещи, и путать их нельзя: намерение задаёт адрес, упование держит опору, якын не даёт ей обесцениться в процессе.</p>
+        </div>
+      </section>
+
+      <section id="niyya">
+        <div class="part"><p class="kicker">Часть I · намерение</p><h2>Намерение с правильным субъектом</h2></div>
+
+        <p>В «Шкале усиления души» намерение разложено на пять элементов. Здесь я меняю только одно — порядок слов, потому что в нём и сидит смещение. Субъект действия должен оставаться Аллахом во всех пяти пунктах.</p>
+
+        <div class="tablewrap"><table>
+          <caption>Пять элементов намерения — с указанием действующего лица</caption>
+          <thead><tr><th>Элемент</th><th>Вопрос</th><th>Кто отвечает</th><th>Как звучит правильно</th></tr></thead>
+          <tbody>
+            <tr><td>Субъект</td><td>Кто аннулирует?</td><td><b>Аллах</b></td><td>«Прошу Аллаха аннулировать»</td></tr>
+            <tr><td>Моя роль</td><td>А я тогда кто?</td><td><b>Раки, причина</b></td><td>«Я читаю, называю адрес и держу внимание»</td></tr>
+            <tr><td>Объект</td><td>На кого читаю?</td><td><b>Я называю</b></td><td>Конкретный человек, конкретная зона</td></tr>
+            <tr><td>Инструмент</td><td>Чем?</td><td><b>Слово Аллаха</b></td><td>Аяты, дуа из Сунны, дозволенные формулы</td></tr>
+            <tr><td>Цель</td><td>Ради чего?</td><td><b>Довольство Аллаха</b></td><td>Не похвала, не гонорар, не «доказать себе»</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="formula">
+          <p class="ar">نَوَيْتُ أَنْ أَقْرَأَ الرُّقْيَةَ الشَّرْعِيَّةَ عَلَى فُلَانٍ، رَاجِيًا أَنْ يُبْطِلَ اللهُ السِّحْرَ وَيُذْهِبَ الضَّرَرَ، وَيَكُونَ الشِّفَاءُ مِنْ عِنْدِ اللهِ</p>
+          <p class="translit">Навайту ан акра'а р-рукъия аш-шар'ийя 'аля фулян, раджийан ан йубтиля-Ллаху-с-сихра ва йузхиба-д-дарра, ва йакун аш-шифа' мин 'инди-Ллах.</p>
+          <p class="trans">«Я намереваюсь прочитать шариатскую рукъю над [имя], упождая на то, что Аллах аннулирует колдовство и устранит вред, и что исцеление — от Аллаха».</p>
+          <p class="why">Рабочая формулировка (не хадис). Заметь распределение: «навайту» — про меня и про действие, которое действительно моё (читать); «ан йубтиля-Ллаху» — про то, что моим быть не может (аннулировать). Слово «раджийан» — упование на ответ — стоит в середине и держит всю конструкцию.</p>
+        </div>
+
+        <div class="box"><span class="tag">Важно про произнесение</span>
+          <p>Место намерения — сердце, а не язык; учёные прямо говорили, что произнесение вслух не является условием. Формула нужна мне как инструмент собирания: она задаёт адрес до чтения, чтобы внимание не искало его по ходу. Если я успел только подумать «Аллах, аннулируй это у этого человека в этой зоне» — намерение есть. Если я красиво произнёс, но внутри смотрю на себя — намерения нет.</p>
+        </div>
+
+        <h4>Две формулировки, одна рука</h4>
+        <div class="vs">
+          <div class="col good"><span class="k">Адрес — Аллах</span>
+            <ul>
+              <li>«О Аллах, аннулируй этот сихр; я направляю чтение сюда»</li>
+              <li>«Исцеление — от Тебя, я прошу Твоего ответа»</li>
+              <li>«Я читаю — Ты действуешь»</li>
+              <li>После: «Это — от Аллаха»</li>
+            </ul>
+          </div>
+          <div class="col bad"><span class="k">Адрес — я / метод</span>
+            <ul>
+              <li>«Мне надо сломать это поражение»</li>
+              <li>«Если я правильно отчитаю 21 раз — уйдёт»</li>
+              <li>«Сейчас я в сильном состоянии, должно взять»</li>
+              <li>После: «Я смог» — и страх перед следующим случаем</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="small">Практический признак подмены: во втором столбце тебе <strong>страшно</strong>. Страх — всегда маркер того, что ответственность за результат повесили на того, кто его нести не может. У уповающего тоже есть старание, но нет этой тяжести.</p>
+      </section>
+
+      <section id="answer">
+        <div class="part"><p class="kicker">Часть I · ответ</p><h2>«Каждому человеку достанется то, что он намеревался»</h2></div>
+
+        <p>Вторая половина хадиса — это закон, а не обещание. <strong>Ответ приходит по адресу намерения.</strong> Если я намеревался, чтобы аннулировал Аллах, — мне придёт аннулирование от Аллаха, даже если придёт не так и не тогда, как я себе нарисовал. Если я намеревался «чтобы получилось у меня», — мне останется моё: старание, голос, усталость и страх. Ровно то, на что я реально рассчитывал.</p>
+
+        <div class="box source"><span class="tag">Пророческое подкрепление</span>
+          <p>Аллах передаёт в хадисе кудси: «<strong>Я отношусь к рабу так, как он думает обо Мне</strong>, — пусть думает обо Мне как пожелает» (аль-Бухари 7405, Муслим 2675). И в другой версии: «Если он позовёт Меня — Я отвечу ему» (аль-Бухари 6401). Ожидание ответа — не украшение чтения, а часть его адреса.</p>
+        </div>
+
+        <h4>Три формы ответа</h4>
+        <p>Ждать ответа Аллаха — значит знать, что Он отвечает всегда, но тремя разными способами. Пророк (да благословит его Аллах и приветствует) сказал: нет мусульманина, который обратился бы с мольбой, в которой нет греха и разрыва родственных уз, кроме как Аллах даст ему одно из трёх: либо ускорит его мольбу, либо сохранит её для него в Ахирате, либо отведёт от него зло в том же размере (Ахмад; оценён как достоверный рядом учёных).</p>
+
+        <div class="grid three">
+          <div class="card"><span class="k">Форма 1</span><h4>Да — сейчас</h4><p>Облегчение на сеансе или в 72 часа. Здесь главная опасность — не радость, а присвоение: «это моё чтение сработало».</p></div>
+          <div class="card"><span class="k">Форма 2</span><h4>Да — но позже</h4><p>Ответ отсрочен по милости, а не по отказу. Моя работа в этом случае — держать курс и не объявлять провал на третий день.</p></div>
+          <div class="card"><span class="k">Форма 3</span><h4>Да — в ином виде</h4><p>Отведено иное зло, сохранено в Ахирате. Это самый трудный для намерения ответ: он выглядит как «ничего», если смотреть на себя.</p></div>
+        </div>
+
+        <div class="formula">
+          <p class="ar">إِذَا دَعَا أَحَدُكُمْ فَلْيُعْزِمْ فِي الدُّعَاءِ، وَلَا يَقُلْ: اللَّهُمَّ إِنْ شِئْتَ فَأَعْطِنِي، فَإِنَّ اللَّهَ لَا مُكْرِهَ لَهُ</p>
+          <p class="translit">Иза да'а ахадкум фальйу'зим фи-д-ду'á', ва лá йакуль: Аллахумма ин шита фа-а'тини, фа-инна-Ллаха лá мукриха лях.</p>
+          <p class="trans">«Когда кто-либо из вас обращается с мольбой, пусть будет решителен в мольбе и не говорит: “О Аллах, если пожелашъ — даруй мне”, — ибо поистине, нет никого, кто мог бы принудить Аллаха».</p>
+          <p class="why">Аль-Бухари 6339, Муслим 2679. Это прямо про конструкцию намерения в рукъе: приказ поражению и просьба к Аллаху произносятся как решимость («Аллах аннулирует это сейчас»), а не как робкое «если Тебе удобно». Оговорка «ин шаАллах» нужна про результат, а не про волю Аллаха — см. раздел «Границы».</p>
+        </div>
+
+        <div class="box imp"><span class="tag">Чего не должно быть в намерении</span>
+          <ul>
+            <li><strong>Торга.</strong> «Я отчитал 21 раз — значит, Ты обязан». Обязывать Аллаха — значит переставить себя на место действующего лица.</li>
+            <li><strong>Условия.</strong> «О Аллах, аннулируй, если сочтёшь этого человека достойным». Достойны не мы; милость шире.</li>
+            <li><strong>Отчётности себе.</strong> «Хочу убедиться, что я могу». Это намерение про себя, и ответ придёт про себя — то есть ничего.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="roles">
+        <div class="part"><p class="kicker">Часть II · действующее лицо</p><h2>Кто что делает</h2></div>
+
+        <p>Ниже — единственная таблица, которую стоит выучить наизусть до того, как вообще начать брать случаи. Она снимает 90 % выгорания заклинателя: почти всё, что в ней тяжело, происходит от приписанных себе чужих функций.</p>
+
+        <div class="tablewrap"><table>
+          <caption>Распределение ролей в рукъе</caption>
+          <thead><tr><th>Кто</th><th>Что делает</th><th>Чего он НЕ делает</th></tr></thead>
+          <tbody>
+            <tr><td><b>Аллах</b></td><td>Аннулирует колдовство, исцеляет, отвечает на мольбу, даёт баракя, держит исход</td><td>Не обязан нашей процедуре, не измеряется нашими повторами, не «выполняет заказ»</td></tr>
+            <tr><td><b>Читающий (раки)</b></td><td>Намеревается, называет адрес, читает, держит внимание и этику, просит, передаёт результат</td><td>Не аннулирует, не исцеляет, не гарантирует срок, не отвечает за чужое сердце</td></tr>
+            <tr><td><b>Слово (Коран, дуа)</b></td><td>Является причиной (сабаб) и носилем милости; аят — сильный, когда за ним стоит говорящий Аллах</td><td>Не работает механически, не «звучит как заклинание само по себе», не заменяет адресата</td></tr>
+            <tr><td><b>Вода, масло, дуновение</b></td><td>Дозволенные средства-причины, усиливают собранность и передачу</td><td>Не хранят силу, не «заряжаются», не являются опорой</td></tr>
+            <tr><td><b>Поражение (сихр, масс, 'айн)</b></td><td>Разрушается, уходит, слабеет — по воле Аллаха</td><td>Не обладает собственной властью над Аллахом; не боится моего голоса</td></tr>
+            <tr><td><b>Сам больной (пациент)</b></td><td>Читает сам, держит защиту, действует, не торопит</td><td>Не остаётся «лечиться у меня» навсегда; его упование — его ответственность</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box tip"><span class="tag">Моя формула на каждый сеанс</span>
+          <p>«Я направляю — Аллах аннулирует». Направление — это адрес, точность, повтор, голос, внимание, этика. Аннулирование — не моё. Я ни разу не видел, чтобы колдовство разбирали усердием; я видел, как его разбирает Аллах по Своей милости — по слову, сказанному с правильным адресом.</p>
+        </div>
+
+        <h4>Приказ и доверенность</h4>
+        <p>«Выходи, о болезнь, с именем Аллаха!» — это приказ. Но приказ в рукъе устроен как приказ по доверенности: как полицейский, останавливающий машину. Он поднимает руку не потому, что сильнее автомобиля, а потому что за ним стоит власть, которая сильнее. Кто забудет, от чьего имени говорит, — тот либо испугается, либо начнёт верить, что он сам сильнее. Оба варианта заканчиваются одинаково: упованием на себя.</p>
+
+        <div class="formula">
+          <p class="ar">لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</p>
+          <p class="translit">Лá хауля ва лá куатта илля билляях.</p>
+          <p class="trans">«Нет мощи и нет силы ни у кого, кроме как у Аллаха».</p>
+          <p class="why">Эта фраза — не украшение, а отключение опоры на себя. Я говорю её трижды до намерения и один раз после каждого «удара», если внутри появилось ощущение «я это сделал». Передано, что она — «сокровище под Троном» (аль-Бухари, Муслим).</p>
+        </div>
+      </section>
+
+      <section id="sunna">
+        <div class="part"><p class="kicker">Часть II · действующее лицо</p><h2>Формула Сунны: я читаю — Аллах исцеляет</h2></div>
+
+        <p>Самое сильное доказательство этой конструкции — не мои слова и не «Влияние волей», а формула рукъи, которой Джибриль читал над Пророком (да благословит его Аллах и приветствует). В ней это разделение субъектов сделано прямо в тексте формулы:</p>
+
+        <div class="hadith">
+          <span class="lbl">Текст</span>
+          <p class="arq">بِسْمِ اللهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ، مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنِ حَاسِدٍ، اللهُ يَشْفِيكَ</p>
+          <span class="lbl">Транскрипция</span>
+          <p class="translit">Бисми-Ллахи аркика, мин кулли шай'ин йу'зика, мин шарри кулли нафсин ау 'айни хасид, Аллаху йашфика.</p>
+          <span class="lbl">Перевод</span>
+          <p class="tr">«С именем Аллаха я читаю над тобой рукъю — от каждой вещи, которая причиняет тебе вред, от зла любой души и завистливого глаза. Аллах исцелит тебя».</p>
+          <p class="ref">Сахих Муслим 2185 (от 'Аиши). Ср. аль-Бухари 5743: «Аллахумма, Рабба-н-нас, устрани тяжесть, исцели — Ты исцеляющий, нет исцеления кроме Твоего».</p>
+        </div>
+
+        <p>Две глагольные формы в одном дуа: <em>аркика</em> — «я читаю» (первое лицо, моё действие, моя ответственность за направление) и <em>йашфика</em> — «исцеляет» (Аллах, первое лицо уже не моё). Это ровно то, что я называю «аркый → яшфиний», только здесь это сказал не я.</p>
+
+        <div class="grid two">
+          <div class="card"><span class="k">Первое лицо уместно</span><h4>В действии причины</h4><p>«Я читаю», «я называю», «я прошу», «я направляю сюда». Снятие с себя первого лица здесь — пассивность, а не упование. Метод требует, чтобы исполнитель был назван.</p></div>
+          <div class="card"><span class="k">Первое лицо неуместно</span><h4>В действии Исцеляющего</h4><p>«Я исцеляю», «я аннулирую», «я сниму навсегда», «я гарантирую». Здесь первое лицо — ширк в практическом смысле: приписывание себе того, что принадлежит Аллаху.</p></div>
+        </div>
+
+        <div class="box note"><span class="tag">Отсюда правило проверки веса слов</span>
+          <p>Прежде чем усиливать формулу, проверь, куда она смотрит. Формула с правильным субъектом держит вес при любом голосе. Формула, в которой ты — действующее лицо, обесценивается на первом же сомнении, потому что её опора — твоя устойчивость, а она конечна.</p>
+        </div>
+      </section>
+
+      <section id="method">
+        <div class="part"><p class="kicker">Часть II · метод</p><h2>«Хитаб Исаба» не меняет действующее лицо</h2></div>
+
+        <p>Мой метод — самый «действующий» по языку: первое лицо, приказ, адрес в орган, требование уйти. И именно поэтому он опаснее мягкого чтения: он напрашивает ошибку «это я». Разберём по ступеням, кто на самом деле работает в каждой точке.</p>
+
+        <div class="tablewrap"><table>
+          <caption>Девять ступеней — и распределение действия</caption>
+          <thead><tr><th>Ступень</th><th>Как звучит</th><th>Кто действительно действует</th></tr></thead>
+          <tbody>
+            <tr><td>1. Нийя и ирада</td><td>«Я намереваюсь…, я действую»</td><td>Я выбираю адрес; силу выбора даёт Аллах</td></tr>
+            <tr><td>2. Тахара и истиаза</td><td>«Аузу би-Лляхи мин аш-шайтани р-раджим»</td><td>Аллах защищает; я прошу защиты</td></tr>
+            <tr><td>3. Локализация</td><td>«Здесь, в груди, мин ас-сихр»</td><td>Я навожу; Аллах знает, куда бить</td></tr>
+            <tr><td>4. Сердечное чтение</td><td>Накопление 40–100 про себя</td><td>Я собираю; полноту в груди даёт Аллах</td></tr>
+            <tr><td>5. Аркый</td><td>«Бисмилляхи арки…»</td><td>Я начинаю причину; ответ — за Ним</td></tr>
+            <tr><td>6. Хитаб</td><td>«Выходи, развязывайся, сгорай»</td><td>Приказ по доверенности; исполняет Аллах</td></tr>
+            <tr><td>7. Изгнание / тахриж</td><td>Усиление, 3 / 7 / 21, нафс</td><td>Я усиливаю причину; выход даёт Аллах</td></tr>
+            <tr><td>8. Проход по телу</td><td>Зона за зоной</td><td>Я веду порядок; очистку делает Аллах</td></tr>
+            <tr><td>9. Закрытие</td><td>«Аллаху яшфиний», печать, «Хасбуна-Ллах»</td><td>Я возвращаю результат Аллаху и полагаюсь на Него</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box imp"><span class="tag">Точка, в которой метод ломается</span>
+        <p>Метод перестаёт быть методом в ту секунду, когда его начинают считать <strong>силой</strong>. Структура, повторность, адресность, «проход по зонам» — это дисциплина направления, а не источник воздействия. Метод — это прицел, а не выстрел и не порох. Прицел без стрелка бесполезен; стрелок без прицела неточен; но называть прицел оружием — значит забыть, Кто даёт результат.</p>
+        </div>
+
+        <h4>Как правильно относиться к своему методу</h4>
+        <ul>
+          <li><strong>Любить его как причину</strong>, а не как опору. Причина нужна; опора — только Аллах.</li>
+          <li><strong>Быть готовым читать без него.</strong> Если нет схемы, нет записи, человек рядом стонет, — читай аль-Фатиху и проси Аллаха. Метод не условие милости.</li>
+          <li><strong>Не проверять Аллаха схемой.</strong> «Я всё сделал по методу, почему нет ответа?» — это торг из раздела «Чего не должно быть в намерении».</li>
+          <li><strong>Не передавать людям метод как талисман.</strong> Учу человека читать самому — не «носить мой обряд».</li>
+        </ul>
+      </section>
+
+      <section id="idol">
+        <div class="part"><p class="kicker">Часть II · действующее лицо</p><h2>Идол методики</h2></div>
+
+        <p>Называть так грубо — и правильно. Идол в рукъе почти никогда не выглядит как статуя: он выглядит как «то, на что я реально рассчитываю, когда мне тяжело». Проверка одна: <strong>на что ты смотришь в момент, когда результат не приходит?</strong> Вот куда смотрит большинство из нас.</p>
+
+        <div class="tablewrap"><table>
+          <caption>Скрытые опоры, их запах и лечение</caption>
+          <thead><tr><th>На что упование переехало</th><th>Как это звучит внутри</th><th>Признак</th><th>Лечение</th></tr></thead>
+          <tbody>
+            <tr><td>Число повторов</td><td>«Отчитаю 21 — должно уйти»</td><td>Считает голосом и злится на сбитый счёт</td><td>Сказать вслух: «число — моя дисциплина, ответ — у Аллаха»; сделать паузу и продолжить с 1 без злости</td></tr>
+            <tr><td>Своё состояние</td><td>«Сегодня я чистый — возьмёт»</td><td>Откладывает чтение ради «правильного дня»</td><td>Читать сегодня, зная, что чистота — дар, а не мой ресурс</td></tr>
+            <tr><td>Начитанную воду / масло</td><td>«Без начитанной воды слабее»</td><td>Тревога, если вода кончилась</td><td>Прочитать прямо на человека; вода — причина, не действующее лицо</td></tr>
+            <tr><td>Метод / таблицу</td><td>«По методу должно было сработать»</td><td>Раздражение на схему, «неполнота» протокола</td><td>Напоминание: прицел не выстрел; добавить мольбу без схемы</td></tr>
+            <tr><td>Себя как лекаря</td><td>«Я не могу позволить себе не справиться»</td><td>Страх перед сложным случаем, желание не отпускать пациента</td><td>Сказать «Лá хауля ва лá куатта илля билляях»; вернуть результат Аллаху вслух</td></tr>
+            <tr><td>Ощущением</td><td>«Если жар/давление — значит есть»</td><td>Прислушиваться к телу вместо чтения</td><td>Оценка — после сеанса; во время чтения только адрес</td></tr>
+            <tr><td>Опытом / статистикой</td><td>«У меня 300 таких ушло»</td><td>Уверенность до чтения, паника после сбоя</td><td>Опыт — милость, а не право; каждый случай новый</td></tr>
+            <tr><td>Святым / духом-помощником</td><td>«Спрошу у него», «он сильнее держит»</td><td>Обращение не к Аллаху за причиной</td><td>Полный отказ: никаких посредников, никаких «помощников»</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box tip"><span class="tag">Одна фраза против любого идола</span>
+          <p>«Это — причина. Действующий — Аллах. Ответа я жду от Него». Произнеси её вслух в тот момент, когда поймаешь себя на расчёте на что-то, кроме Аллаха. Не нужно менять формулу, менять метод или начинать заново — нужно вернуть адрес.</p>
+        </div>
+
+        <p class="small">Замечу отдельно: упование не отменяет причин. «Ради таваккуля» бросить начатое лечение, не читать защиту, не держать режим — не упование, а самонадеянность. Аллах дал нам и лекарство как причину, и Коран как причину: берём обе причины, а опору держим на Том, Кто делает их действенными.</p>
+      </section>
+
+      <section id="tawakkul">
+        <div class="part"><p class="kicker">Часть III · упование</p><h2>Что такое таваккуль</h2></div>
+
+        <p>Таваккуль — это не «мне всё равно, потому что я верующий» и не «я ничего не делаю, Аллах разберётся». Это внутренняя опора сердца на Аллаха <strong>при работающей руке</strong>. Пророк (да благословит его Аллах и приветствует) сказал:</p>
+
+        <div class="hadith">
+          <span class="lbl">Текст</span>
+          <p class="arq">لَوْ أَنَّكُمْ تَتَوَكَّلُونَ عَلَى اللهِ حَقَّ تَوَكُّلِهِ لَرَزَقَكُمْ كَمَا يَرْزُقُ الطَّائِرَ تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا</p>
+          <span class="lbl">Транскрипция</span>
+          <p class="translit">Ляу анкум татаваккалюна 'аля-Ллахи хакка таваккулихи ля-разаккум кáма йарзуку-т-тáира, тагду химáсан ва таруху битанá.</p>
+          <span class="lbl">Перевод</span>
+          <p class="tr">«Если бы вы уповали на Аллаха по-настоящему, Он наделял бы вас так, как наделяет птицу: она вылетает утром с пустым брюхом и возвращается вечером сытой».</p>
+          <p class="ref">От Умара ибн аль-Хаттаба. Ат-Тирмизи 2344, Ибн Маджа 4164 — хасан/сахих.</p>
+        </div>
+
+        <p>В этой картинке две половины, и обе обязательны. Птица <strong>вылетает</strong> — это мои причины: намерение, адрес, чтение, повтор, режим, лечение. И она <strong>не сама себя кормит</strong> — это результат от Аллаха. Кто не вылетает, тот не уповает, а сидит голодным и называет это верой. Кто вылетает и думает, что прокормил себя, — тот уповает на свои крылья.</p>
+
+        <div class="grid three">
+          <div class="card"><span class="k">Сердце</span><h4>Опора</h4><p>Убеждённость, что дело в руках Аллаха, а не в моих крыльях. Здесь живёт таваккуль.</p></div>
+          <div class="card"><span class="k">Рука</span><h4>Причина</h4><p>Читаю, называю, держу курс, беру лечение, не ленюсь. Здесь живёт азм.</p></div>
+          <div class="card"><span class="k">Язык</span><h4>Просьба</h4><p>Дуа с решимостью, без «если Тебе удобно». Здесь живёт ожидание ответа.</p></div>
+        </div>
+
+        <div class="box source"><span class="tag">Кораническая опора</span>
+          <ul>
+            <li>«…а когда решил (‘азамта), — уповай на Аллаха. Поистине, Аллах любит уповающих» (Аль Имран 3:159).</li>
+            <li>«…кто упует на Аллаха, тому Аллах — достаточен» (Ат-Талак 65:3).</li>
+            <li>«Ваш Господь сказал: взывайте ко Мне, и Я отвечу вам» (Гафир 40:60).</li>
+            <li>«Когда Мои рабы спрашивают тебя обо Мне — поистине, Я близок. Я отвечаю на призыв зовущего, когда он взывает ко Мне» (Аль Бакара 2:186).</li>
+            <li>«Или кто отвечает на сетующего, когда он взывает к Нему, и снимает зло?» (Ан-Намль 27:62).</li>
+          </ul>
+        </div>
+
+        <p>Обрати внимание на порядок в аяте 3:159: сначала <strong>решимость</strong> («когда решил»), потом <strong>упование</strong>. Не наоборот. Тот, кто сначала «уповает», а потом всё никак не решится начать чтение, путает таваккуль с отговоркой.</p>
+      </section>
+
+      <section id="not">
+        <div class="part"><p class="kicker">Часть III · упование</p><h2>Чем таваккуль не является</h2></div>
+
+        <div class="tablewrap"><table>
+          <caption>Четыре состояния, которые путают с упованием</caption>
+          <thead><tr><th>Состояние</th><th>Где опора</th><th>Как действует</th><th>Что делает с задержкой ответа</th></tr></thead>
+          <tbody>
+            <tr><td><b>Таваккуль</b> (истинное упование)</td><td>Аллах</td><td>Берёт все доступные причины: читает, лечится, держит режим</td><td>Терпит, продолжает, не торопит: «ответ придёт по милости»</td></tr>
+            <tr><td><b>Ложное упование</b> (ат-таваккур: оставление причин)</td><td>Иллюзия «Аллах сам»</td><td>Ничего не делает, называя это верой</td><td>Обвиняет Аллаха в своём бездействии</td></tr>
+            <tr><td><b>Надежда на себя</b></td><td>Своё усердие, опыт, состояние</td><td>Работает много, но смотрит на себя</td><td>Падает в уныние: «я всё сделал, значит я не смог»</td></tr>
+            <tr><td><b>Упование на причину</b></td><td>Вода, метод, число, лекарь, святой</td><td>Формально всё делает, но ждёт от средства</td><td>Наращивает средство: ещё повторы, ещё воды, ещё «усилителей»</td></tr>
+            <tr><td><b>Торг</b></td><td>Собственная правота</td><td>Читает как выполнение плана</td><td>Требует: «я же читал, почему не ушло?»</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box imp"><span class="tag">Практическое следствие для пациента</span>
+          <p>Если человек «уповает на Аллаха» и потому бросает назначенное врачом лечение, — это не таваккуль. Аллах дал и лекарство как причину, и Коран как причину: берём обе. Формулировка, которую я даю таким: «О Аллах, я беру то, что Ты сделал причинами, и прошу действия у Тебя. Отмена причины не является упованием, потому что брать причины — часть упования».</p>
+        </div>
+
+        <div class="box note"><span class="tag">Откуда берется страх</span>
+          <p>В моём каталоге душевных загрязнений <strong>страх</strong> (الخوف) лечится именно «бесстрашием и упованием на Аллаха» — не тем, что я сильнее, а тем, что опора моя в том, кто сильнее колдовства, зависти и джинна. Страх на чтении — это почти всегда признак смещённого намерения: когда действующее лицо — я, бояться есть кого.</p>
+        </div>
+      </section>
+
+      <section id="three">
+        <div class="part"><p class="kicker">Часть III · упование</p><h2>Три действия: азм — таваккуль — тасвим</h2></div>
+
+        <p>Упование — не одно мгновение «я верю», а последовательность из трёх актов. Я держу их как каркас любого сеанса: до чтения, в чтении, после чтения.</p>
+
+        <ul class="timeline">
+          <li><span class="t">До · <span class="art">أَلْعَزْم</span></span><b>Решимость (азм)</b>
+            <p>Чёткое намерение без «если получится»: кого, где, от чего, прошу у Аллаха. В хадисе: «пусть будет решителен в мольбе». Здесь я называю адрес и не оставляю себе лазейки для оправдания потом.</p></li>
+          <li><span class="t">Во · <span class="art">التَّوَكُّل</span></span><b>Упование (таваккуль)</b>
+            <p>Я читаю и одновременно держу в сердце: «действие — не моё». Внимание на адресе, а не на ощущениях; счёт повторам — дисциплина, а не опора. Именно здесь чаще всего утекает: не в начале, а на середине формулы.</p></li>
+          <li><span class="t">После · <span class="art">التَّفْوِيض</span></span><b>Передача дела (тасвим)</b>
+            <p>«Хасбуна-Ллаху ва ни'ма-ль-Вакиль» — делаю причину и отдаю результат Тому, Кто им распоряжается. Не «я закончил и жду», а «я сделал своё, теперь Твоя очередь» — с полным отсутствием права требовать.</p></li>
+        </ul>
+
+        <div class="formula">
+          <p class="ar">حَسْبُنَا اللهُ وَنِعْمَ الْوَكِيلُ</p>
+          <p class="translit">Хасбуна-Ллаху ва ни'ма-ль-Вакиль.</p>
+          <p class="trans">«Достаточно нам Аллаха, и Он — лучший Покровитель».</p>
+          <p class="why">Аль-Бухари 4563: эти слова произнёс Ибрахим, когда его бросили в огонь, и произнёс их Мухаммад (да благословит его Аллах и приветствует), когда люди сказали «собраны против вас войска». Это формула тасвима: не отказ от действия, а передача результата после действия. В моём методе — финал курса и конец сеанса.</p>
+        </div>
+
+        <div class="box drill"><span class="tag">Как это ложится на девять ступеней</span>
+          <ul>
+            <li><strong>Азм</strong> закрывает ступени 1–3: намерение, чистый вход, локализация.</li>
+            <li><strong>Таваккуль</strong> держит ступени 4–8: сердечное чтение, «аркый», хитаб, изгнание, проход.</li>
+            <li><strong>Тасвим</strong> — ступень 9: «Аллаху яшфиний», защитные суры, благодарность, наставление пациенту, журнал.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="mechanism">
+        <div class="part"><p class="kicker">Часть III · упование</p><h2>Механизм: как упование совершается в душе</h2></div>
+
+        <p class="lead">Нийя назвала действующее лицо — Аллах. Это не вывод для ума, а перемена в том, кто несёт дело. Если аннулирует Он, то перед первым словом я делаю в душе то, что соответствует нийе: обращаюсь к Нему и опираюсь на Него. Упование — не настроение перед чтением и не добавка к нему. Это акт сердца, без которого нийя остаётся правильной фразой с пустым адресом.</p>
+
+        <h4>Почему нийя без упования не работает</h4>
+        <p>Из нийи «чтобы Аллах аннулировал» следуют четыре вещи, и все четыре — действия, а не слова. Просить — у Него (дуа). Опираться — на Него (таваккуль). Ждать — от Него (ожидание). Отдать исход — Ему (тафвид). Пропусти второе — и первое станет формулой, третье превратится в проверку себя, а четвёртое — в притязание.</p>
+        <p>Внешне всё на месте: нийя сказана, суры прочитаны, адрес назван. Внутри дело осталось в моих руках, и я жду от своего чтения. Это и есть скрытая подмена: правильные слова при неверном ожидании.</p>
+
+        <div class="box imp"><span class="tag">Где это видно</span>
+          <p>Не в словах, а в промежутке: <strong>на что смотрит надежда между двумя аятами</strong>. Если на голос, на число, на своё состояние — нийя была произнесена, но не принята сердцем. Действующее лицо осталось за творением, а Творец был только назван.</p>
+        </div>
+
+        <h4>Два столпа акта</h4>
+        <p>Упование стоит на двух вещах, и обе — не слова. Первая: <strong>знание</strong>, что дело в руке Аллаха и что Он способен, — «кто уповает на Аллаха, тому Он достаточен» (65:3), «а когда решил — уповай на Аллаха» (3:159). Вторая: <strong>движение сердца</strong>, которым оно перестаёт держать дело само и кладёт его на Него.</p>
+        <p>Знание без движения — теория. Движение без знания — самоуспокоение, которое рассыпается на первом сомнении. Упование — это когда знание стало опорой. Я называю это переносом веса: пока вес на мне, я напряжён; когда он переложен, я ровен и продолжаю читать.</p>
+
+        <h4>Пять движений одного акта</h4>
+        <ul class="timeline">
+          <li><span class="t">1 · <span class="art">عَجْز</span></span><b>«Не могу» — признание</b>
+            <p>Первое движение — честность, а не отчаяние. Я смотрю на сихр и говорю себе: развязать это моя рука не может. Не «я слабый», а «это не моё». Признак: уходит внутреннее «должно сработать». Блок: страх выглядеть бессильным.</p></li>
+          <li><span class="t">2 · <span class="art">قُدْرَة</span></span><b>«Он может» — взгляд</b>
+            <p>Второе — перевести взгляд с размера болезни на размер Того, Кто её разбирает. Не фантазия и не образ: знание из аята и из хадиса о птице. Признак: болезнь перестаёт быть больше Того, к Кому я обращаюсь.</p></li>
+          <li><span class="t">3 · <span class="art">اِعْتِمَاد</span></span><b>«Кладу» — перенос веса</b>
+            <p>Третье — сам акт. Я не уговариваю себя, что уповаю; я перестаю держать. В теле это видно: плечи опускаются, дыхание уходит ниже, темп выравнивается, спешка прекращается. Если тело осталось сжатым, акт не совершён: слова были раньше него.</p></li>
+          <li><span class="t">4 · <span class="art">تَفْوِيض</span></span><b>«Не моё» — передача</b>
+            <p>Четвёртое — отпустить не только исход, но и его форму и срок. Аннулирует Аллах — значит, «как» и «когда» тоже Его. Признак: исчезает торг и желание назначить дату. Блок: страх, что без контроля ничего не произойдёт.</p></li>
+          <li><span class="t">5 · <span class="art">سُكُون</span></span><b>«Ровно» — продолжение</b>
+            <p>Пятое — не пассивность, а ровное продолжение. Упование не отменяет чтение, повтор, адрес; оно снимает с них тяжесть, которую они не могут нести. Признак: я читаю так же внимательно, но без надрыва.</p></li>
+        </ul>
+
+        <div class="box note"><span class="tag">Чего в этом акте нет</span>
+          <ul>
+            <li><strong>Чувства.</strong> Ждать «ощущения упования» — значит поставить новое условие и найти нового идола. Оно может быть сухим и при этом верным.</li>
+            <li><strong>Счёта.</strong> Не три, не семь и не сорок: это не зикр с числом, а движение сердца.</li>
+            <li><strong>Позы.</strong> Особая поза не даёт сердцу опоры; она лишь убирает лишнее движение.</li>
+            <li><strong>Проверки.</strong> Следить за сердцем каждые десять секунд — то же прислушивание, что и к телу, только тоньше.</li>
+            <li><strong>Гарантии.</strong> Упование не обещает исход; оно ставит на Того, Кто им распоряжается.</li>
+          </ul>
+        </div>
+
+        <h4>Перед первым словом: девяносто секунд</h4>
+        <ol class="steps">
+          <li><b>Нийя вслух.</b> Одна строка: «Аллахумма, инни акра'у би-ль-Курани ли-ан тубтиля-с-сихр…». Не пересказ и не объяснение — адрес.<span class="say">«Я читаю Кораном, чтобы Ты аннулировал. Не я».</span></li>
+          <li><b>Три вопроса.</b> Кто аннулирует? — Аллах. Что моё? — читать, называть, держать внимание. Чего я жду? — Его ответа, не своего ощущения.<span class="say">«Аннулирует Аллах. Читаю я. Жду от Него».</span></li>
+          <li><b>Признание своими словами.</b> «Я не могу этого развязать. Ты можешь». Одна фраза, без формулы, своим языком — чтобы это было моё, а не заученное.<span class="say">«Это не в моей руке».</span></li>
+          <li><b>Одна дуа.</b> Из тех, что ниже, — не все подряд. Одна, с пониманием, без спешки.<span class="say">«Аллахумма, рахматака арджу, фа-ля такильни иля нафси…».</span></li>
+          <li><b>Пауза.</b> Пять–десять секунд молчания. Не проверять чувства и не искать «тепло»: оставить дело там, где его положил.</li>
+          <li><b>Первое слово.</b> Истиаза и чтение — без паузы на сомнение. Намерение сказано, дело начато.<span class="say">«Аузу би-Лляхи мин аш-шайтани р-раджим».</span></li>
+        </ol>
+        <p>Всё вместе — полторы минуты. Если времени нет, остаются три вопроса, признание и одна дуа. Это ядро; остальное — порядок, который его защищает.</p>
+
+        <h4>Как проверить, что упование присутствует</h4>
+        <p>Проверка делается до чтения и после него, а не внутри. Внутри держится только адрес: кто проверяет упование посреди формулы, теряет и формулу, и упование.</p>
+        <div class="tablewrap"><table>
+          <caption>Шесть признаков: упование и его подмена</caption>
+          <thead><tr><th>Признак</th><th>Упование есть</th><th>Упования нет</th></tr></thead>
+          <tbody>
+            <tr><td>Речь</td><td>«прошу», «жду от Него»</td><td>«должно сработать», «надо взять»</td></tr>
+            <tr><td>Тело</td><td>Плечи опущены, дыхание ровное, челюсть не сжата</td><td>Зажатость, задержанное дыхание, желание закончить раньше</td></tr>
+            <tr><td>Темп</td><td>Ровный, без рывков</td><td>То быстрее, то пауза «послушать, что происходит»</td></tr>
+            <tr><td>Срок</td><td>«Когда — Его дело»</td><td>«Должно уйти за этот сеанс»</td></tr>
+            <tr><td>После сеанса</td><td>Возвращаюсь к обычным делам и к следующему человеку</td><td>Прокручиваю «а вдруг не ушло», проверяю тело</td></tr>
+            <tr><td>В чтении</td><td>Адрес и слово</td><td>Прислушивание, счёт как опора, репетиция интонации</td></tr>
+          </tbody>
+        </table></div>
+        <p>Это не экзамен и не оценка. Это карта: по ней видно, куда ушёл вес, — и куда его вернуть.</p>
+
+        <h4>Если упования нет</h4>
+        <ol class="steps">
+          <li><b>Не начинай на автомате.</b> Двадцать секунд честности дешевле, чем сеанс с пустым адресом.</li>
+          <li><b>Назови помеху.</b> Страх, спешка, вина, сомнение, желание результата. У каждой своё лечение: страх — таухид и «Ля хауля»; спешка — срок; вина — тауба; сомнение — знание обещания; желание результата — возврат к «аннулирует Аллах».</li>
+          <li><b>Верни адрес одной фразой.</b> Продолжи, не начиная всё заново: «это причина, действующий — Аллах, ответа жду от Него».</li>
+          <li><b>Читай как причину.</b> Не ожидай настроения: упование — не настроение, оно может быть сухим и при этом верным.</li>
+        </ol>
+
+        <div class="box imp"><span class="tag">Правило</span>
+          <p>Отсутствие чувства — не доказательство отсутствия упования. Доказательство — направление, а не накал. И обратное верно: тёплое чувство не является доказательством присутствия.</p>
+        </div>
+
+        <h4>Дуа, которые держат упование</h4>
+        <p>Порядок здесь не украшение, а логика: снять свою силу, попросить не быть оставленным себе, передать дело, назвать опору, взять решимость. Всё, кроме помеченного, — Коран и достоверная Сунна. Вход начинается с «Ля хауля ва ля куввата илля биЛлях» — трижды, как в разделе входа; ниже — то, что идёт после неё.</p>
+
+        <div class="formula">
+          <p class="ar">اللَّهُمَّ رَحْمَتَكَ أَرْجُو، فَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ، وَأَصْلِحْ لِي شَأْنِي كُلَّهُ، لَا إِلَهَ إِلَّا أَنْتَ</p>
+          <p class="translit">Аллахумма рахматака арджу, фа-ля такильни иля нафси тарфата 'айн, ва аслих ли ша'ни кулляху, ля иляха илля Ант.</p>
+          <p class="trans">«О Аллах, на Твою милость я надеюсь: не поручай меня мне самому ни на мгновение ока, приведи в порядок всё моё дело; нет божества, кроме Тебя».</p>
+          <p class="why">Абу Дауд, 5090 — хасан (у аль-Албани — сахих). Это точная противоположность самонадежде: я прошу не силы, а того, чтобы меня не оставили мне самому. Одно это предложение и совершает в душе перенос веса.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">رَبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبْنَا وَإِلَيْكَ الْمَصِيرُ</p>
+          <p class="translit">Раббана 'аляйка таваккальна, ва иляйка анабна, ва иляйка-ль-масир.</p>
+          <p class="trans">«Господь наш, на Тебя мы уповаем, к Тебе обращаемся, и к Тебе — возвращение».</p>
+          <p class="why">Аль-Мумтахана, 60:4 — слова Ибрахима и тех, кто с ним. Здесь таваккуль назван самим Кораном; произнесённый как своё слово, аят становится признанием, а не цитатой.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">اللَّهُمَّ إِنِّي أَسْأَلُكَ الثَّبَاتَ فِي الْأَمْرِ وَالْعَزِيمَةَ عَلَى الرُّشْدِ</p>
+          <p class="translit">Аллахумма инни ас'алюка-с-сабата фи-ль-амри, ва-ль-'азимата 'аля-р-рушд.</p>
+          <p class="trans">«О Аллах, я прошу у Тебя стойкости в деле и решимости на правильном пути».</p>
+          <p class="why">Приводится у ан-Насаи и Ахмада; оценён как хасан. Упование без решимости превращается в отговорку: эта дуа держит вторую половину — азм.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">اللَّهُمَّ إِنِّي أَقْرَأُ بِالْقُرْآنِ لِأَنْ تُبْطِلَ السِّحْرَ، وَعَلَيْكَ تَوَكَّلْتُ، وَإِلَيْكَ فَوَّضْتُ الْأَمْرَ</p>
+          <p class="translit">Аллахумма инни акра'у би-ль-Курани ли-ан тубтиля-с-сихр, ва 'аляйка таваккальту, ва иляйка фаввадту-ль-амр.</p>
+          <p class="trans">«О Аллах, я читаю Кораном, чтобы Ты аннулировал колдовство; на Тебя я уповаю и Тебе передаю дело».</p>
+          <p class="why">Рабочая конструкция, не хадис. Она соединяет нийю и упование в одну строку: та же нийя, что в главе 19 книги, плюс два глагола — таваккуль и тафвид. Я говорю её, когда чувствую, что нийя и упование начинают жить отдельно.</p>
+        </div>
+
+        <div class="box source"><span class="tag">Что здесь лучше всего</span>
+          <p>Лучшее — не самое длинное. Порядок: «Ля хауля» — снять свою силу; «Рахматака арджу» — не быть оставленным себе; «Хасбуна-Ллаху ва ни'ма-ль-Вакиль» — передать дело (эта формула уже звучала в разделе о трёх действиях; перед чтением она — передача, а не печать); «Раббана 'аляйка таваккальна» — назвать опору; «Ас'алюка-с-сабата» — взять решимость. Если времени мало — вторая и третья. Если совсем нет — вторая.</p>
+          <p>Условия правильности: понимать смысл; просить без «если Ты пожелаешь» (аль-Бухари, 6339); не рифмовать и не украшать; не назначать число; не ставить условием чувство; заканчивать без требования. И главное: дуа — свидетельство сердца, а не его подмена. Можно произнести все пять и не сдвинуть вес.</p>
+        </div>
+
+        <div class="box drill"><span class="tag">Порядок на входе</span>
+          <p>«Ля хауля» ×3 → нийя → три вопроса → признание → одна дуа → пауза → истиаза → первое слово. Две минуты, и адрес стоит до чтения, а не ищется в середине.</p>
+        </div>
+
+        <p class="small">И последнее: если ты поймал себя на том, что проверяешь, «пришло ли упование», — ты уже вышел из него. Упование не проверяют. Его держат.</p>
+      </section>
+
+      <section id="waiting">
+        <div class="part"><p class="kicker">Часть III · упование</p><h2>Ждать ответа Аллаха</h2></div>
+
+        <p>Даже правильно сформулированного намерения мало: нужно ещё <strong>находиться в позиции ожидающего ответа от Аллаха</strong>, а не в позиции проверяющего, «получилось ли у меня». Это разные направления сердца, и хадис о намерениях прямо об этом: каждому достанется то, на что он был настроен.</p>
+
+        <div class="formula">
+          <p class="ar">لَا يَزَالُ يُسْتَجَابُ لِلْعَبْدِ مَا لَمْ يَسْتَعْجِلْ، يَقُولُ: قَدْ دَعَوْتُ فَلَمْ يُسْتَجَبْ لِي</p>
+          <p class="translit">Лá йазáлю йустаджабу ли-ль-'абди малям йаста'джиль, йакуль: кад да'авту фалям йустаджаб ли.</p>
+          <p class="trans">«Рабу отвечает [Аллах] всегда, пока он не торопит, говоря: “я взывал, но мне не ответили”».</p>
+          <p class="why">Аль-Бухари 6340, Муслим 2735. Слово «торопит» здесь — не про темп чтения, а про позицию: превратить ожидание ответа Аллаха в отчёт о своей работе. Это единственный способ проиграть при правильном намерении.</p>
+        </div>
+
+        <h4>Позиция ожидающего vs позиция судящего</h4>
+        <div class="vs">
+          <div class="col good"><span class="k">Жду ответа Аллаха</span>
+            <ul>
+              <li>«Я прочитал с мольбой — теперь смотрю, что сделает Аллах»</li>
+              <li>Отмечает факт чтения, а не оценку, по ходу</li>
+              <li>Считывает результат после: 72 часа, 7 дней, 21 день</li>
+              <li>При задержке усиливает мольбу и причины, а не повторы</li>
+              <li>Говорит «иншаАллах» о будущем и «аль-хамду ли-Ллях» о случившемся</li>
+            </ul>
+          </div>
+          <div class="col bad"><span class="k">Выношу приговор</span>
+            <ul>
+              <li>«Не сработало / сработало — я решу прямо сейчас»</li>
+              <li>Прислушивается к ощущениям посреди формулы</li>
+              <li>Делает вывод по одному сеансу</li>
+              <li>При задержке наращивает схему: ещё 21, ещё вода, ещё сеанс</li>
+              <li>Говорит «не помогло» и «я сделал всё что мог»</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box tip"><span class="tag">Четыре строки ожидания</span>
+          <ul>
+            <li><strong>Ответ возможен в любую минуту.</strong> Аллах близок (2:186), и Он не связан моим расписанием.</li>
+            <li><strong>Ответ может быть не тем, что я нарисовал.</strong> Форма — за Ним (три формы ответа).</li>
+            <li><strong>Молчание — не отказ.</strong> Задержка есть ответ: «жди», а не «нет».</li>
+            <li><strong>Моей части хватает.</strong> Я не обязан производить результат; я обязан направить, прочитать и не быть несправедливым.</li>
+          </ul>
+        </div>
+
+        <p>И ещё одна деталь, о которой я забыл в первые годы: <strong>упование видно по лицу после сеанса</strong>. Если через час после чтения ты всё ещё прокручиваешь «а вдруг не ушло» — таваккуля там не было, была ставка на себя, которая теперь не уверена в себе.</p>
+      </section>
+
+      <section id="silence">
+        <div class="part"><p class="kicker">Часть III · упование</p><h2>Если ответ задерживается</h2></div>
+
+        <p>Это самый практический раздел. Задержка ответа — не авария, а обычный режим. Но именно здесь чаще всего ломается и намерение, и человек, и метод. Порядок проверки — всегда от простого к сложному, и первым пунктом идёт не «я плохо уповал».</p>
+
+        <ol class="steps">
+          <li><b>Тело.</b> Исключить соматическую причину и врачебное лечение.
+            <span class="say">«Я беру обе причины: и врача, и Коран. Аллах дал лекарство как причину и Коран как причину».</span>
+            Если есть боль, температура, судороги, потеря веса, острая неврология — сначала сохраняется тело. Духовное чтение при этом не отменяется, но не подменяет лечение.
+          </li>
+          <li><b>Адрес.</b> Верно ли названы зона, вид и порядок прохода; не «в воздух» ли читал.
+            <span class="say">«Я назвал человека, зону и вид. Если ошибся в зоне — я уточню, а не начинаю всё сначала».</span>
+            Гипотеза проверяется совокупностью признаков и реакцией на чтение, а не одним симптомом.
+          </li>
+          <li><b>Препятствия ответа.</b> То, что удерживает: явный грех без покаяния, разрыв родственных уз, несправедливость по отношению к людям, дуа с грехом в самом тексте, притязание на результат.
+            <span class="say">«О Аллах, если есть во мне то, что удерживает ответ — исправь это во мне, и я исправлю то, что в моих руках».</span>
+            Хадис: «…пока не торопит и не взывает с грехом или разрывом родственных уз» (Ахмад, достоверный).
+          </li>
+          <li><b>Намерение.</b> Куда реально смотрела надежда эти дни: на Аллаха или на схему/себя/средство.
+            <span class="say">«Я намеревался, чтобы аннулировал Аллах. Я держу это намерение и не превращаю его в требование».</span>
+            Здесь лечится не длиной чтения, а возвратом адреса — одна фраза вслух и продолжение курса.
+          </li>
+          <li><b>Упование.</b> Проверить, не сменилась ли опора: «ещё 21 повтор», «ещё воды», «ещё более сильный читающий».
+            <span class="say">«Причину я усиливаю, опору не переношу».</span>
+            Наращивание причины допустимо, перенос надежды на причину — нет.
+          </li>
+          <li><b>Время.</b> Дать срок: 72 часа, 7 дней, 21 день. И держать защиту всё это время, а не «до результата».
+            <span class="say">«Я не объявляю срок Аллаху. Я знаю свои сроки измерения и держу их как порядок, а не как условие».</span>
+          </li>
+        </ol>
+
+        <div class="box imp"><span class="tag">Чего нельзя делать при задержке</span>
+          <ul>
+            <li>Объявлять «не помогло» и бросать курс: это та самая спешка из хадиса.</li>
+            <li>Менять формулу на ходу каждые два дня: это обесценивание как причины, так и собственного терпения.</li>
+            <li>Искать «более сильного» человека бесконечно: это перенос упования на раба.</li>
+            <li>Наращивать чтение через голод и бессонницу: «рукъя не требует героизма и не оплачивается здоровьем».</li>
+            <li>Обвинять пациента: «ты мало веришь, поэтому не идёт». Ответ Аллаха — не заложник чужого якына.</li>
+          </ul>
+        </div>
+
+        <div class="box note"><span class="tag">Если я сам в этот момент без сил</span>
+          <p>Задержка ответа у читающего бьёт по его собственной душе: появляется стыд, страх случая, ощущение обмана. Я выхожу из этого той же формулой, только обращённой к себе: «Аллах, я причина. Я не владею исцелением и не отвечаю за чужое сердце. Верни мне лёгкость, и я продолжу». Потом — короткий зикр, вода, сон. Не «дочитать до результата». Не новый «усилитель». Возврат адреса и продолжение.</p>
+        </div>
+      </section>
+
+      <section id="entry">
+        <div class="part"><p class="kicker">Часть IV · практика</p><h2>Вход с упованием: семь шагов</h2></div>
+
+        <p>Это готовый каркас перед каждым сеансом — своим или чужим. Шесть-восемь минут. Смысл не в длине, а в том, чтобы <strong>адрес был поставлен до чтения</strong>, а не искался во время него. Отмечай пункты: счёт сохранится в этом браузере.</p>
+
+        <div class="box drill">
+          <span class="tag">Вход · 6–8 минут</span>
+          <ul class="check" id="dayCheck">
+            <li><input type="checkbox" id="d1" data-k="d1"><label for="d1"><strong>1. Тишина и вуду.</strong> Телефон убран, спина ровна, плечи опущены. Тело собрано — внимание не ищет позы.</label></li>
+            <li><input type="checkbox" id="d2" data-k="d2"><label for="d2"><strong>2. Отключение своей силы.</strong> «Лá хауля ва лá куатта илля билляях» — 3 раза, с пониманием: ни сдвинуть, ни удержать я сам не могу.</label></li>
+            <li><input type="checkbox" id="d3" data-k="d3"><label for="d3"><strong>3. Истиаза и признание.</strong> «Аузу би-Лляхи мин аш-шайтани р-раджим»; вслух: «Я — причина. Аннулирует и исцеляет Аллах».</label></li>
+            <li><input type="checkbox" id="d4" data-k="d4"><label for="d4"><strong>4. Нийя с правильным субъектом.</strong> Кого, где, от чего — и главное: «прошу Аллаха аннулировать». Пять элементов, адрес назван.</label></li>
+            <li><input type="checkbox" id="d5" data-k="d5"><label for="d5"><strong>5. Упование и дуа.</strong> «Аллахумма, рахматака арджу, фа-ля такильни иля нафси…» и «Хасбуна-Ллаху ва ни'ма-ль-Вакиль»; короткая пауза, чтобы сердце оставило дело у Него. Механизм — в разделе «Механизм упования».</label></li>
+            <li><input type="checkbox" id="d6" data-k="d6"><label for="d6"><strong>6. Сердечное чтение.</strong> Аль-Фатиха, Аят аль-Курси, три суры — про себя, до «полноты в груди», без прислушивания к эффектам.</label></li>
+            <li><input type="checkbox" id="d7" data-k="d7"><label for="d7"><strong>7. Передача дела.</strong> «Хасбуна-Ллаху ва ни'ма-ль-Вакиль». Начинаю хитаб, зная, что результат уже не мой.</label></li>
+          </ul>
+          <div class="counter"><span id="dayTxt">0 / 7</span><span class="bar"><i id="dayBar"></i></span></div>
+        </div>
+
+        <div class="box"><span class="tag">Формула, которую я держу в середине чтения</span>
+          <p>«Я направляю — Аллах аннулирует». Одна короткая строка, возвращающая адрес, когда внимание ушло в ощущения. Не пауза на три минуты, не начало заново, не смена формулы: одна строка — и продолжение.</p>
+        </div>
+      </section>
+
+      <section id="during">
+        <div class="part"><p class="kicker">Часть IV · практика</p><h2>Во время чтения: куда утекает упование</h2></div>
+
+        <p>Намерение ставится один раз, а упование приходится держать каждую минуту. Утечка почти никогда не выглядит как «я перестал верить Аллаху» — она выглядит как безобидные движения внимания.</p>
+
+        <div class="tablewrap"><table>
+          <caption>Пять утечек и что с ними делать</caption>
+          <thead><tr><th>Утечка</th><th>Как ощущается</th><th>Что происходит с упованием</th><th>Действие</th></tr></thead>
+          <tbody>
+            <tr><td>Прислушивание</td><td>«Появился жар? стало плотнее?»</td><td>Опора переезжает на ощущение</td><td>Вернуть фокус на адрес; оценка — только после сеанса</td></tr>
+            <tr><td>Счёт как опора</td><td>Раздражение на сбитом счёте</td><td>Ставка на число, а не на Аллах</td><td>Считать как дисциплину; сбился — начать заново без злости</td></tr>
+            <tr><td>Внутренняя репетиция</td><td>«Как бы сказать посильнее»</td><td>Ставка на свой голос</td><td>Читай ровно: вес слов даёт не громкость, а адрес</td></tr>
+            <tr><td>Страх</td><td>Холод в пояснице, желание закончить раньше</td><td>Действующим лицом стал джинн</td><td>Вслух: «иннамá аль-а'мáлю би-н-ниййат; мой адрес — Аллах», продолжить</td></tr>
+            <tr><td>Сомнение</td><td>«А вдруг не поможет»</td><td>Обесценивание слова в процессе</td><td>Стоп-кадр: «я причина, исцеляет Аллах», без смены формулы</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box tip"><span class="tag">Правило</span>
+          <p><strong>Во время чтения не бывает проверки.</strong> Есть адрес, слово, пауза, и есть ожидание ответа — но ответ не читается посреди формулы. Любая оценка «получилось/нет» в процессе уводит внимание с цели на себя, а вместе с вниманием уводит и упование.</p>
+        </div>
+
+        <p>Отдельно про то, <strong>как выглядит упование внутри чтения</strong>: это не напряжённая вера и не восторг. Это ровность. Плечи опущены, дыхание не задержано, темп не рваный, голос без дрожи «я сейчас покажу». Внутренне — состояние человека, который отправил просьбу Тому, Кто слышит, и спокойно ждёт, а не выжимает ответ из собственных слов.</p>
+      </section>
+
+      <section id="after">
+        <div class="part"><p class="kicker">Часть IV · практика</p><h2>После чтения: как держать ожидание ответа</h2></div>
+
+        <p>Закрытие сеанса — это не «я закончил работу», а <strong>передача дела</strong>. Порядок короткий: «Аллаху яшфиний» (Аллах исцелит меня) — дуновение — защитные суры — «Хасбуна-Ллаху ва ни'ма-ль-Вакиль» — благодарность Аллаху — строка в журнал. И после этого три вещи, которые отличают уповающего от торговца:</p>
+
+        <div class="grid three">
+          <div class="card"><span class="k">1. Не выносить приговор</span><h4>Три срока</h4><p>72 часа, 7 дней, 21 день. До истечения срока вывод не делается — ни пациенту, ни себе. «Не помогло» — это слово о своей работе, а не о милости Аллаха.</p></div>
+          <div class="card"><span class="k">2. Не додумывать ответ</span><h4>Форма за Ним</h4><p>Облегчение может прийти как сон, как спокойствие, как ушедшая боль, как отвернувшаяся ссора. Я жду ответа Аллаха, а не подтверждения моего сценария.</p></div>
+          <div class="card"><span class="k">3. Держать причины</span><h4>Не бросать</h4><p>Защита, чтение, лечение, режим держатся и при «тишине». Упование без продолжения причин — это не упование, а обида на Аллаха в мягкой упаковке.</p></div>
+        </div>
+
+        <h4>Что писать в журнале после сеанса</h4>
+        <div class="tablewrap"><table>
+          <caption>Шесть колонок — и ни одной оценки «сработало/нет»</caption>
+          <thead><tr><th>Колонка</th><th>Содержание</th><th>Зачем</th></tr></thead>
+          <tbody>
+            <tr><td>Адрес</td><td>Кто, какая зона, какой вид</td><td>Проверить точность, а не силу</td></tr>
+            <tr><td>Намерение</td><td>Одной строкой: куда смотрела надежда</td><td>Главный предмет анализа этого метода</td></tr>
+            <tr><td>Что читал</td><td>Формулы, повторы, средства</td><td>Держать причину ровно, без накрутки</td></tr>
+            <tr><td>Реакция</td><td>Факты тела и поведения человека</td><td>Отделять признак от домысла</td></tr>
+            <tr><td>Моя опора</td><td>Была на Аллах / соскакивала (где именно)</td><td>Тренировать упование как навык</td></tr>
+            <tr><td>Срок проверки</td><td>Дата 72 ч / 7 / 21</td><td>Не решать раньше срока</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box note"><span class="tag">Фраза для пациента</span>
+          <p>«Лечит Аллах. Я прочитал причину — теперь мы ждём ответа от Него и держим защиту. Не пугайся откатов: они не означают, что Аллах не ответил; иногда они означают, что идёт работа». Эту фразу стоит говорить на каждом курсе, потому что ожидание ответа — часть лечения, а не приложение к нему.</p>
+        </div>
+      </section>
+
+      <section id="formulas">
+        <div class="part"><p class="kicker">Часть IV · практика</p><h2>Формулы с правильным действующим лицом</h2></div>
+
+        <p>Ниже — то, что я реально говорю на входе и на закрытии. Всё, кроме помеченного, — Коран или достоверная Сунна. Порядок: отключение своей силы → просьба → признание действия за Аллахом → передача дела.</p>
+
+        <div class="formula">
+          <p class="ar">لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</p>
+          <p class="translit">Лá хауля ва лá куатта илля билляях.</p>
+          <p class="trans">«Нет мощи и нет силы ни у кого, кроме как у Аллаха».</p>
+          <p class="why">Вход. Трижды до намерения и один раз всякий раз, когда появляется ощущение «это я сделал».</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">بِسْمِ اللهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ، مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنِ حَاسِدٍ، اللهُ يَشْفِيكَ</p>
+          <p class="translit">Бисми-Ллахи аркика, мин кулли шай'ин йу'зика, мин шарри кулли нафсин ау 'айни хасид, Аллаху йашфика.</p>
+          <p class="trans">«С именем Аллаха я читаю над тобой рукъю — от всего, что причиняет тебе вред, от зла любой души и завистливого глаза. Аллах исцелит тебя».</p>
+          <p class="why">Сахих Муслим 2185. Ядро: «аркика» — моё, «йашфика» — Его. Эта формула сама по себе есть напоминание о разделении ролей, произнесённое словами Сунны.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا</p>
+          <p class="translit">Аллахумма Рабба-н-нас, азхиб аль-ба's, ишфи Анта ш-Шáфи, лá шифá'а илля шифá'ук, шифá'ан лá йугáдиру сакамá.</p>
+          <p class="trans">«О Аллах, Господь людей, устрани тяжесть, исцели — Ты есть Исцеляющий, нет исцеления кроме Твоего: исцеление, не оставляющее болезни».</p>
+          <p class="why">Аль-Бухари 5743, Муслим 2191. «Анта ш-Шáфи» — прямое назначение действующего лица; «ля шифа'а илля шифа'ук» — закрытие всех прочих опор.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
+          <p class="translit">А'узу би-калимáти-Ллахи т-тáммаати мин шарри ма халак.</p>
+          <p class="trans">«Я прибегаю к совершенным Словам Аллаха от зла того, что Он сотворил».</p>
+          <p class="why">Сахих Муслим 2708. У уповающего защита — не «мой обряд», а Слово Аллаха; произнесение этого дуа вечером как раз и тренирует опору вне своей силы.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">نَوَيْتُ أَنْ أَقْرَأَ الرُّقْيَةَ الشَّرْعِيَّةَ عَلَى فُلَانٍ، رَاجِيًا أَنْ يُبْطِلَ اللهُ السِّحْرَ وَيُذْهِبَ الضَّرَرَ</p>
+          <p class="translit">Навайту ан акра'а р-рукъия аш-шар'ийя 'аля фулян, раджийан ан йубтиля-Ллаху-с-сихра ва йузхиба-д-дарр.</p>
+          <p class="trans">«Я намереваюсь прочитать шариатскую рукъю над [имя], упождая на то, что Аллах аннулирует колдовство и устранит вред».</p>
+          <p class="why">Рабочая формулировка, не хадис. Место намерения — сердце; вслух она нужна только для собирания адреса.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">بِسْمِ اللهِ أَرْقِي نَفْسِي، اللهُ يَشْفِينِي — وَإغلاقُ كُلِّ بَابِ شَرٍّ إِلَى جَسَدِي</p>
+          <p class="translit">Бисми-Ллахи арки нафси, Аллаху йашфини — ва иглааку кулли баби шаррин иля джасади.</p>
+          <p class="trans">«С именем Аллаха я читаю рукъю на себя, Аллах исцелит меня — и закрытие каждых врат зла к моему телу».</p>
+          <p class="why">Печать сеанса в моём методе (рабочая конструкция на основе достоверных смыслов; ср. аль-Бухари 5740). Здесь снова две роли в одной строке: «арки» — моя, «йашфини» — Его.</p>
+        </div>
+
+        <div class="formula">
+          <p class="ar">حَسْبُنَا اللهُ وَنِعْمَ الْوَكِيلُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ، وَصَلَّى اللهُ عَلَى نَبِيِّنَا مُحَمَّدٍ</p>
+          <p class="translit">Хасбуна-Ллаху ва ни'ма-ль-Вакиль, ва лá хауля ва лá куатта илля билляях.</p>
+          <p class="trans">«Достаточно нам Аллаха, и Он — лучший Покровитель. Нет мощи и нет силы ни у кого, кроме как у Аллаха. И мир Пророку Мухаммаду».</p>
+          <p class="why">Закрытие. Аль-Бухари 4563. После этих слов я не «жду результата от себя» — я нахожусь в позиции ожидающего ответа.</p>
+        </div>
+
+        <div class="orn">۞ ۞ ۞</div>
+      </section>
+
+      <section id="breakers">
+        <div class="part"><p class="kicker">Часть V · проверка</p><h2>Разрушители упования</h2></div>
+
+        <p>Шесть вещей, которые не выглядят как грех и не выглядят как ошибка метода, но обнуляют намерение. Я выписал их по симптомам, потому что узнаются они только так.</p>
+
+        <div class="tablewrap"><table>
+          <caption>Шесть разрушителей: симптом → корень → восстановление</caption>
+          <thead><tr><th>Разрушитель</th><th>Симптом</th><th>Корень</th><th>Восстановление</th></tr></thead>
+          <tbody>
+            <tr><td>Самонадежда</td><td>Уверенность до чтения, паника после сбоя</td><td>Действующее лицо — я</td><td>«Лá хауля ва лá куатта илля билляях»; вернуть первое лицо только чтению</td></tr>
+            <tr><td>Торг с Аллахом</td><td>«Я же прочитал 21 — почему не ушло?»</td><td>Причина возведена в ранг обязательства</td><td>Признать: «ответ — милость, а не плата»; продолжить без требования</td></tr>
+            <tr><td>Упование на средство</td><td>Тревога без начитанной воды, без схемы, без «сильного» читающего</td><td>Опора перенесена на причину</td><td>Прочитать без средства; убедиться, что ответ не ушёл вместе с водой</td></tr>
+            <tr><td>Спешка</td><td>Вывод по одному сеансу; «не помогло»</td><td>Внимание на себе, а не на Аллахе</td><td>Держать срок 72 ч / 7 / 21; не говорить о чужом исходе</td></tr>
+            <tr><td>Страх поражения</td><td>Желание закончить раньше, «не трогать это место»</td><td>Джинн стал действующим лицом в моей голове</td><td>Истиаза, называние Аллаха вслух, продолжение с ровным темпом</td></tr>
+            <tr><td>Показуха</td><td>Хочется, чтобы увидели силу; красивая интонация</td><td>Адресат намерения — люди</td><td>«Иннамá аль-а'мáлю би-н-ниййат»: вернуть цель — довольство Аллаха; читать тише</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="box imp"><span class="tag">Единственный необратимый вариант</span>
+          <p>Если в формулу или в средство начинает вплетаться обращение не к Аллаху — к духу, «хозяину места», умершему, «силе рода», амулету, имени, значения которого я не знаю, — это уже не утечка упования, а выход из метода. Такое убирается полностью, без «попробую позже», и после — покаяние и чтение заново с чистым адресом.</p>
+        </div>
+      </section>
+
+      <section id="quiz">
+        <div class="part"><p class="kicker">Часть V · проверка</p><h2>Самопроверка: где стоит твоя опора</h2></div>
+
+        <p>Десять вопросов. Отвечай про <strong>обычные дни</strong>, а не про лучший сеанс. Выбирай тот вариант, который ближе к тому, что реально происходит. Результат — не ранг, а подсказка, где именно утекает упование.</p>
+
+        <div class="quiz" id="quizBox">
+          <div class="q"><p><span class="qn">1.</span> За секунду до «Бисмилляхи арки…» у меня в голове…</p>
+            <div class="opts">
+              <label><input type="radio" name="q0" value="0">«мне надо это взять»</label>
+              <label><input type="radio" name="q0" value="1">смесь: «читаю — и надеюсь, что выйдет»</label>
+              <label><input type="radio" name="q0" value="2">«прошу Аллаха аннулировать это здесь»</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">2.</span> На середине формулы я ловлю себя на том, что…</p>
+            <div class="opts">
+              <label><input type="radio" name="q1" value="0">прислушиваюсь: есть ли жар/давление</label>
+              <label><input type="radio" name="q1" value="1">считаю повторы и слегка злюсь, если сбился</label>
+              <label><input type="radio" name="q1" value="2">держу адрес и не оцениваю до конца</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">3.</span> Прошёл сеанс, внешних признаков нет. Мои первые мысли…</p>
+            <div class="opts">
+              <label><input type="radio" name="q2" value="0">«значит, я не справился»</label>
+              <label><input type="radio" name="q2" value="1">«надо добавить повторов и воды»</label>
+              <label><input type="radio" name="q2" value="2">«жду ответа Аллаха, держу срок и причины»</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">4.</span> Что для меня 21 повтор?</p>
+            <div class="opts">
+              <label><input type="radio" name="q3" value="0">условие, при котором «должно уйти»</label>
+              <label><input type="radio" name="q3" value="1">привычка, без которой неуверенно</label>
+              <label><input type="radio" name="q3" value="2">моя дисциплина в причине, а не опора</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">5.</span> Перед сложным случаем я чувствую…</p>
+            <div class="opts">
+              <label><input type="radio" name="q4" value="0">страх и желание отложить</label>
+              <label><input type="radio" name="q4" value="1">собранность через «я должен справиться»</label>
+              <label><input type="radio" name="q4" value="2">ровность: «дело не моё, читаю и прошу»</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">6.</span> Результат пришёл быстро и заметно. Я…</p>
+            <div class="opts">
+              <label><input type="radio" name="q5" value="0">отмечаю свою работу и жду новых случаев</label>
+              <label><input type="radio" name="q5" value="1">хвалю Аллаха, но внутри горжусь</label>
+              <label><input type="radio" name="q5" value="2">«аль-хамду ли-Ллях, это — от Аллаха», и записываю намерение</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">7.</span> Если начитанной воды нет, а читать надо…</p>
+            <div class="opts">
+              <label><input type="radio" name="q6" value="0">отказываюсь: «так слабее»</label>
+              <label><input type="radio" name="q6" value="1">читаю, но с ощущением неполноты</label>
+              <label><input type="radio" name="q6" value="2">читаю спокойно: вода — причина, не действующее лицо</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">8.</span> «Ин шаАллах» в моём языке появляется…</p>
+            <div class="opts">
+              <label><input type="radio" name="q7" value="0">только когда оправдываюсь за неудачу</label>
+              <label><input type="radio" name="q7" value="1">когда говорю о будущем</label>
+              <label><input type="radio" name="q7" value="2">когда говорю о будущем и отдаю результат, не теряя решимости в дуа</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">9.</span> Человек привязался ко мне и боится читать сам. Я…</p>
+            <div class="opts">
+              <label><input type="radio" name="q8" value="0">держу его на сеансах: без меня не справится</label>
+              <label><input type="radio" name="q8" value="1">разъясняю, но оставляю свою схему как основу</label>
+              <label><input type="radio" name="q8" value="2">веду к самостоятельности: лечит Аллах, я — лишь причина</label>
+            </div></div>
+
+          <div class="q"><p><span class="qn">10.</span> Мое упование в последний месяц я бы описал так…</p>
+            <div class="opts">
+              <label><input type="radio" name="q9" value="0">оно зависит от результатов</label>
+              <label><input type="radio" name="q9" value="1">оно держится, когда я «в состоянии»</label>
+              <label><input type="radio" name="q9" value="2">оно стоит на Аллахе независимо от исхода случая</label>
+            </div></div>
+
+          <div class="result" id="quizResult"><p class="big">Ответь на все 10 вопросов</p><p class="next">Результат появится после полного ответа. Отвечай честно: карта нужна не для оценки, а для возврата адреса.</p></div>
+          <div class="quizbar"><button class="iconbtn" id="quizReset">↺ Сбросить ответы</button><span class="small">Ответы сохраняются в этом браузере.</span></div>
+        </div>
+      </section>
+
+      <section id="limits">
+        <div class="part"><p class="kicker">Часть V · границы</p><h2>Чего эта статья не делает</h2></div>
+
+        <ul>
+          <li><strong>Это не фетва.</strong> Хадис, его перевод и ссылки приведены для опоры; правовые вопросы (плата, условия рукъи, смешанные случаи) решаются у знающих людей.</li>
+          <li><strong>Не отменяет врачей.</strong> Упование не заменяет терапию, диагностику и неотложную помощь; оно не спорит с причинами.</li>
+          <li><strong>Не даёт права обещать исход.</strong> О результате говорю «иншаАллах» и не беру на себя чужое сердце.</li>
+          <li><strong>Не превращает метод в силу.</strong> «Хитаб Исаба» — дисциплина направления, а не источник воздействия.</li>
+          <li><strong>Не заменяет терпение алгоритмом.</strong> Здесь нет «четырёх шагов, после которых Аллах обязан ответить».</li>
+        </ul>
+
+        <div class="box imp"><span class="tag">Красные флаги</span>
+          <p>Суицидальные мысли и самоповреждение, бред и галлюцинации с утратой критики, судороги и потеря сознания, высокая температура, кровотечения, острые состояния у детей, беременность с осложнениями. Здесь сначала сохраняют тело руками врача. Чтение не прекращается — но оно не является заменой помощи.</p>
+        </div>
+
+        <div class="box source"><span class="tag">Одна фраза, ради которой написана вся статья</span>
+          <p>Если ты хочешь, чтобы Аллах ответил на твоё намерение — адресуй это намерение Ему, читай как направление, а не как производство, и жди ответа от Него. Аннулирует Аллах, а не мы; мы лишь направляем. «Дела — по намерениям, и каждому человеку достанется то, что он намеревался обрести».</p>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="part"><p class="kicker">Приложение</p><h2>На чём это собрано</h2></div>
+
+        <div class="tablewrap"><table>
+          <caption>Опоры по разделам</caption>
+          <thead><tr><th>Что взято</th><th>Откуда</th></tr></thead>
+          <tbody>
+            <tr><td>Хадис о намерениях (текст, перевод, место в «Сахихе»)</td><td>Аль-Бухари 1, Муслим 1907 — от Умара ибн аль-Хаттаба</td></tr>
+            <tr><td>Слова учёных о весе этого хадиса</td><td>аш-Шафи'и — «треть знания»; ахмадитская оценка «один из трёх оснований»; Ибн Раджаб, «Джаами' аль-'улюм ва-ль-хикам», коммент. к хадису 1</td></tr>
+            <tr><td>«Аркика… Аллаху йашфика» — разделение субъектов</td><td>Сахих Муслим 2185 (от 'Аиши, рукъя Джибриля)</td></tr>
+            <tr><td>«Аллахумма Рабба-н-нас…» — «Ты Исцеляющий»</td><td>Аль-Бухари 5743, Муслим 2191</td></tr>
+            <tr><td>Решимость в мольбе, без «если пожелашъ»</td><td>Аль-Бухари 6339, Муслим 2679</td></tr>
+            <tr><td>«На Твою милость я надеюсь; не поручай меня мне самому…»</td><td>Абу Дауд, 5090 — хасан (у аль-Албани — сахих)</td></tr>
+            <tr><td>«Раббана 'аляйка таваккальна…» — слова Ибрахима</td><td>Коран, 60:4</td></tr>
+            <tr><td>«Ас'алюка-с-сабата фи-ль-амр…» — стойкость и решимость</td><td>Ан-Насаи, Ахмад — оценён как хасан</td></tr>
+            <tr><td>Запрет спешки «я взывал — мне не ответили»</td><td>Аль-Бухари 6340, Муслим 2735</td></tr>
+            <tr><td>Три формы ответа</td><td>Муснад Ахмада (от Абу Хурайры); оценён достоверным рядом учёных</td></tr>
+            <tr><td>Хадис кудси «Я отношусь к рабу так, как он думает обо Мне»</td><td>Аль-Бухари 7405, Муслим 2675</td></tr>
+            <tr><td>Упование на Аллаха «по-настоящему» — птица</td><td>Ат-Тирмизи 2344, Ибн Маджа 4164 — от Умара</td></tr>
+            <tr><td>«Хасбуна-Ллаху ва ни'ма-ль-Вакиль»</td><td>Аль-Бухари 4563 (от Ибн 'Аббаса)</td></tr>
+            <tr><td>«Лá хауля ва лá куатта илля билляях»</td><td>Аль-Бухари, Муслим — «сокровище под Троном»</td></tr>
+            <tr><td>«А'узу би-калимáти-Ллахи т-тáммаат…»</td><td>Сахих Муслим 2708</td></tr>
+            <tr><td>Аяты: 3:159, 65:3, 40:60, 2:186, 27:62</td><td>Коран</td></tr>
+            <tr><td>Девять ступеней, «аркый → яшфиний → печать», четыре условия действительности, страх как недуг нафса</td><td>Мои записи: «Метод Хитаб Исаба», «Влияние волей» (посты № 3848, 3941, 4401, 4455), «Шкала усиления души»</td></tr>
+            <tr><td>«Брать причины обязательно», «рукъя не требует героизма», сроки 72 ч / 7 / 21 день</td><td>Промпт курса и разборы случаев (Абу Мухаммад)</td></tr>
+          </tbody>
+        </table></div>
+
+        <p class="small">Переводы хадисов даны в приближённом, удобном для чтения виде; там, где важна формулировка, я оставил арабский и транскрипцию. Формулы, помеченные как «рабочая конструкция», — мои, а не пророческие: они дозволены по смыслу и не приписываются Пророку (да благословит его Аллах и приветствует). Нумерация приведена по изданиям «Сахих» аль-Бухари и Муслима и по печатным сборникам сунны; в разных изданиях номера могут незначительно отличаться.</p>
+      </section>
+
+      <footer>
+        <p><strong>Автор: Абу Мухаммад</strong> — лекарь, метод «Хитаб Исаба». Статья написана от его имени по его разборам, урокам и ведению курсов.</p>
+        <p><strong>Упование на Аллаха и намерение, которое ждёт ответа.</strong> Статья по методу «Хитаб Исаба» / «Влияние волей».</p>
+        <p>Читает человек — аннулирует Аллах. Намерение задаёт адрес, упование держит опору, ожидание ответа не даёт ей обесцениться.</p>
+        <p class="small">Версия 1.0 · на основе хадиса «Иннамá аль-а'мáлю би-н-ниййат» · файл работает без интернета.</p>
+      </footer>
+
+    </div>
+  </main>
+</div>
+
+<button class="totop" id="totop" aria-label="Наверх">↑</button>
+
+<style>
+body.focus .sidebar{display:none}
+body.focus .layout{grid-template-columns:1fr}
+body.focus main .wrap{max-width:88ch}
+body.focus .hero{margin-left:-42px;margin-right:-42px}
+@media (max-width:1080px){body.focus .hero{margin-left:-22px;margin-right:-22px}}
+@media print{body.focus .sidebar{display:none}}
+</style>
+
+<script>
+(function(){
+  "use strict";
+  var root=document.documentElement;
+  function $(s,c){return (c||document).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
+  function load(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+  /* тема */
+  var theme=load("tiqqah.theme",null);
+  if(!theme){theme=root.getAttribute("data-theme")||"light";}
+  root.setAttribute("data-theme",theme);
+  var themeBtn=$("#themeBtn");
+  if(themeBtn){themeBtn.addEventListener("click",function(){
+    theme=root.getAttribute("data-theme")==="dark"?"light":"dark";
+    root.setAttribute("data-theme",theme);save("tiqqah.theme",theme);
+  });}
+
+  /* размер текста */
+  var size=load("tiqqah.size",18);
+  function applySize(){root.style.fontSize=size+"px"}
+  applySize();
+  var fp=$("#fontPlus"),fm=$("#fontMinus");
+  if(fp){fp.addEventListener("click",function(){size=Math.min(24,size+1);applySize();save("tiqqah.size",size);});}
+  if(fm){fm.addEventListener("click",function(){size=Math.max(15,size-1);applySize();save("tiqqah.size",size);});}
+
+  /* фокус и мобильное оглавление */
+  var focusBtn=$("#focusBtn"),menuBtn=$("#menuBtn"),sidebar=$("#sidebar"),backdrop=$("#backdrop");
+  if(focusBtn){focusBtn.addEventListener("click",function(){document.body.classList.toggle("focus");});}
+  function closeMenu(){if(sidebar){sidebar.classList.remove("open");}if(backdrop){backdrop.classList.remove("show");}document.body.style.overflow="";}
+  if(menuBtn&&sidebar){menuBtn.addEventListener("click",function(){
+    var open=sidebar.classList.toggle("open");
+    if(backdrop){backdrop.classList.toggle("show",open);}
+    document.body.style.overflow=open?"hidden":"";
+  });}
+  if(backdrop){backdrop.addEventListener("click",closeMenu);}
+  $$(".sidebar nav a").forEach(function(a){a.addEventListener("click",function(){if(window.innerWidth<=1080){closeMenu();}});});
+
+  /* прогресс и активный пункт */
+  var prog=$("#progress"),links=$$('.sidebar nav a[href^="#"]'),totop=$("#totop");
+  var ticking=false;
+  function updateScroll(){
+    var h=document.documentElement;
+    var top=h.scrollTop||document.body.scrollTop||0;
+    var max=h.scrollHeight-window.innerHeight;
+    if(prog){prog.style.width=(max>0?Math.min(100,top/max*100):0)+"%";}
+    if(totop){totop.classList.toggle("show",top>600);}
+    var current=null;
+    links.forEach(function(a){
+      var el=$(a.getAttribute("href"));
+      if(el&&el.getBoundingClientRect().top<=140){current=a;}
+    });
+    links.forEach(function(a){a.classList.toggle("active",a===current);});
+    ticking=false;
+  }
+  window.addEventListener("scroll",function(){
+    if(!ticking){ticking=true;window.requestAnimationFrame(updateScroll);}
+  },{passive:true});
+  updateScroll();
+  if(totop){totop.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});}
+
+  /* появление блоков */
+  var targets=$$(".part h2, .chapter, .box, .formula, .hadith, .card, .steps li, .tablewrap, .ladder, .quiz, .timeline li, .vs .col");
+  if("IntersectionObserver" in window){
+    targets.forEach(function(el,i){
+      el.classList.add("rv");
+      el.style.transitionDelay=(Math.min(i%6,6)*55)+"ms";
+    });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}
+      });
+    },{rootMargin:"0px 0px -6% 0px",threshold:0.06});
+    targets.forEach(function(el){io.observe(el);});
+  }
+
+  /* чек-лист входа */
+  var checks=$$("#dayCheck input"),day=load("tiqqah.day",{});
+  function paintDay(){
+    var done=0;
+    checks.forEach(function(c){if(c.checked){done++;}});
+    var t=$("#dayTxt"),b=$("#dayBar"),st=$("#scoreTxt"),sb=$("#scoreBar");
+    if(t){t.textContent=done+" / "+checks.length;}
+    if(b){b.style.width=(checks.length?done/checks.length*100:0)+"%";}
+    if(st){st.textContent=done+" / 7";}
+    if(sb){sb.style.width=(checks.length?done/checks.length*100:0)+"%";}
+  }
+  checks.forEach(function(c){
+    var k=c.getAttribute("data-k");
+    c.checked=!!day[k];
+    c.addEventListener("change",function(){day[k]=c.checked;save("tiqqah.day",day);paintDay();});
+  });
+  paintDay();
+
+  /* самопроверка */
+  var QN=10;
+  var LV=[
+    {n:0,min:0,max:7,name:"Опора смещена",sub:"надежда смотрит на меня, на число и на средство",
+     step:"Перед следующим чтением скажи вслух три вещи: «Лá хауля ва лá куатта илля билляях», «аннулирует Аллах», «ответа я жду от Него». И прочитай один аят без схемы.",
+     warn:"Не бери новые формулы и не наращивай повторы: сначала верни адрес."},
+    {n:1,min:8,max:13,name:"Намерение верное, упование рваное",sub:"адрес правильный, но срывается на прислушивание",
+     step:"Держи семь шагов входа семь дней подряд; во время чтения при утечке — одна строка «я направляю — Аллах аннулирует» и продолжение.",
+     warn:"Не оценивай «получилось/нет» в процессе — там и утекает."},
+    {n:2,min:14,max:17,name:"Упование держится",sub:"опора на Аллахе, причины взяты, сроки соблюдаются",
+     step:"Добавь то, что слабое: журнал намерения (строка «куда смотрела надежда») и самостоятельное чтение пациента.",
+     warn:"Опасная точка — успех: после сильного случая чаще всего возвращается самонадежда."},
+    {n:3,min:18,max:20,name:"Ровность ожидающего",sub:"читаю причину, жду ответа, не выношу приговор",
+     step:"Держи это в обычный день и передавай так же другим: учить человека читать самому и полагаться на Аллаха.",
+     warn:"Не проверяй себя «ещё сильнее»: упование не измеряется подвигом и не оплачивается здоровьем."}
+  ];
+  function levelFor(s){
+    for(var i=0;i<LV.length;i++){if(s>=LV[i].min&&s<=LV[i].max){return LV[i];}}
+    return LV[LV.length-1];
+  }
+  var answers=load("tiqqah.quiz",{}),radios=$$("#quizBox input[type=radio]");
+  function calcQuiz(){
+    var got=0,sum=0;
+    for(var i=0;i<QN;i++){
+      var v=answers["q"+i];
+      if(v===0||v===1||v===2){got++;sum+=v;}
+    }
+    var box=$("#quizResult");
+    if(!box)return;
+    if(got<QN){
+      box.innerHTML='<p class="big">Отвечено '+got+' из '+QN+'</p><p class="next">Результат появится, когда будут все ответы. Отвечай по обычным дням, а не по лучшему сеансу.</p>';
+      return;
+    }
+    var L=levelFor(sum);
+    box.innerHTML=
+      '<p class="big">'+L.name+'</p>'+
+      '<p class="next">'+L.sub.charAt(0).toUpperCase()+L.sub.slice(1)+'. Балл: '+sum+' из '+(QN*2)+'.</p>'+
+      '<p class="next"><strong>Ближайший шаг:</strong> '+L.step+'</p>'+
+      '<p class="next"><strong>Осторожно:</strong> '+L.warn+'</p>'+
+      '<p class="next">Повтори проверку через неделю: упование меняется вместе с практикой.</p>';
+  }
+  radios.forEach(function(r){
+    if(answers[r.name]===parseInt(r.value,10)){r.checked=true;}
+    r.addEventListener("change",function(){
+      answers[r.name]=parseInt(r.value,10);save("tiqqah.quiz",answers);calcQuiz();
+    });
+  });
+  var reset=$("#quizReset");
+  if(reset){reset.addEventListener("click",function(){
+    answers={};save("tiqqah.quiz",answers);
+    radios.forEach(function(r){r.checked=false;});
+    calcQuiz();
+  });}
+  calcQuiz();
+
+  /* клавиши */
+  document.addEventListener("keydown",function(e){
+    var tag=(e.target&&e.target.tagName)||"";
+    if(tag==="INPUT"||tag==="TEXTAREA"||tag==="SELECT"){return;}
+    var k=e.key.toLowerCase();
+    if(k==="t"&&themeBtn){themeBtn.click();}
+    else if(k==="f"&&focusBtn){focusBtn.click();}
+    else if((k==="+"||k==="=")&&fp){fp.click();}
+    else if(k==="-"&&fm){fm.click();}
+  });
+})();
+</script>
+</body>
+</html>
