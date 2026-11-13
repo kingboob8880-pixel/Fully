@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a1f1a">
 <title>Анализ состояния · сестра, по твоим ответам — Лекарь Абу Мухаммад</title>
 <style>
   *{box-sizing:border-box} html{scrollbar-color:rgba(201,169,97,.8) rgba(10,31,26,.45);scrollbar-width:thin}
@@ -53,6 +54,48 @@
   .note{font-size:12.5px;color:rgba(245,239,224,.72);margin-top:14px;font-style:italic;text-align:center;line-height:1.6}
   .sign{text-align:center;margin-top:12px;color:#e6c887;font-weight:600}
   .sign small{display:block;margin-top:4px;color:rgba(245,239,224,.6);font-weight:400;letter-spacing:1px}
+/* ===== MOBILE-OPT v1 ===== */
+  ::selection { background: rgba(201,169,97,.85); color: #0a1f1a; }
+  a, button { touch-action: manipulation; }
+  .crit p, .intro, .ayah, .ftr, .ftranslate, .act, .crit-title, .day-title, .warn { overflow-wrap: anywhere; }
+  .read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 95; pointer-events: none;
+    background: linear-gradient(90deg, #9f7f3f, #c9a961, #e6c887); box-shadow: 0 0 8px rgba(201,169,97,.5); }
+  .top-fab { position: fixed; right: calc(14px + env(safe-area-inset-right)); bottom: calc(14px + env(safe-area-inset-bottom));
+    width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(201,169,97,.5);
+    background: linear-gradient(135deg, #c9a961, #9f7f3f); color: #0a1f1a; cursor: pointer; z-index: 96;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,.4);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .3s ease, transform .3s ease;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .top-fab.show { opacity: 1; transform: none; pointer-events: auto; }
+  .top-fab:active { transform: scale(.94); }
+  .top-fab svg { width: 20px; height: 20px; }
+  .tbl-wrap { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    scrollbar-width: thin; scrollbar-color: rgba(201,169,97,.8) rgba(10,31,26,.45); }
+  .tbl-wrap::-webkit-scrollbar { height: 7px; }
+  .tbl-wrap::-webkit-scrollbar-track { background: rgba(10,31,26,.45); border-radius: 4px; }
+  .tbl-wrap::-webkit-scrollbar-thumb { background: linear-gradient(90deg, #c9a961, #9f7f3f); border-radius: 4px; }
+  @media screen and (max-width: 600px) {
+    .doc-wrap { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
+    .crit p { font-size: 15px; line-height: 1.7; }
+    .intro { font-size: 15.5px; }
+    .ftr { font-size: 14px; }
+    .ftranslate { font-size: 14.5px; }
+    .act { font-size: 13.5px; }
+    .warn { font-size: 14px; }
+    .offer-list li { font-size: 14.5px; }
+    .steps li { font-size: 14px; }
+    .note { font-size: 13px; }
+    .cards { gap: 24px; }
+    .pcard.full { transform: none; }
+    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; }
+    .day-head { row-gap: 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    html { scroll-behavior: auto !important; }
+  }
+  @media print { .read-progress, .top-fab { display: none !important; } }
+
 </style>
 </head>
 <body>
@@ -336,5 +379,31 @@
   </footer>
 
 </div>
+<script>
+// ===== MOBILE-OPT v1 =====
+  (function () {
+    var bar = document.createElement('div');
+    bar.className = 'read-progress';
+    document.body.appendChild(bar);
+    var fab = document.createElement('button');
+    fab.className = 'top-fab';
+    fab.type = 'button';
+    fab.setAttribute('aria-label', 'Наверх');
+    fab.title = 'Наверх';
+    fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>';
+    document.body.appendChild(fab);
+    function onScroll() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+      fab.classList.toggle('show', h.scrollTop > 480);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+    fab.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  })();
+
+</script>
 </body>
 </html>
