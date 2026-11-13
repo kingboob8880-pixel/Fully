@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#fefdfb">
 <title>Открытие закрытых путей — Руководство по дуа | Абу Мухаммад</title>
 <meta name="description" content="Шариатское руководство по дуа для открытия закрытых путей: ризк, ибада, тауфик, ильм, шифа, хифз, брак, работа. Автор — Абу Мухаммад.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1478,6 +1479,91 @@
     opacity: 1;
     transform: translateY(0);
   }
+/* ===== MOBILE-OPT v1 ===== */
+  [id] { scroll-margin-top: 80px; }
+  html { scrollbar-color: var(--green-600) var(--paper-2); scrollbar-width: thin; }
+  ::-webkit-scrollbar { width: 10px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--paper-2); }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--green-600), var(--green-800)); border-radius: 8px; border: 2px solid var(--paper-2); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold-500); }
+  .feature-table-wrap { scrollbar-width: thin; scrollbar-color: var(--green-600) var(--paper-2); }
+  .chapters-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+  .duas-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+  .modal-transliteration, .modal-translation, .modal-description { overflow-wrap: break-word; }
+
+  /* touch ergonomics */
+  a, button, .spell-card, .dua-card, .chapter-card, .tab-btn, .toc a { -webkit-tap-highlight-color: transparent; }
+  button, .btn, .tab-btn, .spell-action-btn, .modal-btn, .nav-toggle, .theme-toggle { touch-action: manipulation; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  @media (hover: none) {
+    .spell-card:hover, .prep-card:hover, .chapter-card:hover, .dua-card:hover, .step-card:hover,
+    .btn-primary:hover, .btn-secondary:hover, .nav-cta:hover, .theme-toggle:hover { transform: none; box-shadow: none; }
+    .spell-card:active, .chapter-card:active, .dua-card:active { transform: scale(0.985); }
+    .btn:active, .modal-btn:active, .spell-action-btn:active, .tab-btn:active { transform: scale(0.97); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    html { scroll-behavior: auto !important; }
+  }
+
+  @media (max-width: 960px) {
+    .nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .nav-toggle { width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 10px; }
+    .nav-links.mobile-open { padding: 10px 12px calc(12px + env(safe-area-inset-bottom)); animation: navDrop .28s var(--ease); }
+    .nav-links.mobile-open a { display: flex; align-items: center; min-height: 48px; padding: 12px 16px; font-size: 15px; border-radius: 10px; }
+    .nav-links.mobile-open .nav-cta { justify-content: center; margin-top: 6px; }
+    @keyframes navDrop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-visual { min-height: 320px; }
+    .hero-ornament { max-width: 320px; }
+    .hero-float { padding: 10px 14px; font-size: 12px; gap: 8px; }
+    .hero-float-1 { left: 0; top: 4%; }
+    .hero-float-2 { right: 0; bottom: 6%; }
+    .hero-float-icon { width: 30px; height: 30px; font-size: 15px; }
+  }
+  @media (max-width: 640px) {
+    .hero { min-height: 100svh; padding: 96px 0 56px; }
+    .hero-title { font-size: clamp(32px, 9vw, 44px); }
+    .hero-subtitle { font-size: 16px; margin-bottom: 32px; }
+    .btn { min-height: 52px; white-space: normal; }
+    .hero-stats { gap: 20px 28px; }
+    .hero-visual { min-height: 280px; margin-top: 8px; }
+    .hero-ornament { max-width: 260px; }
+    .hero-ornament-text { font-size: 44px; padding: 12px; }
+    .section-header { margin-bottom: 40px; }
+    .section-subtitle { font-size: 16px; }
+    .steps-grid, .chapters-grid, .conclusion-tips { grid-template-columns: 1fr; }
+    .step-card { padding: 24px 20px; }
+    .chapter-card { padding: 26px 20px; }
+    .chapter-icon { width: 52px; height: 52px; font-size: 26px; margin-bottom: 18px; }
+    .duas-panel { padding: 20px 14px; border-radius: var(--radius-lg); }
+    .duas-panel-title h3 { font-size: 20px; }
+    .duas-panel-icon { width: 44px; height: 44px; font-size: 22px; border-radius: 12px; }
+    .dua-card { padding: 20px 16px; }
+    .feature-table th, .feature-table td { padding: 14px 16px; }
+    /* modal as bottom sheet */
+    .modal-overlay { padding: 0; align-items: flex-end; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .modal { display: flex; flex-direction: column; max-width: 100%; max-height: 94dvh; overflow: hidden;
+      border-radius: 22px 22px 0 0; transform: translateY(32px); }
+    .modal-overlay.active .modal { transform: translateY(0); }
+    .modal::after { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+      width: 42px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.4); z-index: 3; }
+    .modal-header { flex: 0 0 auto; padding: 28px 20px 20px; border-radius: 22px 22px 0 0; }
+    .modal-close { top: 14px; right: 14px; width: 44px; height: 44px; }
+    .modal-title { font-size: 20px; padding-right: 48px; }
+    .modal-bismillah { font-size: 20px; margin-bottom: 14px; }
+    .modal-body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 22px 18px; }
+    .modal-arabic { padding: 28px 16px; }
+    .modal-footer { flex: 0 0 auto; flex-direction: row; padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); border-radius: 0; }
+    .modal-btn { width: auto; flex: 1 1 0; min-height: 48px; justify-content: center; }
+    .modal-btn-primary { flex: 1.6 1 0; }
+    .toast { bottom: calc(16px + env(safe-area-inset-bottom)); max-width: calc(100vw - 32px); font-size: 13px; padding: 12px 18px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-height: 520px) and (orientation: landscape) {
+    .hero { min-height: auto; padding: 96px 0 48px; }
+    .modal { max-height: 96dvh; }
+  }
+
 </style>
 </head>
 <body>
@@ -2182,6 +2268,54 @@
       nav.style.boxShadow = 'none';
     }
   });
+// ===== MOBILE-OPT v1 =====
+  // nav drawer behaviour
+  (function () {
+    var links = document.getElementById('navLinks');
+    var toggle = document.querySelector('.nav-toggle');
+    if (!links || !toggle) return;
+    toggle.setAttribute('aria-controls', 'navLinks');
+    toggle.setAttribute('aria-expanded', 'false');
+    function sync() { toggle.setAttribute('aria-expanded', String(links.classList.contains('mobile-open'))); }
+    function close() { links.classList.remove('mobile-open'); sync(); }
+    toggle.addEventListener('click', sync);
+    links.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+    document.addEventListener('click', function (e) { if (links.classList.contains('mobile-open') && !e.target.closest('.nav')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+  // swipe-down on sheet header closes the modal
+  (function () {
+    var modal = document.getElementById('modal');
+    if (!modal) return;
+    var header = modal.querySelector('.modal-header');
+    var sy = null, dy = 0;
+    header.addEventListener('touchstart', function (e) { sy = e.touches[0].clientY; dy = 0; }, { passive: true });
+    header.addEventListener('touchmove', function (e) {
+      if (sy === null) return;
+      dy = e.touches[0].clientY - sy;
+      if (dy > 0) modal.style.transform = 'translateY(' + Math.min(dy, 140) + 'px)';
+    }, { passive: true });
+    header.addEventListener('touchend', function () {
+      if (dy > 80) closeModal();
+      modal.style.transform = ''; sy = null; dy = 0;
+    });
+  })();
+  // clipboard fallback for non-secure contexts
+  (function () {
+    if (navigator.clipboard && window.isSecureContext) return;
+    var shim = { writeText: function (t) { return new Promise(function (res, rej) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = t; ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+        document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length);
+        var ok = document.execCommand('copy'); ta.remove();
+        ok ? res() : rej(new Error('copy failed'));
+      } catch (e) { rej(e); }
+    }); } };
+    try { Object.defineProperty(navigator, 'clipboard', { value: shim, configurable: true }); } catch (e) {}
+  })();
+
 </script>
 
 </body>

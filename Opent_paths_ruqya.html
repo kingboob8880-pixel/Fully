@@ -2,7 +2,8 @@
 <html lang="ru" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0e1a">
 <title>Бисмилляхи Арки — Заклинания для открытия путей | Абу Мухаммад</title>
 <meta name="description" content="Полный сборник шариатских заклинаний «Бисмилляхи арки» для открытия закрытых путей: ризк, ибада, тауфик, ильм, шифа, хифз, семья, работа.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1458,6 +1459,91 @@
   [data-theme="light"] ::-webkit-scrollbar-track { background: var(--bg-secondary); }
   [data-theme="light"] ::-webkit-scrollbar-thumb { background: var(--text-faint); border-radius: 10px; }
   [data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
+/* ===== MOBILE-OPT v1 ===== */
+  [id] { scroll-margin-top: 80px; }
+  html[data-theme="dark"] { scrollbar-color: var(--bg-elevated) var(--bg-primary); }
+  html[data-theme="light"] { scrollbar-color: var(--text-faint) var(--bg-secondary); }
+  .modal-transliteration, .modal-translation, .spell-translit, .spell-translation { overflow-wrap: break-word; }
+
+  /* touch ergonomics */
+  a, button, .spell-card, .dua-card, .chapter-card, .tab-btn, .toc a { -webkit-tap-highlight-color: transparent; }
+  button, .btn, .tab-btn, .spell-action-btn, .modal-btn, .nav-toggle, .theme-toggle { touch-action: manipulation; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  @media (hover: none) {
+    .spell-card:hover, .prep-card:hover, .chapter-card:hover, .dua-card:hover, .step-card:hover,
+    .btn-primary:hover, .btn-secondary:hover, .nav-cta:hover, .theme-toggle:hover { transform: none; box-shadow: none; }
+    .spell-card:active, .chapter-card:active, .dua-card:active { transform: scale(0.985); }
+    .btn:active, .modal-btn:active, .spell-action-btn:active, .tab-btn:active { transform: scale(0.97); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    html { scroll-behavior: auto !important; }
+  }
+
+  @media (max-width: 960px) {
+    .nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .nav-toggle, .theme-toggle { width: 44px; height: 44px; }
+    .nav-links.mobile-open { padding: 10px 12px calc(12px + env(safe-area-inset-bottom)); animation: navDrop .28s var(--ease); }
+    .nav-links.mobile-open a { display: flex; align-items: center; min-height: 48px; padding: 12px 16px; font-size: 15px; border-radius: 12px; }
+    .nav-links.mobile-open .nav-cta { justify-content: center; margin-top: 6px; }
+    @keyframes navDrop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-glow { width: 480px; height: 480px; }
+  }
+  @media (max-width: 640px) {
+    .hero { min-height: 100svh; padding: 96px 0 56px; }
+    .hero-badge { max-width: 100%; font-size: 12px; line-height: 1.45; text-align: center; justify-content: center; margin-bottom: 24px; }
+    .hero-title { font-size: clamp(30px, 8.6vw, 40px); }
+    .hero-subtitle { font-size: 16px; margin-bottom: 32px; }
+    .hero-actions { margin-bottom: 44px; }
+    .btn { min-height: 52px; white-space: normal; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 0; padding: 8px 12px; }
+    .hero-stat { border-right: none; border-bottom: 1px solid var(--border-subtle); padding: 14px 8px; }
+    .hero-stat:nth-child(odd) { border-right: 1px solid var(--border-subtle); }
+    .hero-stat:nth-child(n+3) { border-bottom: none; }
+    .hero-stat-num { font-size: 26px; }
+    .method-quote { padding: 28px 20px; }
+    .method-quote-arabic { font-size: 26px; }
+    .section-header { margin-bottom: 40px; }
+    .section-subtitle { font-size: 16px; }
+    /* tabs: horizontal snap rail with themed scrollbar */
+    .tabs-nav { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; max-width: 100%;
+      scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+      scrollbar-width: thin; scrollbar-color: var(--accent-secondary) var(--bg-tertiary); margin-bottom: 28px; }
+    .tabs-nav::-webkit-scrollbar { height: 6px; }
+    .tabs-nav::-webkit-scrollbar-track { background: var(--bg-tertiary); border-radius: 3px; }
+    .tabs-nav::-webkit-scrollbar-thumb { background: var(--accent-secondary); border-radius: 3px; }
+    .tabs-nav::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
+    .tab-btn { flex: 0 0 auto; scroll-snap-align: start; min-height: 44px; }
+    .tab-panel-header { padding: 28px 18px; }
+    .tab-panel-icon { font-size: 44px; }
+    .tab-panel-meta { gap: 10px; }
+    .spell-card { padding: 22px 18px; }
+    .spell-arabic { font-size: 22px; padding: 16px 10px; }
+    .spell-action-btn { min-height: 44px; font-size: 13px; }
+    /* modal as bottom sheet: header + scrollable body + pinned actions */
+    .modal-overlay { padding: 0; align-items: flex-end; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .modal { position: relative; display: flex; flex-direction: column; max-width: 100%; max-height: 94dvh;
+      overflow: hidden; border-radius: 22px 22px 0 0; transform: translateY(32px); }
+    .modal-overlay.active .modal { transform: translateY(0); }
+    .modal::before { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+      width: 42px; height: 4px; border-radius: 2px; background: var(--border-strong); z-index: 3; }
+    .modal-header { flex: 0 0 auto; padding: 26px 20px 16px; }
+    .modal-close { top: 14px; right: 14px; width: 44px; height: 44px; }
+    .modal-title { font-size: 20px; padding-right: 48px; }
+    .modal-body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 20px 18px; }
+    .modal-arabic { padding: 28px 16px; }
+    .modal-footer { flex: 0 0 auto; flex-direction: row; padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); border-radius: 0; }
+    .modal-btn { width: auto; flex: 1 1 0; min-height: 48px; justify-content: center; }
+    .modal-btn-primary { flex: 1.6 1 0; }
+    .conclusion-warning { padding: 22px 18px; }
+    .toast { bottom: calc(16px + env(safe-area-inset-bottom)); max-width: calc(100vw - 32px); font-size: 13px; padding: 12px 18px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-height: 520px) and (orientation: landscape) {
+    .hero { min-height: auto; padding: 96px 0 48px; }
+    .modal { max-height: 96dvh; }
+  }
+
 </style>
 </head>
 <body>
@@ -2088,6 +2174,71 @@
       nav.style.boxShadow = 'none';
     }
   });
+// ===== MOBILE-OPT v1 =====
+  // nav drawer: close on link / outside / Escape, keep aria in sync
+  (function () {
+    var links = document.getElementById('navLinks');
+    var toggle = document.querySelector('.nav-toggle');
+    if (!links || !toggle) return;
+    toggle.setAttribute('aria-controls', 'navLinks');
+    toggle.setAttribute('aria-expanded', 'false');
+    function sync() { toggle.setAttribute('aria-expanded', String(links.classList.contains('mobile-open'))); }
+    function close() { links.classList.remove('mobile-open'); sync(); }
+    toggle.addEventListener('click', sync);
+    links.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+    document.addEventListener('click', function (e) { if (links.classList.contains('mobile-open') && !e.target.closest('.nav')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+  // keep active tab visible in the horizontal rail
+  (function () {
+    var rail = document.getElementById('tabsNav');
+    if (!rail) return;
+    rail.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab-btn');
+      if (b) b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  })();
+  // swipe-down on sheet header closes the modal
+  (function () {
+    var modal = document.getElementById('modal');
+    if (!modal) return;
+    var header = modal.querySelector('.modal-header');
+    var sy = null, dy = 0;
+    header.addEventListener('touchstart', function (e) { sy = e.touches[0].clientY; dy = 0; }, { passive: true });
+    header.addEventListener('touchmove', function (e) {
+      if (sy === null) return;
+      dy = e.touches[0].clientY - sy;
+      if (dy > 0) modal.style.transform = 'translateY(' + Math.min(dy, 140) + 'px)';
+    }, { passive: true });
+    header.addEventListener('touchend', function () {
+      if (dy > 80) closeModal();
+      modal.style.transform = ''; sy = null; dy = 0;
+    });
+  })();
+  // clipboard fallback for non-secure contexts
+  (function () {
+    if (navigator.clipboard && window.isSecureContext) return;
+    var shim = { writeText: function (t) { return new Promise(function (res, rej) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = t; ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+        document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length);
+        var ok = document.execCommand('copy'); ta.remove();
+        ok ? res() : rej(new Error('copy failed'));
+      } catch (e) { rej(e); }
+    }); } };
+    try { Object.defineProperty(navigator, 'clipboard', { value: shim, configurable: true }); } catch (e) {}
+  })();
+  // mobile browser chrome follows the theme
+  (function () {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    function sync() { meta.setAttribute('content', document.documentElement.getAttribute('data-theme') === 'light' ? '#faf8f3' : '#0a0e1a'); }
+    new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    sync();
+  })();
+
 </script>
 
 </body>
